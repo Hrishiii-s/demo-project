@@ -102,7 +102,7 @@ function Breadcrumb({ breadcrumbTitle }) {
             id: "Schedule a Meeting",
             backgroundImageUrl: "/assets/img/banner/Schedule a meeting.png",
             backgroundMobile: "/assets/img/banner/case_studies_banner_mobile.png",
-            style: "text-white"
+            style: "text-black"
         },
 
 
