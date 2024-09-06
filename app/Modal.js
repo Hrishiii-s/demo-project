@@ -29,7 +29,7 @@ const Modal = ({ showModal, setShowModal, title, description, imageUrl, linkedIn
               style={{
                   position: 'absolute',
                   width: isMobile ? '95vw' : '80%',
-                  height: isMobile ? '85vh' : '80vh',
+                  height: isMobile ? '80vh' : '80vh',
                   left: '50%',
                   top: '56%',
                   transform: 'translate(-50%, -50%)',

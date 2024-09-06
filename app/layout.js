@@ -9,7 +9,7 @@ import "/public/assets/css/swiper-bundle.css"
 import "/public/assets/css/aos.css"
 import "/public/assets/css/default.css"
 import "/public/assets/css/main.css"
-import Script from 'next/script';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 const inter = Inter({
@@ -33,11 +33,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <head>
-           
-            </head>
+            <GoogleTagManager gtmId="GTM-TBG2XGX4" />
+            {console.log("GTM Working")}
             <body className={`${inter.variable} ${outfit.variable}`}>
-          
                 {children}</body>
         </html>
     )

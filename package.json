@@ -13,6 +13,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.8",
     "@react-google-maps/api": "^2.19.3",
     "@react-spring/web": "^9.7.3",
     "@sentry/nextjs": "^8.3.0",

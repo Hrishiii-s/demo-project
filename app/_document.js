@@ -19,6 +19,8 @@ class MyDocument extends Document {
                             `,
                         }}
                     />
+                    <link rel="preload" href="https://assets.calendly.com/assets/external/widget.js" as="script" />
+
                 </Head>
                 <body>
                     {/* GTM noscript for the body */}

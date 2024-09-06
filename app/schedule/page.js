@@ -11,6 +11,7 @@ function AccountingServices() {
     const [isMobile, setIsMobile] = useState(false);
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
 
+
     let Nothome = true;
 
     useEffect(() => {
@@ -23,14 +24,13 @@ function AccountingServices() {
 
         setAllLoaded(true);
 
-
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
 
-    
+
     if (!allLoaded) {
-        return <div>Loading...</div>; // Or any other loading indicator
+        return <div>Loading...</div>;
     }
 
 
@@ -38,10 +38,10 @@ function AccountingServices() {
         <>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Schedule a Meeting" Nothome={Nothome}>
                 <div>
-                    <section className="services__details-area">
+                    <section className={`services__details-area ${isMobile ? 'h-full' : ''}`}>
                         <div className="container">
                             <div className="services__details-wrap">
-                            <div class="calendly-inline-widget" data-url="https://calendly.com/ecesisdigitalsolutions/30min?primary_color=00235f" style={{minWidth:'320px', height:'700px'}}></div>
+                            <div className="calendly-inline-widget" data-url="https://calendly.com/ecesisdigitalsolutions/30min?primary_color=00235f" style={{minWidth:'320px', height:'700px'}}></div>
                             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                             </div>
                         </div>

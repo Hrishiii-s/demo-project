@@ -5459,6 +5459,7 @@ padding-left: 40px;
   padding: 15px 55px 15px 25px;
   position: relative;
   width: 350px;
+  text-align: left;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -5467,7 +5468,7 @@ padding-left: 40px;
 }
 @media (max-width: 1199.98px) {
   .services__tab-wrap .nav-link {
-    width: 270px;
+    width: 300px;
     font-size: 18px;
     padding: 15px 45px 15px 20px;
   }
