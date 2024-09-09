@@ -9,6 +9,7 @@ import Marquee2 from '@/components/sections/Marquee2';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import default styles
 import { MoonLoader } from 'react-spinners';
+import LazyLoad from 'react-lazyload';
 
 
 export default function Proptech() {
