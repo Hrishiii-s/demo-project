@@ -15,7 +15,7 @@ export default function ProjectDetails() {
                                             <div className="row">
                                                 <div className="col-70">
                                                     <div className="project__details-thumb">
-                                                        <img src="/assets/img/project/project_details01.jpg" alt="" />
+                                                        <img src="/assets/img/project/project_details01.webp" alt="" />
                                                     </div>
                                                 </div>
                                                 <div className="col-30">
@@ -49,7 +49,7 @@ export default function ProjectDetails() {
                                                 <div className="row align-items-center">
                                                     <div className="col-lg-6 order-0 order-lg-2">
                                                         <div className="project__details-inner-img">
-                                                            <img src="/assets/img/project/project_details02.jpg" alt="" />
+                                                            <img src="/assets/img/project/project_details02.webp" alt="" />
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-6">
@@ -58,7 +58,7 @@ export default function ProjectDetails() {
                                                             <p>when an unknown printer took a galley of type and scrambled it to make a type specimen bookhas survived not only five centuries.but also the leap into electronic typesetting, remaining.</p>
                                                             <div className="content-inner">
                                                                 <div className="graph-img">
-                                                                    <img src="/assets/img/project/graph.jpg" alt="" />
+                                                                    <img src="/assets/img/project/graph.webp" alt="" />
                                                                 </div>
                                                                 <div className="about__list-box">
                                                                     <ul className="list-wrap">
@@ -92,7 +92,7 @@ export default function ProjectDetails() {
                                         </div>
                                         <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
                                         <div className="shape">
-                                            <img src="/assets/img/images/call_back_shape.png" alt="" data-aos="fade-right" data-aos-delay={400} />
+                                            <img src="/assets/img/images/call_back_shape.webp" alt="" data-aos="fade-right" data-aos-delay={400} />
                                         </div>
                                     </div>
                                 </div>

@@ -49,10 +49,10 @@ export default function Slider() {
                                     </div>
                                     <div className="box-authors mt-65">
                                         <div className="box-img-author">
-                                            <img src="/assets/img/home7/author.png" />
-                                            <img src="/assets/img/home7/author2.png" />
-                                            <img src="/assets/img/home7/author3.png" />
-                                            <img src="/assets/img/home7/author4.png" />
+                                            <img src="/assets/img/home7/author.webp" />
+                                            <img src="/assets/img/home7/author2.webp" />
+                                            <img src="/assets/img/home7/author3.webp" />
+                                            <img src="/assets/img/home7/author4.webp" />
                                             <span className="item-author-more">+28k</span>
                                         </div>
                                         <div className="text-trusted-author">
@@ -67,7 +67,7 @@ export default function Slider() {
                         <Swiper {...swiperOptions} className="swiper-container slider_baner__active slider_baner_home6">
                             <div className="swiper-wrapper">
                                 <SwiperSlide className="swiper-slide slide__home7">
-                                    <img src="/assets/img/home7/banner.png" />
+                                    <img src="/assets/img/home7/banner.webp" />
                                     <div className="box-info-contact">
                                         <p className="text-need-help">
                                             <svg width={38} height={38} viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@ export default function Slider() {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="swiper-slide slide__home7">
-                                    <img src="/assets/img/home7/banner.png" />
+                                    <img src="/assets/img/home7/banner.webp" />
                                     <div className="box-info-contact">
                                         <p className="text-need-help">
                                             <svg width={38} height={38} viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">

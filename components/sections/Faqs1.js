@@ -29,7 +29,7 @@ export default function Faqs1() {
                     <div className="row align-items-center">
                         <div className="col-lg-6 mb-30">
                             <div className="box-need-help">
-                                <img src="/assets/img/home6/img-faq.png" />
+                                <img src="/assets/img/home6/img-faq.webp" />
                                 <div className="box-text-need-help">
                                     <svg width={36} height={36} viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fillRule="evenodd" clipRule="evenodd" d="M12.2563 21.887H19.8349C20.1467 21.887 20.3998 21.6339 20.3998 21.3221C20.3998 21.0103 20.1467 20.7572 19.8349 20.7572H12.2563C11.9445 20.7572 11.6914 21.0103 11.6914 21.3221C11.6914 21.6339 11.9444 21.887 12.2563 21.887Z" fill="#F7A400" />

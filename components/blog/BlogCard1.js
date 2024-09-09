@@ -22,7 +22,7 @@ export default function BlogCard1({ item }) {
                         <h2 className="title"><Link href={`/blog/${item.id}`}>{item.title}</Link></h2>
                         <div className="blog-avatar">
                             <div className="avatar-thumb">
-                                <img src="/assets/img/blog/blog_avatar01.png" alt="" />
+                                <img src="/assets/img/blog/blog_avatar01.webp" alt="" />
                             </div>
                             <div className="avatar-content">
                                 <p>By <Link href={`/blog/${item.id}`}>Doman Smith</Link></p>

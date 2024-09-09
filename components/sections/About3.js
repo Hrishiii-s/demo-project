@@ -29,11 +29,11 @@ export default function About3() {
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-6 col-md-8">
                             <div className="about__img-wrap-three">
-                                {isMobile ? <div /> : <img src="/assets/img/images/about_3.png" className='w-full' alt="" />
+                                {isMobile ? <div /> : <img src="/assets/img/images/about_3.webp" className='w-full' alt="" />
                                 }
-                                {/* <img src="/assets/img/images/h3_about_img02.jpg" alt="" data-parallax="{&quot;x&quot; : 50 }" /> */}
+                                {/* <img src="/assets/img/images/h3_about_img02.webp" alt="" data-parallax="{&quot;x&quot; : 50 }" /> */}
                                 <div className="shape">
-                                    <img src="/assets/img/images/h3_about_img_shape.png" alt="" className="alltuchtopdown" />
+                                    <img src="/assets/img/images/h3_about_img_shape.webp" alt="" className="alltuchtopdown" />
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ export default function About3() {
                                     </div>
                                 </div>
                                 <div className="about__shape-wrap-three">
-                                    <img src="/assets/img/images/h3_about_shape01.png" alt="" className="rotateme" />
+                                    <img src="/assets/img/images/h3_about_shape01.webp" alt="" className="rotateme" />
                                 </div>
                             </div>
                         </div>

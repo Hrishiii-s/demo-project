@@ -44,7 +44,7 @@ export default function PricingTable() {
                             </ul>
                         </div>
                         <div className="pricing__btn">
-                            <Link href="#" className="btn">Get this plan Now</Link>
+                            <Link href="/schedule-a-meeting" className="btn">Get this plan Now</Link>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ export default function PricingTable() {
                             </ul>
                         </div>
                         <div className="pricing__btn">
-                            <Link href="#" className="btn">Get this plan Now</Link>
+                        <Link href="/schedule-a-meeting" className="btn">Get this plan Now</Link>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@ export default function PricingTable() {
                         </div>
 
                         <div className="pricing__btn">
-                            <Link href="#" className="btn">Get this plan Now</Link>
+                        <Link href="/schedule-a-meeting" className="btn">Get this plan Now</Link>
                         </div>
                     </div>
                 </div>

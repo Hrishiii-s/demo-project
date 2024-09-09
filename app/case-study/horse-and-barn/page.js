@@ -65,7 +65,7 @@ function CaseStudy() {
                                 <p>The primary challenge was to unify these separate websites into a single, cohesive platform that would allow users to explore all services in one place. The new website needed to:</p>
                                 {isMobile ? (
                                     <div className="relative max-w-xs mx-auto">
-                                        <img src="/assets/img/icon/case_challenges_mobile.png" alt="" className="w-full justify-center mx-auto" />
+                                        <img src="/assets/img/icon/case_challenges_mobile.webp" alt="" className="w-full justify-center mx-auto" />
                                         <div className="absolute top-[40%] left-[7%]">
                                             <p className="text-center text-sm font-bold">Three Separate <br /> Websites</p>
                                         </div>
@@ -82,7 +82,7 @@ function CaseStudy() {
 
                                 ) : (
                                     <div className="relative">
-                                        <img src="/assets/img/icon/case_challenges.png" alt="" className="w-[300px] justify-center mx-auto" />
+                                        <img src="/assets/img/icon/case_challenges.webp" alt="" className="w-[300px] justify-center mx-auto" />
                                         <div className="absolute top-[60px] left-[200px]">
                                             <p className="text-left text-lg font-bold">Three Seperate Websites</p>
                                         </div>
@@ -168,7 +168,7 @@ function CaseStudy() {
 
                             <div className={` ${isMobile ? "w-full" : "w-[60%]"} bg-[#00235f] rounded-2xl p-3 mt-12`}>
                                 <div className="flex ">
-                                    <img src="/assets/img/icon/case_dev.png" alt="" className="w-14" />
+                                    <img src="/assets/img/icon/case_dev.webp" alt="" className="w-14" />
                                     <h3 className="text-xl content-center text-white ml-4">Development and Hosting Platform</h3>
                                 </div>
 
@@ -193,7 +193,7 @@ function CaseStudy() {
                                 <p className="title text-2xl font-bold text-black mt-12">Results</p>
                                 {isMobile ? (
                                     <div className="relative max-w-xs mx-auto">
-                                        <img src="/assets/img/icon/case_results_mobile.png" alt="" className="w-full justify-center mx-auto" />
+                                        <img src="/assets/img/icon/case_results_mobile.webp" alt="" className="w-full justify-center mx-auto" />
                                         <div className="absolute top-[40%] left-[16%]">
                                             <p className="text-center text-sm font-bold">3X<br /> Revenue<br /> Growth</p>
                                         </div>
@@ -209,7 +209,7 @@ function CaseStudy() {
                                     </div>
                                 ) : (
                                     <div className="relative w-fit mx-auto">
-                                        <img src="/assets/img/icon/case_results.png" alt="" className="w-[800px] mx-auto" />
+                                        <img src="/assets/img/icon/case_results.webp" alt="" className="w-[800px] mx-auto" />
                                         <div className="absolute -bottom-[70px] left-[70px] ">
                                             <p className="text-center text-lg font-bold">3X<br /> Revenue<br /> Growth</p>
                                         </div>
@@ -242,10 +242,10 @@ function CaseStudy() {
                                             </h2>
 
                                             <p className="text-white  text-xl mt-3">Get started by talking to our experts about how to enable business insights at scale with the right data foundation, modernization and platform management.</p>
-                                            <Link href="/schedule" className="btn mt-5">BOOK A CONSULTATION</Link>
+                                            <Link href="/schedule-a-meeting" className="btn mt-5">BOOK A CONSULTATION</Link>
                                         </div>
                                         {/* {!isMobile ? (<div className="">
-                                            <img src="/assets/img/images/callback_photo.jpg" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
+                                            <img src="/assets/img/images/callback_photo.webp" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
 
                                         </div>) : null} */}
 

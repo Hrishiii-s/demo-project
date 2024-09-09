@@ -13,10 +13,10 @@ export default function CallbackAuto(isMobile) {
                                     </h2>
 
                                     <p className="text-white  text-xl mt-3">Embrace RPA innovation and new process optimization opportunities to increase business efficiency and reduce costs.</p>
-                                    <Link href="/schedule" className="btn mt-5">BOOK A CONSULTATION</Link>
+                                    <Link href="/schedule-a-meeting" className="btn mt-5">BOOK A CONSULTATION</Link>
                                 </div>
                                 {!isMobile ? (<div className="">
-                                    <img src="/assets/img/images/callback_photo.jpg" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
+                                    <img src="/assets/img/images/callback_photo.webp" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
 
                                 </div>) : null}
 

@@ -71,7 +71,7 @@ const RadialCardGrid = () => {
                             onClick={setSelectedCard} // Pass the setSelectedCard function to handle click
                         >
                             <div className='flip-container'>
-                            <img src='/assets/img/icon/chip.png' className='w-20 h-20 flip-image' alt='chip' />
+                            <img src='/assets/img/icon/chip.webp' className='w-20 h-20 flip-image' alt='chip' />
 
                             </div>
                         </Card>

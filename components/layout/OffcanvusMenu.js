@@ -8,7 +8,7 @@ export default function OffcanvusMenu({ isOffcanvus, handleOffcanvus }) {
                     <button><i className="far fa-window-close" /></button>
                 </div>
                 <div className="offCanvas__logo mb-30">
-                    <Link href="/"><img src="/assets/img/logo/logo.png" className="" alt="Logo" /></Link>
+                    <Link href="/"><img src="/assets/img/logo/logo.webp" className="" alt="Logo" /></Link>
                 </div>
                 <div className="offCanvas__side-info mb-30">
                     <div className="contact-list mb-30">

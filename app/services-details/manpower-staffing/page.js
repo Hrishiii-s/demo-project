@@ -19,49 +19,49 @@ function TalentServices() {
         {
             id: 1,
             name: "Production & Advanced Manufacturing",
-            url: "/assets/img/icon/manufacturing.png",
+            url: "/assets/img/icon/manufacturing.webp",
             style: "h-24 w-24"
         },
         {
             id: 2,
             name: "Electronics & semiconductors",
-            url: "/assets/img/icon/semiconductor.png",
+            url: "/assets/img/icon/semiconductor.webp",
             style: "h-24 w-24"
         },
         {
             id: 3,
             name: "Hospitality",
-            url: "/assets/img/icon/hospitality.png",
+            url: "/assets/img/icon/hospitality.webp",
             style: "h-20 w-20 mb-6"
         },
         {
             id: 4,
             name: "Information Technology",
-            url: "/assets/img/icon/info-tech.png",
+            url: "/assets/img/icon/info-tech.webp",
             style: "h-20 w-20 mb-6"
         },
         {
             id: 5,
             name: "E-Commerce",
-            url: "/assets/img/icon/e-commerce.png",
+            url: "/assets/img/icon/e-commerce.webp",
             style: "h-24 w-24"
         },
         {
             id: 6,
             name: "Education",
-            url: "/assets/img/icon/education.png",
+            url: "/assets/img/icon/education.webp",
             style: "h-24 w-24"
         },
         {
             id: 7,
             name: "Retail",
-            url: "/assets/img/icon/retail.png",
+            url: "/assets/img/icon/retail.webp",
             style: "h-24 w-24"
         },
         {
             id: 8,
             name: "FMCG",
-            url: "/assets/img/icon/fmcg.png",
+            url: "/assets/img/icon/fmcg.webp",
             style: "h-24 w-24"
         },
     ]
@@ -99,7 +99,7 @@ function TalentServices() {
                                 <div className="row">
                                     <div className="col-100 order-0 order-lg-2 ">
                                         {/* <div className="services__details-thumb">
-                                            <img src="/assets/img/services/services_details01.jpg" alt="" />
+                                            <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div> */}
                                         <div className="services__details-content">
                                             <h2 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `}>Elevating Industries Through <span className="text-pink-400">Premier Staffing Solution</span></h2>
@@ -134,7 +134,7 @@ function TalentServices() {
                                                 <div className="row gutter-24 align-items-center">
                                                     <div className="col-44">
                                                         <div className="services__details-inner-img">
-                                                            <img src="/assets/img/services/services_details_inner01.jpg" alt="" />
+                                                            <img src="/assets/img/services/services_details_inner01.webp" alt="" />
                                                             <VideoPopup />
                                                         </div>
                                                     </div>
@@ -161,7 +161,7 @@ function TalentServices() {
                                             <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-x-4 gap-y-4`}>
                                                 <div className="ebt">
                                                     <div className="title px-3 py-4 border-2 text-center justify-center rounded-2xl" style={{ width: '390px', height: '275px' }} >
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/precision.png" className="w-20 h-20 mt-3" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/precision.webp" className="w-20 h-20 mt-3" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Precision Placements
                                                         </h4>
@@ -173,7 +173,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className="ebt">
                                                     <div className="title px-2  border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px', paddingTop: '26px', paddingBottom: '26px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/verified-icon.png" className="w-20 h-20 mt-3" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/verified-icon.webp" className="w-20 h-20 mt-3" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Proven Expertise</h4>
 
@@ -183,7 +183,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className="ebt">
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/human.png" className="w-20 h-20 mt-3" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/human.webp" className="w-20 h-20 mt-3" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Top Talent Network
                                                         </h4>
@@ -195,7 +195,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className="ebt">
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/client-centric.png" className="w-20 h-20" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/client-centric.webp" className="w-20 h-20" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Client-Centric Approach</h4>
 
@@ -205,7 +205,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className="ebt">
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/around-the-clock-icon.png" className="w-20 h-20" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/around-the-clock-icon.webp" className="w-20 h-20" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Agile and Responsive</h4>
 
@@ -215,7 +215,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className="ebt">
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/handshake-icon2.png" className="w-20 h-20" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/handshake-icon2.webp" className="w-20 h-20" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Strategic Partner
                                                         </h4>
@@ -229,7 +229,7 @@ function TalentServices() {
                                             <div className={`${isMobile ? "flex-col mt-3" : "flex-row mt-4"} flex justify-center `}>
                                                 <div className="ebt">
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/security-icon.png" className="w-20 h-20" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/security-icon.webp" className="w-20 h-20" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Flexibility</h4>
 
@@ -239,7 +239,7 @@ function TalentServices() {
                                                 </div>
                                                 <div className={`ebt ${isMobile ? "mt-3" : "ml-4"} `}>
                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                        <span className="flex justify-center"><img src="/assets/img/icon/excellence.png" className="w-20 h-20" /></span>
+                                                        <span className="flex justify-center"><img src="/assets/img/icon/excellence.webp" className="w-20 h-20" /></span>
                                                         <h4 className="mt-3 text-2xl">
                                                             Commitment to Excellence                                                        </h4>
 

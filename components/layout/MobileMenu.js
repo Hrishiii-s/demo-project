@@ -27,7 +27,7 @@ export default function MobileMenu({ handleMobileMenu }) {
                             <ul className="sub-menu" style={{ display: isActive['digital'] ? "block" : "none" }}>
                                 <li onClick={handleMobileMenu}><Link href="/services-details/proptech">PropTech</Link></li>
                                 <li onClick={handleMobileMenu}><Link href="/services-details/artificial-intelligence">Artificial Intelligence</Link></li>
-                                <li onClick={handleMobileMenu}><Link href={`/services-details/automation`}>Business Process Automation</Link></li>
+                                <li onClick={handleMobileMenu}><Link href={`/services-details/business-process-automation`}>Business Process Automation</Link></li>
                                 {/* <li><Link href="/services-details/software-development">Enterprise Software Solutions</Link></li> */}
 
                             </ul>

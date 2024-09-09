@@ -25,7 +25,7 @@ He started his career leading the country's first Metro Railway fare collection 
 In 2010, he founded ECESIS, a venture that has since thrived under his leadership, becoming a leader in its field and reflecting his ongoing commitment to innovation and excellence.
                 </p>
             ),
-            imageUrl: '/assets/img/team/TKV.png',
+            imageUrl: '/assets/img/team/TKV.webp',
             linkedInUrl: 'https://www.linkedin.com/in/velayudham-tk-ecesis/'
         },
         {
@@ -37,7 +37,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     <br /><br /> Karthik's strategic vision and business acumen have been instrumental in driving the company's success. He is dedicated to fostering innovation, enhancing operational efficiency, and exploring new market opportunities. His commitment to excellence and forward-thinking approach continues to contribute significantly to the ongoing success and expansion of ECESIS.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Karthik.png',
+            imageUrl: '/assets/img/team/Karthik.webp',
             linkedInUrl: 'https://www.linkedin.com/in/karthik-k-v-2403891a/'
         },
         {
@@ -50,7 +50,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     He also sits on advisory boards and consults for various businesses in North America and South-East Asia. Electronics & Communication Engineer by qualification and Certified Scrum Coach, holds Postgrad.Dip in Computer Applications, Engineering Diploma in Electronics & Avionics, and Diploma in Embedded Systems.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Anil.png',
+            imageUrl: '/assets/img/team/Anil.webp',
             linkedInUrl: 'https://www.linkedin.com/in/anil-ar-001/'
         },
         {
@@ -63,7 +63,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     Saritha’s leadership style is defined by her collaborative approach and commitment to innovation. Her experience and strategic insight make her a vital asset to Ecesis, ensuring the company continues to lead in its industry.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Saritha.png',
+            imageUrl: '/assets/img/team/Saritha.webp',
             linkedInUrl: 'https://www.linkedin.com/in/sarithans/'
         },
         {
@@ -75,7 +75,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     With a career spanning several years, he has established himself as a proficient and trusted resource in the field of client relations. His ability to navigate complex client requirements and provide tailored solutions has earned him a stellar reputation in the industry. <br /><br />Shebin oversees the operations of the Trivandrum center, where he ensures that the highest standards of service are maintained.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Shebin.png',
+            imageUrl: '/assets/img/team/Shebin.webp',
             linkedInUrl: 'https://www.linkedin.com/in/shebin-koshy-050543160/'
         },
         {
@@ -86,7 +86,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     Pradeep is a distinguished professional with extensive expertise in the KPO industry. With a solid academic foundation, having completed his master's degree in the United Kingdom, Pradeep possesses a deep and comprehensive understanding of the intricacies of the KPO sector. His journey in the KPO business has been marked by a remarkable dedication to excellence. <br /><br />His career spans a range of roles and responsibilities, allowing him to acquire a holistic view of the industry. He has successfully led and managed KPO operations across various domains, showcasing his versatility and adaptability. <br /><br />Pradeep played a crucial role in establishing the Nagercoil center for ECESIS, a significant achievement that highlights his strategic vision and leadership.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Pradeep.png',
+            imageUrl: '/assets/img/team/Pradeep.webp',
             linkedInUrl: 'hhttps://www.linkedin.com/in/pradeep-maddipoti-5a2ab4125/'
         },
         {
@@ -97,7 +97,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                     Sathi Devi is a seasoned finance professional responsible for managing the finances and accounts at ECESIS. With her meticulous attention to detail and commitment to accuracy, Sathi ensures that the company's financial operations run smoothly. Her expertise and dedication provide a strong foundation for the company’s financial health, ensuring that every aspect of the finances is handled with care and precision.
                 </p>
             ),
-            imageUrl: '/assets/img/team/Sathi.png',
+            imageUrl: '/assets/img/team/Sathi.webp',
             linkedInUrl: 'https://www.linkedin.com/in/sathi-devi-752aa725/'
         },
         {
@@ -110,7 +110,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
 
                 </p>
             ),
-            imageUrl: '/assets/img/team/Arun.png',
+            imageUrl: '/assets/img/team/Arun.webp',
             linkedInUrl: 'https://www.linkedin.com/in/arun-sankar-697837185/'
         },
 
@@ -171,9 +171,9 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                             <div className="row align-items-center justify-content-center">
                                 <div className="col-lg-6 col-md-9 col-sm-10">
                                     <div className="about__img-wrap-four">
-                                        <img src="/assets/img/images/inner_about01.jpg" alt="" />
-                                        {/* <img src="/assets/img/images/inner_about02.jpg" alt="" /> */}
-                                        <img src="/assets/img/bg/bg_about_photos.png" className={`${isMobile ? 'scale-150 mt-20' : ''} about_photo_bg`} style={{ marginLeft: isMobile ? '50px' : '' }} alt="" />
+                                        <img src="/assets/img/images/inner_about01.webp" alt="" />
+                                        {/* <img src="/assets/img/images/inner_about02.webp" alt="" /> */}
+                                        <img src="/assets/img/bg/bg_about_photos.webp" className={`${isMobile ? 'scale-150 mt-20' : ''} about_photo_bg`} style={{ marginLeft: isMobile ? '50px' : '' }} alt="" />
 
                                         {/* <div className="about__award-box">
                                             <div className="icon">
@@ -185,7 +185,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                             </div>
                                         </div> */}
                                         {/* <div className="shape">
-                                            <img src="/assets/img/images/inner_about_shape.jpg" alt="" className="alltuchtopdown" />
+                                            <img src="/assets/img/images/inner_about_shape.webp" alt="" className="alltuchtopdown" />
                                         </div> */}
                                     </div>
                                 </div>
@@ -203,7 +203,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                                 </ul>
                                             </div>
                                             {/* <div className="about__list-img-two">
-                                                <img src="/assets/img/images/about_list_img02.png" alt="" />
+                                                <img src="/assets/img/images/about_list_img02.webp" alt="" />
                                             </div> */}
                                         </div>
                                         <p className="w-[600px]">We have transformed from a BPO provider into a global leader, offering a diverse portfolio of services including software development, digital marketing, and staffing solutions. Our evolution is guided by a forward-thinking approach that anticipates the needs of tomorrow’s markets.
@@ -212,7 +212,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     </div>
                                 </div>
                                 <div className={`services__details-inner-img relative ${isMobile ? '' : 'justify-center'}  flex mt-6`} >
-                                    <img src="/assets/img/images/thumbnail.png" className="object-fit" style={{ width: isMobile ? '100vw' : "50vw" }} alt="" />
+                                    <img src="/assets/img/images/thumbnail.webp" className="object-fit" style={{ width: isMobile ? '100vw' : "50vw" }} alt="" />
                                     <VideoPopup url={'sSjS2Fm_R9M'} />
 
                                 </div>
@@ -244,7 +244,7 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     }}
                                     title={modalContents[modalIndex]?.title || ''}
                                     description={modalContents[modalIndex]?.description || ''}
-                                    imageUrl={modalContents[modalIndex]?.imageUrl || '/default/path/to/image.jpg'}
+                                    imageUrl={modalContents[modalIndex]?.imageUrl || '/default/path/to/image.webp'}
                                     email={modalContents[modalIndex]?.email || 'default@email.com'}
                                     linkedInUrl={modalContents[modalIndex]?.linkedInUrl || 'https://www.linkedin.com'}
                                 />
@@ -253,12 +253,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(0) }}>
                                     <div className="team__item-four shine-animate-item" >
                                         <div className="team__thumb-four shine-animate" >
-                                            <img src="/assets/img/team/TKV.png" alt="" />
+                                            <img src="/assets/img/team/TKV.webp" alt="" />
                                         </div>
                                         <div className="team__content-four bg-slate-200 relative">
                                             <h2 className="title">T K Velayudham</h2>
                                             <span className="text-black">CEO</span>
-                                            <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                            <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                         </div>
 
@@ -267,12 +267,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(1) }}>
                                     <div className="team__item-four shine-animate-item">
                                         <div className="team__thumb-four shine-animate">
-                                            <img src="/assets/img/team/Karthik.png" alt="" />
+                                            <img src="/assets/img/team/Karthik.webp" alt="" />
                                         </div>
                                         <div className="team__content-four bg-slate-200">
                                             <h2 className="title">Karthik K V</h2>
                                             <span className="text-black">Director</span>
-                                            <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                            <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                         </div>
                                     </div>
@@ -282,12 +282,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(2) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Anil.png" alt="" />
+                                                <img src="/assets/img/team/Anil.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Anil Appukuttan</h2>
                                                 <span className="text-black">Director <br /> (North America)</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>
@@ -296,12 +296,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(3) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Saritha.png" alt="" />
+                                                <img src="/assets/img/team/Saritha.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Saritha N S</h2>
                                                 <span className="text-black">Vice President <br />Software Engineering</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>
@@ -310,12 +310,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(4) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Shebin.png" alt="" />
+                                                <img src="/assets/img/team/Shebin.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Shebin Koshy</h2>
                                                 <span className="text-black">Asst. General Manager <br /> Operations</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>
@@ -326,12 +326,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(5) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Pradeep.png" alt="" />
+                                                <img src="/assets/img/team/Pradeep.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Pradeep M</h2>
                                                 <span className="text-black">Asst. General Manager <br /> Operations</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>
@@ -340,12 +340,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(6) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Sathi.png" alt="" />
+                                                <img src="/assets/img/team/Sathi.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Sathi Devi</h2>
                                                 <span className="text-black">General Manager <br /> Finance</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>
@@ -354,12 +354,12 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8 z-0 relative" onClick={() => { handlePageClick(7) }}>
                                         <div className="team__item-four shine-animate-item">
                                             <div className="team__thumb-four shine-animate">
-                                                <img src="/assets/img/team/Arun.png" alt="" />
+                                                <img src="/assets/img/team/Arun.webp" alt="" />
                                             </div>
                                             <div className="team__content-four bg-slate-200">
                                                 <h2 className="title">Arun Sankar</h2>
                                                 <span className="text-black">Asst. Vice President <br /> Business Development</span>
-                                                <img src="/assets/img/icon/arrow2.png" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
+                                                <img src="/assets/img/icon/arrow2.webp" alt="" className=" w-7 h-7 bottom-[-14px] absolute left-[45%]" />
 
                                             </div>
                                         </div>

@@ -46,7 +46,7 @@ export default function ServicesDetails() {
                                 <div className="row">
                                     <div className="col-100 order-0 order-lg-2">
                                         {/* <div className="services__details-thumb">
-                                            <img src="/assets/img/services/services_details01.jpg" alt="" />
+                                            <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div> */}
                                         <div className="services__details-content">
                                             <h2 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `} >Transforming Real Estate Valuations<br/> with<span className="text-pink-400" > Premier BPO Services</span></h2>
@@ -102,7 +102,7 @@ export default function ServicesDetails() {
                                                 <div className="row gutter-24 align-items-center">
                                                     <div className="">
                                                         <div className="services__details-inner-img justify-center flex" >
-                                                            <img src="/assets/img/services/services_details_inner01.jpg" className="object-cover object-top" style={{ height: "350px", width: "60%" }} alt="" />
+                                                            <img src="/assets/img/services/services_details_inner01.webp" className="object-cover object-top" style={{ height: "350px", width: "60%" }} alt="" />
                                                             <VideoPopup url={"jRHkw8liWLQ"} />
 
                                                         </div>
@@ -133,7 +133,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                                 <div className="ebt">
                                                                     <div className="title px-2  border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px', paddingTop: '26px', paddingBottom: '26px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/verified-icon.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/verified-icon.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             High acceptance rate and best quality assurance & control
                                                                         </h4>
@@ -145,7 +145,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                                 <div className="ebt">
                                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/handshake-icon2.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/handshake-icon2.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             Trusted partner to 150+ US realtors
                                                                         </h4>
@@ -157,7 +157,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                                 <div className="ebt">
                                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/time-icon.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/time-icon.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             Accelerated response & turnaround time
                                                                         </h4>
@@ -169,7 +169,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                                 <div className="ebt">
                                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/around-the-clock-icon.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/around-the-clock-icon.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             Round-the-clock support
                                                                         </h4>
@@ -181,7 +181,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                                 <div className="ebt">
                                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xl " style={{ width: '390px', height: '275px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/isp-icon.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/isp-icon.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             Sophisticated multi-tier network security
                                                                         </h4>
@@ -196,7 +196,7 @@ export default function ServicesDetails() {
                                                             <div className="flex justify-center">
                                                                 <div className="ebt">
                                                                     <div className="title px-2 py-4 border-2 text-center justify-center rounded-2xlitems-center " style={{ width: '390px', height: '275px' }}>
-                                                                        <span className="justify-center flex"><img src="/assets/img/icon/security-icon.png" className="w-20 h-20" /></span>
+                                                                        <span className="justify-center flex"><img src="/assets/img/icon/security-icon.webp" className="w-20 h-20" /></span>
                                                                         <h4 className="mt-3">
                                                                             High standards of integrity
                                                                         </h4>
@@ -232,8 +232,8 @@ export default function ServicesDetails() {
                                                 <h4 className="sidebar__widget-title">Brochure</h4>
                                                 <div className="sidebar__brochure">
                                                     <p>when an unknown printer took ga lley offer typey anddey.</p>
-                                                    <Link href="/assets/img/services/services_details01.jpg" target="_blank" download><i className="far fa-file-pdf" />PDF. Download</Link>
-                                                    <Link href="/assets/img/services/services_details01.jpg" target="_blank" download><i className="far fa-file-alt" />DOC. Download</Link>
+                                                    <Link href="/assets/img/services/services_details01.webp" target="_blank" download><i className="far fa-file-pdf" />PDF. Download</Link>
+                                                    <Link href="/assets/img/services/services_details01.webp" target="_blank" download><i className="far fa-file-alt" />DOC. Download</Link>
                                                 </div>
                                             </div>
                                             <div className="sidebar__widget">
@@ -241,7 +241,7 @@ export default function ServicesDetails() {
                                                 <div className="sidebar__post-list">
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post01.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post01.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">deno weuine easiure and praising</Link></h5>
@@ -250,7 +250,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post02.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post02.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">know how to pursue pleasure rationally</Link></h5>
@@ -259,7 +259,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post03.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post03.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">there anyone who loves</Link></h5>
@@ -268,7 +268,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post04.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post04.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">deno weuine easiure and praising</Link></h5>
@@ -290,7 +290,7 @@ export default function ServicesDetails() {
                             </div>
                         </div>
                     </section>
-                    <section className="pricing__area pricing__bg" data-background="/assets/img/bg/pricing_bg.jpg">
+                    <section className="pricing__area pricing__bg" data-background="/assets/img/bg/pricing_bg.webp">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-xl-5">
@@ -308,8 +308,8 @@ export default function ServicesDetails() {
                             </div>
                         </div>
                         <div className="pricing__shape-wrap">
-                            <img src="/assets/img/images/pricing_shape01.png" alt="" data-aos="fade-right" data-aos-delay={400} />
-                            <img src="/assets/img/images/pricing_shape02.png" alt="" data-aos="fade-left" data-aos-delay={400} />
+                            <img src="/assets/img/images/pricing_shape01.webp" alt="" data-aos="fade-right" data-aos-delay={400} />
+                            <img src="/assets/img/images/pricing_shape02.webp" alt="" data-aos="fade-left" data-aos-delay={400} />
                         </div>
                     </section>
                     {/* services-details-area-end */}

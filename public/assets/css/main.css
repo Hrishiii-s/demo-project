@@ -12132,6 +12132,28 @@ blockquote p {
   font-size: 30px;
   flex: 0 0 auto;
 }
+
+.contact__info .list-wrap li .icon2 {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tg-color-gray-3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 0;
+  color: var(--tg-theme-secondary);
+  font-size: 20px;
+  flex: 0 0 auto;
+}
 .contact__info .list-wrap li .content .title {
   margin-bottom: 5px;
   font-size: 20px;

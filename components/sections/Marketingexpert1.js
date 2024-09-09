@@ -22,7 +22,7 @@ export default function Marketingexpert1() {
                         <div className="col-lg-7 mb-30 position-relative">
                             <img src="/assets/img/home6/icon-square.svg" className="shape-top-right" />
                             <div className="box-video">
-                                <img src="/assets/img/home6/img-marketing.png" />
+                                <img src="/assets/img/home6/img-marketing.webp" />
                                 <VideoPopup style={1}/>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ export default function Marketingexpert1() {
                             </div>
                             <div className="video-small-right">
                                 <div className="box-video">
-                                    <img src="/assets/img/home6/img-video.png" />
+                                    <img src="/assets/img/home6/img-video.webp" />
                                     <VideoPopup style={1}/>
                                 </div>
                             </div>

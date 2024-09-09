@@ -20,7 +20,7 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-   
+
     return (
         <>
             <header className={`tg-header__style-three transparent-header ${Nothome ? "" : "absolute"}`} >
@@ -31,7 +31,7 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                 <div className="tgmenu__wrap">
                                     <nav className="tgmenu__nav">
                                         <div className="logo">
-                                            <Link href="/"><img src="/assets/img/logo/Logo.png" alt="Logo" className="h-14 ml-3" /></Link>
+                                            <Link href="/"><img src="/assets/img/logo/Logo.webp" alt="Logo" className="h-14 ml-3" /></Link>
                                         </div>
                                         <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex mr-5">
                                             <Menu />
@@ -57,7 +57,7 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
                                             <Link href="/">
-                                                <img src="/assets/img/logo/Logo.png" alt="Logo" /></Link>
+                                                <img src="/assets/img/logo/Logo.webp" alt="Logo" /></Link>
                                         </div>
                                         <div className="tgmobile__menu-outer">
                                             <MobileMenu handleMobileMenu={handleMobileMenu} />
@@ -65,11 +65,10 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                         <div className="tgmobile__menu-bottom">
                                             <div className="social-links">
                                                 <ul className="list-wrap">
-                                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-instagram" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-youtube" /></Link></li>
+                                                    <li><Link href="https://www.facebook.com/ecesisservices/"><i className="fab fa-facebook-f" /></Link></li>
+                                                    <li><Link href="https://x.com/ecesisservices?s=21"><i className="fab fa-twitter" /></Link></li>
+                                                    <li><Link href="https://www.instagram.com/ecesistech/profilecard/?igsh=MTVvcnFramdhenJzNA=="><i className="fab fa-instagram" /></Link></li>
+                                                    <li><Link href="https://in.linkedin.com/company/ecesis"><i className="fab fa-linkedin-in" /></Link></li>
                                                 </ul>
                                             </div>
                                         </div>

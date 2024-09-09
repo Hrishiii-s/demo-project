@@ -42,7 +42,7 @@ const Modal = ({ showModal, setShowModal, title, description, imageUrl, linkedIn
                   <h1 className="text-xl text-center sm:text-left sm:text-2xl font-bold">{title}</h1>
                   <p className="text-sm mt-2 md:mt-0 md:ml-4" style={{ textOverflow: 'ellipsis' }}>{description}</p>
                   <a href={linkedInUrl} className="text-blue-500 mt-2 md:ml-3" target="_blank" rel="noopener noreferrer">
-                  <img src="/assets/img/icon/linkedin.png" alt="LinkedIn" className="w-10 h-10" /> {/* Adjust the path and size as necessary */}
+                  <img src="/assets/img/icon/linkedin.webp" alt="LinkedIn" className="w-10 h-10" /> {/* Adjust the path and size as necessary */}
 
                   </a>
               </div>
@@ -52,7 +52,7 @@ const Modal = ({ showModal, setShowModal, title, description, imageUrl, linkedIn
                   className="absolute top-2 right-2 w-10 p-2"
                   aria-label="Close modal"
               >
-                  <img src="/assets/img/icon/close.png" alt='' className=''/>
+                  <img src="/assets/img/icon/close.webp" alt='' className=''/>
               </button>
           </div>
       </div>

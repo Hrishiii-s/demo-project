@@ -23,7 +23,7 @@ export default function Login() {
                                     </div>
                                     <div className="form-group">
                                         <Link href="#" className="btn btn-login-social">
-                                            <img src="/assets/img/login/apple.png" />
+                                            <img src="/assets/img/login/apple.webp" />
                                             Sign In With Apple Id
                                         </Link>
                                     </div>

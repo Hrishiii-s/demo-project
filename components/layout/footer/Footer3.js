@@ -51,7 +51,7 @@ export default function Footer3() {
                         <div className={`${isMobile ? "w-full" : "container"} mx-auto px-4`}>
                             <div className={`flex ${isMobile ? "flex-col-reverse" : "flex-row justify-between items-start"}`}>
                                 <div className={`${isMobile ? "mt-5" : "mt-2"} footer-widget text-lb flex-1`}>
-                                    <img src="/assets/img/logo/Logo.png" className={`${isMobile ? "hidden" : ""} h-14 mb-5`} alt="logo" />
+                                    <img src="/assets/img/logo/Logo.webp" className={`${isMobile ? "hidden" : ""} h-14 mb-5`} alt="logo" />
                                     <div className="footer__social-three">
                                         <span className="title">Follow Us on:</span>
                                         <ul className="list-wrap">

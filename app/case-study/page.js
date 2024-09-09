@@ -55,7 +55,7 @@ function CaseStudy() {
                                 <Link href="/case-study/horse-and-barn">
                                     <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2">
                                         <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
-                                            <img src="/assets/img/case/horse_barn.png" alt="" className="rounded-3xl md:rounded-l-md object-cover" />
+                                            <img src="/assets/img/case/horse_barn.webp" alt="" className="rounded-xl md:rounded-l-md object-cover" />
 
                                         </div>
                                         {isMobile ? null : (

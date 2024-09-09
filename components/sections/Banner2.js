@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import Banner from '../../public/assets/img/banner/banner.png'
+import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
 
 export default function Banner2({ scrollRef }) {
@@ -39,7 +39,7 @@ export default function Banner2({ scrollRef }) {
     return (
         <>
             <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-screen" : "h-full"}`} style={{
-                backgroundImage: `url(${isMobile ? "/assets/img/bg/services_1.jpeg" : "/assets/img/banner/banner.png"})`
+                backgroundImage: `url(${isMobile ? "/assets/img/bg/services_1.webp" : "/assets/img/banner/banner.webp"})`
             }}>
                 <div className="container">
                     <div className={`row`} style={space}>
@@ -70,7 +70,7 @@ export default function Banner2({ scrollRef }) {
                     </ul>
                 </div> */}
                 <div className="banner__shape-two">
-                    <img src="/assets/img/banner/h3_banner_shape01.png" alt="" className="heartbeat mt-14" />
+                    <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
                 </div>
             </section>
         </>

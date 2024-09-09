@@ -52,7 +52,7 @@ function DigitalServices() {
                                             <div className={`flex flex-col `}>
                                                 <div className={`flex ${isMobile ? 'flex-col justify-center' : "flex-row justify-between mt-6"} items-center`}>
                                                     <h2 className={` ${isMobile ? "text-center text-2xl" : "text-5xl"} `}>High-Impact <span className="text-pink-400"> <br />Digital Marketing Strategies</span> <br />That Deliver <br /><span className="text-blue-400">Sustainable Outcomes</span></h2>
-                                                    <img src="/assets/img/images/digital_image.png" className={`${isMobile ? '' : 'mr-16'} aspect-auto `} alt="" style={{ height: '320px', width: '320px' }} />
+                                                    <img src="/assets/img/images/digital_image.webp" className={`${isMobile ? '' : 'mr-16'} aspect-auto `} alt="" style={{ height: '320px', width: '320px' }} />
 
                                                 </div>
                                                 <p className={`mt-5 text-lg ${isMobile ? '' : 'text-justify'} `}>In today’s hyperconnected marketplace, your digital identity is not just important—it’s essential. To thrive, you need a robust, omni-channel brand presence that’s both distinctive and strategically executed within budget and timelines.<br /><br />
@@ -66,7 +66,7 @@ function DigitalServices() {
                                                 <div className="row gutter-24 align-items-center">
                                                     {/* <div className="col-44">
                                                         <div className="services__details-inner-img">
-                                                            <img src="/assets/img/services/services_details_inner01.jpg" alt="" />
+                                                            <img src="/assets/img/services/services_details_inner01.webp" alt="" />
                                                             <VideoPopup />
                                                         </div>
                                                     </div>
@@ -276,7 +276,7 @@ function DigitalServices() {
                                                         </div>
                                                     </div>
                                                     <div style={{ position: 'relative', height: isMobile ? '' : '350px' }} className="mt-24">
-                                                        {!isMobile ? (<img src="/assets/img/banner/cross.png" alt="" style={{
+                                                        {!isMobile ? (<img src="/assets/img/banner/cross.webp" alt="" style={{
                                                             position: 'absolute',
                                                             right: 0,
                                                             top: isMobile ? '200px' : '-170px',

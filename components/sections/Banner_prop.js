@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import Banner from '../../public/assets/img/banner/banner.png'
+import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
 
 export default function Banner_prop() {
@@ -35,7 +35,7 @@ export default function Banner_prop() {
     return (
         <>
             <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-full" : "h-full"}`} style={{
-                backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/Proptech.png"})`
+                backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/Proptech.webp"})`
             }}>
                 <div className="container">
                     <div className={`row`} style={space}>
@@ -64,7 +64,7 @@ export default function Banner_prop() {
                     </ul>
                 </div> */}
                 <div className="banner__shape-two">
-                    <img src="/assets/img/banner/h3_banner_shape01.png" alt="" className="heartbeat mt-14" />
+                    <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
                 </div>
             </section>
         </>

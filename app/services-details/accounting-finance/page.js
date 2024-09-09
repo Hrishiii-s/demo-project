@@ -56,7 +56,7 @@ function AccountingServices() {
                                                 <div className="row gutter-24 align-items-center">
                                                     {/* <div className="col-44">
                                                         <div className="services__details-inner-img">
-                                                            <img src="/assets/img/services/services_details_inner01.jpg" alt="" />
+                                                            <img src="/assets/img/services/services_details_inner01.webp" alt="" />
                                                             <VideoPopup />
                                                         </div>
                                                     </div>
@@ -75,7 +75,7 @@ function AccountingServices() {
                                                     </div> */}
                                                     <h3 className="mt-12 text-4xl font-bold text-center mb-16">Why Us?</h3>
                                                     <div className="flex justify-center items-center " style={{ maxWidth: '775px' }}>
-                                                        <img src="/assets/img/images/acc_values.png" className="aspect-auto h-auto w-full" alt="" style={{ marginLeft: isMobile ? "" : "450px" }} />
+                                                        <img src="/assets/img/images/acc_values.webp" className="aspect-auto h-auto w-full" alt="" style={{ marginLeft: isMobile ? "" : "450px" }} />
                                                     </div>
                                                     <div className="mt-16">
                                                         <h3 className="mt-12 text-4xl font-bold text-center mb-16">Our Services</h3>

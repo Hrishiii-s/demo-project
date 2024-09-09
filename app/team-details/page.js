@@ -13,7 +13,7 @@ export default function TeamDetails() {
                                 <div className="row align-items-center">
                                     <div className="col-36">
                                         <div className="team__details-img">
-                                            <img src="/assets/img/team/team_details_img.jpg" alt="" />
+                                            <img src="/assets/img/team/team_details_img.webp" alt="" />
                                         </div>
                                     </div>
                                     <div className="col-64">

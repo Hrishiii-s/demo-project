@@ -33,7 +33,7 @@ export default function Slider2() {
                 <div className="swiper-container slider_baner__active slider_baner_home6">
                     <Swiper {...swiperOptions} className="swiper-wrapper">
                         <SwiperSlide className="swiper-slide slider__single">
-                            <div className="slider__bg" data-background="/assets/img/home6/banner.png" />
+                            <div className="slider__bg" data-background="/assets/img/home6/banner.webp" />
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-7">
@@ -52,7 +52,7 @@ export default function Slider2() {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slider__single">
-                            <div className="slider__bg" data-background="/assets/img/home6/banner2.png" />
+                            <div className="slider__bg" data-background="/assets/img/home6/banner2.webp" />
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-7">
@@ -71,7 +71,7 @@ export default function Slider2() {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className="swiper-slide slider__single">
-                            <div className="slider__bg" data-background="/assets/img/home6/banner3.png" />
+                            <div className="slider__bg" data-background="/assets/img/home6/banner3.webp" />
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-7">

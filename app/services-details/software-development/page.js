@@ -52,7 +52,7 @@ function SoftwareServices() {
         <>
             <Layout headerStyle={3} footerStyle={3} Nothome={Nothome}>
                 <section className={`banner__area-two  banner__bg-two ${isMobile ? "object-right h-full" : "object-fill]"} w-full`} style={{
-                    backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/software_banner.png"})`, maxHeight: '600px'
+                    backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/software_banner.webp"})`, maxHeight: '600px'
                 }}>
                     <div className="container">
                         <div className={`row`} style={space}>
@@ -81,7 +81,7 @@ function SoftwareServices() {
                     </ul>
                 </div> */}
                     <div className="banner__shape-two">
-                        <img src="/assets/img/banner/h3_banner_shape01.png" alt="" className="heartbeat mt-14" />
+                        <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
                     </div>
                 </section>
                 <div className="" >
@@ -119,7 +119,7 @@ function SoftwareServices() {
                             <div className="relative">
                                 <p className="font-bold absolute text-right text-white" style={{ fontSize: '4rem', lineHeight: '4rem', left: '300px', top: '25px' }}>Core  <br /><span className="text-pink-600">Services</span></p>
                                 <p className="absolute text-lg text-white" style={{ right: '200px', top: '50px', width: '30rem' }}>We are dedicated to delivering cutting-edge solutions tailored to meet your specific needs. Our expertise spans a wide range of domains, ensuring that we can address diverse requirements and deliver exceptional results.</p>
-                                <img src="/assets/img/images/soft_core.png" alt="" className="" style={{ width: '840px', marginTop: '100px' }} />
+                                <img src="/assets/img/images/soft_core.webp" alt="" className="" style={{ width: '840px', marginTop: '100px' }} />
                                 <div className="soft__list-box text-lg absolute text-white" style={{ left: '500px', bottom: '0px' }}>
                                     <ul className="list-wrap">
                                         <li><i className="flaticon-arrow-button" />Flagship Product - BPO Acceptor</li>
@@ -209,7 +209,7 @@ function SoftwareServices() {
                                 <p className="text-white ml-4 mt-2" style={{ fontSize: '2.25rem', lineHeight: '2.75rem' }}>Innovation with purpose,<br /> values at the Core.</p>
                             </span>
                             <p className="text-white absolute" style={{ left: '60px', top: '150px', width: '37rem' }}>Our Guiding Principles serve as the compass that leads us to create exceptional solutions for our clients and deliver unparalleled value. With a relentless commitment to quality, collaboration, and customer satisfaction, we empower businesses to thrive in the digital landscape.</p>
-                            <img src="/assets/img/images/guiding_img.png" alt="" className="absolute" style={{ width: '500px', right: '0px', top: '20px' }} />
+                            <img src="/assets/img/images/guiding_img.webp" alt="" className="absolute" style={{ width: '500px', right: '0px', top: '20px' }} />
 
                             <div className="flex flex-row absolute" style={{ top: '275px', left: '60px' }}>
                                 <div className="flex flex-col">
@@ -306,8 +306,8 @@ function SoftwareServices() {
                                     <p className="font-bold text-white" style={{ fontSize: '5rem', lineHeight: '4.75rem' }}>Development</p>
                                     <p className="font-bold ml-12" style={{ color: '#0F1EAF', left: '50px', fontSize: '5rem', lineHeight: '4.75rem' }}>Approach</p>
                                 </div>
-                                <img src="/assets/img/images/soft_hand.png" alt="" className="absolute left-0" style={{ width: '700px' }} />
-                                <img src="/assets/img/images/soft_approach.png" alt="" className="absolute right-28 " style={{ width: '300px', top: '300px' }} />
+                                <img src="/assets/img/images/soft_hand.webp" alt="" className="absolute left-0" style={{ width: '700px' }} />
+                                <img src="/assets/img/images/soft_approach.webp" alt="" className="absolute right-28 " style={{ width: '300px', top: '300px' }} />
                                 <div className="flex flex-col absolute text-right justify-center items-end" style={{ right: '425px', top: '335px' }}>
                                     <p className="">Thorough Project Planning</p>
                                     <p className="" style={{ marginTop: '42px' }}>Scope and Goal Clarity</p>

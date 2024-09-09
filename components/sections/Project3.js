@@ -20,7 +20,7 @@ const swiperOptions = {
 export default function Project3() {
     return (
         <>
-            <section className="project__area-three project__bg-three" data-background="/assets/img/bg/h3_project_bg.jpg">
+            <section className="project__area-three project__bg-three" data-background="/assets/img/bg/h3_project_bg.webp">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xl-7 col-lg-8">
@@ -43,7 +43,7 @@ export default function Project3() {
                                                 <Link href="#" className="btn btn-two">See Details</Link>
                                             </div>
                                             <div className="project__thumb-three shine-animate">
-                                                <img src="/assets/img/project/h3_project_img01.jpg" alt="" />
+                                                <img src="/assets/img/project/h3_project_img01.webp" alt="" />
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -56,7 +56,7 @@ export default function Project3() {
                                                 <Link href="#" className="btn btn-two">See Details</Link>
                                             </div>
                                             <div className="project__thumb-three shine-animate">
-                                                <img src="/assets/img/project/h3_project_img01.jpg" alt="" />
+                                                <img src="/assets/img/project/h3_project_img01.webp" alt="" />
                                             </div>
                                         </div>
                                     </SwiperSlide>
@@ -70,8 +70,8 @@ export default function Project3() {
                     </div>
                 </div>
                 <div className="project__shape-wrap-three">
-                    <img src="/assets/img/project/h3_project_shape01.png" alt="" data-aos="fade-left" data-aos-delay={400} />
-                    <img src="/assets/img/project/h3_project_shape02.png" alt="" className="alltuchtopdown" />
+                    <img src="/assets/img/project/h3_project_shape01.webp" alt="" data-aos="fade-left" data-aos-delay={400} />
+                    <img src="/assets/img/project/h3_project_shape02.webp" alt="" className="alltuchtopdown" />
                 </div>
             </section>
         </>

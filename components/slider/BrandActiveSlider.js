@@ -33,67 +33,67 @@ export default function BrandActiveSlider() {
             <Swiper {...swiperOptions} >
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Papa John.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Papa John.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Claruz.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Claruz.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 {/* <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Ecesis.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Ecesis.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide> */}
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/BPO.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/BPO.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Cracs.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Cracs.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Cyqurex.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Cyqurex.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/EDST.png" className="w-full h-auto" alt="" />
+                        <img src="/assets/img/brand/EDST.webp" className="w-full h-auto" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Enchanteur.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Enchanteur.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Hera.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Hera.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/EDS.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/EDS.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Kimball.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Kimball.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/ONDC.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/ONDC.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Safely.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Safely.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -103,17 +103,17 @@ export default function BrandActiveSlider() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/TBDC.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/TBDC.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/Trek.png" className="w-full" alt="" />
+                        <img src="/assets/img/brand/Trek.webp" className="w-full" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="brand-item">
-                        <img src="/assets/img/brand/UAQ.png" className="w-full object-cover h-auto aspect-auto" alt="" />
+                        <img src="/assets/img/brand/UAQ.webp" className="w-full object-cover h-auto aspect-auto" alt="" />
                     </div>
                 </SwiperSlide>
             </Swiper>

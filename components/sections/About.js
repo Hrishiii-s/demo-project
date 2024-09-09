@@ -10,12 +10,12 @@ export default function About() {
                         <div className="row align-items-center justify-content-center">
                             <div className="col-lg-6 col-md-9 order-0 order-lg-2">
                                 <div className="about__img-wrap-seven">
-                                    <img src="/assets/img/home7/img-about.png" alt="" />
+                                    <img src="/assets/img/home7/img-about.webp" alt="" />
                                     <div className="about__award-box about__award-box-two2">
-                                        <img src="/assets/img/images/about_list_img04.png" alt="" />
+                                        <img src="/assets/img/images/about_list_img04.webp" alt="" />
                                     </div>
                                     <div className="shape">
-                                        <img src="/assets/img/images/h5_about_shape.png" alt="" className="ribbonRotate" />
+                                        <img src="/assets/img/images/h5_about_shape.webp" alt="" className="ribbonRotate" />
                                     </div>
                                 </div>
                             </div>

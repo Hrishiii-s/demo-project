@@ -18,7 +18,7 @@ export default function ServicesDetails() {
                                 <div className="row">
                                     <div className="col-70 order-0 order-lg-2">
                                         <div className="services__details-thumb">
-                                            <img src="/assets/img/services/services_details01.jpg" alt="" />
+                                            <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div>
                                         <div className="services__details-content">
                                             <h2 className="title">Modern Business Investment Planning</h2>
@@ -55,7 +55,7 @@ export default function ServicesDetails() {
                                                 <div className="row gutter-24 align-items-center">
                                                     <div className="col-44">
                                                         <div className="services__details-inner-img">
-                                                            <img src="/assets/img/services/services_details_inner01.jpg" alt="" />
+                                                            <img src="/assets/img/services/services_details_inner01.webp" alt="" />
                                                             <VideoPopup />
                                                         </div>
                                                     </div>
@@ -95,8 +95,8 @@ export default function ServicesDetails() {
                                                 <h4 className="sidebar__widget-title">Brochure</h4>
                                                 <div className="sidebar__brochure">
                                                     <p>when an unknown printer took ga lley offer typey anddey.</p>
-                                                    <Link href="/assets/img/services/services_details01.jpg" target="_blank" download><i className="far fa-file-pdf" />PDF. Download</Link>
-                                                    <Link href="/assets/img/services/services_details01.jpg" target="_blank" download><i className="far fa-file-alt" />DOC. Download</Link>
+                                                    <Link href="/assets/img/services/services_details01.webp" target="_blank" download><i className="far fa-file-pdf" />PDF. Download</Link>
+                                                    <Link href="/assets/img/services/services_details01.webp" target="_blank" download><i className="far fa-file-alt" />DOC. Download</Link>
                                                 </div>
                                             </div>
                                             <div className="sidebar__widget">
@@ -104,7 +104,7 @@ export default function ServicesDetails() {
                                                 <div className="sidebar__post-list">
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post01.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post01.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">deno weuine easiure and praising</Link></h5>
@@ -113,7 +113,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post02.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post02.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">know how to pursue pleasure rationally</Link></h5>
@@ -122,7 +122,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post03.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post03.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">there anyone who loves</Link></h5>
@@ -131,7 +131,7 @@ export default function ServicesDetails() {
                                                     </div>
                                                     <div className="sidebar__post-item">
                                                         <div className="sidebar__post-thumb">
-                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post04.jpg" alt="" /></Link>
+                                                            <Link href="/blog-details"><img src="/assets/img/blog/sb_post04.webp" alt="" /></Link>
                                                         </div>
                                                         <div className="sidebar__post-content">
                                                             <h5 className="title"><Link href="/blog-details">deno weuine easiure and praising</Link></h5>

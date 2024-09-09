@@ -37,7 +37,7 @@ export default function MainService() {
     return (
         <>
             <div>
-                <section className="services__area-six services__bg-six" data-background="/assets/img/bg/services_bg1.jpeg">
+                <section className="services__area-six services__bg-six" data-background="/assets/img/bg/services_bg1.webp">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
@@ -113,7 +113,7 @@ export default function MainService() {
                                         <li className="nav-item" onClick={() => handleOnClick(3)}>
                                             {isMobile ? (
                                                 <>
-                                                    <Link href="/services-details/automation">
+                                                    <Link href="/services-details/business-process-automation">
                                                         <button className={activeIndex == 3 ? "nav-link active" : "nav-link"} id="travel-tab" data-bs-toggle="tab" data-bs-target="#travel-tab-pane" type="button" role="tab" aria-controls="travel-tab-pane" aria-selected="false">Business Process Automation </button>
 
                                                     </Link>
@@ -246,7 +246,7 @@ export default function MainService() {
                                     <div className={activeIndex == 1 ? "tab-pane fade show active" : "tab-pane fade"} id="health-tab-pane" role="tabpanel" aria-labelledby="health-tab" tabIndex={0}>
                                             <div className="services__item-four  shine-animate-item">
                                                 <div className="services__thumb-four shine-animate">
-                                                    <img src="/assets/img/services/Proptech.jpeg" className="" alt="" />
+                                                    <img src="/assets/img/services/Proptech.webp" className="" alt="" />
                                                 </div>
                                                 <div className="services__content-four">
                                                     <h2 className="title"><Link href="#">PropTech</Link></h2>
@@ -299,7 +299,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Scalability</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/automation" className="btn">Read More</Link>
+                                                    <Link href="/services-details/business-process-automation" className="btn">Read More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -430,8 +430,8 @@ export default function MainService() {
                         </div>
                     </div>
                     {/* <div className="">
-                        <img src="/assets/img/project/h3_project_shape01.png" alt="" data-aos="fade-left" data-aos-delay={400} />
-                        <img src="/assets/img/project/h3_project_shape02.png" alt="" className="alltuchtopdown" />
+                        <img src="/assets/img/project/h3_project_shape01.webp" alt="" data-aos="fade-left" data-aos-delay={400} />
+                        <img src="/assets/img/project/h3_project_shape02.webp" alt="" className="alltuchtopdown" />
                     </div> */}
                     {/* <Request3/> */}
                 </section>

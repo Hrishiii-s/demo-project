@@ -9,12 +9,12 @@ export default function Choose3() {
                         <div className="col-lg-7 col-md-9 order-0 order-lg-2">
                             <div className="choose__img-wrap-three">
                                 <div className="main-img">
-                                    <img src="/assets/img/images/h3_choose_img01.jpg" alt="" />
+                                    <img src="/assets/img/images/h3_choose_img01.webp" alt="" />
                                     <Link href="#" className="play-btn"><i className="fas fa-play" /></Link>
                                 </div>
-                                <img src="/assets/img/images/h3_choose_img02.jpg" alt="" data-parallax="{&quot;y&quot; : 80 }" />
+                                <img src="/assets/img/images/h3_choose_img02.webp" alt="" data-parallax="{&quot;y&quot; : 80 }" />
                                 <div className="shape">
-                                    <img src="/assets/img/images/h3_choose_img_shape.jpg" alt="" className="alltuchtopdown" />
+                                    <img src="/assets/img/images/h3_choose_img_shape.webp" alt="" className="alltuchtopdown" />
                                 </div>
                             </div>
                         </div>
@@ -56,8 +56,8 @@ export default function Choose3() {
                     </div>
                 </div>
                 <div className="choose__shape-wrap-three">
-                    <img src="/assets/img/images/h3_choose_shape01.jpg" alt="" data-parallax="{&quot;x&quot; : 100 , &quot;y&quot; : -100 }" />
-                    <img src="/assets/img/images/h3_choose_shape02.jpg" alt="" />
+                    <img src="/assets/img/images/h3_choose_shape01.webp" alt="" data-parallax="{&quot;x&quot; : 100 , &quot;y&quot; : -100 }" />
+                    <img src="/assets/img/images/h3_choose_shape02.webp" alt="" />
                 </div>
             </section>
         </>

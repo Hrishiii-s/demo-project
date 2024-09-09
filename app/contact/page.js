@@ -124,36 +124,46 @@ export default function Contact() {
                                 <div className="col-lg-5">
                                     <div className="contact__content">
                                         <div className="section-title mb-35">
-                                            <h2 className="title">How can we help you?</h2>
+                                            <h2 className="title">Our Locations</h2>
                                         </div>
                                         <div className="contact__info">
                                             <ul className="list-wrap">
                                                 <li className="mt-6">
                                                     <div className="mb-[77px]">
-                                                       <img src="/assets/img/icon/india.png" alt="" className="w-12"/>
+                                                        <img src="/assets/img/icon/india.webp" alt="" className="w-12" />
                                                     </div>
                                                     <div className="content">
                                                         <h4 className="title">INDIA</h4>
                                                         <p>2nd Floor, Temple Square - PPD <br /> Ambalamukku Junction,<br /> Kowdiar P.0 Trivandrum. 695003 <br />Kerala, India</p>
+                                                        <div className="flex flex-row">
+                                                            <div className="text-[18px]">
+                                                                <i className="flaticon-phone-call mr-2" />
+                                                            </div>
+                                                            <div className="content">
+
+                                                                <Link href="">+91 9072310239</Link>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </li>
                                                 <li className="mt-6">
                                                     <div className="mb-[30px]">
-                                                    <img src="/assets/img/icon/usa.png" alt="" className="w-12"/>
+                                                        <img src="/assets/img/icon/usa.webp" alt="" className="w-12" />
                                                     </div>
                                                     <div className="content">
                                                         <h4 className="title">US</h4>
-                                                        <p>4830 West Kennedy Boulevard, Tampa<br/>
-                                                        Florida - 33609<br /> </p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="icon">
-                                                        <i className="flaticon-phone-call" />
-                                                    </div>
-                                                    <div className="content">
-                                                        <h4 className="title">Phone</h4>
-                                                        <Link href="tel:0123456789">+91 9072310239</Link>
+                                                        <p>4830 West Kennedy Boulevard, Tampa<br />
+                                                            Florida - 33609<br /> </p>
+                                                        <div className="flex flex-row">
+                                                            <div className="text-[18px]">
+                                                                <i className="flaticon-phone-call mr-2" />
+                                                            </div>
+                                                            <div className="content">
+
+                                                                <Link href="">+1 (813) 338 6870</Link>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -169,9 +179,9 @@ export default function Contact() {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
-                            
+
                         </div>
                     </section>
 

@@ -75,7 +75,7 @@ function AIServices() {
                                             <h3 className="text-3xl mb-3 mt-28 text-center">Harness the Potential of End-to-End AI/ML Solutions</h3>
                                             <p className="text-center">Leverage the transformative power of our AI capabilities and revolutionize your business with limitless possibilities.</p>
                                             <div className="flex justify-center items-center">
-                                                <img src="/assets/img/images/ai_solutions.png" className="" alt="" style={{ width: isMobile ? '100%' : '85%' }} />
+                                                <img src="/assets/img/images/ai_solutions.webp" className="" alt="" style={{ width: isMobile ? '100%' : '85%' }} />
                                             </div>
                                             <p className="text-2xl text-center font-bold mb-6">With optimized data strategies, empowered decision-making, and AI-driven innovations, we will help you achieve unparalleled success.</p>
                                         </div>
@@ -115,23 +115,23 @@ function AIServices() {
                                         <div className="w-full border" />
                                         <div className="flex flex-row flex-wrap justify-evenly">
                                             <div className="flex flex-col items-center">
-                                                <img src="/assets/img/icon/supervised.png" className="w-10 h-10 mt-4" alt="" />
+                                                <img src="/assets/img/icon/supervised.webp" className="w-10 h-10 mt-4" alt="" />
                                                 <p className="px-3 pb-1 mt-2 text-center w-32">Supervised / Unsupervised <br /> Learning</p>
                                             </div>
                                             <div className="flex flex-col items-center">
-                                                <img src="/assets/img/icon/clustering.png" className="w-10 h-10 mt-4" alt="" />
+                                                <img src="/assets/img/icon/clustering.webp" className="w-10 h-10 mt-4" alt="" />
                                                 <p className="px-3 pb-1 mt-2 text-center w-32">Clustering</p>
                                             </div>
                                             <div className="flex flex-col items-center">
-                                                <img src="/assets/img/icon/metric.png" className="w-10 h-10 mt-4" alt="" />
+                                                <img src="/assets/img/icon/metric.webp" className="w-10 h-10 mt-4" alt="" />
                                                 <p className="px-3 pb-1 mt-2 text-center w-32">Metric<br /> Learning</p>
                                             </div>
                                             <div className="flex flex-col items-center">
-                                                <img src="/assets/img/icon/few_shot.png" className="w-12 h-12 mt-3" alt="" />
+                                                <img src="/assets/img/icon/few_shot.webp" className="w-12 h-12 mt-3" alt="" />
                                                 <p className="px-3 pb-1 mt-2 text-center w-32">Fewshot<br />  Learning</p>
                                             </div>
                                             <div className="flex flex-col items-center ">
-                                                <img src="/assets/img/icon/yolo.png" className="w-12 h-12 mt-3" alt="" />
+                                                <img src="/assets/img/icon/yolo.webp" className="w-12 h-12 mt-3" alt="" />
                                                 <p className="px-3 pb-1 mt-2 text-center w-32">YOLO<br />  Learning</p>
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@ function AIServices() {
                                 </div>
                             </div>
                             <div className="flex justify-center items-center">
-                                <img src={`${isMobile ? '/assets/img/images/ai_pipeline_mobile.png' : '/assets/img/images/ai_pipeline.png'}`} className="" alt="" style={{ width: isMobile ? '90%' : '85%' }} />
+                                <img src={`${isMobile ? '/assets/img/images/ai_pipeline_mobile.webp' : '/assets/img/images/ai_pipeline.webp'}`} className="" alt="" style={{ width: isMobile ? '90%' : '85%' }} />
                             </div>
                         </div>
 

@@ -20,7 +20,7 @@ export default function ProjectDetails() {
                                             <div className="row">
                                                 <div className="col-70">
                                                     <div className="project__details-thumb">
-                                                        <img src="/assets/img/project/project_details01.jpg" alt="" />
+                                                        <img src="/assets/img/project/project_details01.webp" alt="" />
                                                     </div>
                                                 </div>
                                                 <div className="col-30">
@@ -63,7 +63,7 @@ export default function ProjectDetails() {
                                                     <p className="">Smart Value stands at the cutting edge of Valuation technology, offering unparalleled versatility and precision across industries. Central to Smart Value, innovation is its foundation on state-of-the-art machine learning algorithms, including Python - need to add technologies if any. This powerful tool is adept at analyzing available data with unmatched accuracy, thanks to extensive training on a diverse data set. The essence of Smart Value capability lies in its adaptability; with specific datasets for training, it can be tailored to meet any use case.
                                                     </p>
                                                     {/* <div>
-                                                        <img src="/assets/img/icon/few_shot.png" className="w-32 cursor-pointer" alt=""
+                                                        <img src="/assets/img/icon/few_shot.webp" className="w-32 cursor-pointer" alt=""
                                                             onMouseEnter={() => setShowModal(true)}
                                                             onMouseLeave={() => setShowModal(false)} />
                                                     </div>
@@ -101,7 +101,7 @@ export default function ProjectDetails() {
                                         </div>
                                         <p>Ever find yourself staring at your computer screen a good consulting slogan to come to mind? Oftentimes.</p>
                                         <div className="shape">
-                                            <img src="/assets/img/images/call_back_shape.png" alt="" data-aos="fade-right" data-aos-delay={400} />
+                                            <img src="/assets/img/images/call_back_shape.webp" alt="" data-aos="fade-right" data-aos-delay={400} />
                                         </div>
                                     </div>
                                 </div>

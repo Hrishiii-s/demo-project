@@ -19,7 +19,7 @@ export default function HeroSlider() {
         <>
             <Swiper {...swiperOptions}>
                 <SwiperSlide className="swiper-slide slider__single">
-                    <div className="slider__bg" data-background="/assets/img/slider/slider_bg01.jpg" />
+                    <div className="slider__bg" data-background="/assets/img/slider/slider_bg01.webp" />
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
@@ -33,12 +33,12 @@ export default function HeroSlider() {
                         </div>
                     </div>
                     <div className="slider__shape">
-                        <img src="/assets/img/slider/slider_shape01.png" alt="" />
-                        <img src="/assets/img/slider/slider_shape02.png" alt="" />
+                        <img src="/assets/img/slider/slider_shape01.webp" alt="" />
+                        <img src="/assets/img/slider/slider_shape02.webp" alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide slider__single">
-                    <div className="slider__bg" data-background="/assets/img/slider/slider_bg02.jpg" />
+                    <div className="slider__bg" data-background="/assets/img/slider/slider_bg02.webp" />
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
@@ -52,8 +52,8 @@ export default function HeroSlider() {
                         </div>
                     </div>
                     <div className="slider__shape">
-                        <img src="/assets/img/slider/slider_shape01.png" alt="" />
-                        <img src="/assets/img/slider/slider_shape02.png" alt="" />
+                        <img src="/assets/img/slider/slider_shape01.webp" alt="" />
+                        <img src="/assets/img/slider/slider_shape02.webp" alt="" />
                     </div>
                 </SwiperSlide>
             </Swiper>

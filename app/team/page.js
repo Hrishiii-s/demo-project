@@ -15,7 +15,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img01.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img01.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -29,7 +29,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img02.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img02.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -43,7 +43,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img03.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img03.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -57,7 +57,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img04.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img04.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -71,7 +71,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img05.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img05.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -85,7 +85,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img06.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img06.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -99,7 +99,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img07.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img07.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>
@@ -113,7 +113,7 @@ export default function Team() {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-8">
                                         <div className="team-item">
                                             <div className="team-thumb">
-                                                <img src="/assets/img/team/team_img08.jpg" alt="" />
+                                                <img src="/assets/img/team/team_img08.webp" alt="" />
                                                 <div className="team-social">
                                                     <SocialToggle/>
                                                 </div>

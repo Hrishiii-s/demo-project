@@ -33,75 +33,75 @@ function Breadcrumb({ breadcrumbTitle }) {
     const banner = [
         {
             id: "About Us",
-            backgroundImageUrl: "/assets/img/banner/about_banner.png",
-            backgroundMobile: "/assets/img/banner/about_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/about_banner.webp",
+            backgroundMobile: "/assets/img/banner/about_mobile.webp",
             style: ""
         },
         {
             id: "Real Estate Valuations",
-            backgroundImageUrl: "/assets/img/banner/real-estate-banner4.png",
-            backgroundMobile: "/assets/img/banner/real-estate_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/real-estate-banner4.webp",
+            backgroundMobile: "/assets/img/banner/real-estate_mobile.webp",
             style: "text-white multiple-shadows"
         },
         {
             id: "Talent Acquisition",
-            backgroundImageUrl: "/assets/img/banner/manpower_banner2.png",
-            backgroundMobile: "/assets/img/banner/manpower_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/manpower_banner2.webp",
+            backgroundMobile: "/assets/img/banner/manpower_mobile.webp",
             style: "text-white multiple-shadows",
             img_style: "max-h-96"
         },
         {
             id: "Accounting & Finance",
-            backgroundImageUrl: "/assets/img/banner/accounting_banner.jpeg",
-            backgroundMobile: "/assets/img/banner/accounting_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/accounting_banner.webp",
+            backgroundMobile: "/assets/img/banner/accounting_mobile.webp",
             style: "text-white multiple-shadows"
         },
         {
             id: "Let’s get in touch",
-            backgroundImageUrl: "/assets/img/banner/contact_banner.jpg",
-            backgroundMobile: "/assets/img/banner/contact_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/contact_banner.webp",
+            backgroundMobile: "/assets/img/banner/contact_mobile.webp",
             style: "text-black"
         },
         {
             id: "Digital Marketing",
-            backgroundImageUrl: "/assets/img/banner/digital_banner.png",
-            backgroundMobile: "/assets/img/banner/digital_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/digital_banner.webp",
+            backgroundMobile: "/assets/img/banner/digital_mobile.webp",
             style: "text-black"
         },
         {
             id: "Artificial Intelligence",
-            backgroundImageUrl: "/assets/img/banner/ai_banner.png",
-            backgroundMobile: "/assets/img/banner/ai_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/ai_banner.webp",
+            backgroundMobile: "/assets/img/banner/ai_mobile.webp",
             style: "text-white multiple-shadows"
         },
         {
             id: "Enterprise Software Solutions",
-            backgroundImageUrl: "/assets/img/banner/software_banner.png",
-            backgroundMobile: "/assets/img/banner/ai_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/software_banner.webp",
+            backgroundMobile: "/assets/img/banner/ai_mobile.webp",
             style: "text-sky-900"
         },
         {
             id: "Business Process Automation",
-            backgroundImageUrl: "/assets/img/banner/BPA_banner.png",
-            backgroundMobile: "/assets/img/banner/BPA_banner_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/BPA_banner.webp",
+            backgroundMobile: "/assets/img/banner/BPA_banner_mobile.webp",
             style: "text-white"
         },
         {
             id: "From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth",
-            backgroundImageUrl: "/assets/img/banner/case_study.png",
-            backgroundMobile: "/assets/img/banner/case_study_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/case_study.webp",
+            backgroundMobile: "/assets/img/banner/case_study_mobile.webp",
             style: "text-white"
         },
         {
             id: "Case Studies",
-            backgroundImageUrl: "/assets/img/banner/case_studies_banner.jpg",
-            backgroundMobile: "/assets/img/banner/case_studies_banner_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/case_studies_banner.webp",
+            backgroundMobile: "/assets/img/banner/case_studies_banner_mobile.webp",
             style: "text-white"
         }, 
         {
             id: "Schedule a Meeting",
-            backgroundImageUrl: "/assets/img/banner/schedule.png",
-            backgroundMobile: "/assets/img/banner/schedule_mobile.png",
+            backgroundImageUrl: "/assets/img/banner/schedule.webp",
+            backgroundMobile: "/assets/img/banner/schedule_mobile.webp",
             style: "text-black"
         },
 
@@ -120,7 +120,7 @@ function Breadcrumb({ breadcrumbTitle }) {
         <>
             <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
                 {console.log("mb", matchingBanner)}
-                <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.jpg"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? "h-full object-cover" : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px' }} />
+                <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? "h-full object-cover" : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px' }} />
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">

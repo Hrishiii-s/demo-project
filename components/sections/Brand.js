@@ -61,37 +61,37 @@ export default function Brand() {
                         <div className="swiper-wrapper">
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img01.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img01.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img02.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img02.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img03.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img03.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img04.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img04.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img05.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img05.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img06.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img06.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="brand-item">
-                                    <img src="/assets/img/brand/brand_img03.png" alt="" />
+                                    <img src="/assets/img/brand/brand_img03.webp" alt="" />
                                 </div>
                             </SwiperSlide>
                         </div>
