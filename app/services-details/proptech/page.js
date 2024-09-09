@@ -90,7 +90,7 @@ export default function Proptech() {
 
     if (!allLoaded) {
         return <div className='flex justify-center items-center'>
-<MoonLoader/>
+            <MoonLoader />
 
         </div>; // Or any other loading indicator
     }
@@ -158,8 +158,9 @@ export default function Proptech() {
 
 
                 </section>
-                <Counter3 />
-
+                <LazyLoad height={100} offset={250} once>
+                    <Counter3 />
+                </LazyLoad>
                 {/* Core Values */}
                 <section className="mt-12 mb-16">
                     {/* <h3 className="text-4xl font-bold text-center">Core Values</h3> */}
@@ -350,7 +351,7 @@ export default function Proptech() {
                                         <h1 className='title text-center text-2xl'>Proptech Startups</h1>
                                         <p className='text-center mt-4 text-black'>Have a groundbreaking idea that could revolutionize real estate? Let’s turn it into reality. Ecesis will help you build a cutting-edge MVP that will help you secure funding. We conduct in-depth workshops to understand your target audience, identify trends, oversee development, and provide ongoing support to ensure your solution’s financial and operational success.</p>
                                         <div className='flex justify-center items-center mt-[22px]'>
-                                        <Link href="/schedule" className="btn">Know More</Link>
+                                            <Link href="/schedule" className="btn">Know More</Link>
 
                                         </div>
                                     </div>
@@ -358,7 +359,7 @@ export default function Proptech() {
                                         <h1 className='title text-center text-2xl'>Established Proptechs Expanding Market Presence</h1>
                                         <p className='text-center mt-4 text-black'>Passionate about advancing real estate technology but need industry expertise or tech support? Ecesis is here to help. Whether you’re launching new software or enhancing existing solutions, we offer code audits, team augmentation, and full-cycle development to deliver custom real estate software that drives business growth.</p>
                                         <div className='flex justify-center items-center mt-[45px]'>
-                                        <Link href="/schedule" className="btn">Know More</Link>
+                                            <Link href="/schedule" className="btn">Know More</Link>
 
                                         </div>
                                     </div>
@@ -366,7 +367,7 @@ export default function Proptech() {
                                         <h1 className='title text-center text-2xl'>Venture Capital Firms Investing in Proptech</h1>
                                         <p className='text-center mt-4 text-black'>Ecesis partners with venture capital firms to ensure the long-term success of their proptech investments. From due diligence to technology implementation, we provide comprehensive support to assess MVPs, oversee development, and maintain the scalability and performance of your portfolio companies.</p>
                                         <div className='flex justify-center items-center mt-[45px]'>
-                                        <Link href="/schedule" className="btn">Know More</Link>
+                                            <Link href="/schedule" className="btn">Know More</Link>
 
                                         </div>
                                     </div>
