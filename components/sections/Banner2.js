@@ -4,8 +4,6 @@ import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
 import LazyLoad from 'react-lazyload';
 import Head from 'next/head';
-import Image from 'next/image';
-
 
 export default function Banner2({ scrollRef }) {
     const [isMobile, setIsMobile] = useState(null);
@@ -44,7 +42,7 @@ export default function Banner2({ scrollRef }) {
 
         <>
             <Head>
-                <Link rel="preload" href="/assets/img/banner/h3_banner_shape01.webp" as="image" />
+                <Link rel="preload" href="/assets/img/banner/h3_banner_shape01.webp" as="image"/>
 
             </Head>
             <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-screen" : "h-full"}`} style={{
@@ -78,15 +76,9 @@ export default function Banner2({ scrollRef }) {
                         <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
                     </ul>
                 </div> */}
-                <LazyLoad height={50} offset={150} once>
+                <LazyLoad height={50} offset={350} once>
                     <div className="banner__shape-two">
-                        <Image
-                            src="/assets/img/banner/h3_banner_shape01.webp"
-                            alt=""
-                            width={500}  // Adjust based on your layout needs
-                            height={300} // Adjust based on your layout needs
-                            className="heartbeat mt-14"
-                        />
+                        <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
                     </div>
                 </LazyLoad>
 
