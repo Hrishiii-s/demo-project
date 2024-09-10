@@ -16,9 +16,6 @@ import Head from "next/head"
 function Home() {
 
     const mainServiceRef = useRef(null); // Create a ref
-
-
-
     return (
         <>
         <Head>

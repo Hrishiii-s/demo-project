@@ -41,6 +41,7 @@
     "react-typed": "^2.0.12",
     "sass": "^1.69.5",
     "sharp": "^0.33.3",
+    "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.3",
     "wowjs": "^1.1.3"
