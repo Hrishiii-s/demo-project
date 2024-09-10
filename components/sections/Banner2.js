@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
+import LazyLoad from 'react-lazyload';
 
 export default function Banner2({ scrollRef }) {
     const [isMobile, setIsMobile] = useState(null);
@@ -69,9 +70,12 @@ export default function Banner2({ scrollRef }) {
                         <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
                     </ul>
                 </div> */}
+                <LazyLoad height={50} offset={150} once>
                 <div className="banner__shape-two">
                     <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
                 </div>
+                </LazyLoad>
+                
             </section>
         </>
     )
