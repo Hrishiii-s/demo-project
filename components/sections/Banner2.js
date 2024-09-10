@@ -4,6 +4,7 @@ import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
 import LazyLoad from 'react-lazyload';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Banner2({ scrollRef }) {
     const [isMobile, setIsMobile] = useState(null);

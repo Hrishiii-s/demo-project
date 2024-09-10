@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import Banner from '../../public/assets/img/banner/banner.webp'
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+
 
 export default function Banner_prop() {
     const [isMobile, setIsMobile] = useState(null);
