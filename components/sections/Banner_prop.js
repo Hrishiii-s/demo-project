@@ -65,16 +65,35 @@ export default function Banner_prop() {
                         <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
                     </ul>
                 </div> */}
-                <div className="banner__shape-two">
+                     {isMobile ? (
+                    <>
+                    <div className="banner__shape-two ">
                     <Image
                         src="/assets/img/banner/h3_banner_shape01.webp"
                         alt=""
-                        width={500} 
-                        height={300} 
-                        className="heartbeat mt-14"
-                        priority={true}  
+                        width={300}
+                        height={200}
+                        className="heartbeat mt-14 left-[12%] top-[7%]"
+                        priority={true}
                     />
                 </div>
+                </>
+                ) : (
+                <>
+                <div className="banner__shape-two ">
+                    <Image
+                        src="/assets/img/banner/h3_banner_shape01.webp"
+                        alt=""
+                        width={400}
+                        height={300}
+                        className="heartbeat mt-14 left-[5%] top-[12%]"
+                        priority={true}
+                    />
+                </div>
+                    </>
+                    
+                )}
+           
             </section>
         </>
     )

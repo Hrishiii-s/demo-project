@@ -105,16 +105,7 @@ export default function Banner2({ scrollRef }) {
                     </>
                     
                 )}
-                <div className="banner__shape-two">
-                    <Image
-                        src="/assets/img/banner/h3_banner_shape01.webp"
-                        alt=""
-                        width={300}
-                        height={200}
-                        className="heartbeat mt-14"
-                        priority={true}
-                    />
-                </div>
+           
 
             </section>
         </>
