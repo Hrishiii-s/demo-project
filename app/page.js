@@ -9,6 +9,7 @@ import Marquee2 from "@/components/sections/Marquee2"
 import withLoading from "./withLoading"
 import LazyLoad from "react-lazyload"
 import React, { useRef } from 'react';
+import Head from "next/head"
 
 
 
@@ -20,6 +21,12 @@ function Home() {
 
     return (
         <>
+        <Head>
+        <Head>
+            <title>ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company</title>
+            <meta name="description" content="We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise." />
+            </Head>
+        </Head>
 
             <Layout headerStyle={3} footerStyle={3}>
                 <Banner2 scrollRef={mainServiceRef} />

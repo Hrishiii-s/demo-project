@@ -10,6 +10,7 @@ import "/public/assets/css/aos.css"
 import "/public/assets/css/default.css"
 import "/public/assets/css/main.css"
 import { GoogleTagManager } from '@next/third-parties/google'
+import Head from 'next/head'
 
 
 const inter = Inter({

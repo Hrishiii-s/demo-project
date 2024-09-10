@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react';
 import VideoPopup from "@/components/elements/PopupVideo"
 import Modal from "../Modal"
 import LazyLoad from "react-lazyload"
+import Head from "next/head"
 
 export default function About() {
     let Nothome = true;
@@ -18,11 +19,11 @@ export default function About() {
             designation: 'CEO',
             description: (
                 <p className="text-sm">
-                   T.K. Velayudham is a visionary leader with over 35 years of expertise in creating and steering successful ventures across the globe. His career began at Keltron, where he was instrumental in the Metro Railway AFC project in Kolkata, a pioneering initiative in automated fare collection. He then led the medical equipment division at Terumo Penpol, establishing the company as a prominent player in healthcare.<br/><br/>
+                    T.K. Velayudham is a visionary leader with over 35 years of expertise in creating and steering successful ventures across the globe. His career began at Keltron, where he was instrumental in the Metro Railway AFC project in Kolkata, a pioneering initiative in automated fare collection. He then led the medical equipment division at Terumo Penpol, establishing the company as a prominent player in healthcare.<br /><br />
 
-He started his career leading the country's first Metro Railway fare collection and passenger control system. He was instrumental in establishing India's first Cable TV Network (Asianet) with PANASIA Ltd., Taiwan. He also set up and led Terumo PENPOL's Medical Equipment Division. Additionally, he promoted Wins Ltd, India, in collaboration with a Japanese semiconductor manufacturer.<br/><br/>
+                    He started his career leading the country's first Metro Railway fare collection and passenger control system. He was instrumental in establishing India's first Cable TV Network (Asianet) with PANASIA Ltd., Taiwan. He also set up and led Terumo PENPOL's Medical Equipment Division. Additionally, he promoted Wins Ltd, India, in collaboration with a Japanese semiconductor manufacturer.<br /><br />
 
-In 2010, he founded ECESIS, a venture that has since thrived under his leadership, becoming a leader in its field and reflecting his ongoing commitment to innovation and excellence.
+                    In 2010, he founded ECESIS, a venture that has since thrived under his leadership, becoming a leader in its field and reflecting his ongoing commitment to innovation and excellence.
                 </p>
             ),
             imageUrl: '/assets/img/team/TKV.webp',
@@ -159,6 +160,10 @@ In 2010, he founded ECESIS, a venture that has since thrived under his leadershi
 
     return (
         <>
+            <Head>
+                <title>About Us | Experts in AI, Digital Transformation, and PropTech</title>
+                <meta name="description" content="We help businesses evolve and thrive with AI-driven solutions and digital transformation. Explore how we create innovative and impactful solutions tailored to your digital growth." />
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="About Us" Nothome={Nothome}>
                 <div>
                     <section className="about__area-four">
