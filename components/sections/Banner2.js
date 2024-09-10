@@ -86,7 +86,6 @@ export default function Banner2({ scrollRef }) {
                             width={500}  // Adjust based on your layout needs
                             height={300} // Adjust based on your layout needs
                             className="heartbeat mt-14"
-                            priority  // Use if this is above the fold and critical
                         />
                     </div>
                 </LazyLoad>
