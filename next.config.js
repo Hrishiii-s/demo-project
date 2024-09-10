@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-test
+
 const nextConfig = {}
 
 module.exports = nextConfig
