@@ -32,13 +32,30 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+
+    useEffect(() => {
+        // Function to load GTM
+        const loadGTM = () => {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TBG2XGX4';
+            script.async = true;
+            document.body.appendChild(script);
+        };
+
+        // Load GTM after the window load event to ensure it doesn't block rendering
+        window.addEventListener('load', loadGTM);
+
+        return () => {
+            window.removeEventListener('load', loadGTM);
+        };
+    }, []);
     return (
         <>
             <Head>
             <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous"/>
             </Head>
             <html lang="en">
-                <GoogleTagManager gtmId="GTM-TBG2XGX4" />
+                {/* <GoogleTagManager gtmId="GTM-TBG2XGX4" /> */}
                 {console.log("GTM Working")}
                 <body className={`${inter.variable} ${outfit.variable}`}>
                     {children}</body>
