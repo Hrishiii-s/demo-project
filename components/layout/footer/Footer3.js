@@ -84,7 +84,7 @@ export default function Footer3() {
                                         <ul className={`list-wrap ${isMobile ? "flex justify-evenly" : "flex ml-auto"} justify-end`}>
                                             {/* <li className='mr-5'><Link href="#"><p className='normal-text font-bold'>Careers</p></Link></li> */}
                                             <li className='mr-5'><Link href="/about"><p className='normal-text font-bold'>About Us</p></Link></li>
-                                            <li className=''><Link href="/conatct"><p className='normal-text font-bold'>Contact Us</p></Link></li>
+                                            <li className=''><Link href="/contact"><p className='normal-text font-bold'>Contact Us</p></Link></li>
                                         </ul>
                                     </div>
                                 </div>
