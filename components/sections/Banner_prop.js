@@ -63,11 +63,16 @@ export default function Banner_prop() {
                         <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
                     </ul>
                 </div> */}
-                <LazyLoad height={50} offset={350} once>
                 <div className="banner__shape-two">
-                    <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
+                    <Image
+                        src="/assets/img/banner/h3_banner_shape01.webp"
+                        alt=""
+                        width={500} 
+                        height={300} 
+                        className="heartbeat mt-14"
+                        priority={true}  
+                    />
                 </div>
-                </LazyLoad>
             </section>
         </>
     )

@@ -42,7 +42,7 @@ export default function Banner2({ scrollRef }) {
 
         <>
             <Head>
-                <Link rel="preload" href="/assets/img/banner/h3_banner_shape01.webp" as="image"/>
+                <Link rel="preload" href="/assets/img/banner/h3_banner_shape01.webp" as="image" />
 
             </Head>
             <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-screen" : "h-full"}`} style={{
@@ -76,11 +76,16 @@ export default function Banner2({ scrollRef }) {
                         <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
                     </ul>
                 </div> */}
-                <LazyLoad height={50} offset={350} once>
-                    <div className="banner__shape-two">
-                        <img src="/assets/img/banner/h3_banner_shape01.webp" alt="" className="heartbeat mt-14" />
-                    </div>
-                </LazyLoad>
+                <div className="banner__shape-two">
+                    <Image
+                        src="/assets/img/banner/h3_banner_shape01.webp"
+                        alt=""
+                        width={500}
+                        height={300}
+                        className="heartbeat mt-14"
+                        priority={true}
+                    />
+                </div>
 
             </section>
         </>
