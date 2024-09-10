@@ -16,7 +16,7 @@ export default function sitemap() {
         url: 'https://www.ecesistech.com/services-details/proptech',
         lastModified: new Date(),
         changeFrequency: 'weekly',
-        priority: 0.5,
+        priority: 1,
       },
       {
         url: 'https://www.ecesistech.com/services-details/artificial-intelligence',
