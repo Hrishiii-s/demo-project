@@ -7,6 +7,7 @@ import LazyLoad from 'react-lazyload';
 import Callback2 from "@/components/sections/Callback2"
 import withLoading from "@/app/withLoading";
 import MoonLoader from "react-spinners/MoonLoader";
+import Head from "next/head";
 
 
 
@@ -34,12 +35,18 @@ function AIServices() {
     }, []);
 
     if (!allLoaded) {
-        return <div className="flex justify-center items-center"><MoonLoader/></div>; // Or any other loading indicator
+        return <div className="flex justify-center items-center"><MoonLoader /></div>; // Or any other loading indicator
     }
 
 
     return (
         <>
+            <Head>
+                <title>
+                    AI Solutions for Businesses | Driving Innovation with Artificial Intelligence Services
+                </title>
+                <meta name="description" content="Transform your business with our advanced AI solutions. We offer innovative services that integrate machine learning, automation, and predictive analytics to drive growth, optimize operations, and boost competitive advantage." />
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Artificial Intelligence" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">

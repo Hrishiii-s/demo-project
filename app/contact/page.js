@@ -5,6 +5,7 @@ import Maps from "./map"
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import Head from "next/head";
 
 export default function Contact() {
 
@@ -68,6 +69,13 @@ export default function Contact() {
 
     return (
         <>
+        <Head>
+        <title>
+        Contact Us | Get in Touch for Innovative Tech Solutions
+        </title>
+                <meta name="description" content="Reach out to us for expert advice on AI-driven technology, PropTech, and digital transformation services. Our team is ready to assist you with tailored solutions for your business needs." />
+   
+        </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Let’s get in touch" Nothome={Nothome}>
                 <div>
                     <section className="contact__area">

@@ -6,6 +6,7 @@ import Link from "next/link"
 import PricingTable from "@/components/elements/PricingTable"
 import React, { useEffect, useState } from 'react';
 import { MoonLoader } from "react-spinners"
+import Head from "next/head"
 
 
 
@@ -32,12 +33,19 @@ export default function ServicesDetails() {
 
     if (!allLoaded) {
         return <div>
-            <MoonLoader/>
+            <MoonLoader />
         </div>; // Or any other loading indicator
     }
 
     return (
         <>
+            <Head>
+                <title>
+                    Real Estate Valuation Services | Accurate and Efficient Property Valuations
+                </title>
+                <meta name="description" content="Our real estate valuation services offer accurate, technology-powered property assessments tailored to your business needs. Streamline your valuation process for faster, more reliable results." />
+
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Real Estate Valuations" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area mt-6">
@@ -49,7 +57,7 @@ export default function ServicesDetails() {
                                             <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div> */}
                                         <div className="services__details-content">
-                                            <h2 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `} >Transforming Real Estate Valuations<br/> with<span className="text-pink-400" > Premier BPO Services</span></h2>
+                                            <h2 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `} >Transforming Real Estate Valuations<br /> with<span className="text-pink-400" > Premier BPO Services</span></h2>
                                             <p>We specialize in Broker Price Opinion services that empower real estate professionals across the U.S. Started in 2010, ECESIS has established itself as a leader in the real estate valuation industry, known for our precision, reliability, and innovative solutions. For over a decade, we have provided US-based realtors, brokers, and real estate companies with precise valuations and Comparative Market Analysis (CMA). Our commitment to high-quality, value-driven deliverables ensures that you remain proactive, decisive, and adaptable as your business evolves and expands.</p>
                                             <h3 className="text-center text-3xl mt-5 ">Enhanced BPO Management with ECESIS</h3>
                                             <div className={`w-full border-2 bg-slate-100 rounded-3xl mt-12 ${isMobile ? "px-5" : "px-10"}  pt-7 pb-9 `} >
