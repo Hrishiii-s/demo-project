@@ -2866,14 +2866,12 @@ padding-left: 40px;
 .banner__shape-two img {
   position: absolute;
   z-index: -1;
-  left: 5%;
-  top: 12%;
+
   animation: heartbeat 4s infinite alternate;
 }
 @media (max-width: 1500px) {
   .banner__shape-two img {
-    left: 1%;
-    top: 4%;
+
   }
 }
 .banner-social {
