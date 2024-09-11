@@ -15079,3 +15079,12 @@ blockquote p {
 .gap-list li:hover {
   color: #f9ba00; /* Changes text color to blue on hover */
 }
+
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
