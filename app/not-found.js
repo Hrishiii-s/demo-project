@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function NotFound() {
     return (
         <>
-            <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Error page">
+            <Layout headerStyle={3} footerStyle={3}>
                 <section className="error-area">
                     <div className="container">
                         <div className="row">
@@ -26,7 +26,7 @@ export default function NotFound() {
                                     </div>
 
                                     <h2 className="title">OOPS! Nothing Was Found</h2>
-                                    <p>Oops! it could be you or us, there is no page here. It might have <br /> been moved or deleted.Back To Home</p>
+                                    <p>Oops! it could be you or us, there is no page here. It might have <br /> been moved or deleted.</p>
                                     <Link href="/" className="btn btn-two">Go Back To Home Page</Link>
                                 </div>
                             </div>

@@ -178,19 +178,6 @@ export default function About() {
                                         <img src="/assets/img/images/inner_about01.webp" alt="" />
                                         {/* <img src="/assets/img/images/inner_about02.webp" alt="" /> */}
                                         <img src="/assets/img/bg/bg_about_photos.webp" className={`${isMobile ? 'scale-150 mt-20' : ''} about_photo_bg`} style={{ marginLeft: isMobile ? '50px' : '' }} alt="" />
-
-                                        {/* <div className="about__award-box">
-                                            <div className="icon">
-                                                <i className="flaticon-trophy" />
-                                            </div>
-                                            <div className="content">
-                                                <h2 className="title">15+</h2>
-                                                <p>World Best Agency <br /> Award Got</p>
-                                            </div>
-                                        </div> */}
-                                        {/* <div className="shape">
-                                            <img src="/assets/img/images/inner_about_shape.webp" alt="" className="alltuchtopdown" />
-                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
