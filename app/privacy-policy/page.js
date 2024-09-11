@@ -2,9 +2,13 @@
 import VideoPopup from "@/components/elements/PopupVideo"
 import Layout from "@/components/layout/Layout"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
-import Head from "next/head"
 import Link from "next/link"
 import React, { useEffect } from "react"
+
+export const metadata = {
+    title: 'Privacy Policy | Your Data Privacy and Protection at ECESIS',
+    description: 'Learn about our data protection practices in our Privacy Policy. We take your privacy seriously and outline how we handle personal information with the utmost care and security.',
+  }
 
 
 
@@ -64,12 +68,7 @@ useEffect(() => {
 
     return (
         <>
-        <Head>
-        <title>
-        Privacy Policy | Your Data Privacy and Protection at ECESIS
-        </title>
-                <meta name="description" content="Learn about our data protection practices in our Privacy Policy. We take your privacy seriously and outline how we handle personal information with the utmost care and security." />
-        </Head>
+
             <Layout headerStyle={3} footerStyle={3} Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">

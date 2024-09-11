@@ -9,7 +9,12 @@ import LazyLoad from 'react-lazyload';
 import withLoading from "@/app/withLoading"
 import { TRUE } from "sass"
 import { MoonLoader } from "react-spinners"
-import Head from "next/head"
+
+
+export const metadata = {
+    title: 'Expert Digital Marketing Services | Boosting Online Presence and Engagement',
+    description: 'Our digital marketing services include SEO, social media, content creation, and more, designed to elevate your brand and increase visibility. Let us help you drive engagement and achieve measurable results.',
+  }
 
 
 function DigitalServices() {
@@ -42,13 +47,7 @@ function DigitalServices() {
 
     return (
         <>
-        <Head>
-        <title>
-        Expert Digital Marketing Services | Boosting Online Presence and Engagement
-        </title>
-                <meta name="description" content="Our digital marketing services include SEO, social media, content creation, and more, designed to elevate your brand and increase visibility. Let us help you drive engagement and achieve measurable results." />
-   
-        </Head>
+
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Digital Marketing" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">

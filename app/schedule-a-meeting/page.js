@@ -3,9 +3,14 @@ import withLoading from "@/app/withLoading"
 import VideoPopup from "@/components/elements/PopupVideo"
 import Layout from "@/components/layout/Layout"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
-import Head from "next/head"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react';
+
+export const metadata = {
+    title: 'Schedule a Consultation | Book a Meeting with Our Experts',
+    description: 'Book a meeting with our specialists to explore how our tailored solutions can transform your business. Schedule a consultation for AI, PropTech, and digital transformation services now.',
+  }
+
 
 function AccountingServices() {
 
@@ -37,13 +42,7 @@ function AccountingServices() {
 
     return (
         <>
-        <Head>
-        <title>
-        Schedule a Consultation | Book a Meeting with Our Experts
-        </title>
-                <meta name="description" content="Book a meeting with our specialists to explore how our tailored solutions can transform your business. Schedule a consultation for AI, PropTech, and digital transformation services now." />
-   
-        </Head>
+ 
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Schedule a Meeting" Nothome={Nothome}>
                 <div>
                     <section className={`services__details-area ${isMobile ? 'h-full' : ''}`}>

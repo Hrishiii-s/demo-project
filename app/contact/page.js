@@ -5,7 +5,12 @@ import Maps from "./map"
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import Head from "next/head";
+
+
+export const metadata = {
+    title: 'Contact Us | Get in Touch for Innovative Tech Solutions',
+    description: 'Reach out to us for expert advice on AI-driven technology, PropTech, and digital transformation services. Our team is ready to assist you with tailored solutions for your business needs.',
+  }
 
 export default function Contact() {
 
@@ -69,13 +74,7 @@ export default function Contact() {
 
     return (
         <>
-        <Head>
-        <title>
-        Contact Us | Get in Touch for Innovative Tech Solutions
-        </title>
-                <meta name="description" content="Reach out to us for expert advice on AI-driven technology, PropTech, and digital transformation services. Our team is ready to assist you with tailored solutions for your business needs." />
-   
-        </Head>
+
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Let’s get in touch" Nothome={Nothome}>
                 <div>
                     <section className="contact__area">
@@ -129,7 +128,7 @@ export default function Contact() {
                                         <p className="ajax-response mb-0" />
                                     </div>
                                 </div>
-                                <div className="col-lg-5">
+                                <div className="col-lg-5 mt-8 md:mt-0   ">
                                     <div className="contact__content">
                                         <div className="section-title mb-35">
                                             <h2 className="title">Our Locations</h2>

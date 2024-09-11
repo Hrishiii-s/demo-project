@@ -27,10 +27,9 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-    title: 'EcesisTech',
-}
-
-
+    title: 'ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company',
+    description: 'We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise.',
+  }
 export default function RootLayout({ children }) {
     return (
         <>

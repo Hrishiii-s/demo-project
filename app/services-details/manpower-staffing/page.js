@@ -7,7 +7,12 @@ import React, { useEffect, useState } from 'react';
 import RadialCardGrid from './radial';
 import withLoading from "@/app/withLoading"
 import { MoonLoader } from "react-spinners"
-import Head from "next/head"
+
+
+export const metadata = {
+    title: 'Industrial Staffing Services | Finding Skilled Talent for Manufacturing & Assembly Lines',
+    description: 'We specialize in recruiting skilled workers for assembly line and manufacturing roles. Our tailored staffing solutions ensure your production line operates efficiently with the right talent in place.',
+  }
 
 
 
@@ -92,13 +97,7 @@ function TalentServices() {
 
     return (
         <>
-        <Head>
-        <title>
-        Industrial Staffing Services | Finding Skilled Talent for Manufacturing & Assembly Lines
-        </title>
-                <meta name="description" content="We specialize in recruiting skilled workers for assembly line and manufacturing roles. Our tailored staffing solutions ensure your production line operates efficiently with the right talent in place." />
-   
-        </Head>
+
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Talent Acquisition" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area mt-6">

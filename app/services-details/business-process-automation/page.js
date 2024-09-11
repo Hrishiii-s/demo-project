@@ -4,12 +4,16 @@ import Layout from "@/components/layout/Layout"
 import AccordionItem from "@/components/sections/Accordian"
 import CallbackAuto from "@/components/sections/Callback_Auto"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
-import Head from "next/head"
 import Link from "next/link"
 import React, { useState, useEffect } from "react"
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { MoonLoader } from "react-spinners"
+
+export const metadata = {
+    title: 'Business Process Automation | Transforming Workflows with Automation',
+    description: 'Automate key business processes to enhance productivity, reduce costs, and improve workflow accuracy. Our solutions are designed to help your business operate smarter, faster, and more efficiently.',
+  }
 
 
 
@@ -130,12 +134,7 @@ export default function AutoServices() {
 
     return (
         <>
-        <Head>
-        <title>
-        Business Process Automation | Transforming Workflows with Automation
-        </title>
-                <meta name="description" content="Automate key business processes to enhance productivity, reduce costs, and improve workflow accuracy. Our solutions are designed to help your business operate smarter, faster, and more efficiently." />
-        </Head>
+  
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Business Process Automation" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">

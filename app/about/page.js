@@ -8,7 +8,11 @@ import React, { useState, useEffect } from 'react';
 import VideoPopup from "@/components/elements/PopupVideo"
 import Modal from "../Modal"
 import LazyLoad from "react-lazyload"
-import Head from "next/head"
+
+export const metadata = {
+    title: 'About Us | Experts in AI, Digital Transformation, and PropTech',
+    description: 'We help businesses evolve and thrive with AI-driven solutions and digital transformation. Explore how we create innovative and impactful solutions tailored to your digital growth.',
+  }
 
 export default function About() {
     let Nothome = true;
@@ -158,12 +162,11 @@ export default function About() {
         };
     }, []);
 
+
+
     return (
         <>
-            <Head>
-                <title>About Us | Experts in AI, Digital Transformation, and PropTech</title>
-                <meta name="description" content="We help businesses evolve and thrive with AI-driven solutions and digital transformation. Explore how we create innovative and impactful solutions tailored to your digital growth." />
-            </Head>
+         
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="About Us" Nothome={Nothome}>
                 <div>
                     <section className="about__area-four">

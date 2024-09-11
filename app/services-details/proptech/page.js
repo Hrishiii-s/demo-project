@@ -10,7 +10,11 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import default styles
 import { MoonLoader } from 'react-spinners';
 import LazyLoad from 'react-lazyload';
-import Head from 'next/head';
+
+export const metadata = {
+    title: 'PropTech Services | Transforming Real Estate with AI and Technology',
+    description: 'Transform your real estate business with our innovative PropTech services. Powered by AI and automation, our solutions optimize processes, enhance property insights, and enable digital transformation tailored to your business needs.',
+  }
 
 
 export default function Proptech() {
@@ -99,10 +103,6 @@ export default function Proptech() {
 
     return (
         <>
-            <Head>
-                <title>PropTech Services | Transforming Real Estate with AI and Technology</title>
-                <meta name="description" content="Transform your real estate business with our innovative PropTech services. Powered by AI and automation, our solutions optimize processes, enhance property insights, and enable digital transformation tailored to your business needs." />
-            </Head>
             <Layout headerStyle={3} footerStyle={3} Nothome={Nothome}>
                 <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-full" : "h-full="}`} style={{
                     backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/Proptech.webp"})`
