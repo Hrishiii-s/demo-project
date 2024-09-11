@@ -25,7 +25,7 @@ export default function About3() {
     return (
         <>
             <section className="about__area-three about__bg-two">
-                <div className="max-w-[1440px] mx-auto">
+                <div className="max-w-[1440px] mx-auto px-4">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-6 col-md-8">
                             <div className="about__img-wrap-three">
