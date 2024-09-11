@@ -3,14 +3,10 @@ import withLoading from "@/app/withLoading"
 import VideoPopup from "@/components/elements/PopupVideo"
 import Layout from "@/components/layout/Layout"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
+import Head from "next/head"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react';
 import MoonLoader from "react-spinners/MoonLoader";
-
-export const metadata = {
-    title: 'Accounting and Finance Services | Streamlined Financial Solutions for Your Business',
-    description: 'We provide a full range of accounting and finance services to ensure your business runs smoothly. From accurate bookkeeping and seamless payroll management to purchase order matching and accounts payable reconciliation, we handle it all with precision.',
-  }
 
 function AccountingServices() {
 
@@ -44,7 +40,13 @@ function AccountingServices() {
 
     return (
         <>
-
+        <Head>
+        <title>
+        Accounting and Finance Services | Streamlined Financial Solutions for Your Business
+        </title>
+                <meta name="description" content="We provide a full range of accounting and finance services to ensure your business runs smoothly. From accurate bookkeeping and seamless payroll management to purchase order matching and accounts payable reconciliation, we handle it all with precision." />
+   
+        </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Accounting & Finance" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">

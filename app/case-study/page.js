@@ -7,11 +7,8 @@ import Link from "next/link"
 import ReactPlayer from 'react-player';
 import LazyLoad from 'react-lazyload';
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 
-export const metadata = {
-    title: 'Case Studies | Success Stories in AI, PropTech, and Digital Transformation',
-    description: 'Explore our case studies to see how we’ve helped businesses transform with AI, PropTech, and digital solutions. Discover real-world examples of innovation, growth, and success across various industries.',
-  }
 
 
 function CaseStudy() {
@@ -51,7 +48,13 @@ function CaseStudy() {
 
     return (
         <>
-
+        <Head>
+        <title>
+        Case Studies | Success Stories in AI, PropTech, and Digital Transformation
+        </title>
+                <meta name="description" content="Explore our case studies to see how we’ve helped businesses transform with AI, PropTech, and digital solutions. Discover real-world examples of innovation, growth, and success across various industries." />
+   
+        </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Case Studies" Nothome={Nothome}>
                 <section className="services__details-area main-font">
                     <div className="container">

@@ -6,12 +6,8 @@ import Link from "next/link"
 import PricingTable from "@/components/elements/PricingTable"
 import React, { useEffect, useState } from 'react';
 import { MoonLoader } from "react-spinners"
+import Head from "next/head"
 
-
-export const metadata = {
-    title: 'Real Estate Valuation Services | Accurate and Efficient Property Valuations',
-    description: 'Our real estate valuation services offer accurate, technology-powered property assessments tailored to your business needs. Streamline your valuation process for faster, more reliable results.',
-  }
 
 
 export default function ServicesDetails() {
@@ -43,7 +39,13 @@ export default function ServicesDetails() {
 
     return (
         <>
+            <Head>
+                <title>
+                    Real Estate Valuation Services | Accurate and Efficient Property Valuations
+                </title>
+                <meta name="description" content="Our real estate valuation services offer accurate, technology-powered property assessments tailored to your business needs. Streamline your valuation process for faster, more reliable results." />
 
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Real Estate Valuations" Nothome={Nothome}>
                 <div>
                     <section className="services__details-area mt-6">
