@@ -38,7 +38,6 @@ export default function RootLayout({ children }) {
             </Head>
             <html lang="en">
                 <GoogleTagManager gtmId="GTM-TBG2XGX4" />
-                {console.log("GTM Working")}
                 <body className={`${inter.variable} ${outfit.variable}`}>
                     {children}</body>
             </html>

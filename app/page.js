@@ -43,12 +43,11 @@ function Home() {
 
     return (
         <>
-        <Head>
+ 
         <Head>
             <title>ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company</title>
             <meta name="description" content="We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise." />
             </Head>
-        </Head>
 
             <Layout headerStyle={3} footerStyle={3}>
                 <Banner2 scrollRef={mainServiceRef} />
