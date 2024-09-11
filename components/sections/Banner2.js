@@ -68,7 +68,7 @@ export default function Banner2({ scrollRef }) {
                             </div>
                             {isMobile && (<>
                                 <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-                                    <video autoPlay loop muted className="w-full h-full object-cover">
+                                    <video autoPlay loop muted playsInline className="w-full h-full object-cover pointer-events-none">
                                         <source src="/assets/videos/home_mobile.mp4" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
