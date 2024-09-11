@@ -38,7 +38,7 @@ export default function MainService() {
         <>
             <div>
                 <section className="services__area-six services__bg-six" data-background="/assets/img/bg/services_bg1.webp">
-                    <div className="container">
+                    <div className="max-w-[1440px] mx-auto">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="section-title white-title mb-10">
@@ -259,7 +259,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" /> Comprehensive PropTech Solutions </li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/proptech" className="btn">Read More</Link>
+                                                    <Link href="/services-details/proptech" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -278,7 +278,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" /> Solve complex challenges and drive innovation </li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/artificial-intelligence" className="btn">Read More</Link>
+                                                    <Link href="/services-details/artificial-intelligence" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,7 +299,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Scalability</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/business-process-automation" className="btn">Read More</Link>
+                                                    <Link href="/services-details/business-process-automation" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -318,7 +318,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Dedicated Servers</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/cloud-infrastructure" className="btn">Read More</Link>
+                                                    <Link href="/services-details/cloud-infrastructure" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div> */}
@@ -337,7 +337,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Comprehensive Support</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/software-development" className="btn">Read More</Link>
+                                                    <Link href="/services-details/software-development" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -357,7 +357,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />3X Revenue Growth For Clients</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/real-estate-valuation" className="btn">Read More</Link>
+                                                    <Link href="/services-details/real-estate-valuation" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -379,7 +379,7 @@ export default function MainService() {
 
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/accounting-finance" className="btn">Read More</Link>
+                                                    <Link href="/services-details/accounting-finance" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -398,7 +398,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Proven Expertise</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/manpower-staffing" className="btn">Read More</Link>
+                                                    <Link href="/services-details/manpower-staffing" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -420,7 +420,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />100% Secure</li>
                                                         </ul>
                                                     </div> */}
-                                                    <Link href="/services-details/digital-marketing" className="btn">Read More</Link>
+                                                    <Link href="/services-details/digital-marketing" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>

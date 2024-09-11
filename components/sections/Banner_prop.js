@@ -67,7 +67,7 @@ export default function Banner_prop() {
                 </div> */}
                      {isMobile ? (
                     <>
-                    {/* <div className="banner__shape-two ">
+                    <div className="banner__shape-two ">
                     <Image
                         src="/assets/img/banner/h3_banner_shape01.webp"
                         alt=""
@@ -76,7 +76,7 @@ export default function Banner_prop() {
                         className="heartbeat mt-14 left-[12%] top-[7%]"
                         priority={true}
                     />
-                </div> */}
+                </div>
                 </>
                 ) : (
                 <>
