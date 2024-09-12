@@ -57,7 +57,7 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
                                             <Link href="/">
-                                                <img src="/assets/img/logo/Logo.webp" alt="Logo" />
+                                                <img src="/assets/img/logo/Logo.webp" alt="Logo" className="" />
                                                 </Link>
                                         </div>
                                         <div className="tgmobile__menu-outer">

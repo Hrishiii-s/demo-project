@@ -12,7 +12,7 @@ export default function Counter3() {
                                     <i className="flaticon-time" />
                                 </div>
                                 <div className="content">
-                                    <h2 className="count"><CounterUp count={14} />+</h2>
+                                    <h2 className="count">14+</h2>
                                     <p>Years of Service Exellence</p>
                                 </div>
                             </div>
@@ -23,7 +23,7 @@ export default function Counter3() {
                                     <i className="flaticon-handshake"></i>
                                 </div>
                                 <div className="content">
-                                    <h2 className="count"><CounterUp count={150} />+</h2>
+                                    <h2 className="count">150+</h2>
                                     <p>Satisfied Customers</p>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@ export default function Counter3() {
                                     <i className="flaticon-trophy" />
                                 </div>
                                 <div className="content">
-                                    <h2 className="count"><CounterUp count={50} />+</h2>
+                                    <h2 className="count">50+</h2>
                                     <p>Successfully Completed Projects</p>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ export default function Counter3() {
                                     <i className="flaticon-happy" />
                                 </div>
                                 <div className="content">
-                                    <h2 className="count"><CounterUp count={100} />%</h2>
+                                    <h2 className="count">100%</h2>
                                     <p>Client Satisfaction</p>
                                 </div>
                             </div>
