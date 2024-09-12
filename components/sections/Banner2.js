@@ -47,7 +47,7 @@ export default function Banner2({ scrollRef }) {
                 <Link rel="preload" href="/assets/img/banner/h3_banner_shape01.webp" as="image" />
 
             </Head>
-            <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-screen" : "h-full"}`} style={{
+            <section className={`banner__area-two  banner__bg-two object-cover ${isMobile ? "object-right h-screen" : "h-screen"}`} style={{
                 backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/banner.webp"})`
             }}>
 
