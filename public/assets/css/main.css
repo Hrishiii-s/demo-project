@@ -641,7 +641,6 @@ padding-left: 40px;
 
 .border-btn {
   border: 1px solid var(--tg-theme-secondary);
-  background: transparent;
   color: var(--tg-theme-secondary);
   padding: 17px 24px;
 }
@@ -15081,10 +15080,8 @@ blockquote p {
 }
 
 
-video::-webkit-media-controls {
-  display: none !important;
-}
 
-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
 }
