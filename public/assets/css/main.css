@@ -641,14 +641,16 @@ padding-left: 40px;
 
 .border-btn {
   border: 1px solid var(--tg-theme-secondary);
-  color: var(--tg-theme-secondary);
+  background: var(--tg-theme-secondary);
+  color: white; 
   padding: 17px 24px;
 }
 .border-btn::before {
   display: none;
 }
 .border-btn:hover {
-  background: var(--tg-theme-secondary);
+  background: var(--tg-theme-primary);
+  color: var(--tg-theme-secondary);
 }
 
 /*=============================
