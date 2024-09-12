@@ -164,7 +164,7 @@ export default function Proptech() {
 
 
                 </section>
-                <LazyLoad height={100} offset={250} once>
+                <LazyLoad height={100} offset={100} once>
                     <Counter3 />
                 </LazyLoad>
                 {/* Core Values */}

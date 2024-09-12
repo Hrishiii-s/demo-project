@@ -53,7 +53,7 @@ function Home() {
                 <Banner2 scrollRef={mainServiceRef} />
                 <Marquee2 />
                 <About3 />
-                <LazyLoad height={100} offset={250} once>
+                <LazyLoad height={100} offset={100} once>
                     <Counter3 />
                 </LazyLoad>
                 <div ref={mainServiceRef}><MainService /></div>

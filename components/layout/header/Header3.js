@@ -31,7 +31,7 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                 <div className="tgmenu__wrap">
                                     <nav className="tgmenu__nav">
                                         <div className="logo">
-                                            <Link href="/"><img src="/assets/img/logo/Logo.webp" alt="Logo" className="h-14 ml-3" /></Link>
+                                            <Link href="/"><img src="/assets/img/logo/Logo.webp" alt="Logo" className="h-12 ml-3" /></Link>
                                         </div>
                                         <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex mr-5">
                                             <Menu />
@@ -57,7 +57,8 @@ export default function Header3({ Nothome, scroll, isMobileMenu, handleMobileMen
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="fas fa-times" /></div>
                                         <div className="nav-logo">
                                             <Link href="/">
-                                                <img src="/assets/img/logo/Logo.webp" alt="Logo" /></Link>
+                                                <img src="/assets/img/logo/Logo.webp" alt="Logo" />
+                                                </Link>
                                         </div>
                                         <div className="tgmobile__menu-outer">
                                             <MobileMenu handleMobileMenu={handleMobileMenu} />
