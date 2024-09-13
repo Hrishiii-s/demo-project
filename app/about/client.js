@@ -183,7 +183,7 @@ export default function About() {
                                 <div className="col-lg-6">
                                     <div className="about__content-four">
                                         <div className="section-title mb-30">
-                                            <h2 className="title">Pioneering Business Solutions For Tomorrow’s Markets</h2>
+                                            <h1 className="title">Pioneering Business Solutions For Tomorrow’s Markets</h1>
                                         </div>
                                         <div className="about__content-inner-three mt-2">
                                             <div className="about__list-box">

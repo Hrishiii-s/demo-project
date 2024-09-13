@@ -111,7 +111,7 @@ export default function Proptech() {
                         <div className={`row`} style={space}>
                             <div className={`col-lg-8 ${isMobile ? "mt-5" : ""}`}>
                                 <div className={`banner__content-two ${isMobile ? "mt-12" : "mb-24"} `}>
-                                    <h2 className={`font-bold mb-6`} data-aos="fade-up" data-aos-delay={100} style={hstyle}><span className='text-pink-500'> AI </span> & <span className='text-blue-400'> PropTech</span> Solutions For<br /> <span className='text-ly'> Real Estate</span> Industry </h2>
+                                    <h1 className={`font-bold mb-6`} data-aos="fade-up" data-aos-delay={100} style={hstyle}><span className='text-pink-500'> AI </span> & <span className='text-blue-400'> PropTech</span> Solutions For<br /> <span className='text-ly'> Real Estate</span> Industry </h1>
                                     <h4 className={`font-medium mb-6 text-xl`} data-aos="fade-up" data-aos-delay={100}>Empowering Real Estate with 14+ Years of Technological Excellence</h4>
 
                                     {/* {isMobile ?
@@ -120,6 +120,15 @@ export default function Proptech() {
                                     <Link href="#" className="btn border-btn mt-10" data-aos="fade-up" data-aos-delay={600}>Get Started</Link>
                                 } */}
                                 </div>
+                                {isMobile && (<>
+                                <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+                                    <video autoPlay loop muted playsInline className="w-full h-full object-cover pointer-events-none">
+                                        <source src="/assets/videos/home_mobile.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                            </>)}
                             </div>
                         </div>
                     </div>
@@ -150,7 +159,7 @@ export default function Proptech() {
                                 With our expertise in AI, custom software development, and web design, we deliver tailored solutions that address your unique challenges.
                             </p>
 
-                            <Link href="/schedule-a-meeting" className={`btn text-lg ${isMobile ? 'w-full' : 'w-fit'} `}>Contact us for a free consultation</Link>
+                            <Link href="/schedule-a-meeting" className={`btn text-lg justify-center ${isMobile ? 'w-full' : 'w-fit'} `}>Contact us for a free consultation</Link>
 
 
 

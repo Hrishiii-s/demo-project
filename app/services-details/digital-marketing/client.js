@@ -59,7 +59,7 @@ function DigitalServices() {
                                         <div className="services__details-content">
                                             <div className={`flex flex-col `}>
                                                 <div className={`flex ${isMobile ? 'flex-col justify-center' : "flex-row justify-between mt-6"} items-center`}>
-                                                    <h2 className={` ${isMobile ? "text-center text-2xl" : "text-5xl"} `}>High-Impact <span className="text-pink-400"> <br />Digital Marketing Strategies</span> <br />That Deliver <br /><span className="text-blue-400">Sustainable Outcomes</span></h2>
+                                                    <h1 className={` ${isMobile ? "text-center text-2xl" : "text-5xl"} `}>High-Impact <span className="text-pink-400"> <br />Digital Marketing Strategies</span> <br />That Deliver <br /><span className="text-blue-400">Sustainable Outcomes</span></h1>
                                                     <img src="/assets/img/images/digital_image.webp" className={`${isMobile ? '' : 'mr-16'} aspect-auto `} alt="" style={{ height: '320px', width: '320px' }} />
 
                                                 </div>

@@ -46,12 +46,17 @@ export default function Banner_prop() {
                                 <h2 className={`font-bold mb-6`}  data-aos="fade-up" data-aos-delay={100} style={hstyle}><span className='text-pink-500'> AI </span> & <span className='text-blue-400'> PropTech</span> Solutions For<br/> <span className='text-ly'> Real Estate</span> Industry </h2>
                                 <h4 className={`font-medium mb-6 text-xl`} data-aos="fade-up" data-aos-delay={100}>Empowering Real Estate with 14+ Years of Technological Excellence</h4>
                               
-                                {/* {isMobile ?
-                                    <Link href="#" className="btn border-btn mt-40" data-aos="fade-up" data-aos-delay={600}>Get Started</Link>
-                                    :
-                                    <Link href="#" className="btn border-btn mt-10" data-aos="fade-up" data-aos-delay={600}>Get Started</Link>
-                                } */}
+                              
                             </div>
+                            {isMobile && (<>
+                                <div className="absolute top-0 left-0 w-full h-full">
+                                    <video autoPlay loop muted playsInline className="w-full h-full object-cover pointer-events-none">
+                                        <source src="/assets/videos/home_mobile.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                            </>)}
                         </div>
                     </div>
                 </div>

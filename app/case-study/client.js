@@ -68,7 +68,7 @@ function CaseStudy() {
                                         </div>
                                         {isMobile ? null : (
                                             <div className="content-center ml-4 p-2">
-                                                <h2 className="md:text-3xl text-base">From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth</h2>
+                                                <h1 className="md:text-3xl text-base">From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth</h1>
                                             </div>
 
                                         )}

@@ -238,8 +238,8 @@ function CaseStudy() {
                                 <div className="row align-items-center">
                                     <div className="call-back-content flex flex-row justify-center items-center text-left" >
                                         <div className="section-title white-title tg-heading-subheading animation-style3">
-                                            <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Business Consultant</span>
-                                            </h2>
+                                            <h1 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Business Consultant</span>
+                                            </h1>
 
                                             <p className="text-white  text-xl mt-3">Get started by talking to our experts about how to enable business insights at scale with the right data foundation, modernization and platform management.</p>
                                             <Link href="/schedule-a-meeting" className="btn mt-5">BOOK A CONSULTATION</Link>

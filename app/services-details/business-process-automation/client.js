@@ -149,7 +149,7 @@ export default function AutoServices() {
                                                     <>
                                                         <div className="flex flex-col md:flex-row justify-center items-center mt-5">
                                                             <div className={`w-full`}>
-                                                                <h2 className="title text-3xl text-center">Business-specific RPA services</h2>
+                                                                <h1 className="title text-3xl text-center">Business-specific RPA services</h1>
                                                                 <img src="/assets/img/images/bpa_main.gif" alt="" className="w-[300px] mx-auto -mt-5" />
                                                                 <p className="mt-3 text-center">Increase operational efficiency, reduce labor costs, and streamline your processes by automating repetitive and large-scale tasks with our advanced workflow automation services.
                                                                     Our bots will help improve productivity by preventing delays and removing workflow bottlenecks.
@@ -160,7 +160,7 @@ export default function AutoServices() {
                                                     </>
                                                 ) : (<>
                                                     <div className="w-[550px] justify-center ">
-                                                        <h2 className="title text-3xl">Business-specific RPA services</h2>
+                                                        <h1 className="title text-3xl">Business-specific RPA services</h1>
                                                         <p className="mt-3">Increase operational efficiency, reduce labor costs, and streamline your processes by automating repetitive and large-scale tasks with our advanced workflow automation services.
                                                             Our bots will help improve productivity by preventing delays and removing workflow bottlenecks.
                                                         </p>

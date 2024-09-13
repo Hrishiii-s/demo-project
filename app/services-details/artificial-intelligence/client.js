@@ -57,7 +57,7 @@ function AIServices() {
                                         <div className="services__details-content">
                                             <div className={`${isMobile ? 'flex-col justify-center' : 'flex-row justify-between'} flex items-center`}>
                                                 <div className={`${isMobile ? 'justify-center items-center' : ''}`}>
-                                                    <h2 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `}><span className="text-pink-400"> <br />AI </span>Solutions Powered <br />By <span className="text-blue-400">Human </span>Expertise</h2>
+                                                    <h1 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `}><span className="text-pink-400"> <br />AI </span>Solutions Powered <br />By <span className="text-blue-400">Human </span>Expertise</h1>
                                                     <h4 className={` ${isMobile ? 'text-base text-center' : 'text-2xl'}  font-normal`}>Build what matters - Your challenges. Our solutions.</h4>
                                                 </div>
                                                 <div className={`${isMobile ? '' : 'mr-16'}`}>
