@@ -43,7 +43,7 @@ export default function MainService() {
                             <div className="col-lg-6">
                                 <div className="section-title white-title mb-10">
                                     {/* <span className="sub-title">WHAT WE OFFER</span> */}
-                                    <h2 className={`text-lblue text-5xl ${isMobile ? "text-center" : "text-left"}`}>Our Services</h2>
+                                    <h1 className={`text-lblue text-5xl ${isMobile ? "text-center" : "text-left"}`}>Our Services</h1>
                                 </div>
                             </div>
 

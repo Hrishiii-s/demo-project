@@ -41,7 +41,7 @@ export default function About3() {
                             <div className="about__content-three">
                                 <div className="section-title mb-25 tg-heading-subheading animation-style3">
                                     <span className="sub-title">About Our Company</span>
-                                    <h2 className="title tg-element-title">Digital Transformation for Business Growth</h2>
+                                    <h1 className="title tg-element-title">Digital Transformation for Business Growth</h1>
                                 </div>
                                 <p className='text-lb mt-2'>We offer cutting-edge solutions designed to optimize operations, enhance decision-making, and drive growth. With our expertise in advanced technologies and deep industry knowledge, we create solutions that are uniquely suited to your goals.</p>
                                 <div className="about__content-inner about__content-inner-two">
