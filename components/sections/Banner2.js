@@ -56,7 +56,7 @@ export default function Banner2({ scrollRef }) {
                         <div className={`col-lg-8 ${isMobile ? "mt-5" : ""}`}>
                             <div className="banner__content-two mb-24 z-0">
                                 <h1 className={`font-bold mb-6`} data-aos="fade-up" data-aos-delay={100} style={hstyle}>Empowering Global Innovation</h1>
-                                <h3 className={`text-black col-lg-10`} data-aos="fade-up" data-aos-delay={200} style={tstyle}>Your Partner in <span className="text-pink-400">Technology Transformation </span> and Sustainable <span className='text-blue-400'>Growth</span></h3>
+                                <h2 className={`text-black col-lg-10`} data-aos="fade-up" data-aos-delay={200} style={tstyle}>Your Partner in <span className="text-pink-400">Technology Transformation </span> and Sustainable <span className='text-blue-400'>Growth</span></h2>
                                 <div onClick={executeScroll}>
                                     <Link href="#" className="btn border-btn mt-3 bg-[#00235f]" data-aos="fade-up" data-aos-delay={200}>Get Started</Link>
                                 </div>

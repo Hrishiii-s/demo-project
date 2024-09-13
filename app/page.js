@@ -50,9 +50,13 @@ function Home() {
             </Head>
 
             <Layout headerStyle={3} footerStyle={3}>
+            <h1 className="sr-only">ECESIS | Leading AI and PropTech Solutions</h1>
+
                 <Banner2 scrollRef={mainServiceRef} />
                 <Marquee2 />
                 <About3 />
+                <h2 className="sr-only">Explore Our Innovative Digital Solutions</h2>
+
                 <LazyLoad height={100} offset={100} once>
                     <Counter3 />
                 </LazyLoad>

@@ -76,7 +76,7 @@ useEffect(() => {
                         <div className="container mt-[40px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h1 className="text-[60px] font-thin leading-10 text-black"><span className="font-bold text-[#ffcf29]">Privacy</span><span className=""> & </span><span className="font-bold text-lb">Cookie</span> Policy</h1>
-                                <p className="justify-center items-center text-left mt-12">At ECESIS, we are committed to protecting and respecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
+                                <h2 className="justify-center items-center text-left mt-12">At ECESIS, we are committed to protecting and respecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</h2>
                             </div>
                             <div className="h-[1px] rounded-xl bg-slate-300"/>
 
