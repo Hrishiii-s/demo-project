@@ -39,11 +39,11 @@ export default function Menu() {
                 <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
                     <Link href="#">Services</Link>
                     
-                        <ul className="sub-menu">
+                        <ul className="sub-menu w-[230px]">
                             <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
                                 <Link href="#" onMouseEnter={() => handleMouseEnter(2)}>Digital Solutions</Link>
                                 {hoverIndex === 2 && (
-                                    <ul className="sub-menu">
+                                    <ul className="sub-menu w-[230px]">
                                         <li><Link href="/services-details/proptech">PropTech</Link></li>
                                         <li><Link href="/services-details/artificial-intelligence">Artificial Intelligence</Link></li>
                                         <li><Link href="/services-details/business-process-automation">Business Process Automation</Link></li>
@@ -56,7 +56,7 @@ export default function Menu() {
                             <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
                                 <Link href="#" onMouseEnter={() => handleMouseEnter(3)}>Business Consulting</Link>
                                 {hoverIndex === 3 && (
-                                    <ul className="sub-menu">
+                                    <ul className="sub-menu w-[230px]">
                                         <li><Link href="/services-details/real-estate-valuation">Real Estate Valuation</Link></li>
                                         <li><Link href="/services-details/accounting-finance">Accounting & Finance</Link></li>
                                         <li><Link href="/services-details/manpower-staffing">Talent Acquisition</Link></li>
@@ -92,7 +92,7 @@ export default function Menu() {
                 <li className="menu-item-has-children">
                     <Link href="#">Resources</Link>
 
-                    <ul className="sub-menu">
+                    <ul className="sub-menu w-[160px]">
                      
                         <li><Link href={`/case-study`}>Case Studies</Link></li>
 

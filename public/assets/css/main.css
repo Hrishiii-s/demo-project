@@ -1701,7 +1701,6 @@ padding-left: 40px;
   position: absolute;
   left: 0;
   top: 99%;
-  min-width: 230px;
   border: 1px solid #f5f5f5;
   background: var(--tg-color-white-default);
   margin: 0;
