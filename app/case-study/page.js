@@ -11,6 +11,8 @@ export const metadata = {
 function CaseStudypage() {
   return (
     <div>
+                       <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Case Studies</h1>
+                       <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Success Stories in AI, PropTech, and Digital Transformation</h2>
         <CaseStudy/>
     </div>
   )

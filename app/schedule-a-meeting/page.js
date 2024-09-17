@@ -11,6 +11,8 @@ export const metadata = {
 function Schedulepage() {
   return (
     <div> 
+                             <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Schedule a Consultation</h1>
+                             <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Book a Meeting with Our Experts</h2>
         <Schedule/>
            </div>
   )

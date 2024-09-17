@@ -51,8 +51,6 @@ function AIServices() {
                 <div>
                     <section className="services__details-area">
                         <div className="container">
-                        <h1 className="sr-only">AI Solutions for Businesses</h1>
-                        <h2 className="sr-only">Driving Innovation with Artificial Intelligence Services</h2>
                             <div className="services__details-wrap">
                                 <div className="row">
                                     <div className="col-100 order-0 order-lg-2">

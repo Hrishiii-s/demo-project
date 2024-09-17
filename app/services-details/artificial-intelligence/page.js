@@ -10,6 +10,8 @@ export const metadata = {
 function AIpage() {
     return (
         <div>
+            <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>AI Solutions for Businesses</h1>
+            <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Driving Innovation with Artificial Intelligence Services</h2>
             <AI />
         </div>
     )

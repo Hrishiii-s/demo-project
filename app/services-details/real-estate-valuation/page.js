@@ -10,6 +10,8 @@ export const metadata = {
 function RealEstatepage() {
     return (
         <div>
+                        <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Real Estate Valuation Services</h1>
+                        <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Accurate and Efficient Property Valuations</h2>
             <RealEstate />
         </div>
     )

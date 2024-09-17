@@ -11,6 +11,8 @@ export const metadata = {
 function Accountingpage() {
     return (
         <div>
+                 <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Accounting and Finance Services</h1>
+                 <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Streamlined Financial Solutions for Your Business</h2>
             <Accounting />
         </div>
     )
