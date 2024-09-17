@@ -140,6 +140,8 @@ export default function AutoServices() {
                 <div>
                     <section className="services__details-area">
                         <div className="container">
+                        <h1 className="sr-only">Business Process Automation</h1>
+                        <h2 className="sr-only">Transforming Workflows with Automation</h2>
                             <div className="services__details-wrap">
                                 <div className="row">
                                     <div className="order-0 order-lg-2">

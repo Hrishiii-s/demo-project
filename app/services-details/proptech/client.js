@@ -108,6 +108,8 @@ export default function Proptech() {
                     backgroundImage: `url(${isMobile ? "" : "/assets/img/banner/Proptech.webp"})`
                 }}>
                     <div className="container">
+                        <h1 className="sr-only">PropTech Services</h1>
+                        <h2 className="sr-only">Transforming Real Estate with AI and Technology</h2>
                         <div className={`row`} style={space}>
                             <div className={`col-lg-8 ${isMobile ? "mt-5" : ""}`}>
                                 <div className={`banner__content-two ${isMobile ? "mt-12" : "mb-24"} `}>
@@ -121,14 +123,16 @@ export default function Proptech() {
                                 } */}
                                 </div>
                                 {isMobile && (<>
-                                <div className="absolute top-0 left-0 w-full h-full z-[-1]">
-                                    <video autoPlay loop muted playsInline className="w-full h-full object-cover pointer-events-none">
-                                        <source src="/assets/videos/home_mobile.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
+                                    <LazyLoad height={100} offset={250} once>
+                                        <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+                                            <video autoPlay loop muted playsInline className="w-full h-full object-cover pointer-events-none">
+                                                <source src="/assets/videos/home_mobile.mp4" type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </LazyLoad>
 
-                            </>)}
+                                </>)}
                             </div>
                         </div>
                     </div>
