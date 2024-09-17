@@ -3,7 +3,7 @@ import Home from './client.js'
 
 
 export const metadata = {
-    title: 'ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company',
+    title: 'ECESIS | Transforming Businesses with AI & PropTech Services',
     description: 'We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise.',
   }
 
