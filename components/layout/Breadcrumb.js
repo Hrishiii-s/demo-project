@@ -107,7 +107,7 @@ function Breadcrumb({ breadcrumbTitle }) {
         {
             id: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
             backgroundImageUrl: "/assets/img/banner/ecg_banner.jpeg",
-            backgroundMobile: "/assets/img/banner/case_study_mobile.webp",
+            backgroundMobile: "/assets/img/banner/ecg_banner.jpeg",
             style: "text-white"
         },
 
@@ -137,7 +137,7 @@ function Breadcrumb({ breadcrumbTitle }) {
         <>
             <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
                 {console.log("mb", matchingBanner)}
-                <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? "h-full object-cover" : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px' }} />
+                <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover"  : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px' }} />
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -149,7 +149,7 @@ function Breadcrumb({ breadcrumbTitle }) {
                                     ) : (
                                         specialTitleIndex === 1 ? (
                                             <>
-                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '2%' : '10%', top: '25%'}}>
+                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '7.5%' : '10%', top: '25%'}}>
                                             <h2 className={`title p-4 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px` }}><span className="text-black">Enhancing ECG Data Accuracy in <br/> Cardiac Monitoring through<br/><span className="text-white">AI Integration</span> </span></h2>
 
                                             </div>

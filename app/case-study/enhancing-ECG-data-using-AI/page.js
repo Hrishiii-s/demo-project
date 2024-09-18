@@ -119,7 +119,7 @@ function ECGCaseStudy() {
                             </div>
 
                             <div className={`${isMobile ? "w-full" : "w-[95%]"}`}>
-                                <p className="title text-2xl font-bold text-black mt-12">Solutions</p>
+                                <p className="title text-2xl font-bold text-black mt-12">Solution</p>
                                 <p className="text-lg  text-gray-900">To address this challenge, we implemented an AI classification model as an intermediary between the algorithm's output and the
                                     technicians' UI. This AI model is specifically designed to identify and remove noise from the data before it reaches the technicians.</p>
                                 <p className="text-lg text-gray-900">By improving the accuracy of beat identification and reducing the occurrence of noise misclassifications, the AI model significantly
@@ -130,83 +130,40 @@ function ECGCaseStudy() {
                                     {isMobile ? (
                                         <div className="relative mx-auto">
                                             <img src="/assets/img/icon/ecg_solution_mobile.png" alt="" className="w-[30%] justify-center mx-auto" />
-                                            <div>
-                                                <div className="absolute top-[0%] -left-[3%]">
-                                                    <div className="w-[38%]">
+                                            <div className="">
+                                                <div className="absolute top-[2%] left-[0%] w-[35%]">                                               
                                                         <p className="text-right text-xs font-bold pr-2 text-red-400">Data Processing</p>
-                                                        <p className="text-right text-[8px] pr-2 font-bold">The ECG data is pre-processed
-                                                            using Python libraries such as
-                                                            NumPy and Pandas to ensure that
-                                                            the data is clean and properly
-                                                            formatted before being fed into
-                                                            the AI model.</p>
-                                                    </div>
+                                                        <p className="text-right text-[8px] pr-2 font-bold">The ECG data is pre-processed using Python libraries.</p>                                              
                                                 </div>
 
-                                                <div className="absolute top-[32%] -left-[5%]">
-                                                    <div className="w-[38%]">
+                                                <div className="absolute top-[32%] -left-[5%] w-[40%]">                                               
                                                         <p className="text-right text-xs font-bold pr-2 text-blue-400">Noise Filtering</p>
-                                                        <p className="text-right text-[8px] px-2 font-bold">An additional noise filtering layer
-                                                            was implemented using techniques
-                                                            from signal processing libraries
-                                                            like SciPy to remove irrelevant or
-                                                            misleading data points before
-                                                            classification.</p>
-                                                    </div>
+                                                        <p className="text-right text-[8px] px-2 font-bold">An additional noise filtering layer was implemented using techniques from signal processing libraries like SciPy.</p>                                                
                                                 </div>
 
-
-                                                <div className="absolute bottom-[15%] -left-[5%]">
-                                                    <div className="w-[38%]">
+                                                <div className="absolute bottom-[16%] -left-[5%] w-[40%]">                                                  
                                                         <p className="text-right text-xs font-bold pr-2 text-purple-500">Integration</p>
-                                                        <p className="text-right text-[8px] px-2 font-bold">An additional noise filtering layer
-                                                            was implemented using techniques
-                                                            from signal processing libraries
-                                                            like SciPy to remove irrelevant or
-                                                            misleading data points before
-                                                            classification.</p>
-                                                    </div>
+                                                        <p className="text-right text-[8px] px-2 font-bold">The AI model was integrated into the existing workflow using a microservices architecture.</p>                                   
                                                 </div>
 
                                             </div>
                                             <div className="w-full">
-                                                <div className="absolute top-[15%] left-[65%]">
+                                                <div className="absolute top-[16%] left-[65%]">
 
                                                     <p className="text-left text-xs font-bold pl-2 text-emerald-400">AI Model</p>
-                                                    <p className="text-left text-[8px] px-2 font-bold">A Convolutional Neural Network
-                                                        (CNN) was employed for the
-                                                        classification task, leveraging
-                                                        TensorFlow and Keras for model
-                                                        development. The CNN architecture
-                                                        is well-suited for recognizing
-                                                        patterns in sequential data like ECG
-                                                        signals.</p>
+                                                    <p className="text-left text-[8px] px-2 font-bold">A Convolutional Neural Network (CNN) was employed for the classification task.</p>
 
                                                 </div>
 
-                                                <div className="absolute bottom-[25%] left-[65%]">
+                                                <div className="absolute bottom-[30%] left-[65%]">
                                                     <p className="text-left text-xs font-bold pl-2 text-yellow-500">Model Training</p>
-                                                    <p className="text-left text-[8px] px-2 font-bold">The model was trained on a large
-                                                        dataset of annotated ECG signals,
-                                                        using GPU acceleration to expedite
-                                                        the training process. Techniques
-                                                        such as data augmentation and
-                                                        cross-validation were used to
-                                                        enhance model robustness and
-                                                        generalization.</p>
+                                                    <p className="text-left text-[8px] px-2 font-bold">The model was trained on a large dataset of annotated ECG signals, using GPU acceleration to expedite the training process. </p>
                                                 </div>
 
-                                                <div className="absolute -bottom-[10%] left-[65%]">
+                                                <div className="absolute -bottom-[5%] left-[65%]">
                                                     <div className="">
                                                         <p className="text-left text-xs font-bold pl-2 text-lime-500">Monitoring<br /> and Updates</p>
-                                                        <p className="text-left text-[8px] px-2 font-bold">A monitoring system was put in
-                                                            place using tools like Prometheus
-                                                            and Grafana to track the model’s
-                                                            performance and accuracy over
-                                                            time. This allows for continuous
-                                                            improvement and retraining of the
-                                                            model as new data becomes
-                                                            available.</p>
+                                                        <p className="text-left text-[8px] px-2 font-bold">A monitoring system was put in place using tools like Prometheus and Grafana to track the model’s performance and accuracy over time.</p>
                                                     </div>
                                                 </div>
 
@@ -236,9 +193,11 @@ function ECGCaseStudy() {
                                                     misleading data points before
                                                     classification.</p>
                                             </div>
-                                            <div className="absolute bottom-[11%] left-[8%]">
+                                            <div className="absolute bottom-[14%] left-[8%]">
                                                 <p className="text-right font-bold text-purple-500">Integration</p>
-                                                <p className="text-left text-xs font-bold w-[270px]">The model was trained on a large dataset of annotated ECG signals, using GPU acceleration to expedite the training process. Techniques such as data augmentation and cross-validation were used to enhance model robustness and generalization.</p>                                            </div>
+                                                <p className="text-left text-xs font-bold w-[270px]">The model was trained on a large dataset of annotated ECG signals, using GPU acceleration to expedite the training process. Techniques such as data augmentation and cross-validation were used to enhance model robustness and generalization.</p>
+                                            </div>
+                                            
                                             <div className="absolute top-[19.3%] right-[8%]">
                                                 <p className="text-left font-bold text-emerald-400">AI Model</p>
                                                 <p className="text-left text-xs font-bold w-[270px]">A Convolutional Neural Network
@@ -260,7 +219,7 @@ function ECGCaseStudy() {
                                                     cross-validation were used to
                                                     enhance model robustness and
                                                     generalization.</p>                                            </div>
-                                            <div className="absolute -bottom-[10.3%] right-[8%]">
+                                            <div className="absolute -bottom-[2%] right-[8%]">
                                                 <p className="text-left font-bold text-lime-500">Monitoring and Updates</p>
                                                 <p className="text-left text-xs font-bold w-[270px]">A monitoring system was put in
                                                     place using tools like Prometheus
@@ -305,7 +264,7 @@ function ECGCaseStudy() {
                     </section>
                     <div className="p-2">
                         <div className={`${isMobile ? "w-full" : "w-[95%] "} mt-16 bg-slate-200 p-4 rounded-lg container`}>
-                            <p className="title text-2xl font-bold text-black">Results</p>
+                            <p className="title text-2xl font-bold text-black">Result</p>
 
                             <div className="flex flex-row justify-between">
                                 <div className="flex flex-col">
@@ -333,11 +292,11 @@ function ECGCaseStudy() {
                                 </div>
                                 {!isMobile && (
                                     <div>
-                                    <img src="/assets/img/icon/ecg_result.png" alt="" className="" />
-                                </div>
+                                        <img src="/assets/img/icon/ecg_result.png" alt="" className="" />
+                                    </div>
 
                                 )}
-                                
+
                             </div>
 
 
@@ -347,7 +306,7 @@ function ECGCaseStudy() {
                         </div>
                     </div>
 
-                    <div className="mt-8 p-3">
+                    <div className="mt-8 p-3 container">
                         <p className="text-lg font-bold">Conclusion:</p>
                         <p className="text-xl text-left">This case highlights the effectiveness of leveraging AI to enhance legacy systems in healthcare, providing a scalable solution that preserves the
                             stability of existing workflows while introducing modern capabilities to address specific challenges. The success of this project underscores the

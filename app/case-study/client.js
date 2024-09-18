@@ -77,6 +77,22 @@ function CaseStudy() {
 
                                     </div>
                                 </Link>
+                                <Link href="/case-study/enhancing-ECG-data-using-AI">
+                                    <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2 mt-3">
+                                        <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
+                                            <img src="/assets/img/banner/ecg_banner.jpeg" alt="" className="rounded-xl h-[230px] md:rounded-l-md object-cover" />
+                                        </div>
+                                        {isMobile ? null : (
+                                            <div className="content-center ml-4 p-2">
+                                                <h1 className="md:text-3xl text-base">Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration</h1>
+                                                <h2 className="sr-only">Case Study</h2>
+                                            </div>
+
+                                        )}
+
+
+                                    </div>
+                                </Link>
 
                             </div>
 
