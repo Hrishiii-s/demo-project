@@ -15,7 +15,7 @@ function Breadcrumb({ breadcrumbTitle }) {
             setIsTab(viewportWidth > 768 && viewportWidth <= 1024);
             setIsWide(viewportWidth > 2160);
             const vwUnit = viewportWidth / 100;
-            const Width = 2.5 * vwUnit; // Replace 48 with whatever vw value you need
+            const Width = 2 * vwUnit; // Replace 48 with whatever vw value you need
             setCalculatedWidth(Width);
         }
 
@@ -97,12 +97,18 @@ function Breadcrumb({ breadcrumbTitle }) {
             backgroundImageUrl: "/assets/img/banner/case_studies_banner.webp",
             backgroundMobile: "/assets/img/banner/case_studies_banner_mobile.webp",
             style: "text-white"
-        }, 
+        },
         {
             id: "Schedule a Meeting",
             backgroundImageUrl: "/assets/img/banner/schedule.webp",
             backgroundMobile: "/assets/img/banner/schedule_mobile.webp",
             style: "text-black"
+        },
+        {
+            id: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
+            backgroundImageUrl: "/assets/img/banner/ecg_banner.jpeg",
+            backgroundMobile: "/assets/img/banner/case_study_mobile.webp",
+            style: "text-white"
         },
 
 
@@ -113,8 +119,19 @@ function Breadcrumb({ breadcrumbTitle }) {
 
     ]
     const matchingBanner = banner.find(item => item.id === breadcrumbTitle);
-    const specialTitle = "From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth";
-    const isSpecialTitle = breadcrumbTitle === specialTitle;
+    const specialTitle = [
+        "From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth",
+        "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration"
+    ];
+    
+    let specialTitleIndex = -1; // Initialize with -1 to indicate "not found"
+    
+    const isSpecialTitle = specialTitle.includes(breadcrumbTitle);
+    if (isSpecialTitle) {
+        specialTitleIndex = specialTitle.findIndex(title => title === breadcrumbTitle);
+    }
+    
+
 
     return (
         <>
@@ -126,7 +143,23 @@ function Breadcrumb({ breadcrumbTitle }) {
                         <div className="col-lg-6">
                             <div className="breadcrumb__content">
                                 {isSpecialTitle ? (
-                                    <h2 className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" :`${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%' }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+                                    specialTitleIndex === 0 ? (
+                                        <h2 className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%' }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+
+                                    ) : (
+                                        specialTitleIndex === 1 ? (
+                                            <>
+                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '2%' : '10%', top: '25%'}}>
+                                            <h2 className={`title p-4 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px` }}><span className="text-black">Enhancing ECG Data Accuracy in <br/> Cardiac Monitoring through<br/><span className="text-white">AI Integration</span> </span></h2>
+
+                                            </div>
+
+                                            </>
+                                        ) : (
+                                            <>
+                                                {null}
+                                            </>)
+                                    )
 
                                 ) : (
                                     isMobile ? (

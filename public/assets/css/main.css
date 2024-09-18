@@ -188,7 +188,7 @@ p {
   line-height: var(--tg-body-line-height);
   font-weight: var(--tg-fw-regular);
   color: var(--tg-body-color);
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 hr {
