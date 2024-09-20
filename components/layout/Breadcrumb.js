@@ -149,8 +149,8 @@ function Breadcrumb({ breadcrumbTitle }) {
                                     ) : (
                                         specialTitleIndex === 1 ? (
                                             <>
-                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '7.5%' : '10%', top: '25%'}}>
-                                            <h2 className={`title p-4 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px` }}><span className="text-black">Enhancing ECG Data Accuracy in <br/> Cardiac Monitoring through<br/><span className="text-white">AI Integration</span> </span></h2>
+                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '8%' : '10%', top:  isMobile ? '26.5%' :'25%'}}>
+                                            <h2 className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px` }}><span className="text-black">Enhancing ECG Data Accuracy in <br/> Cardiac Monitoring through<br/><span className="text-white">AI Integration</span> </span></h2>
 
                                             </div>
 

@@ -8,9 +8,13 @@ import React, { useState, useEffect } from 'react';
 import VideoPopup from "@/components/elements/PopupVideo"
 import Modal from "../Modal"
 import LazyLoad from "react-lazyload"
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 
 export default function About() {
+    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+
     let Nothome = true;
 
     const modalContents = [
@@ -135,6 +139,7 @@ export default function About() {
         };
 
         handleResize();
+        setAllLoaded(true);
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
@@ -157,6 +162,15 @@ export default function About() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    if (!allLoaded) {
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
+    }
+    
 
 
 

@@ -6,6 +6,8 @@ import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
 import Head from "next/head"
 import Link from "next/link"
 import React, { useEffect, useState } from 'react';
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 function Schedule() {
 
@@ -31,7 +33,11 @@ function Schedule() {
 
 
     if (!allLoaded) {
-        return <div>Loading...</div>;
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
     }
 
 

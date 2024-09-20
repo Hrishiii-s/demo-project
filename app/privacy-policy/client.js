@@ -4,12 +4,31 @@ import Layout from "@/components/layout/Layout"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
 import Head from "next/head"
 import Link from "next/link"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 
 
 export default function Privacy() {
     let Nothome = true;
+    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        setAllLoaded(true);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
 
 useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -60,6 +79,13 @@ useEffect(() => {
 }, []);
 
 
+if (!allLoaded) {
+    return (
+        <div className="fixed inset-0 flex justify-center items-center">
+            <MoonLoader />
+        </div>
+    ); // Or any other loading indicator
+}
 
 
     return (
@@ -73,63 +99,75 @@ useEffect(() => {
             <Layout headerStyle={3} footerStyle={3} Nothome={Nothome}>
                 <div>
                     <section className="services__details-area">
-                        <div className="container mt-[40px]">
-                            <div className="flex flex-col justify-center items-center">
-                                <h1 className="text-[60px] font-thin leading-10 text-black"><span className="font-bold text-[#ffcf29]">Privacy</span><span className=""> & </span><span className="font-bold text-lb">Cookie</span> Policy</h1>
-                                <h2 className="justify-center items-center text-left mt-12">At ECESIS, we are committed to protecting and respecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</h2>
+                        <div className="container mt-[20px] lg:mt-[40px]">
+                            <div className="flex flex-col justify-center items-center mb-6">
+                                {isMobile ? (<>
+                                    <h1 className={`text-[60px] font-thin leading-[50px] text-center text-black`}><span className="font-bold text-[#ffcf29]">Privacy</span><span className=""> <br/>&<br/> </span><span className="font-bold text-lb">Cookie</span> Policy</h1>
+
+                                </>) :(<>
+                                    <h1 className={`text-[60px] font-thin leading-10" text-black`}><span className="font-bold text-[#ffcf29]">Privacy</span><span className=""> & </span><span className="font-bold text-lb">Cookie</span> Policy</h1>
+
+                                </>)}
+                                <h2 className="justify-center items-center text-left mt-12 text-lg">At ECESIS, we are committed to protecting and respecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</h2>
                             </div>
                             <div className="h-[1px] rounded-xl bg-slate-300"/>
 
                             <div className="flex-row flex relative">
-                                <div className="w-[20%] mt-12 ">
-                                    <ul className="gap-list text-lb">
-                                        <Link href="#info-collect" style={{color: "#00235f"}}>
-                                            <li>
-                                                Information We Collect
-                                            </li> </Link>
-
-
-                                        <Link href="#info-use" style={{color: "#00235f"}}>  <li>
-                                            How We Use Your Information
-                                        </li></Link>
-
-
-                                        <Link href="#info-share" style={{color: "#00235f"}}> <li>
-                                            How We Share Your Information
-                                        </li></Link>
-
-
-                                        <Link href="#data-sec" style={{color: "#00235f"}}>
-                                            <li>
-                                                Data Security
-                                            </li></Link>
-
-                                        <Link href="#rights" style={{color: "#00235f"}}>
-                                            <li>
-                                                Your Rights
-                                            </li></Link>
-
-
-                                        <Link href="#third-party" style={{color: "#00235f"}}> <li>
-                                            Third-Party Links
-                                        </li> </Link>
-
-
-                                        <Link href="#changes" style={{color: "#00235f"}}><li>
-                                            Changes to This Privacy Policy
-                                        </li> </Link>
-
-
-                                        <Link href="#contact" style={{color: "#00235f"}}>  <li>
-                                            Contact Us
-                                        </li></Link>
-
-
-
-                                    </ul>
-
-                                </div>
-                                <div className="w-[2px] mr-3 rounded-xl bg-slate-300"/>
+                                {!isMobile && (
+                                    
+                                 <>
+                                  <div className="w-[20%] mt-12 ">
+                                     <ul className="gap-list text-lb">
+                                         <Link href="#info-collect" style={{color: "#00235f"}}>
+                                             <li>
+                                                 Information We Collect
+                                             </li> </Link>
+ 
+ 
+                                         <Link href="#info-use" style={{color: "#00235f"}}>  <li>
+                                             How We Use Your Information
+                                         </li></Link>
+ 
+ 
+                                         <Link href="#info-share" style={{color: "#00235f"}}> <li>
+                                             How We Share Your Information
+                                         </li></Link>
+ 
+ 
+                                         <Link href="#data-sec" style={{color: "#00235f"}}>
+                                             <li>
+                                                 Data Security
+                                             </li></Link>
+ 
+                                         <Link href="#rights" style={{color: "#00235f"}}>
+                                             <li>
+                                                 Your Rights
+                                             </li></Link>
+ 
+ 
+                                         <Link href="#third-party" style={{color: "#00235f"}}> <li>
+                                             Third-Party Links
+                                         </li> </Link>
+ 
+ 
+                                         <Link href="#changes" style={{color: "#00235f"}}><li>
+                                             Changes to This Privacy Policy
+                                         </li> </Link>
+ 
+ 
+                                         <Link href="#contact" style={{color: "#00235f"}}>  <li>
+                                             Contact Us
+                                         </li></Link>
+ 
+ 
+ 
+                                     </ul>
+ 
+                                 </div>
+                                 <div className="w-[2px] mr-3 rounded-xl bg-slate-300"/>
+                                 </>
+                                )}
+                               
                                 <section className="w-full">
                                     <div className="mt-12 ml-4" id="info-collect">
                                         <p className="font-bold">

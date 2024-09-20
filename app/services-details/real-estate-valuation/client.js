@@ -32,11 +32,12 @@ export default function ServicesDetails() {
     }, []);
 
     if (!allLoaded) {
-        return <div>
-            <MoonLoader />
-        </div>; // Or any other loading indicator
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
     }
-
     return (
         <>
             <Head>

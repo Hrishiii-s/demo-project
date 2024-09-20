@@ -8,6 +8,7 @@ import ReactPlayer from 'react-player';
 import LazyLoad from 'react-lazyload';
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import { MoonLoader } from "react-spinners";
 
 
 
@@ -42,8 +43,13 @@ function CaseStudy() {
     }, []);
 
     if (!allLoaded) {
-        return <div>Loading...</div>; // Or any other loading indicator
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
     }
+    
 
 
     return (
@@ -63,7 +69,7 @@ function CaseStudy() {
                                 <Link href="/case-study/how-a-single-website-drove-3X-revenue-growth">
                                     <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2">
                                         <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
-                                            <img src="/assets/img/case/horse_barn.webp" alt="" className="rounded-xl md:rounded-l-md object-cover" />
+                                            <img src="/assets/img/case/horse_barn.webp" alt="" className="rounded-md md:rounded-l-md object-cover" />
 
                                         </div>
                                         {isMobile ? null : (
@@ -80,7 +86,7 @@ function CaseStudy() {
                                 <Link href="/case-study/enhancing-ECG-data-using-AI">
                                     <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2 mt-3">
                                         <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
-                                            <img src="/assets/img/banner/ecg_banner.jpeg" alt="" className="rounded-xl h-[230px] md:rounded-l-md object-cover" />
+                                            <img src="/assets/img/case/ecg_mobile.png" alt="" className="rounded-md h-[230px] md:rounded-l-md object-cover" />
                                         </div>
                                         {isMobile ? null : (
                                             <div className="content-center ml-4 p-2">

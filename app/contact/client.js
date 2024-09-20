@@ -6,10 +6,38 @@ import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import Head from "next/head";
+import MoonLoader from "react-spinners/MoonLoader";
 
 export default function Contact() {
 
+    const [isMobile, setIsMobile] = useState(false);
+    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+
     let Nothome = true;
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        setAllLoaded(true);
+
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+    if (!allLoaded) {
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
+    }
+
 
     const sendEmail = async () => {
 

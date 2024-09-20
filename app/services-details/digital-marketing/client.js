@@ -34,11 +34,12 @@ function DigitalServices() {
 
 
     if (!allLoaded) {
-        return <div className="flex justify-center items-center">
-            <MoonLoader/>
-        </div>; // Or any other loading indicator
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
     }
-
 
     return (
         <>

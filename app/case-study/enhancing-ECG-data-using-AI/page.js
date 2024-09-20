@@ -7,6 +7,8 @@ import Link from "next/link"
 import ReactPlayer from 'react-player';
 import LazyLoad from 'react-lazyload';
 import React, { useState, useEffect } from "react";
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 
 
@@ -40,9 +42,17 @@ function ECGCaseStudy() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    
+
     if (!allLoaded) {
-        return <div>Loading...</div>; // Or any other loading indicator
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
     }
+    
+
 
 
     return (
@@ -120,9 +130,9 @@ function ECGCaseStudy() {
 
                             <div className={`${isMobile ? "w-full" : "w-[95%]"}`}>
                                 <p className="title text-2xl font-bold text-black mt-12">Solution</p>
-                                <p className="text-lg  text-gray-900">To address this challenge, we implemented an AI classification model as an intermediary between the algorithm's output and the
+                                <p className="">To address this challenge, we implemented an AI classification model as an intermediary between the algorithm's output and the
                                     technicians' UI. This AI model is specifically designed to identify and remove noise from the data before it reaches the technicians.</p>
-                                <p className="text-lg text-gray-900">By improving the accuracy of beat identification and reducing the occurrence of noise misclassifications, the AI model significantly
+                                <p className="">By improving the accuracy of beat identification and reducing the occurrence of noise misclassifications, the AI model significantly
                                     decreases the amount of manual intervention required by the technicians.</p>
 
                                 <h2 className="text-[60px] mt-8 text-gray-500 text-center">AI Technology Stack</h2>
@@ -272,15 +282,15 @@ function ECGCaseStudy() {
                                         them to focus on more critical aspects of their work. Additionally, the overall accuracy of the ECG data analysis improved, leading to better
                                         patient outcomes and more efficient use of resources.
                                     </p>
-                                    <ul className={`${isMobile ? "ml-4" : "ml-12"}  text-justify`}>
-                                        <li className="list-disc"><p className="">
+                                    <ul className={`${isMobile ? "ml-4" : "ml-12"}`}>
+                                        <li className="list-disc"><p className="text-black text-xl">
                                             <span className="font-bold">
                                                 Improved
                                             </span>
                                             &nbsp;ECG accuracy and patient outcomes.
                                         </p>
                                         </li>
-                                        <li className="list-disc"><p className="">
+                                        <li className="list-disc"><p className="text-black text-xl">
                                             <span className="font-bold">
                                                 Total FTE savings:                                       </span>
                                             Significant reduction in technician workload, allowing reallocation to more critical tasks.                              </p>
@@ -308,7 +318,7 @@ function ECGCaseStudy() {
 
                     <div className="mt-8 p-3 container">
                         <p className="text-lg font-bold">Conclusion:</p>
-                        <p className="text-xl text-left">This case highlights the effectiveness of leveraging AI to enhance legacy systems in healthcare, providing a scalable solution that preserves the
+                        <p className="text-lg text-left">This case highlights the effectiveness of leveraging AI to enhance legacy systems in healthcare, providing a scalable solution that preserves the
                             stability of existing workflows while introducing modern capabilities to address specific challenges. The success of this project underscores the
                             potential for AI to drive improvements in clinical settings without necessitating extensive overhauls of established systems.
                         </p>
