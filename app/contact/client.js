@@ -30,14 +30,6 @@ export default function Contact() {
     }, []);
 
 
-    if (!allLoaded) {
-        return (
-            <div className="fixed inset-0 flex justify-center items-center">
-                <MoonLoader />
-            </div>
-        ); // Or any other loading indicator
-    }
-
 
     const sendEmail = async () => {
 
@@ -94,6 +86,17 @@ export default function Contact() {
 
         sendEmail();
     };
+
+
+    
+    if (!allLoaded) {
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
+    }
+
 
     return (
         <>
