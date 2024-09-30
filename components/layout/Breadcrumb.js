@@ -22,7 +22,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
         }
 
         handleResize(); // Set initial size
-        window.addEventListener('resize', handleResize); // Adjust on window resize
+        window.addEventListener('resize', handleResize); 
 
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener
     }, []);
