@@ -15086,3 +15086,9 @@ blockquote p {
   display: none!important;
   -webkit-appearance: none;
 }
+
+.banner-placeholder {
+  position: relative; /* Ensure it doesn't interfere with the rest of the layout */
+  width: 100%;
+  background-color: #f0f0f0; /* A light background color to act as a placeholder */
+}

@@ -7,6 +7,8 @@ function Breadcrumb({ breadcrumbTitle }) {
     const [isTab, setIsTab] = useState(null);
     const [isWide, setIsWide] = useState(null);
     const [calculatedWidth, setCalculatedWidth] = useState('');
+    const [bannerLoaded, setBannerLoaded] = useState(false); // Track when the banner is loaded
+
 
     useEffect(() => {
         function handleResize() {
@@ -48,7 +50,7 @@ function Breadcrumb({ breadcrumbTitle }) {
             backgroundImageUrl: "/assets/img/banner/manpower_banner2.webp",
             backgroundMobile: "/assets/img/banner/manpower_mobile.webp",
             style: "text-white multiple-shadows",
-            img_style: "max-h-96"
+            img_style: ""
         },
         {
             id: "Accounting & Finance",
@@ -123,53 +125,61 @@ function Breadcrumb({ breadcrumbTitle }) {
         "From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth",
         "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration"
     ];
-    
+
     let specialTitleIndex = -1; // Initialize with -1 to indicate "not found"
-    
+
     const isSpecialTitle = specialTitle.includes(breadcrumbTitle);
     if (isSpecialTitle) {
         specialTitleIndex = specialTitle.findIndex(title => title === breadcrumbTitle);
     }
-    
+
 
 
     return (
         <>
             <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
                 {console.log("mb", matchingBanner)}
-                <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover"  : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px' }} />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="breadcrumb__content">
-                                {isSpecialTitle ? (
-                                    specialTitleIndex === 0 ? (
-                                        <h2 className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%' }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+                <div
+                    className="banner-placeholder"
+                    style={{ height: bannerLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
+                >
 
-                                    ) : (
-                                        specialTitleIndex === 1 ? (
-                                            <>
-                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{left: isMobile ? '8%' : '10%', top:  isMobile ? '26.5%' :'25%'}}>
-                                            <h2 className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px` }}><span className="text-black">Enhancing ECG Data Accuracy in <br/> Cardiac Monitoring through<br/><span className="text-white">AI Integration</span> </span></h2>
+                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: bannerLoaded ? "block" : "none" }}
+                        onLoad={() => setBannerLoaded(true)} />
 
-                                            </div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="breadcrumb__content">
+                                    {isSpecialTitle ? (
+                                        specialTitleIndex === 0 ? (
+                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: bannerLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
 
-                                            </>
                                         ) : (
-                                            <>
-                                                {null}
-                                            </>)
-                                    )
+                                            specialTitleIndex === 1 ? (
+                                                <>
+                                                    <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{ left: isMobile ? '8%' : '10%', top: isMobile ? '26.5%' : '25%' }}>
+                                                        <h2 data-aos="fade-up" data-aos-delay={100} className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, display: bannerLoaded ? "block" : "none" }}><span className="text-black">Enhancing ECG Data Accuracy in <br /> Cardiac Monitoring through<br /><span className="text-white">AI Integration</span> </span></h2>
 
-                                ) : (
-                                    isMobile ? (
-                                        null
+                                                    </div>
+
+                                                </>
+                                            ) : (
+                                                <>
+                                                    {null}
+                                                </>)
+                                        )
+
                                     ) : (
-                                        <h2 className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%' }}>{breadcrumbTitle}</h2>
+                                        isMobile ? (
+                                            null
+                                        ) : (
+                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%', display: bannerLoaded ? "block" : "none" }}>{breadcrumbTitle}</h2>
 
-                                    )
+                                        )
 
-                                )}
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>

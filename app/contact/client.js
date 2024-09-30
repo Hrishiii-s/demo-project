@@ -12,6 +12,8 @@ export default function Contact() {
 
     const [isMobile, setIsMobile] = useState(false);
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
+    const [captchaError, setCaptchaError] = useState(false); // State to track if captcha error should be shown
 
     let Nothome = true;
 
@@ -39,15 +41,32 @@ export default function Contact() {
             phoneno: formData.phoneNumber,
             comment: formData.message
         };
-
         try {
-            const response = await axios.post('https://www.ecesistech.com/contact-form-submit.php', payload)
-            console.log("Response from backened", response.data)
-        }
-        catch (error) {
-            console.error('Error from backend:', error);
-        }
+            // Send the token to the backend for verification
+            const response = await axios.post('/api/recaptcha', {
+                token: recaptchaToken
+            });
 
+            if (response.data.success) {
+                console.log('reCAPTCHA verified');
+                // Proceed with form submission
+                const formResponse = await axios.post('https://www.ecesistech.com/contact-form-submit.php', payload);
+                console.log('Form submitted successfully:', formResponse.data);
+
+                // Reset the form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phoneNumber: '',
+                    message: ''
+                });
+                setRecaptchaToken(''); // Reset reCAPTCHA
+            } else {
+                console.error('reCAPTCHA verification failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
     }
 
     const [formData, setFormData] = useState({
@@ -56,8 +75,7 @@ export default function Contact() {
         phoneNumber: '',
         message: ''
     });
-    const [recaptchaToken, setRecaptchaToken] = useState(false);
-    const [captchaError, setCaptchaError] = useState(false); // State to track if captcha error should be shown
+
 
 
     const handleChange = (e) => {
@@ -68,10 +86,10 @@ export default function Contact() {
         }));
     };
 
-    const handleRecaptcha = () => {
-        setRecaptchaToken(true);
-        setCaptchaError(false); // Reset error on successful captcha completion
-
+    const handleRecaptcha = (token) => {
+        console.log("Token",token)
+        setRecaptchaToken(token); // Set the reCAPTCHA token
+        setCaptchaError(false);   // Reset error if reCAPTCHA is completed
     };
 
     const handleSubmit = (e) => {
@@ -88,7 +106,7 @@ export default function Contact() {
     };
 
 
-    
+
     if (!allLoaded) {
         return (
             <div className="fixed inset-0 flex justify-center items-center">
@@ -100,13 +118,13 @@ export default function Contact() {
 
     return (
         <>
-        <Head>
-        <title>
-        Contact Us | Get in Touch for Innovative Tech Solutions
-        </title>
+            <Head>
+                <title>
+                    Contact Us | Get in Touch for Innovative Tech Solutions
+                </title>
                 <meta name="description" content="Reach out to us for expert advice on AI-driven technology, PropTech, and digital transformation services. Our team is ready to assist you with tailored solutions for your business needs." />
-   
-        </Head>
+
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Let’s get in touch" Nothome={Nothome}>
                 <div>
                     <section className="contact__area">
