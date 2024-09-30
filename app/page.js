@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './client.js'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 
 export const metadata = {
@@ -12,7 +12,6 @@ export const metadata = {
 function Homepage() {
   return (
     <div> 
-      <SpeedInsights/>
         <h1 className="sr-only">ECESIS | Leading AI and PropTech Solutions</h1>
         <h2 className="sr-only">Explore Our Innovative Digital Solutions</h2>
         <Home/>

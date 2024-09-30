@@ -7,6 +7,7 @@ import Breadcrumb from './Breadcrumb'
 import PageHead from './PageHead'
 import Footer3 from "./footer/Footer3"
 import Header3 from "./header/Header3"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
     title: 'EcesisTech',
@@ -51,9 +52,10 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
             }
         })
     }, [])
-    
+
     return (
         <>
+            <SpeedInsights />
             <PageHead headTitle={headTitle} />
             <DataBg />
 
