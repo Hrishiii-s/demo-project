@@ -11,7 +11,7 @@ import MoonLoader from "react-spinners/MoonLoader";
 function AccountingServices() {
 
     const [isMobile, setIsMobile] = useState(false);
-    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+    const [allLoaded, setAllLoaded] = useState(false);
 
     let Nothome = true;
 
