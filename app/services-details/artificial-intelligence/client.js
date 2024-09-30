@@ -20,6 +20,7 @@ function AIServices() {
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
 
 
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);

@@ -8,6 +8,8 @@ import PageHead from './PageHead'
 import Footer3 from "./footer/Footer3"
 import Header3 from "./header/Header3"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 export const metadata = {
     title: 'EcesisTech',
@@ -16,11 +18,14 @@ export const metadata = {
 export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, breadcrumbTitle, children, transparent }) {
 
     const [Path, setPath] = useState('');
+    const [bread, setBread] = useState(false);
+
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             // Set the active path from window.location.pathname
             setPath(window.location.pathname);
+            console.log(window.location.pathname)
         }
     }, []);
 
@@ -53,23 +58,38 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
         })
     }, [])
 
+    useEffect(() => {
+        console.log("BEEADD", bread)
+    }, [bread])
+    
+    
+
+
+
+
     return (
         <>
             <SpeedInsights />
             <PageHead headTitle={headTitle} />
             <DataBg />
+            {(bread || (Path==="/" || Path==="/services-details/proptech")) && (<>
+                {headerStyle == 3 ? <Header3 Nothome={Nothome} scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
 
-            {headerStyle == 3 ? <Header3 Nothome={Nothome} scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} isOffcanvus={isOffcanvus} handleOffcanvus={handleOffcanvus} /> : null}
+            </>)}
 
 
             <main className="fix">
-                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} bread={bread} loaded={() => setBread(true)} />}
+                {(bread || (Path==="/" || Path==="/services-details/proptech")) && (<>
+                    {children}
+                </>)}
 
-                {children}
             </main>
 
+            {(bread || (Path==="/" || Path==="/services-details/proptech")) && (<>
+                {footerStyle == 3 ? < Footer3 /> : null}
+            </>)}
 
-            {footerStyle == 3 ? < Footer3 /> : null}
 
             <BackToTop />
         </>

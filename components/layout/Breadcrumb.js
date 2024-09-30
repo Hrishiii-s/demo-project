@@ -2,12 +2,12 @@ import withLoading from "@/app/withLoading";
 import Link from "next/link";
 import React, { useEffect, useState } from 'react';
 
-function Breadcrumb({ breadcrumbTitle }) {
+function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
     const [isMobile, setIsMobile] = useState(null);
     const [isTab, setIsTab] = useState(null);
     const [isWide, setIsWide] = useState(null);
     const [calculatedWidth, setCalculatedWidth] = useState('');
-    const [bannerLoaded, setBannerLoaded] = useState(false); // Track when the banner is loaded
+    const [imageLoaded, setImageLoaded] = useState(false); // Single state to track if the image is loaded
 
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function Breadcrumb({ breadcrumbTitle }) {
             setIsTab(viewportWidth > 768 && viewportWidth <= 1024);
             setIsWide(viewportWidth > 2160);
             const vwUnit = viewportWidth / 100;
-            const Width = 2 * vwUnit; // Replace 48 with whatever vw value you need
+            const Width = 2 * vwUnit;
             setCalculatedWidth(Width);
         }
 
@@ -27,11 +27,24 @@ function Breadcrumb({ breadcrumbTitle }) {
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener
     }, []);
 
-    // Do not render the component until the screen size is determined
-    if (isMobile === null || isTab === null || isWide === null) {
-        return null; // or render a loader/spinner here
-    }
+    useEffect(() => {
+        if (imageLoaded) {
+            const timer = setTimeout(() => {
+                console.log("working")
+                loaded(); // Call the loaded function after the image is loaded
+            }, 150); // You can adjust the delay time
+            return () => clearTimeout(timer);
+        }
+    }, [imageLoaded]);
 
+    // Handle image load
+    const handleImageLoad = () => {
+        setImageLoaded(true); // Set image as loaded once it's fully loaded
+    };
+
+    if (isMobile === null || isTab === null || isWide === null) {
+        return null; // Or render a loader/spinner here while determining screen size
+    }
     const banner = [
         {
             id: "About Us",
@@ -126,6 +139,7 @@ function Breadcrumb({ breadcrumbTitle }) {
         "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration"
     ];
 
+
     let specialTitleIndex = -1; // Initialize with -1 to indicate "not found"
 
     const isSpecialTitle = specialTitle.includes(breadcrumbTitle);
@@ -133,19 +147,18 @@ function Breadcrumb({ breadcrumbTitle }) {
         specialTitleIndex = specialTitle.findIndex(title => title === breadcrumbTitle);
     }
 
-
+     
 
     return (
         <>
             <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
-                {console.log("mb", matchingBanner)}
                 <div
                     className="banner-placeholder"
-                    style={{ height: bannerLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
-                >
+                    style={{ height: imageLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
+                >   
 
-                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: bannerLoaded ? "block" : "none" }}
-                        onLoad={() => setBannerLoaded(true)} />
+                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
+                        onLoad={handleImageLoad} />
 
                     <div className="container">
                         <div className="row">
@@ -153,13 +166,13 @@ function Breadcrumb({ breadcrumbTitle }) {
                                 <div className="breadcrumb__content">
                                     {isSpecialTitle ? (
                                         specialTitleIndex === 0 ? (
-                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: bannerLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: imageLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
 
                                         ) : (
                                             specialTitleIndex === 1 ? (
                                                 <>
                                                     <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{ left: isMobile ? '8%' : '10%', top: isMobile ? '26.5%' : '25%' }}>
-                                                        <h2 data-aos="fade-up" data-aos-delay={100} className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, display: bannerLoaded ? "block" : "none" }}><span className="text-black">Enhancing ECG Data Accuracy in <br /> Cardiac Monitoring through<br /><span className="text-white">AI Integration</span> </span></h2>
+                                                        <h2 data-aos="fade-up" data-aos-delay={100} className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, display: imageLoaded ? "block" : "none" }}><span className="text-black">Enhancing ECG Data Accuracy in <br /> Cardiac Monitoring through<br /><span className="text-white">AI Integration</span> </span></h2>
 
                                                     </div>
 
@@ -174,7 +187,7 @@ function Breadcrumb({ breadcrumbTitle }) {
                                         isMobile ? (
                                             null
                                         ) : (
-                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%', display: bannerLoaded ? "block" : "none" }}>{breadcrumbTitle}</h2>
+                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%', display: imageLoaded ? "block" : "none" }}>{breadcrumbTitle}</h2>
 
                                         )
 
