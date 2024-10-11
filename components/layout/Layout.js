@@ -52,6 +52,13 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
         });
     }, [scroll]);
 
+    if (!bread) {
+        <div className="fixed inset-0 flex justify-center items-center">
+            <MoonLoader />
+        </div>
+    }
+
+
     return (
         <>
             <SpeedInsights />
@@ -73,7 +80,7 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
                             handleOffcanvus={handleOffcanvus}
                         />
                     )}
-                   
+
                 </>
             ) : (
                 <>
@@ -95,27 +102,31 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
 
             <main className="fix">
 
-                {breadcrumbTitle  && (<>
+                {breadcrumbTitle ? (<>
                     <Breadcrumb breadcrumbTitle={breadcrumbTitle} bread={bread} loaded={() => setBread(true)} />
-
-                </>)
-               }
+                    {bread && children}
+                </>) : (
+                    <>
+                        {children}
+                    </>
+                )
+                }
                 {/* Always render the children */}
-                {children}
+
             </main>
 
             {breadcrumbTitle && bread ? (
                 <>
-                   {/* Conditionally render Footer */}
-            {footerStyle == 3 && <Footer3 />}
+                    {/* Conditionally render Footer */}
+                    {footerStyle == 3 && <Footer3 />}
                 </>
-            ) :(
+            ) : (
                 <>
-                   {/* Conditionally render Footer */}
-            {footerStyle == 3 && <Footer3 />}
+                    {/* Conditionally render Footer */}
+                    {footerStyle == 3 && <Footer3 />}
                 </>
-            ) }
-         
+            )}
+
 
             <BackToTop />
         </>
