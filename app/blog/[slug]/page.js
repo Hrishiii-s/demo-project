@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
 export default function BlogPage() {
   return (
     <div>
-                       <BlogDetails/>
+      <BlogDetails />
     </div>
   );
 }
