@@ -29,6 +29,7 @@ export async function generateMetadata({ params }) {
       description: blogPost.description || 'Discover more in our latest blog post!',
       images: blogPost.img ? [{ url: `/assets/img/banner/${blogPost.img}` }] : [],
       url: `https://www.ecesistech.com/blog/${slug}`,
+      type: 'article',
     },
   };
 }
@@ -36,8 +37,6 @@ export async function generateMetadata({ params }) {
 export default function BlogPage() {
   return (
     <div>
-                       <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Blog</h1>
-                       <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>How AI is Revolutionizing Real Estate Valuation</h2>
                        <BlogDetails/>
     </div>
   );
