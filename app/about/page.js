@@ -11,7 +11,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'About Us | Experts in AI, Digital Transformation, and PropTech',
       description: 'We help businesses evolve and thrive with AI-driven solutions and digital transformation. Explore how we create innovative and impactful solutions tailored to your digital growth.',
-      images: { url: `/assets/img/banner/about_banner.webp` },
+      images: { url: `/assets/img/logo/Logo_meta.png` },
       url: `https://www.ecesistech.com/about`,
     },
   };
