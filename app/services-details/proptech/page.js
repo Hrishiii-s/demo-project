@@ -10,7 +10,7 @@ export async function generateMetadata() {
       openGraph: {
         title: 'PropTech Services | AI-Driven Real Estate Solutions',
         description: 'Transform your real estate business with our innovative PropTech services. Powered by AI and automation, our solutions optimize processes, enhance property insights, and enable digital transformation tailored to your business needs.',
-        images: { url: `/assets/img/logo/Logo.webp` },
+        images: { url: `/assets/img/avatar/Logo main.png` },
         url: `https://www.ecesistech.com/services-details/proptech`,
       },
     };
