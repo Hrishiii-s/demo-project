@@ -32,7 +32,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
             const timer = setTimeout(() => {
                 console.log("working")
                 loaded(); // Call the loaded function after the image is loaded
-            }, 150); // You can adjust the delay time
+            }, 0); // You can adjust the delay time
             return () => clearTimeout(timer);
         }
     }, [imageLoaded]);

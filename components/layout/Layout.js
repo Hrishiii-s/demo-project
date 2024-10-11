@@ -66,9 +66,9 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
             <DataBg />
 
             {/* Conditionally render Header and Breadcrumb based on breadcrumbTitle */}
-            {breadcrumbTitle && bread ? (
+            {breadcrumbTitle  ? (
                 <>
-                    {headerStyle == 3 && (
+                    {bread && headerStyle == 3 && (
                         <Header3
                             Nothome={Nothome}
                             scroll={scroll}
@@ -115,10 +115,10 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
 
             </main>
 
-            {breadcrumbTitle && bread ? (
+            {breadcrumbTitle ? (
                 <>
                     {/* Conditionally render Footer */}
-                    {footerStyle == 3 && <Footer3 />}
+                    {bread && footerStyle == 3 && <Footer3 />}
                 </>
             ) : (
                 <>
