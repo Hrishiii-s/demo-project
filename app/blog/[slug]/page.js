@@ -82,7 +82,7 @@ export default function BlogDetails() {
                                                                         </ul>
                                                                     </div>
                                                                 </div>
-                                                                <div className="col-md-3">
+                                                                {/* <div className="col-md-3">
                                                                     <div className="post-share">
                                                                         <h5 className="title">Share:</h5>
                                                                         <ul className="list-wrap">
@@ -92,7 +92,7 @@ export default function BlogDetails() {
                                                                             <li><Link href="#"><i className="fab fa-pinterest-p" /></Link></li>
                                                                         </ul>
                                                                     </div>
-                                                                </div>
+                                                                </div> */}
                                                             </div>
                                                         </div>
                                                     </div>
