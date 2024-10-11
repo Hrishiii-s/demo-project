@@ -11155,11 +11155,10 @@ padding-left: 40px;
 }
 .blog-avatar .avatar-content p {
   margin-bottom: 0;
-  font-weight: 500;
-  color: #9597C8;
+  font-weight: 700;
 }
 .blog-avatar .avatar-content p a:hover {
-  color: var(--tg-theme-secondary);
+  color: "#f9ba00";
 }
 .blog-post-meta .list-wrap {
   display: -webkit-box;
@@ -11783,6 +11782,7 @@ blockquote p {
 }
 .sidebar__post-thumb {
   width: 80px;
+  height: 80px;
   flex: 0 0 auto;
 }
 .sidebar__post-thumb img {

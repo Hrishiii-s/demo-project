@@ -1,8 +1,10 @@
 import Marquee from 'react-fast-marquee';
+import LazyLoad from 'react-lazyload';
 
 
 export default function Marquee2() {
     return (
+        <LazyLoad height={100} offset={100} once>
         <div className="marquee__area-two">
 
             <Marquee className="marquee__wrap max-h-40 overflow-hidden" gradient={false} speed={100}>
@@ -25,6 +27,8 @@ export default function Marquee2() {
                 <img src="/assets/img/brand/Mad.webp" className="w-24 h-20 object-contain mr-16 mb_19" alt="Mad" />
 
             </Marquee>
+        
         </div>
+        </LazyLoad>
     );
 }

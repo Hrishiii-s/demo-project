@@ -125,6 +125,13 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
             backgroundMobile: "/assets/img/banner/ecg_banner.jpeg",
             style: "text-white"
         },
+        {
+            id: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
+            backgroundImageUrl: "/assets/img/banner/ecg_banner.jpeg",
+            backgroundMobile: "/assets/img/banner/ecg_banner.jpeg",
+            style: "text-white"
+        },
+
 
 
 
@@ -151,13 +158,15 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
 
     return (
         <>
+        {matchingBanner && breadcrumbTitle && (
+            <>
             <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
                 <div
                     className="banner-placeholder"
                     style={{ height: imageLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
                 >   
 
-                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : "/assets/img/bg/breadcrumb_bg.webp"} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
+                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : null} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
                         onLoad={handleImageLoad} />
 
                     <div className="container">
@@ -166,7 +175,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
                                 <div className="breadcrumb__content">
                                     {isSpecialTitle ? (
                                         specialTitleIndex === 0 ? (
-                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: imageLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : "/assets/img/bg/breadcrumb_bg.webp"} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: imageLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
 
                                         ) : (
                                             specialTitleIndex === 1 ? (
@@ -199,6 +208,10 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
                 </div>
             </section>
 
+            
+            </>
+        )}
+            
         </>
     );
 }

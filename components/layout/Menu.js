@@ -95,6 +95,7 @@ export default function Menu() {
                     <ul className="sub-menu w-[160px]">
                      
                         <li><Link href={`/case-study`}>Case Studies</Link></li>
+                        <li><Link href={`/blog`}>Blog</Link></li>
 
                     </ul>
                 </li>

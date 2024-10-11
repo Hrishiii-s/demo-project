@@ -38,7 +38,7 @@ export default function MainService() {
         <>
             <div>
                 <section className="services__area-six services__bg-six" data-background="/assets/img/bg/services_bg1.webp">
-                    <div className="xl:max-w-[1440px] max-w-[1080px] mx-auto">
+                    <div className="xl:max-2xl:max-w-[1080px] 2xl:max-w-[1440px] max-w-[1080px] mx-auto">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="section-title white-title mb-10">
