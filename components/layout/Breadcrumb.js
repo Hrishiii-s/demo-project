@@ -121,16 +121,11 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
         },
         {
             id: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
-            backgroundImageUrl: "/assets/img/banner/ecg_banner.jpeg",
-            backgroundMobile: "/assets/img/banner/ecg_banner.jpeg",
+            backgroundImageUrl: "/assets/img/banner/ecg_banner.webp",
+            backgroundMobile: "/assets/img/banner/ecg_banner.webp",
             style: "text-white"
         },
-        {
-            id: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
-            backgroundImageUrl: "/assets/img/banner/ecg_banner.jpeg",
-            backgroundMobile: "/assets/img/banner/ecg_banner.jpeg",
-            style: "text-white"
-        },
+
 
 
 

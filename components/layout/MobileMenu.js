@@ -81,7 +81,7 @@ export default function MobileMenu({ handleMobileMenu }) {
                     </Link>
                     <ul className="sub-menu" style={{ display: isActive.resources ? "block" : "none" }}>
                         <li onClick={handleMobileMenu}><Link href="/case-study">Case Study</Link></li>
-                        <li onClick={handleMobileMenu}><Link href="/blog">Blog</Link></li>
+                        <li onClick={handleMobileMenu}><Link href="/blog">Blogs</Link></li>
                     </ul>
                     <div className={isActive.resources ? "dropdown-btn open" : "dropdown-btn"} onClick={(e) => handleToggle('resources', e)}>
                         <span className="plus-line" />
