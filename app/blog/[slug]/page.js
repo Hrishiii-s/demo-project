@@ -73,10 +73,10 @@ export default function BlogDetails() {
                                                                     <div className="post-tags">
                                                                         <h5 className="title">Tags:</h5>
                                                                         {console.log(blogPost.tags)}
-                                                                        <ul className="list-wrap flex">
+                                                                        <ul className="list-wrap flex flex-wrap">
                                                                             {blogPost.tags.map((tag, index) => {
                                                                                 return (
-                                                                                    <li key={index} className="w-fit mr-2"><Link href="#">{tag}</Link></li>
+                                                                                    <li key={index} className="w-fit mr-2 mb-2 md:mb-0 md:mt-2"><Link href="#">{tag}</Link></li>
                                                                                 );
                                                                             })}
                                                                         </ul>
