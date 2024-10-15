@@ -11000,6 +11000,17 @@ padding-left: 40px;
   height: 250px;
   object-fit: cover;
 }
+
+.case__post-thumb-two {
+  -webkit-border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -o-border-radius: 15px 15px 0 0;
+  -ms-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  margin: -1px;
+}
+
 .blog__post-thumb-three {
   margin-bottom: 35px;
 }
@@ -15091,4 +15102,26 @@ blockquote p {
   position: relative; /* Ensure it doesn't interfere with the rest of the layout */
   width: 100%;
   background-color: #f0f0f0; /* A light background color to act as a placeholder */
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.grid-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.blog__post-two img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+.blog__post-content-two .title {
+  font-size: 1.5rem;
+  margin-top: 10px;
 }

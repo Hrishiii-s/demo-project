@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import Request3 from "@/components/sections/Request3";
 import LazyLoad from 'react-lazyload';
-import Marquee_Footer from '@/components/sections/Maquee_footer';
+import Marquee_Footer from '@/components/sections/Marquee_footer';
 
 export default function Footer3() {
 
@@ -70,13 +70,14 @@ export default function Footer3() {
                                 </div>
                                 <div className="max-w-full">
                                     <LazyLoad height={200} key={renderKey} unmountIfInvisible={true} offset={100} once>
-                                        <h3 className={`${isMobile ? "font28 text-left mr-1"  : "text-4xl text-left"} ${showTypewriter ? "typewriter" : ""} mb-2`} >
+                                        <h3 className={`${isMobile ? "text-[31px] text-left mr-1"  : "text-4xl text-left"} ${showTypewriter ? "typewriter" : ""} mb-2`} >
                                             <span className='text-blue-400'>Evolve.</span>
                                             <span className='text-pink-400'>Transform.</span>
                                             <span>Grow.</span>
                                         </h3>
-                                        {/* <Marquee_Footer/> */}
+                                    
                                     </LazyLoad>
+                                        {/* <Marquee_Footer/> */}
                                     <div className="">
                                         <Request3 />
                                     </div>

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blogPost.title,
       description: blogPost.description || 'Discover more in our latest blog post!',
-      images: blogPost.img ? [{ url: `/assets/img/banner/${blogPost.img}` }] : [],
+      images: blogPost.img ? [{ url: `/assets/img/blog/${blogPost.img}` }] : [],
       url: `https://www.ecesistech.com/blog/${slug}`,
       type: 'article',
     },

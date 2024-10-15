@@ -13,6 +13,24 @@ import { MoonLoader } from "react-spinners";
 
 
 function CaseStudy() {
+
+    const cases = [
+        {
+            id: 1,
+            title: "From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth",
+            img: "horse_barn.webp",
+            url: "how-a-single-website-drove-3X-revenue-growth"
+
+        },
+        {
+            id: 2,
+            title: "Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration",
+            img: "ecg_mobile.png",
+            url: "enhancing-ECG-data-using-AI"
+
+        }
+    ]
+
     let Nothome = true;
 
     const [isMobile, setIsMobile] = useState(false);
@@ -49,64 +67,48 @@ function CaseStudy() {
             </div>
         ); // Or any other loading indicator
     }
-    
+
 
 
     return (
         <>
-        <Head>
-        <title>
-        Case Studies | Success Stories in AI, PropTech, and Digital Transformation
-        </title>
+            <Head>
+                <title>
+                    Case Studies | Success Stories in AI, PropTech, and Digital Transformation
+                </title>
                 <meta name="description" content="Explore our case studies to see how we’ve helped businesses transform with AI, PropTech, and digital solutions. Discover real-world examples of innovation, growth, and success across various industries." />
-   
-        </Head>
+
+            </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Case Studies" Nothome={Nothome}>
-                <section className="services__details-area main-font">
-                    <div className="container">
-                        <div className="services__details-wrap">
-                            <div className="flex flex-col">
-                                <Link href="/case-study/how-a-single-website-drove-3X-revenue-growth">
-                                    <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2">
-                                        <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
-                                            <img src="/assets/img/case/horse_barn.webp" alt="" className="rounded-md md:rounded-l-md object-cover" />
-
-                                        </div>
-                                        {isMobile ? null : (
-                                            <div className="content-center ml-4 p-2">
-                                                <h1 className="md:text-3xl text-base">From Complexity to Clarity: How a Single Website Drove 3X Revenue Growth</h1>
-                                                <h2 className="sr-only">Case Study</h2>
-                                            </div>
-
-                                        )}
-
-
-                                    </div>
-                                </Link>
-                                <Link href="/case-study/enhancing-ECG-data-using-AI">
-                                    <div className="w-full rounded-3xl md:rounded-md bg-slate-300 flex flex-row border-2 mt-3">
-                                        <div className={`${isMobile ? 'w-full' : 'w-[30%]'}`}>
-                                            <img src="/assets/img/case/ecg_mobile.png" alt="" className="rounded-md h-[230px] md:rounded-l-md object-cover" />
-                                        </div>
-                                        {isMobile ? null : (
-                                            <div className="content-center ml-4 p-2">
-                                                <h1 className="md:text-3xl text-base">Enhancing ECG Data Accuracy in Cardiac Monitoring through AI Integration</h1>
-                                                <h2 className="sr-only">Case Study</h2>
-                                            </div>
-
-                                        )}
-
-
-                                    </div>
-                                </Link>
-
-                            </div>
-
-
-
-                        </div>
+            <section className="services__details-area main-font">
+    <div className="container">
+        {/* Applying the grid layout to the entire container */}
+        <div className="services__details-wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cases.map((item, index) => (
+                // Each case study item will be a grid item
+                <div className="blog__post-two shine-animate-item" key={index}>
+                    <div className="case__post-thumb-two">
+                        <Link href={`/case-study/${item.url}`} className="shine-animate">
+                            {/* Set fixed width and height for the image with object-cover to maintain aspect ratio */}
+                            <img
+                                src={`/assets/img/case/${item.img}`}
+                                alt={item.title}
+                                className="object-cover rounded-lg"
+                            />
+                        </Link>
                     </div>
-                </section>
+                    <div className=" p-3 mb-3 mt-4">
+                        <h2 className="text-2xl font-semibold capitalize">
+                            <Link href={`/case-study/${item.url}`}>{item.title}</Link>
+                        </h2>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+
             </Layout>
         </>
     )

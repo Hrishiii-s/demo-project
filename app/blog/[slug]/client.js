@@ -46,7 +46,7 @@ export default function BlogDetails() {
                                             <div className="col-70">
                                                 <div className="blog__details-wrap">
                                                     <div className="blog__details-thumb">
-                                                        <img src={`/assets/img/banner/${blogPost.img}`} className="w-100" alt="" />
+                                                        <img src={`/assets/img/blog/${blogPost.img}`} className="w-100" alt="" />
                                                     </div>
                                                     <div className="blog__details-content">
                                                         <h2 className="title">{blogPost.title}</h2>
@@ -114,13 +114,13 @@ export default function BlogDetails() {
                                                 <aside className="blog__sidebar">
 
                                                     <div className="sidebar__widget">
-                                                        <h4 className="sidebar__widget-title">Latest Posts</h4>
+                                                        <h4 className="sidebar__widget-title">Latest Blogs</h4>
                                                         <div className="sidebar__post-list">
-                                                            {latestPosts.slice(0, 4).map((post) => (
+                                                            {latestPosts.slice(-4).map((post) => (
                                                                 <div className="sidebar__post-item" key={post.id}>
                                                                     <div className="sidebar__post-thumb">
                                                                         <Link href={`/blog/${post.slug}`}>
-                                                                            <img src={`/assets/img/banner/${post.img}`} alt={post.title}  className="h-full w-full object-cover"/>
+                                                                            <img src={`/assets/img/blog/${post.img}`} alt={post.title}  className="h-full w-full object-cover"/>
                                                                         </Link>
                                                                     </div>
                                                                     <div className="sidebar__post-content">
