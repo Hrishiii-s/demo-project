@@ -313,7 +313,7 @@ function ECGCaseStudy() {
                                             </div>
                                         </aside>
                                     </div>
-                                    <div className="flex flex-col justify-end">
+                                    <div className="hidden md:flex flex-col justify-end">
                                         <aside className="blog__sidebar">
                                             <div className="sidebar__widget">
                                                 <h4 className="sidebar__widget-title">Case Studies</h4>
