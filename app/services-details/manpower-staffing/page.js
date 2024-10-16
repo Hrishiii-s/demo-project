@@ -19,6 +19,8 @@ export async function generateMetadata() {
 function Talentpage() {
     return (
         <div>
+            <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Industrial Staffing Services</h1>
+            <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Finding Skilled Talent for Manufacturing & Assembly Lines</h2>
             <Talent />
         </div>
     )

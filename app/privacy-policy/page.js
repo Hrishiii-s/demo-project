@@ -21,6 +21,8 @@ export async function generateMetadata() {
 function Privacypage() {
   return (
     <div> 
+                <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Privacy Policy</h1>
+                <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>ECESIS Privacy & Policies</h2>
         <Privacy/>
            </div>
   )

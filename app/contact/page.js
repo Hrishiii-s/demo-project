@@ -20,6 +20,8 @@ export async function generateMetadata() {
 function Contactpage() {
   return (
     <div> 
+                <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Contact Us</h1>
+                <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Let’s Connect</h2>
         <Contact/>
            </div>
   )

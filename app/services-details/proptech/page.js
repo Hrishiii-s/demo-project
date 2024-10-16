@@ -20,6 +20,8 @@ export async function generateMetadata() {
 function PropTechpage() {
     return (
         <div>
+                      <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>PropTech Services</h1>
+                      <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Transforming Real Estate with AI and Technology</h2>
             <PropTech />
         </div>
     )

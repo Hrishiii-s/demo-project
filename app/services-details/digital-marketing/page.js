@@ -20,6 +20,8 @@ export async function generateMetadata() {
 function Marketingpage() {
     return (
         <div>
+          <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Expert Digital Marketing Services</h1>
+          <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Boosting Online Presence and Engagement</h2>
             <Digital />
         </div>
     )

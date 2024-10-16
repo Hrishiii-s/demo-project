@@ -22,6 +22,8 @@ export async function generateMetadata() {
 function Schedulepage() {
   return (
     <div>
+                <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Schedule a meeting</h1>
+                <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Let’s Connect</h2>
       <Schedule />
     </div>
   )

@@ -20,6 +20,8 @@ export async function generateMetadata() {
 export default function Aboutpage() {
   return (
     <div>
+                <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>About Us</h1>
+                <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Explore how we create innovative and impactful solutions tailored to your digital growth.</h2>
       <About />
     </div>
   )

@@ -20,6 +20,8 @@ export async function generateMetadata() {
 function Busineesspage() {
     return (
         <div>
+                      <h1 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Business Process Automation</h1>
+                      <h2 style={{ visibility: 'hidden', height: 0, overflow: 'hidden' }}>Transforming Workflows with Automation</h2>
             <Business />
         </div>
     )
