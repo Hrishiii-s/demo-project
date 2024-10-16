@@ -1,35 +1,28 @@
+import React from 'react'
+import Blog from './client';
 
-import BlogPost from "@/components/blog/BlogPost"
-import Layout from "@/components/layout/Layout"
-import Link from "next/link"
+export async function generateMetadata() {
 
-export default function Blog() {
-    return (
-        <>
-            <Layout headerStyle={3} footerStyle={3}>
-                <div>
-                    <section className="blog__area">
-                        <div className="container">
-                            <div className="blog__inner-wrap">
-                                <div className="row">
-                                    <div className="col-70">
-                                        <div className="blog-post-wrap">
-                                            <div className="row gutter-24">
-                                                <BlogPost showItem={6} style={1} showPagination />
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    {/* blog-area-end */}
-                    {/* call-back-area */}
-
-                </div>
-
-            </Layout>
-        </>
-    )
+  return {
+    title: 'Blogs | PropTech Trends & Innovations',
+    description: 'Discover real estate tech insights and PropTech innovations. Stay informed with expert blogs & articles from ECESIS.',
+    openGraph: {
+      title: 'Blogs | PropTech Trends & Innovations',
+      description: 'Discover real estate tech insights and PropTech innovations. Stay informed with expert blogs & articles from ECESIS.',
+      images: { url: `/assets/img/logo/Logo_meta.png` },
+      url: `https://www.ecesistech.com/blog`,
+    },
+  };
 }
+
+
+
+function Blogpage() {
+  return (
+    <div> 
+        <Blog/>
+           </div>
+  )
+}
+
+export default Blogpage;
