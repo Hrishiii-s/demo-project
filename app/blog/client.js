@@ -9,7 +9,7 @@ export default function Blog() {
             <Layout headerStyle={3} footerStyle={3}>
                 <div>
                     <section className="blog__area">
-                        <div className="max-w-[1440px] pl-20">
+                        <div className="max-w-[1440px] px-20 mx-auto">
                             <div className="blog__inner-wrap">
                                 <div className="row">
                                     <div className="">

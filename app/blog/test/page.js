@@ -68,7 +68,7 @@ export default function BlogTest() {
                                                         </div>
                                                         {/* <BlogConvert jsonContent={blogPost.content} /> */}
                                                         {/* <span className='font-bold'></span> */}
-                                                        {/* <div>
+                                                        <div>
                                                             <p>While AI has become synonymous with enhancing property valuations and real estate appraisals, its capabilities extend far beyond. In the realm of property management, AI-powered solutions are transforming the way repairs and maintenance are handled, bringing new levels of efficiency and cost-effectiveness to real estate firms. At ECESIS, we leverage our expertise in AI and automation to provide solutions that not only enhance property valuations but also streamline the maintenance processes for our clients, ensuring properties remain in optimal condition and retain their value.<br /></p>
 
                                                             <h2 className='font-bold text-2xl my-3'>Automated Property Inspections and Damage Detection</h2>
@@ -100,8 +100,7 @@ export default function BlogTest() {
                                                             <p>At ECESIS, we are committed to providing AI-driven solutions that empower real estate firms to maintain their properties efficiently and effectively. Our expertise in <a href="/services-details/proptech"><span className='underline text-[#e6ae15] font-bold'>proptech</span></a> and automation ensures that our clients remain at the forefront of the industry, offering superior services and maintaining properties that tenants love. If you’re ready to explore how AI can enhance your property management strategies, connect with ECESIS today.<br /></p>
 
 
-                                                        </div> */}
-                                                        <div></div>
+                                                        </div>
                                                         <div className="blog__details-bottom">
                                                             <div className="row align-items-center">
                                                                 <div className="col-lg-9">
