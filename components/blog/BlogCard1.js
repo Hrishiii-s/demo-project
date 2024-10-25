@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 export default function BlogCard1({ item }) {
-    const titleurl = item.title.replace(/\s+/g, '-');
+    const titleurl = item.slug;
     return (
         <>
-            <div className="col-md-6">
+            <div className="col-md-4">
                 <div className="blog__post-two shine-animate-item">
                     <div className="blog__post-thumb-two">
                         <Link href={`/blog/${titleurl}`} className="shine-animate">
