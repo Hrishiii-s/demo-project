@@ -21,14 +21,14 @@ export default function BlogCard1({ item }) {
                             </ul>
                         </div>
                         <h2 className="title"><Link href={`/blog/${titleurl}`}>{item.title}</Link></h2>
-                        <div className="blog-avatar">
+                        {/* <div className="blog-avatar">
                             <div className="avatar-thumb">
                             <img src={`/assets/img/avatar/${item.avatar}`} alt="" />
                             </div>
-                            {/* <div className="avatar-content">
+                            <div className="avatar-content">
                                 <p>By <Link href={`/blog/${titleurl}`} style={{color: "#00235f"}}>{item.author}</Link></p>
-                            </div> */}
-                        </div>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

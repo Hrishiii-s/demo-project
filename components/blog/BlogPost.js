@@ -7,7 +7,7 @@ import Pagination from "./Pagination"
 export default function BlogPost({ style, showItem, showPagination }) {
     let [currentPage, setCurrentPage] = useState(1)
     let showLimit = showItem,
-        paginationItem = 4
+        paginationItem = 3
 
     let [pagination, setPagination] = useState([])
     let [limit, setLimit] = useState(showLimit)
@@ -26,7 +26,7 @@ export default function BlogPost({ style, showItem, showPagination }) {
         setPagination(arr)
         setPages(Math.ceil(data.length / limit))
     }
-
+    console.log("limit",limit)
     const startIndex = currentPage * limit - limit
     const endIndex = startIndex + limit
     const getPaginatedProducts = data.slice(startIndex, endIndex)
