@@ -101,6 +101,7 @@ export default function BlogTest() {
 
 
                                                         </div> */}
+                                                        <div></div>
                                                         <div className="blog__details-bottom">
                                                             <div className="row align-items-center">
                                                                 <div className="col-lg-9">
