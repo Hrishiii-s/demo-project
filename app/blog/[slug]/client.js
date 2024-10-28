@@ -106,14 +106,14 @@ console.log("sidebar",sidebarFixed)
                                                             <ul className="list-wrap">
                                                                 <li><Link href="/blog" className="blog__post-tag-two">{blogPost.category}</Link></li>
                                                                 <li>
-                                                                    <div className="blog-avatar">
+                                                                    {/* <div className="blog-avatar">
                                                                         <div className="avatar-thumb">
                                                                             <img src={`/assets/img/avatar/${blogPost.avatar}`} alt="" />
                                                                         </div>
                                                                         <div className="avatar-content">
                                                                             <p>By <Link href="/blog">{blogPost.author}</Link></p>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> */}
                                                                 </li>
                                                                 <li><i className="fas fa-calendar-alt" />{blogPost.date}</li>
                                                             </ul>
@@ -148,20 +148,9 @@ console.log("sidebar",sidebarFixed)
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="blog__avatar-wrap">
-                                                        <div className="blog__avatar-img">
-                                                            <Link href="#"><img src={`/assets/img/avatar/${blogPost.avatar}`} alt="img" /></Link>
-                                                        </div>
-                                                        <div className="blog__avatar-info">
-                                                            <span className="designation">Author</span>
-                                                            <h4 className="name"><Link href="#">{blogPost.author}</Link></h4>
-                                                            <p>{blogPost.about}</p>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                   
                                                 </div>
                                             </div>
+                                            
                                             <div className={`col-30 hidden lg:block`}>
                                                 <aside className={`blog__sidebar ${sidebarFixed ? 'fixed' : 'absolute bottom-0'}`}>
 
