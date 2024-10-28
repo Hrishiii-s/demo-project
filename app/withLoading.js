@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-// Dynamically import the GridLoader component with SSR disabled
-const GridLoader = dynamic(() => import('react-spinners/GridLoader'), { ssr: false });
+const MoonLoader = dynamic(() => import('react-spinners/MoonLoader'), { ssr: false });
 
 const withLoading = (WrappedComponent) => {
     return (props) => {
@@ -22,7 +21,7 @@ const withLoading = (WrappedComponent) => {
 
         if (!isLoaded) {
             return <div className="absolute" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                <GridLoader color="#f9ba00" />
+                <MoonLoader color="#f9ba00" />
             </div>; // Display a loading indicator while components are loading
         }
 
