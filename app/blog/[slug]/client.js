@@ -4,13 +4,15 @@ import VideoPopup from "@/components/elements/PopupVideo"
 import data from "@/util/blog.json"
 import Link from "next/link"
 import { useParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import BlogConvert from "@/components/blog/BlogConvert"
 
 export default function BlogDetails() {
     let { slug } = useParams();  // Extract slug directly from useParams
     const [blogPost, setBlogPost] = useState(null)
     const [latestPosts, setLatestPosts] = useState([]);
+    const [sidebarFixed, setSidebarFixed] = useState(true);  // State for sidebar fixed position
+    const sidebarContainerRef = useRef(null); // Ref for sidebar container
 
     useEffect(() => {
         // Sort posts by date in descending order (latest first)
@@ -31,7 +33,57 @@ export default function BlogDetails() {
         setBlogPost(post);  // Find the blog post by slug
     }, [slug]);  // Effect will re-run if slug changes
 
+    useEffect(() => {
+        // Observer to detect when sidebar container reaches the end
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setSidebarFixed(!entry.isIntersecting); // Release fixed position when the end is visible
+            },
+            { root: null, threshold: 1.0 } // Trigger when 100% of the element is in view
+        );
 
+        if (sidebarContainerRef.current) {
+            observer.observe(sidebarContainerRef.current);
+        }
+
+        return () => {
+            if (sidebarContainerRef.current) {
+                observer.unobserve(sidebarContainerRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!sidebarContainerRef.current || !sidebarContainerRef.current) return;
+
+            const containerBottom = sidebarContainerRef.current.getBoundingClientRect().bottom;
+            const sidebarHeight = sidebarContainerRef.current.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            console.log("viewportHeight",viewportHeight)
+            console.log("containerBottom",containerBottom)
+            console.log("sidebarHeight",sidebarHeight)
+
+            if (containerBottom  <= (viewportHeight - 100)) {
+                setSidebarFixed(false);
+            } else {
+                setSidebarFixed(true);
+            }
+        };
+
+
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+
+    useEffect(()=>{
+console.log("sidebar",sidebarFixed)
+    },[sidebarFixed])
     const titleurl = slug.replace(/-/g, ' ');
     return (
         <>
@@ -40,8 +92,8 @@ export default function BlogDetails() {
                     <>
                         <div>
                             <section className="blog__details-area">
-                                <div className="container">
-                                    <div className="blog__inner-wrap">
+                                <div className="container relative" ref={sidebarContainerRef}>
+                                    <div className="blog__inner-wrap" >
                                         <div className="row">
                                             <div className="col-70">
                                                 <div className="blog__details-wrap">
@@ -110,10 +162,10 @@ export default function BlogDetails() {
                                                    
                                                 </div>
                                             </div>
-                                            <div className="col-30">
-                                                <aside className="blog__sidebar">
+                                            <div className={`col-30 ${sidebarFixed ? 'fixed right-10' : 'absolute bottom-0 -right-4'}`}>
+                                                <aside className={`blog__sidebar `}>
 
-                                                    <div className="sidebar__widget">
+                                                    <div className="sidebar__widget w-[400px]">
                                                         <h4 className="sidebar__widget-title">Latest Blogs</h4>
                                                         <div className="sidebar__post-list">
                                                             {latestPosts.slice(-4).map((post) => (
