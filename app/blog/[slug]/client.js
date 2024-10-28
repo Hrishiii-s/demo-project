@@ -65,7 +65,7 @@ export default function BlogDetails() {
             console.log("containerBottom",containerBottom)
             console.log("sidebarHeight",sidebarHeight)
 
-            if (containerBottom  <= (viewportHeight - 100)) {
+            if (containerBottom  <= viewportHeight) {
                 setSidebarFixed(false);
             } else {
                 setSidebarFixed(true);
@@ -162,8 +162,8 @@ console.log("sidebar",sidebarFixed)
                                                    
                                                 </div>
                                             </div>
-                                            <div className={`col-30 ${sidebarFixed ? 'fixed right-10' : 'absolute bottom-0 -right-4'}`}>
-                                                <aside className={`blog__sidebar `}>
+                                            <div className={`col-30 hidden lg:block`}>
+                                                <aside className={`blog__sidebar ${sidebarFixed ? 'fixed' : 'absolute bottom-0'}`}>
 
                                                     <div className="sidebar__widget w-[400px]">
                                                         <h4 className="sidebar__widget-title">Latest Blogs</h4>
