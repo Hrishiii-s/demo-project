@@ -112,7 +112,7 @@ function TalentServices() {
                                             <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div> */}
                                         <div className="services__details-content">
-                                            <h1 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `}>Elevating Industries Through <span className="text-pink-400">Premier Staffing Solution</span></h1>
+                                            <h1 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `}>Elevating Industries Through <span className="text-pink-400">Premier Staffing Solutions</span></h1>
                                             <p>Over the years, ECESIS has developed deep expertise in management consulting and Talent Acquisition for the advanced manufacturing industry. We are one of the most trusted brands in the industry, and this recognition stems from the world-class, high-quality talent we provide. We specialize in placing trained precision and assembly line engineers and other skilled manpower for various sectors. Choose us for a staffing strategy that goes beyond conventional solutions, delivering unparalleled results tailored to your organizational goals. We offer sophisticated solutions encompassing end-to-end recruitment, general staffing, executive hiring, and various other services to meet contractual or permanent hiring needs.</p>
                                             {/* <div className="services__details-list">
                                                 <div className="row">

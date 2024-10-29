@@ -60,7 +60,7 @@ export default function BlogPost({ style, showItem, showPagination }) {
                 </React.Fragment>
             ))}
 
-            {showPagination &&
+            {showPagination && getPaginatedProducts.length > 6 &&
                 <Pagination
                     getPaginationGroup={
                         getPaginationGroup

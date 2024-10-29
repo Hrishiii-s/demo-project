@@ -352,7 +352,7 @@ export default function Proptech() {
                 {/* Who Can Leverage Our Real Estate Software Development Services */}
                 <section className="my-4 py-6">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold text-center mb-6">Who Can Leverage Our Real Estate Software Development Services</h2>
+                        <h2 className="text-3xl font-bold text-center mb-6">Who Can Leverage Our Real Estate Software Development Services ?</h2>
                         <div className="">
                             <div className="mt-16 mb-12 flex justify-center items-center">
                                 <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-2"} gap-x-4 gap-y-4 `} >
@@ -367,7 +367,7 @@ export default function Proptech() {
                                     </div>
                                     {/* Tailored Software for Real Estate */}
                                     <div className='rounded-xl bg-slate-100 p-3'>
-                                        <h1 className='title text-center text-2xl'>Proptech Startups</h1>
+                                        <h1 className='title text-center text-2xl'>PropTech Startups</h1>
                                         <p className='text-center mt-4 text-black'>Have a groundbreaking idea that could revolutionize real estate? Let’s turn it into reality. Ecesis will help you build a cutting-edge MVP that will help you secure funding. We conduct in-depth workshops to understand your target audience, identify trends, oversee development, and provide ongoing support to ensure your solution’s financial and operational success.</p>
                                         <div className='flex justify-center items-center mt-[22px]'>
                                             <Link href="/schedule-a-meeting" className="btn">Know More</Link>
@@ -375,7 +375,7 @@ export default function Proptech() {
                                         </div>
                                     </div>
                                     <div className='rounded-xl bg-slate-100 p-3'>
-                                        <h1 className='title text-center text-2xl'>Established Proptechs Expanding Market Presence</h1>
+                                        <h1 className='title text-center text-2xl'>Established PropTechs Expanding Market Presence</h1>
                                         <p className='text-center mt-4 text-black'>Passionate about advancing real estate technology but need industry expertise or tech support? Ecesis is here to help. Whether you’re launching new software or enhancing existing solutions, we offer code audits, team augmentation, and full-cycle development to deliver custom real estate software that drives business growth.</p>
                                         <div className='flex justify-center items-center mt-[45px]'>
                                             <Link href="/schedule-a-meeting" className="btn">Know More</Link>
@@ -383,7 +383,7 @@ export default function Proptech() {
                                         </div>
                                     </div>
                                     <div className='rounded-xl bg-slate-100 p-3'>
-                                        <h1 className='title text-center text-2xl'>Venture Capital Firms Investing in Proptech</h1>
+                                        <h1 className='title text-center text-2xl'>Venture Capital Firms Investing in PropTech</h1>
                                         <p className='text-center mt-4 text-black'>Ecesis partners with venture capital firms to ensure the long-term success of their proptech investments. From due diligence to technology implementation, we provide comprehensive support to assess MVPs, oversee development, and maintain the scalability and performance of your portfolio companies.</p>
                                         <div className='flex justify-center items-center mt-[45px]'>
                                             <Link href="/schedule-a-meeting" className="btn">Know More</Link>
@@ -414,7 +414,7 @@ export default function Proptech() {
                             <div className="row align-items-center">
                                 <div className="call-back-content flex flex-row justify-center items-center" >
                                     <div className="section-title white-title tg-heading-subheading animation-style3 text-center">
-                                        <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> No-cost consulting session with our <span className="text-ly">Proptech expert</span>
+                                        <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>, no-cost consult<br /> with our <span className="text-ly">PropTech expert</span>
                                         </h2>
                                         <Link href="/schedule-a-meeting" className="btn mt-5">Let's Talk</Link>
                                     </div>

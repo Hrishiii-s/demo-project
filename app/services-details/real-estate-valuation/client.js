@@ -109,16 +109,15 @@ export default function ServicesDetails() {
                                             </div>
                                             <div className="services__details-inner">
                                                 <div className="row gutter-24 align-items-center">
-                                                    <div className="">
-                                                        <div className="services__details-inner-img justify-center flex" >
-                                                            <img src="/assets/img/services/services_details_inner01.webp" className="object-cover object-top" style={{ height: "350px", width: "60%" }} alt="" />
+                                                    <div className="flex flex-col items-center justify-center w-full">
+                                                        <div className="services__details-inner-img flex items-center justify-center w-[45%]">
+                                                            <img src="/assets/img/images/thumbnail2.webp" className="object-cover object-center w-full" alt="" />
                                                             <VideoPopup url={"jRHkw8liWLQ"} />
-
                                                         </div>
                                                         <div>
                                                             <h4 className="font-semibold mb-6 uppercase text-center mt-3" style={{ fontSize: '25px' }}>
-                                                                WATCH HOW TO GET <span className="text-blue-400" style={{ fontSize: '30px' }}>2X REVENUE</span> GROWTH, <span className="text-pink-400" style={{ fontSize: '30px' }}>92%+ ACCURACY </span> WITH ECESIS
-
+                                                                WATCH HOW TO GET <span className="text-blue-400" style={{ fontSize: '30px' }}>2X REVENUE</span> GROWTH,
+                                                                <span className="text-pink-400" style={{ fontSize: '30px' }}>92%+ ACCURACY</span> WITH ECESIS
                                                             </h4>
                                                         </div>
                                                     </div>

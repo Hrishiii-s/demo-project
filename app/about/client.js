@@ -204,7 +204,7 @@ export default function About() {
                                                 <ul className="list-wrap">
                                                     <li><i className="flaticon-arrow-button" />Extensive Industry Knowledge</li>
                                                     <li><i className="flaticon-arrow-button" />Innovative and Adaptive Culture</li>
-                                                    <li><i className="flaticon-arrow-button" />Strategic Vision For Long-Term Growth</li>
+                                                    <li><i className="flaticon-arrow-button" />Strategic Visions For Long-Term Growth</li>
                                                 </ul>
                                             </div>
                                             {/* <div className="about__list-img-two">

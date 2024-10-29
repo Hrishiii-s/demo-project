@@ -93,8 +93,8 @@ function DigitalServices() {
                                                         </div>
                                                     </div> */}
                                                     <div>
-                                                        <h2 className="text-3xl uppercase mt-20 text-black text-center">Our Services</h2>
-                                                        <div className={`flex flex-col   ${isMobile ? 'mt-7 gap-y-24' : 'mt-20 gap-y-28'} `}>
+                                                        <h2 className="text-3xl uppercase mt-3 text-black text-center">Our Services</h2>
+                                                        <div className={`flex flex-col   ${isMobile ? 'mt-7 gap-y-24' : 'mt-14 gap-y-24'} `}>
                                                             <div className={`flex  ${isMobile ? "flex-col-reverse" : "flex-row"}`}>
                                                                 {!isMobile && (
                                                                      <div className="justify-center items-center">
@@ -160,7 +160,7 @@ function DigitalServices() {
 
                                                                 )}
 
-                                                                <div className={`${isMobile ? 'mt-2' : 'mt-12'} `}>
+                                                                <div className={`${isMobile ? 'mt-2' : ''} `}>
                                                                     <h3 className="text-2xl">Paid Marketing Services</h3>
                                                                     <p>Focused campaigns and ads that reach the right prospects, with a higher probability of conversions.</p>
                                                                     {isMobile && (
@@ -208,7 +208,7 @@ function DigitalServices() {
                                                                 )}
 
 
-                                                                <div className={`${isMobile ? 'mt-2' : 'mt-6'} `} style={{ marginLeft: isMobile ? "" : "100px" }}>
+                                                                <div className={`${isMobile ? 'mt-2' : ''} `} style={{ marginLeft: isMobile ? "" : "100px" }}>
                                                                     <h3 className="text-2xl">Website Design & Development</h3>
                                                                     <p>Attract, engage and retain prospects with high-impact web designs & formats.</p>
                                                                     {isMobile && (
@@ -254,7 +254,7 @@ function DigitalServices() {
 
                                                                 )}
 
-                                                                <div className={`${isMobile ? 'mt-2' : 'mt-12'} `}>
+                                                                <div className={`${isMobile ? 'mt-2' : ''} `}>
                                                                     <h3 className="text-2xl">Branding and Creative Services</h3>
                                                                     <p>Transform your company into an iconic brand with the right mix of branding services.</p>
                                                                     {isMobile && (

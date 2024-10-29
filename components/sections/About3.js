@@ -43,7 +43,7 @@ export default function About3() {
                                     <span className="sub-title">About Our Company</span>
                                     <h1 className="title tg-element-title">Digital Transformation for Business Growth</h1>
                                 </div>
-                                <h2 className='text-lb mt-2'>We offer cutting-edge solutions designed to optimize operations, enhance decision-making, and drive growth. With our expertise in advanced technologies and deep industry knowledge, we create solutions that are uniquely suited to your goals.</h2>
+                                <h2 className='text-lb text-lg mt-2'>We offer cutting-edge solutions designed to optimize operations, enhance decision-making, and drive growth. With our expertise in advanced technologies and deep industry knowledge, we create solutions that are uniquely suited to your goals.</h2>
                                 <div className="about__content-inner about__content-inner-two">
                                     <div className="experience__box-three ">
                                         <div className="title px-3 py-3">
@@ -51,7 +51,7 @@ export default function About3() {
                                         </div>
                                         <p className='ml-5'>Years of<span>Experience</span></p>
                                     </div>
-                                    <div className="about__list-box about__list-box-two">
+                                    <div className="about__list-box about__list-box-two mt-3">
                                         <ul className="list-wrap">
                                             <li><i className="flaticon-arrow-button" />Operational Efficiency</li>
                                             <li><i className="flaticon-arrow-button" />Strategic Innovation</li>

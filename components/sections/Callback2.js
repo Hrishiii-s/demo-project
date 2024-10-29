@@ -10,10 +10,10 @@ export default function Callback2(isMobile) {
                                 <div className="call-back-content flex flex-row justify-center items-center text-center" >
                                     <div className="section-title white-title tg-heading-subheading animation-style3">
                                         {isMobile ? (<>
-                                            <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br/> no-cost consulting session with our <span className="text-ly">Data and AI services expert</span>
+                                            <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>, no-cost consult<br /> with our <span className="text-ly">Data and AI services expert</span>
                                             </h2>
                                         </>) : (<>
-                                            <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>, no-cost <br/>strategy session with a<br/> <span className="text-ly">Data and AI services expert</span>
+                                            <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>, no-cost consult<br /> with a<br/> <span className="text-ly">Data and AI services expert</span>
                                             </h2>
                                         </>)}
                                         

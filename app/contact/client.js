@@ -139,7 +139,7 @@ export default function Contact() {
                             <div className="row align-items-center">
                                 <div className="col-lg-7">
                                     <div className="contact__form-wrap">
-                                        <h1 className="title">Give Us a Message</h1>
+                                        <h1 className="title">Send Us a Message</h1>
                                         <p>Your email address will not be published. Required fields are marked *</p>
                                         <form onSubmit={handleSubmit}>
                                             <div className="row">

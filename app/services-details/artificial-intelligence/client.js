@@ -77,12 +77,12 @@ function AIServices() {
                                                     </LazyLoad>
                                                 </div>
                                             </div>
-                                            <h3 className="text-3xl mt-12 text-black">Put AI to enable your business</h3>
-                                            <p className="mt-3 text-base">Partner with ECESIS to drive meaningful impact and long-term success through innovative, sustainable approaches that deliver competitive advantage.<br /> ECESIS’s depth of knowledge, coupled with flexible and comprehensive AI capabilities, positions you to thrive in the digital era.</p>
-                                            <p>
-                                                <br /><br />ECESIS’s depth of knowledge, combined with our flexible and comprehensive AI capabilities, positions you to thrive in the digital era. We offer a range of services designed to optimize your operations, enhance customer experiences, and unlock new growth opportunities. By leveraging cutting-edge technologies and industry best practices, we help you navigate the complexities of digital transformation with confidence.
+                                            <h3 className="text-3xl mt-12 text-black">Harness AI to enable your business</h3>
+                                            <p className="mt-3 text-base">Partner with ECESIS to drive meaningful impact and long-term success through innovative, sustainable approaches that deliver competitive advantage.<br /> ECESIS’s depth of knowledge, coupled with flexible and comprehensive AI capabilities, positions you to thrive in the digital era.
+                                         
+                                                ECESIS’s depth of knowledge, combined with our flexible and comprehensive AI capabilities, positions you to thrive in the digital era. We offer a range of services designed to optimize your operations, enhance customer experiences, and unlock new growth opportunities. By leveraging cutting-edge technologies and industry best practices, we help you navigate the complexities of digital transformation with confidence.
                                             </p>
-                                            <h3 className="text-3xl mb-3 mt-28 text-center">Harness the Potential of End-to-End AI/ML Solutions</h3>
+                                            <h3 className="text-3xl mb-3 mt-16 text-center">Harness the Potential of End-to-End AI/ML Solutions</h3>
                                             <p className="text-center">Leverage the transformative power of our AI capabilities and revolutionize your business with limitless possibilities.</p>
                                             <div className="flex justify-center items-center">
                                                 <img src="/assets/img/images/ai_solutions.webp" className="" alt="" style={{ width: isMobile ? '100%' : '85%' }} />

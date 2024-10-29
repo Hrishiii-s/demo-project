@@ -250,7 +250,7 @@ export default function MainService() {
                                                 </div>
                                                 <div className="services__content-four">
                                                     <h2 className="title"><Link href="#">PropTech</Link></h2>
-                                                    <p>Empowering Real Estate with 14+ Years of Technological Excellence. We are a visionary PropTech company dedicated to revolutionizing the real estate industry through cutting-edge technology. With a proven track record of delivering innovative solutions, we empower clients to achieve unprecedented success.</p>
+                                                    <p>Empowering Real Estate with 14+ years of technological excellence. We are a visionary PropTech company dedicated to revolutionizing the real estate industry through cutting-edge technology. With a proven track record of delivering innovative solutions, we empower clients to achieve unprecedented success.</p>
                                                     <div className="about__list-box">
                                                         <ul className="list-wrap">
                                                             <li><i className="fas fa-check" /> Artificial Intelligence in Real Estate </li>
@@ -368,7 +368,7 @@ export default function MainService() {
                                                 </div>
                                                 <div className="services__content-four">
                                                     <h2 className="title"><Link href="#">Accounting & Finance</Link></h2>
-                                                    <p>We specialize in unlocking accounting gaps and navigating the complexities of tax compliance with confidence and ease. Our suite of services is designed to bring harmony, accuracy, and strategic insight to all your financial processes.</p>
+                                                    <p>We specialize in identifying and unlocking accounting gaps while confidently and efficiently navigating the complexities of tax compliance. Our suite of services is designed to bring harmony, accuracy, and strategic insight to all your financial processes.</p>
                                                     <div className="about__list-box">
                                                         <ul className="list-wrap">
                                                             <li><i className="fas fa-check" />Bookkeeping</li>

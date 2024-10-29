@@ -17,7 +17,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
             setIsTab(viewportWidth > 768 && viewportWidth <= 1024);
             setIsWide(viewportWidth > 2160);
             const vwUnit = viewportWidth / 100;
-            const Width = 2 * vwUnit;
+            const Width = 3.3 * vwUnit;
             setCalculatedWidth(Width);
         }
 
@@ -79,7 +79,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
         },
         {
             id: "Digital Marketing",
-            backgroundImageUrl: "/assets/img/banner/digital_banner.webp",
+            backgroundImageUrl: "/assets/img/banner/digital_banner.png",
             backgroundMobile: "/assets/img/banner/digital_mobile.webp",
             style: "text-black"
         },
@@ -161,7 +161,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
                     style={{ height: imageLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
                 >   
 
-                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : null} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill"}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
+                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : null} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill "}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
                         onLoad={handleImageLoad} />
 
                     <div className="container">
