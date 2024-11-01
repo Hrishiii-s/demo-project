@@ -32,11 +32,14 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
         !isMobileMenu ? document.body.classList.add("mobile-menu-visible") : document.body.classList.remove("mobile-menu-visible");
     };
 
+
+
     const [isSearch, setSearch] = useState(false);
     const handleSearch = () => setSearch(!isSearch);
 
     const [isOffcanvus, setOffcanvus] = useState(false);
     const handleOffcanvus = () => setOffcanvus(!isOffcanvus);
+    const [loadfooter, setLoadFooter] = useState(false);
 
     useEffect(() => {
         const WOW = require('wowjs');
@@ -52,11 +55,16 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
         });
     }, [scroll]);
 
-    if (!bread) {
-        <div className="fixed inset-0 flex justify-center items-center">
-            <MoonLoader />
-        </div>
-    }
+    useEffect(() => {
+        if (!breadcrumbTitle) {
+            setLoadFooter(true);
+        }
+    }, [breadcrumbTitle]);
+
+    useEffect(()=>{
+        console.log("bread",bread)
+        console.log("foot",loadfooter)
+    },[loadfooter])
 
 
     return (
@@ -65,7 +73,6 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
             <PageHead headTitle={headTitle} />
             <DataBg />
 
-            {/* Conditionally render Header and Breadcrumb based on breadcrumbTitle */}
             {breadcrumbTitle  ? (
                 <>
                     {bread && headerStyle == 3 && (
@@ -84,7 +91,6 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
                 </>
             ) : (
                 <>
-                    {/* Render the Header3 if it's not a breadcrumb page */}
                     {headerStyle == 3 && (
                         <Header3
                             Nothome={Nothome}
@@ -111,19 +117,17 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
                     </>
                 )
                 }
-                {/* Always render the children */}
 
             </main>
 
             {breadcrumbTitle ? (
                 <>
-                    {/* Conditionally render Footer */}
                     {bread && footerStyle == 3 && <Footer3 />}
                 </>
             ) : (
                 <>
-                    {/* Conditionally render Footer */}
-                    {footerStyle == 3 && <Footer3 />}
+                   
+                    {footerStyle == 3 && loadfooter && <Footer3 />}
                 </>
             )}
 

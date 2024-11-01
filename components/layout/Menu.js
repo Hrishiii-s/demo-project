@@ -99,6 +99,9 @@ export default function Menu() {
 
                     </ul>
                 </li>
+                {/* <li>
+                    <Link href="/careers">Careers</Link>
+                </li> */}
                 <li>
                     <Link href="/contact">Contact Us</Link>
                 </li>

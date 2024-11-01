@@ -6,9 +6,12 @@ import Link from "next/link"
 import { useParams } from "next/navigation"
 import { useEffect, useState, useRef } from "react"
 import BlogConvert from "@/components/blog/BlogConvert"
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 export default function BlogDetails() {
     let { slug } = useParams();  // Extract slug directly from useParams
+    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
     const [blogPost, setBlogPost] = useState(null)
     const [latestPosts, setLatestPosts] = useState([]);
     const [sidebarFixed, setSidebarFixed] = useState(true);  // State for sidebar fixed position
@@ -73,6 +76,7 @@ export default function BlogDetails() {
         };
 
 
+        setAllLoaded(true);
 
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -85,6 +89,14 @@ export default function BlogDetails() {
 console.log("sidebar",sidebarFixed)
     },[sidebarFixed])
     const titleurl = slug.replace(/-/g, ' ');
+
+    if (!allLoaded) {
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
+    }
     return (
         <>
             <Layout headerStyle={3} footerStyle={3}>
@@ -98,7 +110,7 @@ console.log("sidebar",sidebarFixed)
                                             <div className="col-70">
                                                 <div className="blog__details-wrap">
                                                     <div className="blog__details-thumb">
-                                                        <img src={`/assets/img/blog/${blogPost.img}`} className="w-100" alt="" />
+                                                        <img src={`/assets/img/blog/${blogPost.img}`} className="w-full lg:h-[65vh]" alt="" />
                                                     </div>
                                                     <div className="blog__details-content">
                                                         <h2 className="title">{blogPost.title}</h2>

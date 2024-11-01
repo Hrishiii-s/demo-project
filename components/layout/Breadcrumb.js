@@ -22,18 +22,14 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
         }
 
         handleResize(); // Set initial size
-        window.addEventListener('resize', handleResize); 
+        window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize); // Cleanup listener
     }, []);
 
     useEffect(() => {
         if (imageLoaded) {
-            const timer = setTimeout(() => {
-                console.log("working")
-                loaded(); // Call the loaded function after the image is loaded
-            }, 0); // You can adjust the delay time
-            return () => clearTimeout(timer);
+            loaded(); // Call the loaded function after the image is loaded
         }
     }, [imageLoaded]);
 
@@ -149,64 +145,64 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
         specialTitleIndex = specialTitle.findIndex(title => title === breadcrumbTitle);
     }
 
-     
+
 
     return (
         <>
-        {matchingBanner && breadcrumbTitle && (
-            <>
-            <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
-                <div
-                    className="banner-placeholder"
-                    style={{ height: imageLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
-                >   
+            {matchingBanner && breadcrumbTitle && (
+                <>
+                    <section className={`breadcrumb__area breadcrumb__bg_real_estate`}>
+                        <div
+                            className="banner-placeholder"
+                            style={{ height: imageLoaded ? "" : (isMobile ? "250px" : "600px"), backgroundColor: "#fff" }}
+                        >
 
-                    <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : null} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill "}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
-                        onLoad={handleImageLoad} />
+                            <img src={matchingBanner ? (isMobile && !isTab ? matchingBanner.backgroundMobile : matchingBanner.backgroundImageUrl) : null} alt="" className={`${matchingBanner ? matchingBanner.img_style : ""} ${isMobile ? (isSpecialTitle ? "h-[25vh] object-cover" : "h-full object-cover") : "object-fill "}  w-full -z-1 top-0`} style={{ maxHeight: isWide ? '' : '400px', display: imageLoaded ? "block" : "none" }}
+                                onLoad={handleImageLoad} />
 
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="breadcrumb__content">
-                                    {isSpecialTitle ? (
-                                        specialTitleIndex === 0 ? (
-                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : "/assets/img/bg/breadcrumb_bg.webp"} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: imageLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <div className="breadcrumb__content">
+                                            {isSpecialTitle ? (
+                                                specialTitleIndex === 0 ? (
+                                                    <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute  ${matchingBanner ? matchingBanner.style : "/assets/img/bg/breadcrumb_bg.webp"} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, left: isMobile ? '2%' : '10%', top: '40%', display: imageLoaded ? "block" : "none" }}><span className="text-ly">From Complexity to Clarity:</span> <br />How a Single Website Drove<br /> <span className="text-ly">3X</span> Revenue Growth</h2>
 
-                                        ) : (
-                                            specialTitleIndex === 1 ? (
-                                                <>
-                                                    <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{ left: isMobile ? '8%' : '10%', top: isMobile ? '26.5%' : '25%' }}>
-                                                        <h2 data-aos="fade-up" data-aos-delay={100} className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, display: imageLoaded ? "block" : "none" }}><span className="text-black">Enhancing ECG Data Accuracy in <br /> Cardiac Monitoring through<br /><span className="text-white">AI Integration</span> </span></h2>
+                                                ) : (
+                                                    specialTitleIndex === 1 ? (
+                                                        <>
+                                                            <div className="w-fit h-fit bg-blue-500 absolute justify-center items-center" style={{ left: isMobile ? '8%' : '10%', top: isMobile ? '26.5%' : '25%' }}>
+                                                                <h2 data-aos="fade-up" data-aos-delay={100} className={`title px-4 pt-4 pb-3 text-center ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: isMobile ? "15px" : `${calculatedWidth}px`, display: imageLoaded ? "block" : "none" }}><span className="text-black">Enhancing ECG Data Accuracy in <br /> Cardiac Monitoring through<br /><span className="text-white">AI Integration</span> </span></h2>
 
-                                                    </div>
+                                                            </div>
 
-                                                </>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            {null}
+                                                        </>)
+                                                )
+
                                             ) : (
-                                                <>
-                                                    {null}
-                                                </>)
-                                        )
+                                                isMobile ? (
+                                                    null
+                                                ) : (
+                                                    <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%', display: imageLoaded ? "block" : "none" }}>{breadcrumbTitle}</h2>
 
-                                    ) : (
-                                        isMobile ? (
-                                            null
-                                        ) : (
-                                            <h2 data-aos="fade-up" data-aos-delay={100} className={`title absolute ${matchingBanner ? matchingBanner.style : ""} ml-3 text-left`} style={{ fontSize: `${calculatedWidth}px`, left: '10%', top: '40%', display: imageLoaded ? "block" : "none" }}>{breadcrumbTitle}</h2>
+                                                )
 
-                                        )
-
-                                    )}
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            
-            </>
-        )}
-            
+
+                </>
+            )}
+
         </>
     );
 }

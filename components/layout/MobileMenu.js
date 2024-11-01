@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function MobileMenu({ handleMobileMenu }) {
+export default function MobileMenu({ handleMobileMenu}) {
     const [isActive, setIsActive] = useState({
         services: false,
         resources: false,
@@ -29,13 +29,59 @@ export default function MobileMenu({ handleMobileMenu }) {
         }
     };
 
+    const handleMenuClick = () => {
+        // Reset all states when closing the menu
+        console.log("SET")
+        setIsActive({
+            services: false,
+            resources: false,
+            digital: false,
+            business: false
+        });
+        handleMobileMenu(); // Call the provided handleMobileMenu function
+    };
+
+
+    useEffect(() => {
+        const checkVisibility = () => {
+            // Check if the parent element has the class 'mobile-menu-visible'
+
+            const isMenuVisible = document.body.classList.contains('mobile-menu-visible');
+
+
+            // If 'mobile-menu-visible' class is missing, reset states
+            if (!isMenuVisible) {
+                setIsActive({
+                    services: false,
+                    resources: false,
+                    digital: false,
+                    business: false
+                });
+            }
+        };
+
+        // Run on initial mount and on every menu open/close
+        checkVisibility();
+
+        // Listen to DOM changes in case the class is dynamically added/removed
+        const observer = new MutationObserver(checkVisibility);
+        observer.observe(document.body, { attributes: true, subtree: true });
+
+        // Clean up observer on unmount
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(()=>{
+console.log("Main States",isActive)
+    },[isActive])
+
     return (
         <>
             <ul className="navigation">
-                <li className="active" onClick={handleMobileMenu}>
+                <li className="active" onClick={handleMenuClick}>
                     <Link href="/">Home</Link>
                 </li>
-                <li onClick={handleMobileMenu}>
+                <li onClick={handleMenuClick}>
                     <Link href="/about">About Us</Link>
                 </li>
                 <li className="menu-item-has-children">
@@ -48,9 +94,9 @@ export default function MobileMenu({ handleMobileMenu }) {
                                 Digital Solutions
                             </Link>
                             <ul className="sub-menu" style={{ display: isActive.digital ? "block" : "none" }}>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/proptech">PropTech</Link></li>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/artificial-intelligence">Artificial Intelligence</Link></li>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/business-process-automation">Business Process Automation</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/proptech">PropTech</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/artificial-intelligence">Artificial Intelligence</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/business-process-automation">Business Process Automation</Link></li>
                             </ul>
                             <div className={isActive.digital ? "dropdown-btn open" : "dropdown-btn"} onClick={(e) => handleToggle('digital', e)}>
                                 <span className="plus-line" />
@@ -61,10 +107,10 @@ export default function MobileMenu({ handleMobileMenu }) {
                                 Business Consulting
                             </Link>
                             <ul className="sub-menu" style={{ display: isActive.business ? "block" : "none" }}>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/real-estate-valuation">Real Estate Valuation</Link></li>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/accounting-finance">Accounting & Finance</Link></li>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/manpower-staffing">Talent Acquisition</Link></li>
-                                <li onClick={handleMobileMenu}><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/real-estate-valuation">Real Estate Valuation</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/accounting-finance">Accounting & Finance</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/manpower-staffing">Talent Acquisition</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
                             </ul>
                             <div className={isActive.business ? "dropdown-btn open" : "dropdown-btn"} onClick={(e) => handleToggle('business', e)}>
                                 <span className="plus-line" />
@@ -80,14 +126,14 @@ export default function MobileMenu({ handleMobileMenu }) {
                         Resources
                     </Link>
                     <ul className="sub-menu" style={{ display: isActive.resources ? "block" : "none" }}>
-                        <li onClick={handleMobileMenu}><Link href="/case-study">Case Study</Link></li>
-                        <li onClick={handleMobileMenu}><Link href="/blog">Blogs</Link></li>
+                        <li onClick={handleMenuClick}><Link href="/case-study">Case Study</Link></li>
+                        <li onClick={handleMenuClick}><Link href="/blog">Blogs</Link></li>
                     </ul>
                     <div className={isActive.resources ? "dropdown-btn open" : "dropdown-btn"} onClick={(e) => handleToggle('resources', e)}>
                         <span className="plus-line" />
                     </div>
                 </li>
-                <li onClick={handleMobileMenu}>
+                <li onClick={handleMenuClick}>
                     <Link href="/contact">Contact Us</Link>
                 </li>
             </ul>

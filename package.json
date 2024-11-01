@@ -4,7 +4,7 @@
   "private": true,
   "author": "alithemes",
   "scripts": {
-    "dev": "next dev -H 192.168.2.144 -p 4000",
+    "dev": "next dev -H 192.168.2.199 -p 4000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
