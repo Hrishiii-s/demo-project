@@ -6,12 +6,26 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import BlogConvert from "@/components/blog/BlogConvert";
+import CallbackAuto from "@/components/sections/Callback_Auto"
+
 
 export default function BlogTest() {
     let slug =
         "How-Proptech-Firms-Can-Scale-Operations-with-Workforce-Extension-Services";
     const [blogPost, setBlogPost] = useState(null);
     const [latestPosts, setLatestPosts] = useState([]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         // Sort posts by date in descending order (latest first)
@@ -92,154 +106,81 @@ export default function BlogTest() {
                                                         {/* <span className='font-bold'></span> */}
                                                         <div>
                                                             <p>
-                                                                With AI-powered tools, mortgage underwriting is
-                                                                no longer just a matter of lengthy paperwork and
-                                                                waiting periods. Instead, it’s becoming an
-                                                                efficient, data-driven process that transforms
-                                                                how lenders evaluate loans, assess risk, and
-                                                                extend mortgage accessibility.
+                                                                In the modern business landscape, data stands as the cornerstone, driving insights, shaping decisions, and significantly affecting your bottom line. However, the manual collection of data can evolve into a cumbersome and error-prone chore, acting as a stealthy adversary to productivity. This is where the challenge of manual data entry emerges prominently.
                                                                 <br />
                                                             </p>
-
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                Snapshot: How AI is Transforming Underwriting
-                                                            </h2>
-
-                                                            <div className="overflow-x-auto">
-                                                                <table className="min-w-full border-collapse border border-gray-200">
-                                                                    <thead>
-                                                                        <tr className="bg-gray-100">
-                                                                            <th className="px-6 py-3 border-b border-gray-200 text-left text-gray-700 font-semibold">
-                                                                                Key Benefit
-                                                                            </th>
-                                                                            <th className="px-6 py-3 border-b border-gray-200 text-left text-gray-700 font-semibold">
-                                                                                Impact on Mortgage Underwriting
-                                                                            </th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr className="bg-white">
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Speed
-                                                                            </td>
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Real-time underwriting enables faster
-                                                                                loan approvals
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr className="bg-white">
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Accuracy
-                                                                            </td>
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Machine learning reduces errors in risk
-                                                                                assessment
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr className="bg-white">
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Compliance
-                                                                            </td>
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Automated checks enhance adherence to
-                                                                                regulations
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr className="bg-white">
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Accessibility
-                                                                            </td>
-                                                                            <td className="px-6 py-4 border-b border-gray-200">
-                                                                                Streamlined processes improve mortgage
-                                                                                accessibility
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                A New Era in Mortgage Underwriting
-                                                            </h2>
-                                                            <h3 className="font-bold text-xl my-3">
-                                                                What Does AI-Powered Underwriting Mean?
-                                                            </h3>
                                                             <p>
-                                                                AI-driven underwriting means introducing
-                                                                <span className="font-bold">automated underwriting systems (AUS)</span> and
-                                                                <span className="font-bold">predictive modeling</span> that allow lenders to
-                                                                evaluate applications in real-time, improving
-                                                                both <span className="font-bold">speed and accuracy</span>. Through data from
-                                                                <span className="font-bold">loan origination, credit risk assessment</span>, and
-                                                                <span className="font-bold">property valuation</span>, AI enables a more accurate
-                                                                understanding of each loan application.
+                                                                When your workforce is bogged down by entering data from various sources like forms, PDFs, and online platforms, it's a glaring indicator that it's time to pivot to automation. Below are 5 critical signs that herald the urgency for a data entry transformation:
                                                                 <br />
                                                             </p>
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                Key AI Technologies Shaping Underwriting
-                                                            </h2>
-
-                                                            <h3 className="font-bold text-xxl my-3">
-                                                                Machine Learning Models for Risk Assessment
-                                                            </h3>
+                                                            <h3 className="font-bold text-xl my-3">1. Your Team is Stuck in a Copy-Paste Cacophony</h3>
                                                             <p>
-                                                                <span className="italic">How it Works:</span> AI algorithms evaluate thousands of data points from traditional metrics like <span className="font-bold">debt-to-income ratio (DTI)</span>  and <span className="font-bold">loan-to-value ratio (LTV)</span> to identify patterns that could indicate risk.
-                                                                <span className="italic">Why it Matters:</span> By detecting these risk indicators, lenders can make informed lending decisions, reducing default rates.
-
+                                                                Is copying and pasting data from online sources a daily ritual for your team? This repetitive task is not only error-prone but also a huge drain on productivity. Automating online data entry frees your team to focus on higher-value activities.
                                                                 <br />
                                                             </p>
-                                                            <h3 className="font-bold text-xxl my-3">
-                                                                Machine Learning Models for Risk Assessment
-                                                            </h3>
+                                                            <h3 className="font-bold text-xl my-3">2. Data Inconsistency is a Tangled Web</h3>
                                                             <p>
-                                                                <span className="italic">How it Works:</span> RPA tools manage repetitive document verification tasks such as <span className="font-bold">income and asset verification</span>, freeing up human underwriters to focus on complex cases.
-                                                                <span className="italic">Why it Matters:</span> Automating these manual steps speeds up the underwriting process and ensures a high level of accuracy, critical for <span className="font-bold">compliance and regulation</span> adherence.
+                                                                Does your team struggle with inconsistent data formats from different online sources? Manually reformatting data takes time and increases the risk of errors. Automation ensures consistent data capture, regardless of the source.
                                                                 <br />
                                                             </p>
-                                                            <h3 className="font-bold text-xxl my-3">
-                                                                Predictive Modeling in Underwriting
-                                                            </h3>
+                                                            <h3 className="font-bold text-xl my-3">3. Validation Becomes a Manual Marathon</h3>
                                                             <p>
-                                                                <span className="italic">How it Works:</span> Using historical data, predictive models forecast credit risk with unprecedented accuracy, allowing for <span className="font-bold">risk-based pricing</span> tailored to each borrower’s profile.
-                                                                <span className="italic">Why it Matters:</span> This tailored approach helps balance risk while enhancing mortgage accessibility for a wider range of borrowers.
+                                                                Verifying the accuracy of online data entry can be a tedious and time-consuming process. Imagine the wasted hours spent double-checking information! Automated data validation eliminates this burden, ensuring reliable data from the start.
                                                                 <br />
                                                             </p>
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                From Data to Decision: A Step-by-Step Look at AI-Powered Underwriting
-                                                            </h2>
-                                                            <ul className="list-disc">
-                                                                <li><span className="font-bold">Data Collection & Verification:</span>AI systems collect borrower data directly from various sources (e.g., employment records, asset information) and conduct automated verifications, streamlining <span className="font-bold">loan origination</span>.</li>
-                                                                <li><span className="font-bold">Enhanced Risk Assessment:</span>Machine learning algorithms perform an in-depth <span className="font-bold">credit risk assessment</span> using DTI, LTV, and other key ratios, and flag potential <span className="font-bold">fraud prevention</span> markers in real-time..</li>
-                                                                <li><span className="font-bold">Real-Time Compliance Checks:</span>Throughout the process, AI runs compliance protocols, ensuring adherence to standards like <span className="font-bold">Equal Credit Opportunity Act (ECOA)</span> and <span className="font-bold">Fair Lending</span> practices.</li>
-
+                                                            <h3 className="font-bold text-xl my-3">4. Integration Nightmares are Keeping You Up at Night</h3>
+                                                            <p>
+                                                                Does your business rely on multiple online platforms and databases? Manually transferring data between these systems can be a recipe for errors and delays. Automation streamlines data flow and ensures seamless integration.
+                                                                <br />
+                                                            </p>
+                                                            <h3 className="font-bold text-xl my-3">5. Valuable Insights are Buried in a Data Graveyard</h3>
+                                                            <p>
+                                                                Inconsistent and inaccurate data makes it difficult to generate meaningful reports and uncover valuable insights. Automation ensures clean data capture, empowering you to unlock the true potential of your business intelligence.
+                                                                <br />
+                                                            </p>
+                                                            <h2 className="font-bold text-2xl my-3">Introducing SmartEntry: Your Data Entry Superhero</h2>
+                                                            <p>
+                                                                SmartEntry is your secret weapon for conquering the online data entry challenge. Our innovative software utilizes cutting-edge technology to automate data capture from various online sources:
+                                                                <br />
+                                                            </p>
+                                                            <p>
+                                                                Intelligent Web Scraping: Extract data from websites and applications with pinpoint accuracy, eliminating the need for manual copy-pasting.
+                                                                <br />
+                                                            </p>
+                                                            <ul className="list-disc ml-4">
+                                                                <li><span className="font-bold">Streamlined Form Processing: </span>Automate data capture from online forms, ensuring consistent and error-free information.</li>
+                                                                <li><span className="font-bold">Effortless Integration: </span>Connect seamlessly with your existing online platforms and databases, creating a smooth data flow.</li>
+                                                                <li><span className="font-bold">Automated Validation: </span>Eliminate manual verification with built-in data validation tools, guaranteeing clean and reliable information.</li>
                                                             </ul>
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                The Ripple Effects on the Mortgage Industry
-                                                            </h2>
-                                                            <ul className="list-disc">
-                                                                <li><span className="font-bold">Improved Access to Loans:</span>With faster and more efficient underwriting, borrowers have greater access to mortgage products, meeting the industry’s long-standing goal of increased accessibility.</li>
-                                                                <li><span className="font-bold">Better Mortgage Quality Control for Secondary Markets:</span>AI tools strengthen <span className="font-bold">loan quality control</span>, vital for mortgage-backed securities (MBS) in the <span className="font-bold">secondary market</span>, reducing risk for investors.</li>
-                                                                <li><span className="font-bold">Reduced Underwriting Exceptions Compliance Checks:</span>By enhancing consistency and accuracy, AI minimizes the need for <span className="font-bold">underwriting exceptions</span>, leading to a more standardized process across applications.</li>
+                                                            <p className="mt-3">
+                                                                Stop wasting time and resources on manual online data entry. Empower your team, unlock productivity, and gain valuable insights from your data. Contact us today to see how SmartEntry can transform your business!
+                                                                <br />
+                                                            </p>
+                                                            <section className="call-back-area call-back-area-two mt-3">
+                                                                <div className="">
+                                                                    <div className="call-back-wrap-blog rounded-xl bg-lblue">
+                                                                        <div className="row align-items-center">
+                                                                            <div className="call-back-content flex flex-col justify-center items-center text-center" >
+                                                                                <div className="section-title white-title tg-heading-subheading animation-style3">
+                                                                                    <h2 className="mb-0 text-3xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Automation expert</span>
+                                                                                    </h2>
 
-                                                            </ul>
-                                                            <h2 className="font-bold text-2xl my-3">
-                                                                What’s Next for AI in Mortgage Underwriting?
-                                                            </h2>
-                                                            <p>
-                                                                As the technology evolves, expect AI to bring even greater efficiency and consistency to mortgage processes, making homeownership more accessible. Intelligent automation will further reduce processing times, enhance compliance, and introduce advanced tools for mortgage quality control.
-                                                                <br />
-                                                            </p>
-                                                            <p>
-                                                                <span className="font-bold">
-                                                                    At ECESIS,
-                                                                </span>
-                                                                we continue to track these AI developments, supporting clients in optimizing their underwriting workflows and embracing the latest advances in mortgage technology.
-                                                                <br />
-                                                            </p>
-                                                            <p>
-                                                                Let’s transform your mortgage operations together—reach out to discover the possibilities today!
-                                                                <br />
-                                                            </p>
+                                                                                    <p className="text-white  text-lg mt-3">Embrace RPA innovation and new process optimization opportunities to increase business efficiency and reduce costs.</p>
+                                                                                    <Link href="/schedule-a-meeting" className="btn mt-2">BOOK A CONSULTATION</Link>
+                                                                                </div>
+                                                                                {!isMobile ? (<div className="">
+                                                                                    <img src="/assets/img/images/callback_photo.webp" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
+
+                                                                                </div>) : null}
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
                                                         </div>
+
                                                         <div className="blog__details-bottom">
                                                             <div className="row align-items-center">
                                                                 <div className="col-lg-9">
@@ -300,7 +241,8 @@ export default function BlogTest() {
                                                             Latest Blogs
                                                         </h4>
                                                         <div className="sidebar__post-list">
-                                                            {latestPosts.slice(-4).map((post) => (
+                                                            {console.log("",latestPosts.slice(-3))}
+                                                            {latestPosts.slice(-3).map((post) => (
                                                                 <div
                                                                     className="sidebar__post-item"
                                                                     key={post.id}

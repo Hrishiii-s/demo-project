@@ -53,7 +53,7 @@ export default function BlogPost({ style, showItem, showPagination }) {
                 <h3>No Products Found </h3>
             )}
 
-            {getPaginatedProducts.map(item => (
+            {getPaginatedProducts.slice().reverse().map(item => (
                 <React.Fragment key={item.id}>
                     {!style && <BlogCard1 item={item} />}
                     {style === 1 && <BlogCard1 item={item} />}
