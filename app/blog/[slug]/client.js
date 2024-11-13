@@ -23,7 +23,7 @@ export default function BlogDetails() {
         const sortedPosts = [...data].sort((a, b) => new Date(b.sort_date) - new Date(a.sort_date));
 
         // Get the last 4 entries
-        const lastFourPosts = sortedPosts.slice(0, 4);
+        const lastFourPosts = sortedPosts.slice(0, 3);
         setLatestPosts(lastFourPosts);
 
     }, []);
