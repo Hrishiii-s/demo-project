@@ -14,6 +14,7 @@ export default function Contact() {
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
     const [recaptchaToken, setRecaptchaToken] = useState(null);
     const [captchaError, setCaptchaError] = useState(false); // State to track if captcha error should be shown
+    const [confirmation, setConfirmation] = useState(false);
 
     let Nothome = true;
 
@@ -34,34 +35,82 @@ export default function Contact() {
 
 
     const sendEmail = async () => {
+        function encodeData(data) {
+            const jsonString = JSON.stringify(data);
+            return btoa(jsonString); // Encode JSON string to Base64
+        }
 
-        const payload = {
-            contactname: formData.name,
+        const payload = encodeData({
+            name: formData.name,
             email: formData.email,
-            phoneno: formData.phoneNumber,
-            comment: formData.message
-        };
+            phone: formData.phoneNumber,
+            message: formData.message
+        });
+
+        const tok = {
+            token: recaptchaToken
+        }
+        console.log('Form Data:', payload);
+
+
+
         try {
             // Send the token to the backend for verification
-            const response = await axios.post('/api/recaptcha', {
-                token: recaptchaToken
+            { console.log("token", recaptchaToken) }
+            const response = await axios.get(`/api/recaptcha`, {
+                params: {
+                    token: recaptchaToken
+                }
             });
+            console.log("Recaptcha", response.data)
 
             if (response.data.success) {
                 console.log('reCAPTCHA verified');
                 // Proceed with form submission
-                const formResponse = await axios.post('https://www.ecesistech.com/contact-form-submit.php', payload);
-                console.log('Form submitted successfully:', formResponse.data);
 
-                // Reset the form
-                setFormData({
-                    name: '',
-                    email: '',
-                    phoneNumber: '',
-                    message: ''
-                });
-                setRecaptchaToken(''); // Reset reCAPTCHA
-            } else {
+                try {
+                    const response = await axios.get('/api/submitContact', {
+                        params: {
+                            data: payload
+                        }
+                    }, {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    if (response.status === 200) {
+                        console.log('Form submitted successfully:', response.data);
+
+                        // Reset the form
+                        setFormData({
+                            name: '',
+                            email: '',
+                            phoneNumber: '',
+                            message: ''
+                        });
+                        setRecaptchaToken(''); // Reset reCAPTCHA
+                    }
+                }
+                catch (error) {
+                    console.error('Error submitting form:', error);
+                }
+
+
+                try {
+                    const res = await axios.get('/api/sendMail', {
+                        params: {
+                            data: payload
+                        }
+                    });
+                    console.log("Response from backend", res.data)
+                    setConfirmation(true)
+                } catch (error) {
+                    console.log('Error sending email.');
+                }
+
+            }
+            else {
                 console.error('reCAPTCHA verification failed');
             }
         } catch (error) {
@@ -87,7 +136,7 @@ export default function Contact() {
     };
 
     const handleRecaptcha = (token) => {
-        console.log("Token",token)
+        console.log("Token", token)
         setRecaptchaToken(token); // Set the reCAPTCHA token
         setCaptchaError(false);   // Reset error if reCAPTCHA is completed
     };
@@ -95,11 +144,10 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!recaptchaToken) {
-            setCaptchaError(true); // Set error state if captcha is not completed
+            setCaptchaError(false); // Set error state if captcha is not completed
             return; // Prevent form submission
         }
 
-        console.log('Form Data:', formData);
         // Here you can add what to do with the data, e.g., sending it to an API
 
         sendEmail();
@@ -174,6 +222,11 @@ export default function Contact() {
                                             </div>
 
                                             <button type="submit" className="btn mt-3">Submit</button>
+                                            {confirmation && (<div className="" style={{ paddingTop: '1px', paddingBottom: '1px' }}>
+                                                <p className="text-blue-500 mt-2" >Thank you!<br />We will catch up with you soon.</p>
+                                            </div>)
+
+                                            }
                                         </form>
                                         <p className="ajax-response mb-0" />
                                     </div>
@@ -198,7 +251,7 @@ export default function Contact() {
                                                             </div>
                                                             <div className="content">
 
-                                                                <Link href="">+91 9072310239</Link>
+                                                                <Link href="">+91 9074002697</Link>
                                                             </div>
                                                         </div>
 
