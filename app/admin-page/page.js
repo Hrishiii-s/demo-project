@@ -7,10 +7,17 @@ export default function ViewTable() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const payload = {
+    name: "Sid",
+    phone: "1234"
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('/api/viewTable');
+        const response = await axios.post('/api/viewTable',{
+            text: payload,
+        });
         const result = response.data.data; // Access the data property from the response
         console.log("Response:", response);
         setData(result);

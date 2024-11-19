@@ -56,7 +56,7 @@ export default function Contact() {
 
         try {
             // Send the token to the backend for verification
-            { console.log("token", recaptchaToken) }
+            console.log("token", recaptchaToken)
             const response = await axios.get(`/api/recaptcha`, {
                 params: {
                     token: recaptchaToken
@@ -111,7 +111,7 @@ export default function Contact() {
 
             }
             else {
-                setCaptchaError(true)
+                setCaptchaError(true);
                 console.error('reCAPTCHA verification failed');
             }
         } catch (error) {
@@ -137,7 +137,7 @@ export default function Contact() {
     };
 
     const handleRecaptcha = (token) => {
-        console.log("Token", token)
+        console.log("Token", token);
         setRecaptchaToken(token); // Set the reCAPTCHA token
         setCaptchaError(false);   // Reset error if reCAPTCHA is completed
     };

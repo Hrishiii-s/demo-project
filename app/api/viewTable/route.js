@@ -4,7 +4,7 @@ import path from 'path';
 
 const db = new sqlite3('database.db');
 
-export  async function POST() {
+export async function POST() {
   try {
 
     // Query to fetch all rows from the 'contacts' table
