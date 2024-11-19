@@ -111,6 +111,7 @@ export default function Contact() {
 
             }
             else {
+                setCaptchaError(true)
                 console.error('reCAPTCHA verification failed');
             }
         } catch (error) {
