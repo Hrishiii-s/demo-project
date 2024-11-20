@@ -31,7 +31,6 @@ export default function MobileMenu({ handleMobileMenu}) {
 
     const handleMenuClick = () => {
         // Reset all states when closing the menu
-        console.log("SET")
         setIsActive({
             services: false,
             resources: false,

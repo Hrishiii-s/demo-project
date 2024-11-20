@@ -54,7 +54,6 @@ export default function Contact() {
         const tok = {
             token: recaptchaToken
         }
-        console.log('Form Data:', payload);
 
 
 
@@ -62,25 +61,25 @@ export default function Contact() {
             // Send the token to the backend for verification
 
             const response = await axios.post(`/api/recaptcha?token=${recaptchaToken}`);
-            console.log("Response from backend", response);
+            // console.log("Response from backend", response);
 
             if (response.data.success) {
                 console.log('reCAPTCHA verified');
                 // Proceed with form submission
 
-                try {
-                    const response = await axios.get('/api/submitContact', {
-                        params: {
-                            data: payload
-                        }
-                    }, {
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    });
+                // try {
+                //     const response = await axios.get('/api/submitContact', {
+                //         params: {
+                //             data: payload
+                //         }
+                //     }, {
+                //         headers: {
+                //             'Content-Type': 'application/json'
+                //         }
+                //     });
 
-                    if (response.status === 200) {
-                        console.log('Form submitted successfully:', response.data);
+                //     if (response.status === 200) {
+                        // console.log('Form submitted successfully:', response.data);
 
                         // Reset the form
                         setFormData({
@@ -90,11 +89,11 @@ export default function Contact() {
                             message: ''
                         });
                         setRecaptchaToken(''); // Reset reCAPTCHA
-                    }
-                }
-                catch (error) {
-                    console.error('Error submitting form:', error);
-                }
+                //     }
+                // }
+                // catch (error) {
+                //     console.error('Error submitting form:', error);
+                // }
 
 
                 try {
@@ -103,7 +102,7 @@ export default function Contact() {
                             data: payload
                         }
                     });
-                    console.log("Response from backend", res.data)
+                    // console.log("Response from backend", res.data)
                     setConfirmation(true)
                 } catch (error) {
                     console.log('Error sending email.');
@@ -137,7 +136,6 @@ export default function Contact() {
     };
 
     const handleRecaptcha = (token) => {
-        console.log("Token", token);
         setRecaptchaToken(token); // Set the reCAPTCHA token
         setCaptchaError(false);   // Reset error if reCAPTCHA is completed
     };

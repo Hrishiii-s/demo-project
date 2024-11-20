@@ -7,8 +7,6 @@ export async function POST(req) {
 
     // const { token } = req.body; // Get reCAPTCHA token from the client
     const secretKey = process.env.RECAPTCHA_SECRET_KEY; // Use an environment variable for the secret key
-    console.log("Token", token)
-    console.log("secret", secretKey)
 
     if (!secretKey) {
         console.error('Missing reCAPTCHA secret key.');
@@ -37,7 +35,6 @@ export async function POST(req) {
         );
 
         const { success, score } = response.data;
-        console.log("Success_Score", success, score);
 
         if (success) {
             return NextResponse.json({
