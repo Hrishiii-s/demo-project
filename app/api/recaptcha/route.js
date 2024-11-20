@@ -7,7 +7,6 @@ export async function POST(req) {
 
     // const { token } = req.body; // Get reCAPTCHA token from the client
     const secretKey = process.env.RECAPTCHA_SECRET_KEY; // Use an environment variable for the secret key
-    console.log("TOKEN", token)
 
     if (!token) {
         console.log({ success: false, message: 'reCAPTCHA token is required' });

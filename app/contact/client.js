@@ -60,7 +60,6 @@ export default function Contact() {
 
         try {
             // Send the token to the backend for verification
-            console.log("token", recaptchaToken)
 
             const response = await axios.post(`/api/recaptcha?token=${recaptchaToken}`);
             console.log("Response from backend", response.data);
