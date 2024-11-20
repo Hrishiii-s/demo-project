@@ -2,7 +2,8 @@ import sqlite3 from 'better-sqlite3';
 import { NextResponse } from 'next/server';
 import path from 'path';
 
-const db = new sqlite3('database.db');
+const dbpath = path.resolve(process.cwd(), 'database.db')
+const db = new sqlite3(dbpath);
 
 export async function POST() {
   try {
