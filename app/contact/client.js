@@ -8,6 +8,7 @@ import axios from "axios";
 import Head from "next/head";
 import MoonLoader from "react-spinners/MoonLoader";
 
+
 export default function Contact() {
 
     const [isMobile, setIsMobile] = useState(false);
@@ -35,6 +36,9 @@ export default function Contact() {
 
 
     const sendEmail = async () => {
+
+
+
         function encodeData(data) {
             const jsonString = JSON.stringify(data);
             return btoa(jsonString); // Encode JSON string to Base64
@@ -57,12 +61,9 @@ export default function Contact() {
         try {
             // Send the token to the backend for verification
             console.log("token", recaptchaToken)
-            const response = await axios.get(`/api/recaptcha`, {
-                params: {
-                    token: recaptchaToken
-                }
-            });
-            console.log("Recaptcha", response.data)
+
+            const response = await axios.post(`/api/recaptcha?token=${recaptchaToken}`);
+            console.log("Response from backend", response.data);
 
             if (response.data.success) {
                 console.log('reCAPTCHA verified');
@@ -210,10 +211,11 @@ export default function Contact() {
                                                 <textarea name="message" value={formData.message} onChange={handleChange} required />
                                             </div>
                                             <div className="flex">
-                                                <ReCAPTCHA
-                                                    sitekey="6LfzngEqAAAAALa1FOWlzb6YRIcSCisl1gB-mlk-"
+                                                  <ReCAPTCHA
+                                                    sitekey={"6LcLetQUAAAAAP89ce3jCXSHagyDfca0AtQU-63g"}
                                                     onChange={handleRecaptcha}
                                                 />
+ 
                                                 {captchaError && <div className="w-fit h-fit ml-10 mt-3 rounded-lg bg-red-200  px-2 " style={{ paddingTop: '1px', paddingBottom: '1px' }}>
 
                                                     <p className="text-red-500 mt-2" >Please complete the reCAPTCHA.</p>

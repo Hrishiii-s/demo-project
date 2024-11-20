@@ -23,7 +23,7 @@ export default async function handler(req, res) {
             // Step 4: Set up the email data
             await transporter.sendMail({
                 from: process.env.EMAIL, // sender address
-                to: ['sidharth.ecesis@gmail.com'], // recipient address
+                to: ['kv@ecesistech.com','busdev@ecesistech.com','rachel.roy@ecesistech.com','vishnu.nair@ecesistech.com'], // recipient address
                 subject: `New Lead From Ecesis Website - ${name}`, // subject line
                 text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${phone}\nMessage: ${message}\n`, // plain text body
                 headers: {

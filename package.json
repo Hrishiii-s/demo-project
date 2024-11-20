@@ -41,6 +41,7 @@
     "react-fast-marquee": "^1.6.4",
     "react-ga": "^3.3.1",
     "react-google-recaptcha": "^3.1.0",
+    "react-google-recaptcha-v3": "^1.10.1",
     "react-lazyload": "^3.2.1",
     "react-modal-video": "^2.0.1",
     "react-player": "^2.16.0",
