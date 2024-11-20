@@ -7,36 +7,57 @@ export async function POST(req) {
 
     // const { token } = req.body; // Get reCAPTCHA token from the client
     const secretKey = process.env.RECAPTCHA_SECRET_KEY; // Use an environment variable for the secret key
+    console.log("Token", token)
+    console.log("secret", secretKey)
+
+    if (!secretKey) {
+        console.error('Missing reCAPTCHA secret key.');
+        return NextResponse.json({
+            success: false,
+            message: 'Missing reCAPTCHA secret key.',
+        });
+    }
 
     if (!token) {
-        console.log({ success: false, message: 'reCAPTCHA token is required' });
-        return NextResponse.json({ success: false, message: 'reCAPTCHA token is required' }) // No need to continue if there's no token
+        console.error('Missing reCAPTCHA token.');
+        return NextResponse.json({
+            success: false,
+            message: 'Missing reCAPTCHA token.',
+        });
     }
 
     try {
         // Send request to Google's reCAPTCHA verification API
         const response = await axios.post(
-            `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`
+            'https://www.google.com/recaptcha/api/siteverify',
+            new URLSearchParams({
+                secret: secretKey,
+                response: token,
+            })
         );
-        console.log("recaptch_response",response)
+
         const { success, score } = response.data;
-        console.log("Success_Score",success,score);
+        console.log("Success_Score", success, score);
 
         if (success) {
-            // reCAPTCHA is valid
-            console.log({ success: true, message: 'reCAPTCHA verified' });
-            return NextResponse.json({ success: true, message: 'reCAPTCHA verified', response: response}) // No need to continue if there's no token
-
+            return NextResponse.json({
+                success: true,
+                message: 'reCAPTCHA verified.',
+                score,
+            });
         } else {
-            // reCAPTCHA verification failed
-            console.log({ success: false, message: 'reCAPTCHA verification failed' });
-            return NextResponse.json({ success: false, message: 'reCAPTCHA verification failed', response: response }) // No need to continue if there's no token
-
+            return NextResponse.json({
+                success: false,
+                message: 'reCAPTCHA verification failed.',
+                score,
+            });
         }
-    } catch (error) {
-        console.error('Error during reCAPTCHA verification:', error);
-        console.log({ success: false, message: 'Internal Server Error' });
-        return NextResponse.json({ success: false, message: 'Internal Server Error' }) // No need to continue if there's no token
 
+    } catch (error) {
+        console.error('Error verifying reCAPTCHA:', error.message); // Log only the message
+        return NextResponse.json({
+            success: false,
+            message: 'Internal Server Error during reCAPTCHA verification.',
+        });
     }
 }

@@ -71,9 +71,9 @@ export default function MobileMenu({ handleMobileMenu}) {
         return () => observer.disconnect();
     }, []);
 
-    useEffect(()=>{
-console.log("Main States",isActive)
-    },[isActive])
+//     useEffect(()=>{
+// console.log("Main States",isActive)
+//     },[isActive])
 
     return (
         <>
