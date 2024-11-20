@@ -25,12 +25,12 @@ export async function POST(req) {
         if (success) {
             // reCAPTCHA is valid
             console.log({ success: true, message: 'reCAPTCHA verified' });
-            return NextResponse.json({ success: true, message: 'reCAPTCHA verified' }) // No need to continue if there's no token
+            return NextResponse.json({ success: true, message: 'reCAPTCHA verified', response: response}) // No need to continue if there's no token
 
         } else {
             // reCAPTCHA verification failed
             console.log({ success: false, message: 'reCAPTCHA verification failed' });
-            return NextResponse.json({ success: false, message: 'reCAPTCHA verification failed' }) // No need to continue if there's no token
+            return NextResponse.json({ success: false, message: 'reCAPTCHA verification failed', response: response }) // No need to continue if there's no token
 
         }
     } catch (error) {
