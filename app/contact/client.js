@@ -7,6 +7,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import Head from "next/head";
 import MoonLoader from "react-spinners/MoonLoader";
+import { TextField, MenuItem, Select, FormControl, InputLabel, Button } from "@mui/material";
+
 
 
 export default function Contact() {
@@ -48,7 +50,9 @@ export default function Contact() {
             name: formData.name,
             email: formData.email,
             phone: formData.phoneNumber,
-            message: formData.message
+            message: formData.message,
+            option: formData.option
+
         });
 
         const tok = {
@@ -79,16 +83,18 @@ export default function Contact() {
                 //     });
 
                 //     if (response.status === 200) {
-                        // console.log('Form submitted successfully:', response.data);
+                // console.log('Form submitted successfully:', response.data);
 
-                        // Reset the form
-                        setFormData({
-                            name: '',
-                            email: '',
-                            phoneNumber: '',
-                            message: ''
-                        });
-                        setRecaptchaToken(''); // Reset reCAPTCHA
+                // Reset the form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phoneNumber: '',
+                    message: '',
+                    option: ''
+
+                });
+                setRecaptchaToken(''); // Reset reCAPTCHA
                 //     }
                 // }
                 // catch (error) {
@@ -122,7 +128,8 @@ export default function Contact() {
         name: '',
         email: '',
         phoneNumber: '',
-        message: ''
+        message: '',
+        option: ''
     });
 
 
@@ -188,45 +195,85 @@ export default function Contact() {
                                     <div className="contact__form-wrap">
                                         <h1 className="title">Send Us a Message</h1>
                                         <p>Your email address will not be published. Required fields are marked *</p>
-                                        <form onSubmit={handleSubmit}>
-                                            <div className="row">
-                                                <div className="form-grp">
-                                                    <h6 className="ml-2">Name <span className="text-red-600">*</span></h6>
-                                                    <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-                                                </div>
-                                                <div className="form-grp">
-                                                    <h6 className="ml-2">E-mail <span className="text-red-600">*</span></h6>
-                                                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-                                                </div>
-                                                <div className="form-grp">
-                                                    <h6 className="ml-2">Phone <span className="text-red-600">*</span></h6>
-                                                    <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
-                                                </div>
-                                            </div>
-                                            <div className="form-grp">
-                                                <h6 className="ml-2">Message <span className="text-red-600">*</span></h6>
-                                                <textarea name="message" value={formData.message} onChange={handleChange} required />
-                                            </div>
-                                            <div className="flex">
-                                                  <ReCAPTCHA
+                                        <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "auto" }}>
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="E-mail"
+                                                    type="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Phone Number"
+                                                    type="tel"
+                                                    name="phoneNumber"
+                                                    value={formData.phoneNumber}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Message"
+                                                    name="message"
+                                                    multiline
+                                                    rows={4}
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormControl>
+                                            <label
+                                                htmlFor="enquiry"
+                                                className="block mb-2 ml-2 text-base font-medium text-gray-900 dark:text-white"
+                                            >
+                                                Select an option
+                                            </label>
+                                            <select
+                                                id="enquiry"
+                                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            >
+                                                <option selected="">Choose a country</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                            </select>
+
+                                            <div style={{ marginTop: "16px" }}>
+                                                <ReCAPTCHA
                                                     sitekey={"6LcLetQUAAAAAP89ce3jCXSHagyDfca0AtQU-63g"}
                                                     onChange={handleRecaptcha}
                                                 />
- 
-                                                {captchaError && <div className="w-fit h-fit ml-10 mt-3 rounded-lg bg-red-200  px-2 " style={{ paddingTop: '1px', paddingBottom: '1px' }}>
-
-                                                    <p className="text-red-500 mt-2" >Please complete the reCAPTCHA.</p>
-                                                </div>
-                                                }
-
+                                                {captchaError && (
+                                                    <p style={{ color: "red", marginTop: "8px" }}>Please complete the reCAPTCHA.</p>
+                                                )}
                                             </div>
 
-                                            <button type="submit" className="btn mt-3">Submit</button>
-                                            {confirmation && (<div className="" style={{ paddingTop: '1px', paddingBottom: '1px' }}>
-                                                <p className="text-blue-500 mt-2" >Thank you!<br />We will catch up with you soon.</p>
-                                            </div>)
-
-                                            }
+                                            <Button
+                                                type="submit"
+                                                variant="contained"
+                                                color="primary"
+                                                style={{ marginTop: "24px", display: "block", width: "100%" }}
+                                            >
+                                                Submit
+                                            </Button>
                                         </form>
                                         <p className="ajax-response mb-0" />
                                     </div>

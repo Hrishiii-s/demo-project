@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const decodedData = JSON.parse(atob(encodedData)); // Decode Base64 and parse JSON
     // console.log("decodedData",decodedData)
 
-        const { name, email, phone, message } = decodedData;
+        const { name, email, phone, message, option } = decodedData;
         // console.log("name, email, phone, message",name, email, phone, message)
 
         // Step 3: Configure the transporter
