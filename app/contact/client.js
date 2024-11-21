@@ -18,6 +18,7 @@ export default function Contact() {
     const [recaptchaToken, setRecaptchaToken] = useState(null);
     const [captchaError, setCaptchaError] = useState(false); // State to track if captcha error should be shown
     const [confirmation, setConfirmation] = useState(false);
+    const [category, setCategory] = useState(true);
 
     let Nothome = true;
 
@@ -34,6 +35,12 @@ export default function Contact() {
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+
+        console.log("Category", category);
+
+    }, [category]); // Ensure the dependency is included
 
 
 
@@ -140,6 +147,10 @@ export default function Contact() {
             ...prev,
             [name]: value
         }));
+
+        if (name === "option" && value !== "Choose a category") {
+            setCategory(true);
+        }
     };
 
     const handleRecaptcha = (token) => {
@@ -151,8 +162,22 @@ export default function Contact() {
         e.preventDefault();
         if (!recaptchaToken) {
             setCaptchaError(false); // Set error state if captcha is not completed
+            if (formData.option === "") {
+                setCategory(false);
+                return;
+            }
+
+            console.log("Form", formData)
+            console.log("category", category)
             return; // Prevent form submission
         }
+        else {
+            if (formData.option === "") {
+                setCategory(false);
+                return;
+            }
+        }
+
 
         // Here you can add what to do with the data, e.g., sending it to an API
 
@@ -168,6 +193,8 @@ export default function Contact() {
             </div>
         ); // Or any other loading indicator
     }
+
+
 
 
     return (
@@ -203,6 +230,7 @@ export default function Contact() {
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     required
+                                                    className="bg-white"
                                                 />
                                             </FormControl>
 
@@ -214,6 +242,7 @@ export default function Contact() {
                                                     value={formData.email}
                                                     onChange={handleChange}
                                                     required
+                                                    className="bg-white"
                                                 />
                                             </FormControl>
 
@@ -225,6 +254,7 @@ export default function Contact() {
                                                     value={formData.phoneNumber}
                                                     onChange={handleChange}
                                                     required
+                                                    className="bg-white"
                                                 />
                                             </FormControl>
 
@@ -237,24 +267,35 @@ export default function Contact() {
                                                     value={formData.message}
                                                     onChange={handleChange}
                                                     required
+                                                    className="bg-white"
                                                 />
                                             </FormControl>
+
                                             <label
                                                 htmlFor="enquiry"
                                                 className="block mb-2 ml-2 text-base font-medium text-gray-900 dark:text-white"
                                             >
-                                                Select an option
+                                                Type of Enquiry
                                             </label>
                                             <select
+                                                name="option"
+                                                required
                                                 id="enquiry"
-                                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                value={formData.option}
+                                                onChange={handleChange}
+                                                
                                             >
-                                                <option selected="">Choose a country</option>
-                                                <option value="US">United States</option>
-                                                <option value="CA">Canada</option>
-                                                <option value="FR">France</option>
-                                                <option value="DE">Germany</option>
+                                                <option value="Choose a category" disabled={formData.option !== ""}>
+                                                    Choose a category
+                                                </option>
+                                                <option value="Business">Business Enquiry</option>
+                                                <option value="Recruitment">Job Enquiry</option>
                                             </select>
+
+                                            {!category && (<div>
+                                                <p className="text-red-500 ml-3">Choose a category</p>
+                                            </div>)}
 
                                             <div style={{ marginTop: "16px" }}>
                                                 <ReCAPTCHA
@@ -266,15 +307,11 @@ export default function Contact() {
                                                 )}
                                             </div>
 
-                                            <Button
-                                                type="submit"
-                                                variant="contained"
-                                                color="primary"
-                                                style={{ marginTop: "24px", display: "block", width: "100%" }}
-                                            >
-                                                Submit
-                                            </Button>
+                                             <button type="submit" className="btn mt-3">Submit</button>
                                         </form>
+                                        {confirmation && (<div>
+                                            <p className="text-purple-300">Thank you for reaching out to us!<br />We will get back to you shortly.</p>
+                                        </div>)}
                                         <p className="ajax-response mb-0" />
                                     </div>
                                 </div>
