@@ -156,7 +156,7 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!recaptchaToken) {
-            setCaptchaError(false); // Set error state if captcha is not completed
+            setCaptchaError(true); // Set error state if captcha is not completed
             if (formData.option === "") {
                 setCategory(false);
                 return;
