@@ -102,77 +102,137 @@ export default function BlogTest() {
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                        <div className="bg-gray-200 w-full h-[3px] rounded-lg mb-4" />
+
                                                         {/* <BlogConvert jsonContent={blogPost.content} /> */}
                                                         {/* <span className='font-bold'></span> */}
                                                         <div>
                                                             <p>
-                                                                In the modern business landscape, data stands as the cornerstone, driving insights, shaping decisions, and significantly affecting your bottom line. However, the manual collection of data can evolve into a cumbersome and error-prone chore, acting as a stealthy adversary to productivity. This is where the challenge of manual data entry emerges prominently.
+                                                                The U.S. real estate market is in a constant state of evolution, with firms and businesses facing increasing pressure to adapt to new challenges and leverage technology for growth. As one of the leading <span className='font-bold'>PropTech companies</span>, ECESIS brings over 15 years of expertise in real estate solutions, empowering businesses to scale efficiently and boost revenue. Backed by a team of 250+ experienced professionals, ECESIS offers a suite of services tailored to the unique needs of real estate firms across the nation.
                                                                 <br />
                                                             </p>
+
                                                             <p>
-                                                                When your workforce is bogged down by entering data from various sources like forms, PDFs, and online platforms, it's a glaring indicator that it's time to pivot to automation. Below are 5 critical signs that herald the urgency for a data entry transformation:
+                                                                Here’s how ECESIS is helping real estate businesses achieve new heights:
                                                                 <br />
                                                             </p>
-                                                            <h3 className="font-bold text-xl my-3">1. Your Team is Stuck in a Copy-Paste Cacophony</h3>
+
+                                                            <h3 className="font-bold text-xl my-3">1. Property Listings Management Made Easy</h3>
                                                             <p>
-                                                                Is copying and pasting data from online sources a daily ritual for your team? This repetitive task is not only error-prone but also a huge drain on productivity. Automating online data entry frees your team to focus on higher-value activities.
-                                                                <br />
-                                                            </p>
-                                                            <h3 className="font-bold text-xl my-3">2. Data Inconsistency is a Tangled Web</h3>
-                                                            <p>
-                                                                Does your team struggle with inconsistent data formats from different online sources? Manually reformatting data takes time and increases the risk of errors. Automation ensures consistent data capture, regardless of the source.
-                                                                <br />
-                                                            </p>
-                                                            <h3 className="font-bold text-xl my-3">3. Validation Becomes a Manual Marathon</h3>
-                                                            <p>
-                                                                Verifying the accuracy of online data entry can be a tedious and time-consuming process. Imagine the wasted hours spent double-checking information! Automated data validation eliminates this burden, ensuring reliable data from the start.
-                                                                <br />
-                                                            </p>
-                                                            <h3 className="font-bold text-xl my-3">4. Integration Nightmares are Keeping You Up at Night</h3>
-                                                            <p>
-                                                                Does your business rely on multiple online platforms and databases? Manually transferring data between these systems can be a recipe for errors and delays. Automation streamlines data flow and ensures seamless integration.
-                                                                <br />
-                                                            </p>
-                                                            <h3 className="font-bold text-xl my-3">5. Valuable Insights are Buried in a Data Graveyard</h3>
-                                                            <p>
-                                                                Inconsistent and inaccurate data makes it difficult to generate meaningful reports and uncover valuable insights. Automation ensures clean data capture, empowering you to unlock the true potential of your business intelligence.
-                                                                <br />
-                                                            </p>
-                                                            <h2 className="font-bold text-2xl my-3">Introducing SmartEntry: Your Data Entry Superhero</h2>
-                                                            <p>
-                                                                SmartEntry is your secret weapon for conquering the online data entry challenge. Our innovative software utilizes cutting-edge technology to automate data capture from various online sources:
-                                                                <br />
-                                                            </p>
-                                                            <p>
-                                                                Intelligent Web Scraping: Extract data from websites and applications with pinpoint accuracy, eliminating the need for manual copy-pasting.
+                                                                Keeping property listings accurate and up-to-date is critical for attracting buyers and renters. Yet, it’s a time-consuming and error-prone process when handled manually. ECESIS simplifies this task with automated data entry systems, ensuring:
                                                                 <br />
                                                             </p>
                                                             <ul className="list-disc ml-4">
-                                                                <li><span className="font-bold">Streamlined Form Processing: </span>Automate data capture from online forms, ensuring consistent and error-free information.</li>
-                                                                <li><span className="font-bold">Effortless Integration: </span>Connect seamlessly with your existing online platforms and databases, creating a smooth data flow.</li>
-                                                                <li><span className="font-bold">Automated Validation: </span>Eliminate manual verification with built-in data validation tools, guaranteeing clean and reliable information.</li>
+                                                                <li>Consistent and comprehensive property information.</li>
+                                                                <li>Faster updates across multiple listing platforms.</li>
+                                                                <li>Time savings that allow your team to focus on core business activities.</li>
                                                             </ul>
-                                                            <p className="mt-3">
-                                                                Stop wasting time and resources on manual online data entry. Empower your team, unlock productivity, and gain valuable insights from your data. Contact us today to see how SmartEntry can transform your business!
+
+
+                                                            <h3 className="font-bold text-xl my-3">2. Revolutionizing Valuations and Broker Price Opinions</h3>
+                                                            <p>
+                                                                Valuations and BPOs are the foundation of real estate transactions. ECESIS utilizes AI-powered tools to deliver <span className='font-bold'><a href='/services-details/real-estate-valuation' class='underline text-[#e6ae15] font-bold'>accurate property assessments</a></span>, ensuring market credibility. Key benefits include:
                                                                 <br />
                                                             </p>
+                                                            <ul className="list-disc ml-4">
+                                                                <li>Analysis of market trends and comparable sales for precise valuations.</li>
+                                                                <li>Reduced turnaround times for BPO reports, enhancing client satisfaction.</li>
+                                                                <li>Customizable valuation templates tailored to your firm’s needs.</li>
+                                                            </ul>
+                                                            <br/>
+                                                            <p>
+                                                                Our technology and expertise enable firms to provide reliable property appraisals that instill confidence in buyers, sellers, and lenders.
+                                                            </p>
+
+                                                            <h3 className="font-bold text-xl my-3">3. Streamlining the Underwriting Process</h3>
+                                                            <p>
+                                                                Underwriting is often plagued by inefficiencies and delays due to manual processes. ECESIS addresses this by <span className='font-bold'>automating key aspects of underwriting</span>, including:
+                                                                <br />
+                                                            </p>
+                                                            <ul className="list-disc ml-4">
+                                                                <li>Document collection and data validation.</li>
+                                                                <li>Integration of AI to assess risks and streamline approvals.</li>
+                                                                <li>Ensuring compliance with real estate and lending regulations.</li>
+                                                            </ul>
+                                                            <br/>
+                                                            <p>
+                                                                By reducing manual workloads, we help real estate firms expedite loan approvals and deliver a seamless experience to their clients.
+                                                                <br />
+                                                            </p>
+
+                                                            <h3 className="font-bold text-xl my-3">4. Mastering Data Entry and Management</h3>
+                                                            <p>
+                                                                Real estate operations rely heavily on accurate and organized data. ECESIS brings advanced automation to data entry processes, allowing firms to:
+                                                                <br />
+                                                            </p>
+                                                            <ul className="list-disc ml-4">
+                                                                <li>Minimize errors through intelligent data validation.</li>
+                                                                <li>Maintain clean and organized databases for decision-making.</li>
+                                                                <li>Free up resources for high-value business activities.</li>
+                                                            </ul>
+                                                            <br/>
+                                                            <p>
+                                                                From tax details and MLS data to market analyses, our team ensures that every piece of information is correctly logged and readily accessible.
+                                                                <br />
+                                                            </p>
+
+                                                            <h3 className="font-bold text-xl my-3">5. Supporting Real Estate Businesses at Scale</h3>
+                                                            <p>
+                                                                The combination of our cutting-edge <span className='font-bold'><a href='/services-details/proptech' class='underline text-[#e6ae15] font-bold'>PropTech solutions</a></span> and experienced team positions ECESIS as the go-to partner for real estate firms looking to grow. We work with businesses across the U.S., including large real estate firms and appraisal companies, to:
+                                                                <br />
+                                                            </p>
+                                                            <ul className="list-disc ml-4">
+                                                                <li>Automate repetitive tasks like data entry, valuations, and underwriting.</li>
+                                                                <li>Save time and reduce costs while boosting operational efficiency.</li>
+                                                                <li>Drive revenue growth by enabling faster, smarter decisions.</li>
+                                                            </ul>
+
+                                                            <h2 className="font-bold text-2xl my-3">Why Choose ECESIS?</h2>
+                                                            <ul className="list-disc ml-4">
+                                                                <li>
+                                                                    <p className=""><span className="font-bold">Industry Expertise: </span>With over 15 years of experience in the U.S. real estate market, we bring unparalleled insights into the industry's challenges and opportunities.<br /></p>
+                                                                </li>
+
+                                                                <li>
+                                                                    <p className=""><span className="font-bold">Skilled Team: </span>We harness the power of AI, automation, and machine learning to create solutions that drive tangible results.<br /></p>
+                                                                </li>
+
+                                                                <li>
+                                                                    <p className=""><span className="font-bold">Innovative Technology: </span>We harness the power of AI, automation, and machine learning to create solutions that drive tangible results.<br /></p>
+
+                                                                </li>
+
+
+                                                                <li>
+                                                                    <p className=""><span className="font-bold">Client-Focused Approach: </span>At ECESIS, your success is our priority. We customize our services to align with your business goals, ensuring sustainable growth.<br /></p>
+
+                                                                </li>
+
+                                                                <li>
+                                                                    <p className=""><span className="font-bold">Partner with ECESIS Today: </span>As the real estate industry continues to embrace PropTech, partnering with ECESIS ensures your firm stays ahead of the competition. Whether it’s managing listings, conducting valuations, or automating data processes, our solutions are designed to optimize your operations and fuel your growth.<br /></p>
+
+                                                                </li>
+
+
+                                                            </ul>
+
+                                                            <p className="mb-3">
+                                                                Let ECESIS help you evolve, transform, and grow in today’s competitive market. Contact us today to learn how we can redefine the way your business operates.
+                                                                <br />
+                                                            </p>
+
                                                             <section className="call-back-area call-back-area-two mt-3">
                                                                 <div className="">
                                                                     <div className="call-back-wrap-blog rounded-xl bg-lblue">
                                                                         <div className="row align-items-center">
                                                                             <div className="call-back-content flex flex-col justify-center items-center text-center" >
                                                                                 <div className="section-title white-title tg-heading-subheading animation-style3">
-                                                                                    <h2 className="mb-0 text-3xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Automation expert</span>
+                                                                                    <h2 className="mb-0 text-3xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Proptech expert</span>
                                                                                     </h2>
 
-                                                                                    <p className="text-white  text-lg mt-3">Embrace RPA innovation and new process optimization opportunities to increase business efficiency and reduce costs.</p>
-                                                                                    <Link href="/schedule-a-meeting" className="btn mt-2">BOOK A CONSULTATION</Link>
+                                                                                    <p className="text-white  text-lg mt-3">Discover cutting-edge PropTech solutions to streamline real estate processes, boost operational efficiency, and drive growth.</p>
+                                                                                    <a href="/schedule-a-meeting" className="btn mt-2">BOOK A CONSULTATION</a>
                                                                                 </div>
-                                                                                {!isMobile ? (<div className="">
-                                                                                    <img src="/assets/img/images/callback_photo.webp" alt="" style={{ width: '1100px' }} className="ml-2 rounded-2xl" />
-
-                                                                                </div>) : null}
-
 
                                                                             </div>
                                                                         </div>
@@ -241,7 +301,7 @@ export default function BlogTest() {
                                                             Latest Blogs
                                                         </h4>
                                                         <div className="sidebar__post-list">
-                                                            {console.log("",latestPosts.slice(-3))}
+                                                            {console.log("", latestPosts.slice(-3))}
                                                             {latestPosts.slice(-3).map((post) => (
                                                                 <div
                                                                     className="sidebar__post-item"

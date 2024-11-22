@@ -416,6 +416,8 @@ export default function Proptech() {
                                     <div className="section-title white-title tg-heading-subheading animation-style3 text-center">
                                         <h2 className="mb-0 text-4xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>, no-cost consult<br /> with our <span className="text-ly">PropTech expert</span>
                                         </h2>
+                                        <p className="text-white  text-lg mt-3">Discover cutting-edge PropTech solutions to streamline real estate processes, boost operational efficiency, and drive growth.</p>
+
                                         <Link href="/schedule-a-meeting" className="btn mt-5">Let's Talk</Link>
                                     </div>
 

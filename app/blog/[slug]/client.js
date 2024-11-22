@@ -126,6 +126,8 @@ export default function BlogDetails() {
                                                                 <li><i className="fas fa-calendar-alt" />{blogPost.date}</li>
                                                             </ul>
                                                         </div>
+                                                        <div className="bg-gray-200 w-full h-[3px] rounded-lg mb-4" />
+
                                                         <BlogConvert jsonContent={blogPost.content} />
                                                         <div className="blog__details-bottom">
                                                             <div className="row align-items-center">
