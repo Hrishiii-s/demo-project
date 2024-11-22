@@ -30,9 +30,7 @@ export default function BlogDetails() {
 
 
     useEffect(() => {
-        console.log('Slug:', slug);  // Check if slug is correct
         const post = data.find((post) => post.slug === slug);
-        console.log('BlogPost:', post);  // Check if the post is being found
         setBlogPost(post);  // Find the blog post by slug
     }, [slug]);  // Effect will re-run if slug changes
 
@@ -64,9 +62,9 @@ export default function BlogDetails() {
             const sidebarHeight = sidebarContainerRef.current.offsetHeight;
             const viewportHeight = window.innerHeight;
 
-            console.log("viewportHeight",viewportHeight)
-            console.log("containerBottom",containerBottom)
-            console.log("sidebarHeight",sidebarHeight)
+            // console.log("viewportHeight",viewportHeight)
+            // console.log("containerBottom",containerBottom)
+            // console.log("sidebarHeight",sidebarHeight)
 
             if (containerBottom  <= viewportHeight) {
                 setSidebarFixed(false);
@@ -85,9 +83,7 @@ export default function BlogDetails() {
     }, []);
 
 
-    useEffect(()=>{
-console.log("sidebar",sidebarFixed)
-    },[sidebarFixed])
+
     const titleurl = slug.replace(/-/g, ' ');
 
     if (!allLoaded) {
@@ -136,7 +132,6 @@ console.log("sidebar",sidebarFixed)
                                                                 <div className="col-lg-9">
                                                                     <div className="post-tags">
                                                                         <h5 className="title">Tags:</h5>
-                                                                        {console.log(blogPost.tags)}
                                                                         <ul className="list-wrap flex flex-wrap">
                                                                             {blogPost.tags.map((tag, index) => {
                                                                                 return (

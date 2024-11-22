@@ -10,14 +10,12 @@ export async function POST() {
 
     // Query to fetch all rows from the 'contacts' table
     const rows = db.prepare('SELECT * FROM contacts').all();
-    console.log("ROWS",rows)
 
     // Return the rows as a JSON response
     // res.status(200).json({ data: rows });
  
     const plainRows = rows.map(row => JSON.parse(JSON.stringify(row)));
     
-    console.log("plainRows",plainRows)
     // Return the rows as a JSON response
     return NextResponse.json({ data: rows });
   } catch (error) {

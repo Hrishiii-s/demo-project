@@ -36,11 +36,6 @@ export default function Contact() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-
-        console.log("Category", category);
-
-    }, [category]); // Ensure the dependency is included
 
 
 
@@ -166,9 +161,6 @@ export default function Contact() {
                 setCategory(false);
                 return;
             }
-
-            console.log("Form", formData)
-            console.log("category", category)
             return; // Prevent form submission
         }
         else {

@@ -9,13 +9,10 @@ console.log("DB Path:", db);
 
 export default function handler(req) {
         
-    console.log("REquest",req)
     const encodedData = req.searchParams.data;
     const decodedData = JSON.parse(atob(encodedData)); // Decode Base64 and parse JSON
-    console.log("decodedData",decodedData)
 
     const { name, email, phone, message } = decodedData;
-    console.log("name, email, phone, message",name, email, phone, message)
 
     // try {
     //     // Query to retrieve all table names
@@ -58,7 +55,6 @@ export default function handler(req) {
             `);
             stmt.run(name, email, phone, message);
 
-            console.log("Contact saved successfully");
             console.log({ message: "Contact saved successfully" });
         } catch (error) {
             console.error("Database error:", error);

@@ -61,10 +61,10 @@ export default function Layout({ Nothome, headerStyle, footerStyle, headTitle, b
         }
     }, [breadcrumbTitle]);
 
-    useEffect(()=>{
-        console.log("bread",bread)
-        console.log("foot",loadfooter)
-    },[loadfooter])
+    // useEffect(()=>{
+    //     console.log("bread",bread)
+    //     console.log("foot",loadfooter)
+    // },[loadfooter])
 
 
     return (

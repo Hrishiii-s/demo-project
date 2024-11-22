@@ -26,7 +26,6 @@ export default function BlogPost({ style, showItem, showPagination }) {
         setPagination(arr)
         setPages(Math.ceil(data.length / limit))
     }
-    console.log("limit",limit)
     const startIndex = currentPage * limit - limit
     const endIndex = startIndex + limit
     const getPaginatedProducts = data.slice(startIndex, endIndex)

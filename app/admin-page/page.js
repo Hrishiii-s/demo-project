@@ -19,7 +19,7 @@ export default function ViewTable() {
             text: payload,
         });
         const result = response.data.data; // Access the data property from the response
-        console.log("Response:", response);
+        // console.log("Response:", response);
         setData(result);
       } catch (error) {
         console.error('Error fetching table data:', error);

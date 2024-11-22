@@ -9,7 +9,7 @@ export default function handler(req) {
     const stmt = db.prepare(`DELETE FROM contacts`);
     const info = stmt.run();
 
-    console.log(`Table cleared successfully. Rows affected: ${info.changes}`);
+    // console.log(`Table cleared successfully. Rows affected: ${info.changes}`);
     db.close();
   } catch (error) {
     console.error("Database error while clearing table:", error.message);
