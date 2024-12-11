@@ -55,7 +55,7 @@ function Breadcrumb({ breadcrumbTitle, bread, loaded }) {
             style: "text-white multiple-shadows"
         },
         {
-            id: "Talent Acquisition",
+            id: "Engineering Services",
             backgroundImageUrl: "/assets/img/banner/manpower_banner2.webp",
             backgroundMobile: "/assets/img/banner/manpower_mobile.webp",
             style: "text-white multiple-shadows",

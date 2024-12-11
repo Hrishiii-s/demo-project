@@ -108,7 +108,7 @@ export default function MobileMenu({ handleMobileMenu}) {
                             <ul className="sub-menu" style={{ display: isActive.business ? "block" : "none" }}>
                                 <li onClick={handleMenuClick}><Link href="/services-details/real-estate-valuation">Real Estate Valuation</Link></li>
                                 <li onClick={handleMenuClick}><Link href="/services-details/accounting-finance">Accounting & Finance</Link></li>
-                                <li onClick={handleMenuClick}><Link href="/services-details/manpower-staffing">Talent Acquisition</Link></li>
+                                <li onClick={handleMenuClick}><Link href="/services-details/engineering-services">Engineering Services</Link></li>
                                 <li onClick={handleMenuClick}><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
                             </ul>
                             <div className={isActive.business ? "dropdown-btn open" : "dropdown-btn"} onClick={(e) => handleToggle('business', e)}>

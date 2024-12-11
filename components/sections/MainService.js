@@ -38,7 +38,7 @@ export default function MainService() {
         <>
             <div>
                 <section className="services__area-six services__bg-six" data-background="/assets/img/bg/services_bg1.webp">
-                    <div className="xl:max-2xl:max-w-[1080px] 2xl:max-w-[1440px] max-w-[1080px] mx-auto">
+                    <div className="xl:max-2xl:max-w-[1080px] 2xl:max-w-[1260px] max-w-[1080px] mx-auto">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
                                 <div className="section-title white-title mb-10">
@@ -208,14 +208,14 @@ export default function MainService() {
                                         <li className="nav-item" onClick={() => handleOnClick(7)}>
                                             {isMobile ? (
                                                 <>
-                                                    <Link href="/services-details/manpower-staffing">
-                                                        <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Talent Acquisition</button>
+                                                    <Link href="/services-details/engineering-services">
+                                                        <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Engineering Services</button>
 
                                                     </Link>
                                                 </>
                                             ) : (
                                                 <>
-                                                    <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Talent Acquisition</button>
+                                                    <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Engineering Services</button>
 
                                                 </>
                                             )
@@ -389,7 +389,7 @@ export default function MainService() {
                                                     <img src="/assets/img/services/ManpowerStaffing.webp" alt="" />
                                                 </div>
                                                 <div className="services__content-four">
-                                                    <h2 className="title"><Link href="#">Talent Acquisition</Link></h2>
+                                                    <h2 className="title"><Link href="#">Engineering Services</Link></h2>
                                                     <p>We specialize in placing trained precision and assembly line engineers and other skilled manpower for various sectors. Choose us for a staffing strategy that goes beyond conventional solutions, delivering unparalleled results tailored to your organizational goals. We offer sophisticated solutions encompassing <br /> end-to-end recruitment, general staffing, executive hiring, and various other services to meet contractual or permanent hiring needs.</p>
                                                     <div className="about__list-box">
                                                         <ul className="list-wrap">
@@ -398,7 +398,7 @@ export default function MainService() {
                                                             <li><i className="fas fa-check" />Proven Expertise</li>
                                                         </ul>
                                                     </div>
-                                                    <Link href="/services-details/manpower-staffing" className="btn">Learn More</Link>
+                                                    <Link href="/services-details/engineering-services" className="btn">Learn More</Link>
                                                 </div>
                                             </div>
                                         </div>
