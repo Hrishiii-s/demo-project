@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         subject = `New Lead From Ecesis Website - ${name}`
     }
     else if(option === 'Recruitment'){
-        mails = ['neethunandan@ecesistech.com', 'arya-ps@ecesistech.com', 'hr@ecesistech.com']
+        mails = ['arya-ps@ecesistech.com', 'hr@ecesistech.com']
         // mails = ['sidharth.ecesis@gmail.com']
         subject = `New Job Enquiry from Ecesis Website  - ${name}`
     }
