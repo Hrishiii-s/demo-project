@@ -8,9 +8,9 @@ export default function Pagination({
 }) {
     return (
         <>
-            <div className="pagination-wrap mt-40">
+            <div className="pagination-wrap">
                 <nav aria-label="Page navigation example">
-                    <ul className="pagination  list-wrap">
+                    <ul className="pagination list-wrap">
                         {getPaginationGroup.length <= 0 ? null : (
                             <li onClick={prev} className="next_link page-item">
                                 {currentPage === 1 ? null : (

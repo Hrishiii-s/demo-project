@@ -14,11 +14,11 @@ export default function BlogPost({ style, showItem, showPagination }) {
     let [pages, setPages] = useState(Math.ceil(data.length / limit))
 
     useEffect(() => {
-        cratePagination()
+        createPagination()
     }, [limit, pages, data.length])
 
-    const cratePagination = () => {
-        // set pagination
+    const createPagination = () => {
+        // Set pagination
         let arr = new Array(Math.ceil(data.length / limit))
             .fill()
             .map((_, idx) => idx + 1)
@@ -26,44 +26,46 @@ export default function BlogPost({ style, showItem, showPagination }) {
         setPagination(arr)
         setPages(Math.ceil(data.length / limit))
     }
-    const startIndex = currentPage * limit - limit
-    const endIndex = startIndex + limit
-    const getPaginatedProducts = data.slice(startIndex, endIndex)
 
+    // Reverse data order
+    const reversedData = [...data].reverse()
+
+    const startIndex = (currentPage - 1) * limit
+    const endIndex = startIndex + limit
+    const getPaginatedProducts = reversedData.slice(startIndex, endIndex)
 
     let start = Math.floor((currentPage - 1) / paginationItem) * paginationItem
     let end = start + paginationItem
     const getPaginationGroup = pagination.slice(start, end)
 
     const next = () => {
-        setCurrentPage((page) => page + 1)
+        if (currentPage < pages) setCurrentPage((page) => page + 1)
     }
 
     const prev = () => {
-        setCurrentPage((page) => page - 1)
+        if (currentPage > 1) setCurrentPage((page) => page - 1)
     }
 
     const handleActive = (item) => {
         setCurrentPage(item)
     }
+
     return (
         <>
             {getPaginatedProducts.length === 0 && (
-                <h3>No Products Found </h3>
+                <h3>No Products Found</h3>
             )}
 
-            {getPaginatedProducts.slice().reverse().map(item => (
+            {getPaginatedProducts.map((item) => (
                 <React.Fragment key={item.id}>
                     {!style && <BlogCard1 item={item} />}
                     {style === 1 && <BlogCard1 item={item} />}
                 </React.Fragment>
             ))}
 
-            {showPagination && getPaginatedProducts.length > 6 &&
+            {showPagination &&
                 <Pagination
-                    getPaginationGroup={
-                        getPaginationGroup
-                    }
+                    getPaginationGroup={getPaginationGroup}
                     currentPage={currentPage}
                     pages={pages}
                     next={next}
