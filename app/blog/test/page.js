@@ -7,6 +7,9 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import BlogConvert from "@/components/blog/BlogConvert";
 import CallbackAuto from "@/components/sections/Callback_Auto"
+import DOMPurify from 'dompurify';
+import Model from "@/public/assets/img/blog/BOT_Model.png"
+
 
 
 export default function BlogTest() {
@@ -47,6 +50,8 @@ export default function BlogTest() {
     }, [slug]); // Effect will re-run if slug changes
 
     const titleurl = slug.replace(/-/g, " ");
+
+
     return (
         <>
             <Layout headerStyle={3} footerStyle={3}>
@@ -107,94 +112,135 @@ export default function BlogTest() {
                                                         {/* <BlogConvert jsonContent={blogPost.content} /> */}
                                                         {/* <span className='font-bold'></span> */}
                                                         <div>
+
+
                                                             <p>
-                                                                As we approach 2025, the U.S. housing market is poised for significant shifts that real estate professionals need to be prepared for. Analysts foresee increased home sales, a gradual rise in housing inventory, and stabilizing mortgage rates. These changes not only offer new opportunities for buyers but also present realtors with the chance to enhance their role as trusted advisors in this evolving landscape.
+                                                                Scaling operations is one of the most significant challenges businesses face today. It involves balancing efficiency, cost, and risk while ensuring alignment with strategic goals. The Build-Operate-Transfer (BOT) model, combined with the establishment of Global Capability Centers (GCCs), has emerged as a transformative solution to address these challenges.
                                                                 <br />
                                                             </p>
 
-                                                            <h3 className="font-bold text-xl my-3">The Landscape of Home Sales</h3>
+                                                            <h2 className="font-bold text-xl my-3">Understanding the BOT Model for GCCs</h2>
                                                             <p>
-                                                                The <span className='font-bold'>National Association of Realtors (NAR)</span> projects approximately 4.5 million existing home sales in 2025, a 7% to 12% increase compared to 2024. For realtors, this uptick signals a revitalized market where buyer interest and activity are likely to rise.
-                                                                <br />
-                                                            </p>
-
-                                                            <p>
-                                                                Realtors can prepare by focusing on buyer education, ensuring clients understand how this shift impacts their purchasing power and options. Highlighting these favorable conditions in marketing efforts can attract clients who have been hesitant to enter the market.
+                                                                The BOT model is a phased approach to setting up operations, designed to streamline scaling while maintaining control and minimizing risks. Here’s how it works:
                                                                 <br />
                                                             </p>
 
 
-                                                            <h3 className="font-bold text-xl my-3">Mortgage Rates: A Welcome Stabilization</h3>
+
+
+
+
+                                                            <h2 className="font-bold text-xl my-3">Key Benefits of the BOT Model</h2>
                                                             <p>
-                                                                <span className='font-bold'>Mortgage rates, a critical factor for affordability are expected to stabilize at around 6% in 2025</span>, down from the near 7% seen in 2024. This stabilization could make homeownership attainable for approximately 6.2 million households.
+                                                                The BOT model provides significant advantages for businesses aiming to scale efficiently and effectively:
                                                                 <br />
                                                             </p>
 
-                                                            <h3 className="font-bold text-xl my-3">What This Means for Realtors:</h3>
-
-                                                            <ul className="list-disc ml-4">
-                                                                <li>Position yourself as an expert by offering workshops or consultations on how clients can leverage stable rates to secure their dream homes.</li>
-                                                                <li>Partner with mortgage lenders to provide clients with pre-qualification assistance, reinforcing trust and preparedness.</li>
+                                                            <h4 className="font-bold text-xl my-3">1. Streamlined GCC Setup:</h4>
+                                                            <ul className="list-disc ml-16">
+                                                                <li>Quickly establish fully operational Global Capability Centers tailored to your business goals.</li>
+                                                                <li>Reduce complexities in setup and scale seamlessly for future growth.</li>
                                                             </ul>
 
-
-                                                            <h3 className="font-bold text-xl my-3">Rising Inventory Levels: Expanding Buyer Options</h3>
-
-                                                            <p>
-                                                                With an 11.7% increase in inventory and a 13.8% rise in new-home construction anticipated, realtors can look forward to a less competitive market where buyers have more choices. This trend reduces the intensity of bidding wars, allowing clients to focus on finding homes that align with their needs and budgets.
-                                                                <br />                                               </p>
-
-                                                            <h3 className="font-bold text-xl my-3">Tips for Realtors:</h3>
-                                                            <ul className="list-disc ml-4">
-                                                                <li>Stay informed about new listings and developments to provide clients with timely updates.</li>
-                                                                <li>Use this period to strengthen your buyer network, offering personalized support to navigate the increased inventory effectively.</li>
+                                                            <h4 className="font-bold text-xl my-3 ">2. Cost and Resource Optimization:</h4>
+                                                            <ul className="list-disc ml-16">
+                                                                <li>Minimize upfront investments and optimize operational costs.</li>
+                                                                <li>Access skilled resources and scale operations based on business needs.</li>
                                                             </ul>
 
+                                                            <h4 className="font-bold text-xl my-3">3. Risk Mitigation and Knowledge Transfer:</h4>
+                                                            <ul className="list-disc ml-16">
+                                                                <li>Leverage partner expertise during the initial phases to mitigate risks.</li>
+                                                                <li>Ensure a smooth handover with structured knowledge transfer.</li>
+                                                            </ul>
 
-                                                            <h3 className="font-bold text-xl my-3">Modest Home Price Appreciation</h3>
+                                                            <h4 className="font-bold text-xl my-3 ">4. Focus on Strategic Goals:</h4>
+                                                            <ul className="list-disc ml-16">
+                                                                <li>Delegate operational tasks to focus on innovation, growth, and core business objectives.</li>
+                                                            </ul>
+
+                                                            <div className="w-full h-[2px] bg-gray-300 mt-4" />
+
+
+
+                                                            <h2 className="font-bold text-xl my-3">Shared Resources and Support</h2>
                                                             <p>
-                                                                <span className='font-bold'>Home prices are projected to grow modestly at 2% to 3.7%</span>, with a median home price of $410,700. This steady appreciation creates a balanced market that encourages long-term investments without overwhelming buyers.
+                                                                The success of the BOT model lies in providing businesses with a strong foundation. This includes access to shared resources such as:
+                                                                <br />
+                                                            </p>
+
+
+                                                            <ul className="list-disc ml-12">
+                                                                <li><span className="font-bold">Infrastructure:</span> Fully equipped office spaces, workstations, and technology setups.</li>
+                                                                <li><span className="font-bold">HR and Administrative Support:</span> Comprehensive services to manage team needs effectively.</li>
+                                                                <li><span className="font-bold">Regulatory Compliance:</span> Adherence to all legal requirements, ensuring smooth operations.</li>
+                                                            </ul>
+                                                            <div className="w-full h-[2px] bg-gray-300 mt-4" />
+
+
+
+                                                            <h3 className="font-bold text-xl my-3">Tailored to Meet Every Business Need</h3>
+                                                            <p>
+                                                                Whether you’re scaling for automation-focused initiatives or enhancing standard operational processes, the BOT model can be customized to suit your needs:
+                                                                <br />
+                                                            </p>
+
+                                                            <h3 className="font-bold text-xl my-3">1. Automation-Focused Centers:</h3>
+                                                            <ul className="list-disc ml-12">
+                                                                <li>Establish Centers of Excellence for automation initiatives.</li>
+                                                                <li>Integrate cutting-edge tools and technologies to drive innovation.</li>
+                                                            </ul>
+
+                                                            <h3 className="font-bold text-xl my-3">2. Standard Operational Processes:</h3>
+                                                            <ul className="list-disc ml-12">
+                                                                <li>Streamline workflows for tasks like data entry, BPO, or administrative support.</li>
+                                                                <li>Optimize processes to reduce costs and improve productivity.</li>
+                                                            </ul>
+
+                                                            <div className="w-full h-[2px] bg-gray-300 mt-4" />
+
+                                                            <h3 className="font-bold text-xl my-3">Your Role in the Journey: Key Questions</h3>
+                                                            <p>
+                                                                To create a GCC and BOT model tailored to your business, here are some questions to consider:
+                                                                <br />
+                                                            </p>
+
+                                                            <h3 className="font-bold text-xl my-3">1. Strategic Goals:</h3>
+                                                            <ul className="list-disc ml-12">
+                                                                <li>What are the key objectives for your GCC?</li>
+                                                                <li>How does this align with your long-term business vision?</li>
+                                                            </ul>
+
+                                                            <h3 className="font-bold text-xl my-3">2. Team and Resources:</h3>
+                                                            <ul className="list-disc ml-12">
+                                                                <li>What team size and skill sets are required to start operations?</li>
+                                                                <li>Are there specific capabilities or expertise you are looking for?</li>
+                                                            </ul>
+
+                                                            <h3 className="font-bold text-xl my-3">3.Timelines and Milestones:</h3>
+                                                            <ul className="list-disc ml-12">
+                                                                <li>What are your target timelines for the Build, Operate, and Transfer phases?</li>
+                                                                <li>Are there specific deliverables or milestones we should prioritize?</li>
+                                                            </ul>
+
+                                                            <div className="w-full h-[2px] bg-gray-300 mt-4" />
+
+                                                            <h3 className="font-bold text-xl my-3">
+
+                                                                Conclusion
+                                                            </h3>
+                                                            <p>
+                                                                The Build-Operate-Transfer model, paired with Global Capability Centers, is reshaping how businesses scale operations. By offering a structured, phased approach, it allows organizations to grow efficiently while maintaining flexibility and control.
+                                                                <br />
+                                                            </p>
+
+                                                            <p>
+                                                                Whether you’re launching automation initiatives or streamlining standard processes, the BOT model provides the foundation for long-term success. Ready to scale your operations? Let’s start building together!
                                                                 <br />
                                                             </p>
 
 
 
-
-                                                            <h3 className="font-bold text-xl my-3">Actionable Insights for Realtors:</h3>
-
-                                                            <ul className="list-disc ml-4">
-                                                                <li>Educate clients about the benefits of moderate price growth, emphasizing long-term value and reduced urgency to rush purchases.</li>
-                                                                <li>Leverage price trends in local markets to position yourself as a go-to expert for accurate and insightful property advice.</li>
-                                                            </ul>
-
-
-                                                            <h3 className="font-bold text-xl my-3">Regional Market Highlights: Where to Focus</h3>
-                                                            <p>
-                                                                Certain metropolitan areas, including <span className='font-bold'>Boston, Phoenix, and Grand Rapids</span> are expected to outperform the national average in home sales and price appreciation. Realtors operating in these regions should capitalize on growing demand by tailoring their services to local market dynamics.
-                                                                <br />
-                                                            </p>
-
-                                                            <h3 className="font-bold text-xl my-3">Shaping the Buyer Experience in 2025</h3>
-                                                            <p>
-                                                                The 2025 housing market offers a promising environment for buyers. As a real estate professional, your role in guiding clients through these opportunities is more vital than ever. Key strategies include:
-                                                                <br />
-                                                            </p>
-                                                            <ul className="list-disc ml-4">
-                                                                <li><span className='font-bold'>Educating Clients:</span> Demystify mortgage rates, inventory trends, and price stability to instill confidence in buyers.</li>
-                                                                <li><span className="font-bold">Leveraging Technology:</span> Use AI-powered tools for property valuation, predictive analytics, and market insights to provide clients with cutting-edge solutions.</li>
-                                                                <li><span className="font-bold">Expanding Your Network:</span> Collaborate with other professionals, such as mortgage brokers and developers, to offer a seamless home-buying experience.</li>
-                                                            </ul>
-
-                                                            <h2 className="font-bold text-2xl my-3">Real Estate Professionals: The Key to Success in 2025</h2>
-
-                                                            <p>The anticipated changes in the 2025 housing market offer a unique opportunity for real estate professionals to strengthen their client relationships and grow their businesses. By staying ahead of trends, adopting innovative strategies, and emphasizing personalized service, you can establish yourself as a trusted advisor in a shifting landscape.</p>
-                                                            <p>At ECESIS, we support real estate professionals in scaling their operations efficiently, enabling them to meet market demands with confidence. Whether you’re navigating increased inventory or helping buyers make informed decisions, we’re here to help you achieve your goals.</p>
-
-                                                            <h2 className="font-bold text-2xl my-3">Conclusion: A Year of Opportunity</h2>
-
-                                                            <p>The 2025 housing market is shaping up to be a year of opportunity for buyers and real estate professionals alike. With stabilizing mortgage rates, increased inventory, and moderate price growth, the market is moving towards a more balanced and sustainable future. For realtors, understanding these trends and leveraging them effectively will be key to success.</p>
-                                                            <p>By positioning yourself as a knowledgeable and proactive partner, you can not only help your clients achieve their homeownership goals but also thrive in this evolving market.
-                                                            </p><br />
 
 
                                                             <section className="call-back-area call-back-area-two mt-3">
@@ -203,10 +249,10 @@ export default function BlogTest() {
                                                                         <div className="row align-items-center">
                                                                             <div className="call-back-content flex flex-col justify-center items-center text-center" >
                                                                                 <div className="section-title white-title tg-heading-subheading animation-style3">
-                                                                                    <h2 className="mb-0 text-3xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Real Estate expert</span>
+                                                                                    <h2 className="mb-0 text-3xl text-white tg-element-title">Get a <span className="text-ly">30-minute</span>,<br /> no-cost consulting session with our <span className="text-ly">Business expert</span>
                                                                                     </h2>
 
-                                                                                    <p className="text-white  text-lg mt-3">Transform your real estate operations by optimizing processes, increasing efficiency, and driving sustainable growth.</p>
+                                                                                    <p className="text-white  text-lg mt-3">Transform your operations by optimizing processes, increasing efficiency, and driving sustainable growth.</p>
                                                                                     <a href="/schedule-a-meeting" className="btn mt-2">BOOK A CONSULTATION</a>
                                                                                 </div>
 
@@ -216,6 +262,9 @@ export default function BlogTest() {
                                                                 </div>
                                                             </section>
                                                         </div>
+
+
+
 
                                                         <div className="blog__details-bottom">
                                                             <div className="row align-items-center">

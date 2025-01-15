@@ -5,6 +5,18 @@ const BlogConvert = ({ jsonContent }) => {
   // Parse the content and handle className attributes
   const content = parse(jsonContent, {
     replace: (domNode) => {
+
+      if (domNode.name === 'img') {
+        const { src, alt, class: className } = domNode.attribs;
+        return (
+          <img
+            src={src}
+            alt={alt}
+            className={className}
+          />
+        );
+      }
+
       // If the element contains a class attribute (for Tailwind)
       if (domNode.attribs && domNode.attribs.class) {
         return (

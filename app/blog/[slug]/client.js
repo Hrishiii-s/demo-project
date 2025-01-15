@@ -9,6 +9,8 @@ import BlogConvert from "@/components/blog/BlogConvert"
 import MoonLoader from "react-spinners/MoonLoader";
 
 
+
+
 export default function BlogDetails() {
     let { slug } = useParams();  // Extract slug directly from useParams
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
@@ -66,7 +68,7 @@ export default function BlogDetails() {
             // console.log("containerBottom",containerBottom)
             // console.log("sidebarHeight",sidebarHeight)
 
-            if (containerBottom  <= viewportHeight) {
+            if (containerBottom <= viewportHeight) {
                 setSidebarFixed(false);
             } else {
                 setSidebarFixed(true);
@@ -86,6 +88,10 @@ export default function BlogDetails() {
 
     const titleurl = slug.replace(/-/g, ' ');
 
+    
+
+     
+
     if (!allLoaded) {
         return (
             <div className="fixed inset-0 flex justify-center items-center">
@@ -93,6 +99,8 @@ export default function BlogDetails() {
             </div>
         ); // Or any other loading indicator
     }
+
+    
     return (
         <>
             <Layout headerStyle={3} footerStyle={3}>
@@ -159,7 +167,7 @@ export default function BlogDetails() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             <div className={`col-30 hidden lg:block`}>
                                                 <aside className={`blog__sidebar ${sidebarFixed ? 'fixed' : 'absolute bottom-0'}`}>
 
@@ -170,7 +178,7 @@ export default function BlogDetails() {
                                                                 <div className="sidebar__post-item" key={post.id}>
                                                                     <div className="sidebar__post-thumb">
                                                                         <Link href={`/blog/${post.slug}`}>
-                                                                            <img src={`/assets/img/blog/${post.img}`} alt={post.title}  className="h-full w-full object-cover"/>
+                                                                            <img src={`/assets/img/blog/${post.img}`} alt={post.title} className="h-full w-full object-cover" />
                                                                         </Link>
                                                                     </div>
                                                                     <div className="sidebar__post-content">
@@ -196,7 +204,7 @@ export default function BlogDetails() {
                                     </div>
                                 </div>
                             </section>
-      
+
                         </div>
                     </>
                 )}

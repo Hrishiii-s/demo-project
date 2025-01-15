@@ -297,6 +297,7 @@ padding-left: 40px;
 
 .container {
   max-width: 1250px;
+  
 }
 @media (max-width: 1500px) {
   .container {
@@ -15129,3 +15130,9 @@ blockquote p {
   font-size: 1.5rem;
   margin-top: 10px;
 }
+
+
+div {
+  overflow: visible; /* Ensure content is not clipped */
+}
+
