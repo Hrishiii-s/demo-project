@@ -6,6 +6,11 @@ export default function Pagination({
     pages,
     handleActive,
 }) {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to top
+    };
+
     return (
         <>
             <div className="pagination-wrap">
@@ -24,7 +29,7 @@ export default function Pagination({
                         {getPaginationGroup.map((item, index) => {
                             return (
                                 <li
-                                    onClick={() => handleActive(item)}
+                                    onClick={() => {handleActive(item); scrollToTop();}}
                                     key={index}
                                     className={
                                         currentPage === item
