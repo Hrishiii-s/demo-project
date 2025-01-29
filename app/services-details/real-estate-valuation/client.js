@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout"
 import BrandActiveSlider from "@/components/slider/BrandActiveSlider"
 import Link from "next/link"
 import PricingTable from "@/components/elements/PricingTable"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useLayoutEffect  } from 'react';
 import { MoonLoader } from "react-spinners"
 import Head from "next/head"
 
@@ -16,6 +16,23 @@ export default function ServicesDetails() {
 
     const [isMobile, setIsMobile] = useState(false);
     const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+
+    useEffect(() => {
+        const scrollToHash = () => {
+          const hash = window.location.hash; // Get the hash from the URL
+          if (hash) {
+            const targetElement = document.querySelector(hash);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+              console.warn("Element not found, retrying...");
+              setTimeout(scrollToHash, 100); // Retry after 100ms
+            }
+          }
+        };
+        scrollToHash(); // Start the scroll function
+      }, []);
+    
 
 
     useEffect(() => {
@@ -49,7 +66,7 @@ export default function ServicesDetails() {
             </Head>
             <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Real Estate Valuations" Nothome={Nothome}>
                 <div>
-                    <section className="services__details-area mt-6">
+                    <section className="services__details-area mt-6" id="sec1">
                         <div className="container">
                             <div className="services__details-wrap">
                                 <div className="row">
@@ -57,12 +74,12 @@ export default function ServicesDetails() {
                                         {/* <div className="services__details-thumb">
                                             <img src="/assets/img/services/services_details01.webp" alt="" />
                                         </div> */}
-                                        <div className="services__details-content">
+                                        <div className="services__details-content" id="data-process">
                                             <h1 className={` ${isMobile ? "text-center text-3xl" : "text-5xl mb-3"} `} >Transforming Real Estate Valuations<br /> with<span className="text-pink-400" > Premier BPO Services</span></h1>
                                             <p>We specialize in Broker Price Opinion services that empower real estate professionals across the U.S. Started in 2010, ECESIS has established itself as a leader in the real estate valuation industry, known for our precision, reliability, and innovative solutions. For over a decade, we have provided US-based realtors, brokers, and real estate companies with precise valuations and Comparative Market Analysis (CMA). Our commitment to high-quality, value-driven deliverables ensures that you remain proactive, decisive, and adaptable as your business evolves and expands.</p>
                                             <h3 className="text-center text-3xl mt-5 ">Enhanced BPO Management with ECESIS</h3>
-                                            <div className={`w-full border-2 bg-slate-100 rounded-3xl mt-12 ${isMobile ? "px-5" : "px-10"}  pt-7 pb-9 `} >
-                                                <div className="services__details-list mt-3">
+                                            <div  className={`w-full border-2 bg-slate-100 rounded-3xl mt-12 ${isMobile ? "px-5" : "px-10"}  pt-7 pb-9 `} >
+                                                <div className="services__details-list mt-3" >
                                                     <div className="row">
                                                         <div className="">
                                                             <div className="services__details-list-box">
@@ -91,7 +108,7 @@ export default function ServicesDetails() {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className="">
+                                                        <div className="" >
                                                             <div className="services__details-list-box">
                                                                 {/* <div className="icon">
                                                                 <i className="flaticon-insurance-agent" />
@@ -117,7 +134,7 @@ export default function ServicesDetails() {
                                                         <div>
                                                             <h4 className="font-semibold mb-6 uppercase text-center mt-3" style={{ fontSize: '25px' }}>
                                                                 WATCH HOW TO GET <span className="text-blue-400" style={{ fontSize: '30px' }}>2X REVENUE</span> GROWTH,
-                                                                <span className="text-pink-400" style={{ fontSize: '30px' }}>92%+ ACCURACY</span> WITH ECESIS
+                                                                <span className="text-pink-400" style={{ fontSize: '30px' }}> 92%+ ACCURACY</span> WITH ECESIS
                                                             </h4>
                                                         </div>
                                                     </div>

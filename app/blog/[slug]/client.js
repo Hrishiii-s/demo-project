@@ -18,6 +18,18 @@ export default function BlogDetails() {
     const [latestPosts, setLatestPosts] = useState([]);
     const [sidebarFixed, setSidebarFixed] = useState(true);  // State for sidebar fixed position
     const sidebarContainerRef = useRef(null); // Ref for sidebar container
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         // Sort posts by date in descending order (latest first)
@@ -114,7 +126,20 @@ export default function BlogDetails() {
                                             <div className="col-70">
                                                 <div className="blog__details-wrap">
                                                     <div className="blog__details-thumb">
-                                                        <img src={`/assets/img/blog/${blogPost.img}`} className="w-full lg:h-[65vh]" alt="" />
+                                                    {isMobile && blogPost.Mimg ? (<>
+                                                            <img
+                                                            src={`/assets/img/blog/${blogPost.Mimg}`}
+                                                            className=""
+                                                            alt=""
+                                                        />
+                                                        </>) : (<>
+                                                            <img
+                                                            src={`/assets/img/blog/${blogPost.img}`}
+                                                            className={`md:w-full lg:h-[65vh] object-left`}
+                                                            alt=""
+                                                        />
+                                                        
+                                                        </>)}
                                                     </div>
                                                     <div className="blog__details-content">
                                                         <h2 className="title">{blogPost.title}</h2>
