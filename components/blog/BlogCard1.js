@@ -8,7 +8,7 @@ export default function BlogCard1({ item }) {
                 <div className="blog__post-two shine-animate-item">
                     <div className="blog__post-thumb-two">
                         <Link href={`/blog/${titleurl}`} className="shine-animate">
-                            <img src={`/assets/img/blog/${item.img}`} alt="" />
+                            <img src={`/assets/img/blog/${item.img}`} alt="" className={`md:w-full object-left`}/>
                             </Link>
                     </div>
                     <div className="blog__post-content-two">
