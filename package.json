@@ -5,12 +5,13 @@
   "author": "alithemes",
   "scripts": {
     "dev": "next dev -H 192.168.2.199 -p 4000",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css",
     "deploy": "gh-pages -d dist",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "generate-sitemap": "node sitemap.js",
+    "build": "npm run generate-sitemap && next build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
