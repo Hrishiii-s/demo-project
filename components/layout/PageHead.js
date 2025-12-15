@@ -1,16 +1,14 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const PageHead = ({ headTitle }) => {
-    return (
-        <>
-            <Head>
-            {/* <link rel="icon" href="/public/" /> */}
-                <title>
-                    {headTitle ? headTitle : "EcesisTech"}
-                </title>
-            </Head>
-        </>
-    )
-}
+  return (
+    <>
+      <Head>
+        {/* <link rel="icon" href="/public/" /> */}
+        <title>{headTitle ? headTitle : 'EcesisTech'}</title>
+      </Head>
+    </>
+  );
+};
 
-export default PageHead
+export default PageHead;
