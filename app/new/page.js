@@ -159,16 +159,16 @@ const New = () => {
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:items-start lg:gap-16">
           <div className="lg:w-2/3">
-            <h1 className="text-3xl font-bold leading-tight lg:text-5xl text-black">
-              <span className="text-violet-800">AI Software</span> for <br />
-              Digital Marketing <br />
-              and Lead Generation
+            <h1 className="text-3xl font-bold leading-tight lg:text-5xl text-black lg:w-[75%]">
+              The <span className="text-violet-800">#1 Trusted </span> Offshore
+              Vendor Supporting U.S. Real Estate Broker price opinion &
+              Valuation Firms
             </h1>
 
-            <p className="mt-6 text-base text-gray-600 lg:text-lg">
-              Our AI-powered software creates, executes, and optimizes custom
-              digital marketing strategies to deliver high-quality results at
-              minimal cost.
+            <p className="mt-6 text-base text-gray-600 lg:text-lg lg:w-[75%]">
+              We enable valuation firms, real estate companies, and independent
+              brokers to handle higher Broker Price Opinion volumes while
+              maintaining accuracy, compliance, and fast turnaround times.
             </p>
 
             <div className="mt-8 relative">
@@ -179,13 +179,25 @@ const New = () => {
               </p>
 
               <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
-                <li>AI-driven Social Media Optimization</li>
-                <li>AI-powered Lead Generation</li>
-                <li>Automated Campaign Management</li>
-                <li>Performance Tracking & Analytics</li>
-                <li>Multi-platform Ad Optimization</li>
-                <li>Conversion Rate Optimization</li>
-                <li>AI-based Content Strategy</li>
+                <li>
+                  AI-enabled Broker price opinion order Acceptance & Routing
+                </li>
+                <li>End-to-End Broker price opinion Workflow Automation</li>
+                <li>Valuation Review & Quality Control Automation</li>
+                <li>Scalable Broker price opinion Production Support</li>
+                <li>Broker & Panel Management Tools</li>
+                <li>Reporting & Insights for Institutional Clients</li>
+              </ul>
+
+              <p className="text-lg font-semibold text-gray-800 mt-5">
+                Designed for:
+              </p>
+
+              <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-700">
+                <li>Broker price opinion companies and valuation vendors</li>
+                <li>Institutional broker panels</li>
+                <li>REO, foreclosure, and asset management teams</li>
+                <li>Appraisal review & pricing support firms</li>
               </ul>
             </div>
           </div>
@@ -205,25 +217,36 @@ const New = () => {
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <h5 className="text-sm text-start font-semibold uppercase tracking-wider text-violet-700">
-            Why LeadMetrics
+            Why Ecesis
           </h5>
 
           <h2 className="mt-2 text-start text-3xl font-bold text-gray-900 sm:text-4xl">
-            Digital Marketing with AI <br className="hidden sm:block" />
-            for Every Business
+            What differentiates us
           </h2>
 
-          <div className="mt-[3rem] grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-[3rem] flex flex-wrap justify-center gap-6">
+            <div className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] group rounded-xl bg-violet-50 p-6 text-left transition hover:-translate-y-1 hover:shadow-lg ">
+              <h1 className="mb-4 text-[2.5rem] text-[#F9BA00]">16+</h1>
+
+              <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                An established & registered service provider
+              </h3>
+
+              <p className="text-sm leading-relaxed text-gray-600">
+                16+ successful years in the US real estate industry.
+              </p>
+            </div>
+
             {BUSSINESS_DATA.map((data, index) => (
               <div
                 key={index}
-                className="group rounded-xl bg-violet-50 p-6 text-left transition hover:-translate-y-1 hover:shadow-lg"
+                className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] group rounded-xl bg-violet-50 p-6 text-left transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-violet-100">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg">
                   <img
                     src={data.imageUrl}
                     alt={data.title}
-                    className="h-8 w-8 object-contain"
+                    className="size-40 object-contain"
                   />
                 </div>
 
@@ -262,12 +285,12 @@ const New = () => {
                 key={index}
                 ref={el => (tabRefs.current[index] = el)}
                 onClick={() => handleTabClick(index)}
-                className={`whitespace-nowrap rounded-md px-4 py-3 text-sm font-medium transition
-        ${
-          index === activeService
-            ? 'bg-violet-800 text-white shadow'
-            : 'text-gray-700 hover:bg-white'
-        }`}
+                className={`rounded-md px-4 py-3 text-sm font-medium transition w-[85%] lg:w-full lg:whitespace-nowrap
+                ${
+                  index === activeService
+                    ? 'bg-violet-800 text-white shadow'
+                    : 'text-gray-700 hover:bg-white'
+                }`}
               >
                 {service}
               </button>
@@ -352,7 +375,7 @@ const New = () => {
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="mb-10 text-center text-3xl font-bold text-gray-900">
-            Brands that trust us
+            Portals
           </h2>
 
           <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-6">

@@ -1,56 +1,56 @@
 export const BUSSINESS_DATA = [
   {
-    imageUrl: '/assets/img/bussiness/user.png',
-    title: 'Increase the number of qualified leads',
+    imageUrl: '/assets/img/bussiness/verified-icon.webp',
+    title: 'High acceptance rate and best quality assurance & control',
     description:
-      'A highly efficient Lead Management System with specialized tools for effortless lead tracking, monitoring, and conversion.',
+      'Track record of 90%+ acceptance rate for all BPO portals and 92% quality score in BPO reports.',
   },
   {
-    imageUrl: '/assets/img/bussiness/money_bag.png',
-    title: 'Improve the Return On Investments ( ROIs)',
+    imageUrl: '/assets/img/bussiness/handshake-icon2.webp',
+    title: 'Trusted partner to 150+ US realtors',
     description:
-      'Ensures more time for acquiring new clients, a smoother process, and ultimately drives better returns on investments.',
+      'We invest both in technology and people to deliver high-quality services.',
   },
   {
-    imageUrl: '/assets/img/bussiness/scissors.png',
-    title: 'Cut Costs & Save Time',
+    imageUrl: '/assets/img/bussiness/time-icon.webp',
+    title: 'Accelerated response & turnaround time',
     description:
-      'A jack-of-all-marketing-trades platform Leadmetrics performs digital marketing activities for your clients, saving 70% in time, cost.',
+      'We deliver over 15,000 monthly reports, with an average TAT of 24 hours.',
   },
   {
-    imageUrl: '/assets/img/bussiness/seo.png',
-    title: 'Faster Results on Performance Marketing & SEO Efforts',
+    imageUrl: '/assets/img/bussiness/around-the-clock-icon.webp',
+    title: 'Round-the-clock support',
     description:
-      'Ensures more time for acquiring new clients, a smoother process, and ultimately drives better returns on investments.',
+      '365 x 24 x 7 service with well-defined SLAs & escalation matrix.',
   },
   {
-    imageUrl: '/assets/img/bussiness/play.png',
-    title: 'Social Media Campaign Management',
+    imageUrl: '/assets/img/bussiness/isp-icon.webp',
+    title: 'Sophisticated multi-tier network security',
     description:
-      'A jack-of-all-marketing-trades platform Leadmetrics performs digital marketing activities for your clients, saving 70% in time, cost.',
+      'Your web traffic is routed only through dedicated US IPs within the US border.',
   },
   {
-    imageUrl: '/assets/img/bussiness/file.png',
-    title: 'Performance Reports',
+    imageUrl: '/assets/img/bussiness/security-icon.webp',
+    title: 'High standards of integrity',
     description:
-      'A highly efficient Lead Management System with specialized tools for effortless lead tracking, monitoring, and conversion.',
+      'Set processes & secure protocols to protect data confidentiality.',
   },
 ];
 
 export const SERVICES = [
-  'AI Search Optimization',
-  'AI-Driven SEO Optimization',
-  'AI Powered Ad Campaings',
-  'Social Media Marketing with AI Insights',
-  'AI Powered Maps Optimizations',
-  'Marketing Automation and CRM Integration',
+  'AI-enabled BPO order Acceptance & Routing',
+  'End-to-End BPO Workflow Automation',
+  'Valuation Review & QC Automation',
+  'Scalable BPO Production Support',
+  'Broker & Panel Management Tools',
+  'Reporting & Insights for Institutional Clients',
 ];
 
 export const SERVICE_DATA = {
-  'AI Search Optimization': {
-    title: 'AI Search Optimization',
+  'AI-enabled BPO order Acceptance & Routing': {
+    title: 'AI-enabled Broker price opinion order Acceptance & Routing',
     description:
-      "Leadmetrics optimizes customer business's digital presence for AI-powered search engines like ChatGPT, Google SGE, Gemini, Bing Copilot, and other Generative AI-based assistants. Key highlights of our activities",
+      'Automatically capture, filter, and assign BPO orders across major portals based on coverage, fee, and rules.',
     services: [
       'Creation of Contents aligned with AI Search',
       'Incorporation of Structured & Machine-Readable Content',
@@ -58,10 +58,10 @@ export const SERVICE_DATA = {
       'Generation & Implementation of Conversational Content',
     ],
   },
-  'AI-Driven SEO Optimization': {
-    title: 'AI-Driven SEO Optimization',
+  'End-to-End BPO Workflow Automation': {
+    title: 'End-to-End Broker price opinion Workflow Automation',
     description:
-      "Utilizing advanced AI algorithms, we enhance your website's visibility, ensuring top rankings on search engines such as Google & Bing",
+      'From order intake to submission, reduce manual touchpoints, turnaround time, and operational risk.',
     services: [
       'Comprehensive Keyword Analysis',
       'On-Page, Off-Page and Technical SEO',
@@ -69,10 +69,10 @@ export const SERVICE_DATA = {
       'Local SEO Enhancements ',
     ],
   },
-  'AI Powered Ad Campaings': {
-    title: 'AI Powered Ad Campaings',
+  'Valuation Review & QC Automation': {
+    title: 'Valuation Review & Quality Control Automation',
     description:
-      'Maximize your ROI with precision targeted Ad campaigns on Google, Meta, Linkedin etc. Our AI tools optimize ad spend and increase conversion rates through',
+      'AI-assisted checks for data consistency, compliance, and documentation accuracy before delivery.',
     services: [
       'Automated Bid Management',
       'Audience Segmentation & fine toning the ICP',
@@ -80,10 +80,10 @@ export const SERVICE_DATA = {
       'Ad creation & continuous optimisation for Google, Meta, Linkedin etc',
     ],
   },
-  'Social Media Marketing with AI Insights': {
-    title: 'Social Media Marketing with AI Insights',
+  'Scalable BPO Production Support': {
+    title: 'Scalable Broker price opinion Production Support',
     description:
-      'Generate audience engagement effectively across all social platforms for Brand Building & Lead Generation',
+      'Handle volume spikes without adding headcount. Ideal for REO, institutional, and portfolio work.',
     services: [
       'Content Creation and Scheduling',
       'Sentiment Analysis',
@@ -91,10 +91,10 @@ export const SERVICE_DATA = {
       'Performance Metrics Tracking',
     ],
   },
-  'AI Powered Maps Optimizations': {
-    title: 'AI Powered Maps Optimizations',
+  'Broker & Panel Management Tools': {
+    title: 'Broker & Panel Management Tools',
     description:
-      'Deliver compelling content that resonates with your audience.',
+      'Centralized visibility into broker performance, SLAs, revisions, and turnaround metrics.',
     services: [
       'Location-Specific Keyword Optimization (Using AI)',
       'Automated Review Management using AI',
@@ -102,10 +102,10 @@ export const SERVICE_DATA = {
       'AI-Based Competitor Monitoring',
     ],
   },
-  'Marketing Automation and CRM Integration': {
-    title: 'Marketing Automation and CRM Integration',
+  'Reporting & Insights for Institutional Clients': {
+    title: 'Reporting & Insights for Institutional Clients',
     description:
-      'Streamline your marketing efforts with automation tools that nurture leads and enhance customer relationships.',
+      'Real-time dashboards for volume, cycle time, quality trends, and cost efficiency.',
     services: [
       'Lead capturing & segregation from various platforms',
       'Lead utilisation for Retargeted Ads',
