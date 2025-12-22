@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { MdEmail } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -103,6 +103,13 @@ const New = () => {
       slider.removeEventListener('mouseleave', handleMouseLeave);
       if (animationId !== null) cancelAnimationFrame(animationId);
     };
+  }, []);
+
+  const brandColors = useMemo(() => {
+    return TRUSTED_BRANDS.map(() => {
+      const randomIndex = Math.floor(Math.random() * BG_COLORS.length);
+      return BG_COLORS[randomIndex];
+    });
   }, []);
 
   const handleTabClick = index => {
@@ -350,17 +357,15 @@ const New = () => {
 
           <div className="grid grid-cols-2 gap-2 md:grid-cols-4 lg:grid-cols-6">
             {TRUSTED_BRANDS.map((img, index) => {
-              const bgColor = BG_COLORS[index % BG_COLORS.length];
-
               return (
                 <div
                   key={index}
-                  className={`flex items-center justify-center rounded-xl ${bgColor} p-4`}
+                  className={`flex items-center justify-center rounded-xl p-4 ${brandColors[index]}`}
                 >
                   <img
                     src={img}
                     alt="Trusted brand"
-                    className="h-12 w-28 object-contain md:h-16 md:w-32"
+                    className="h-12 w-28 object-contain md:h-16 md:w-32 mix-blend-multiply"
                   />
                 </div>
               );
