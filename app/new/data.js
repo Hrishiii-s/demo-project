@@ -53,10 +53,10 @@ export const SERVICE_DATA = {
     description:
       'Automatically capture, filter, and assign BPO orders across major portals based on coverage, fee, and rules.',
     services: [
-      'Creation of Contents aligned with AI Search',
-      'Incorporation of Structured & Machine-Readable Content',
-      'Optimizing Business Knowledge Graph & Entity SEO',
-      'Generation & Implementation of Conversational Content',
+      'Automated BPO order capture across major real estate portals with real-time monitoring',
+      'Intelligent routing based on coverage area, fee rules, property type, and client instructions',
+      'Faster order acceptance to help firms scale BPO order volume without manual intervention',
+      'Reduced missed assignments through reliable BPO order workflow automation',
     ],
   },
   'End-to-End BPO Workflow Automation': {
@@ -64,10 +64,10 @@ export const SERVICE_DATA = {
     description:
       'From order intake to submission, reduce manual touchpoints, turnaround time, and operational risk.',
     services: [
-      'Comprehensive Keyword Analysis',
-      'On-Page, Off-Page and Technical SEO',
-      'Content Strategy Development',
-      'Local SEO Enhancements ',
+      'Complete BPO order processing services from intake to final submission',
+      'Automated task sequencing to reduce manual work and BPO turnaround time',
+      'Structured workflows for residential, commercial, and REO BPO processing services',
+      'Lower operational risk through standardized broker price opinion support systems',
     ],
   },
   'Valuation Review & QC Automation': {
@@ -75,10 +75,10 @@ export const SERVICE_DATA = {
     description:
       'AI-assisted checks for data consistency, compliance, and documentation accuracy before delivery.',
     services: [
-      'Automated Bid Management',
-      'Audience Segmentation & fine toning the ICP',
-      'A/B Testing and Performance Analysis',
-      'Ad creation & continuous optimisation for Google, Meta, Linkedin etc',
+      'AI-assisted validation for real estate BPO data entry accuracy and completeness',
+      'Instruction-driven checks aligned with lender, AMC, and investor requirements',
+      'Reduced revisions through automated compliance and documentation review',
+      'Improved first-pass acceptance for broker price opinion services for AMCs',
     ],
   },
   'Scalable BPO Production Support': {
@@ -86,10 +86,10 @@ export const SERVICE_DATA = {
     description:
       'Handle volume spikes without adding headcount. Ideal for REO, institutional, and portfolio work.',
     services: [
-      'Content Creation and Scheduling',
-      'Sentiment Analysis',
-      'Paid promotion across all platforms for Lead Generation',
-      'Performance Metrics Tracking',
+      'Seamless handling of bulk, portfolio, and foreclosure BPO assignments',
+      'Ability to process high volumes without hiring virtual assistants for BPO orders',
+      'Ideal for mortgage lenders, asset managers, and foreclosure BPO research and data entry',
+      'Reliable outsourced property valuation data entry during seasonal or REO spikes',
     ],
   },
   'Broker & Panel Management Tools': {
@@ -97,10 +97,10 @@ export const SERVICE_DATA = {
     description:
       'Centralized visibility into broker performance, SLAs, revisions, and turnaround metrics.',
     services: [
-      'Location-Specific Keyword Optimization (Using AI)',
-      'Automated Review Management using AI',
-      'AI-Driven Citations & Local Backlink Building',
-      'AI-Based Competitor Monitoring',
+      'Centralized dashboard to manage brokers, panels, and internal valuation teams',
+      'SLA tracking for acceptance rates, turnaround time, and revisions',
+      'Performance insights to optimize broker allocation and panel efficiency',
+      'Scalable BPO management solutions for institutional and multi-client operations',
     ],
   },
   'Reporting & Insights for Institutional Clients': {
@@ -108,75 +108,13 @@ export const SERVICE_DATA = {
     description:
       'Real-time dashboards for volume, cycle time, quality trends, and cost efficiency.',
     services: [
-      'Lead capturing & segregation from various platforms',
-      'Lead utilisation for Retargeted Ads',
-      'Integration with popular CRM tools',
-      'Analytics and Reporting along with Notifications',
+      'Real-time reporting on BPO volume, cycle time, and order status',
+      'Quality and revision trend analysis across residential and commercial BPOs',
+      'Cost and productivity insights for outsourced BPO processing companies',
+      'Data-driven visibility to support lenders, AMCs, and enterprise valuation teams',
     ],
   },
 };
-
-export const PRODUCT_FEATURES = [
-  {
-    imageUrl: '/assets/img/product/magic.png',
-    description:
-      'Automatic Generation and implementation of tailor made digital marketing strategies',
-  },
-  {
-    imageUrl: '/assets/img/product/crm.png',
-    description: 'Mini CRM for streamlined lead and interaction tracking',
-  },
-  {
-    imageUrl: '/assets/img/product/voice.png',
-    description:
-      'Unified digital media interface for seamless management of Digital Assets',
-  },
-  {
-    imageUrl: '/assets/img/product/user.png',
-    description:
-      'Optimization of Performance marketing Activities for high-quality lead generation',
-  },
-  {
-    imageUrl: '/assets/img/product/search.png',
-    description:
-      'Automatic Website & Google Business Profile Optimization for improved search engine visibility',
-  },
-  {
-    imageUrl: '/assets/img/product/document.png',
-    description:
-      'Comprehensive Performance Analysis & Reports for Decision Makers',
-  },
-  {
-    imageUrl: '/assets/img/product/date.png',
-    description:
-      'Easy content generation & publishing and Social Media & Websites along with Scheduling',
-  },
-  {
-    imageUrl: '/assets/img/product/feature.png',
-    description:
-      'AI agents based Generation & Implementation of Digital Marketing Activities',
-  },
-  {
-    imageUrl: '/assets/img/product/money.png',
-    description:
-      'Efficient expense management and ROI analysis for digital marketing with a possibility to reduce expenses by 70%',
-  },
-  {
-    imageUrl: '/assets/img/product/status.png',
-    description:
-      'Performance review and scorecard for all Digital Media Assets',
-  },
-  {
-    imageUrl: '/assets/img/product/user.png',
-    description:
-      'Optimization of Digital Assets to Get Listed on AI Searches, Including Gemini, ChatGPT & Meta AI',
-  },
-  {
-    imageUrl: '/assets/img/product/dollar.png',
-    description:
-      'Expense Tracking and Management of All Digital Marketing Spends, Including Ad Campaign',
-  },
-];
 
 export const TRUSTED_BRANDS = [
   '/assets/img/trusted/ca.jpg',
@@ -191,6 +129,11 @@ export const TRUSTED_BRANDS = [
   '/assets/img/trusted/swbc.png',
   '/assets/img/trusted/valuation-connect.jpg',
   '/assets/img/trusted/xome.png',
+  '/assets/img/trusted/avs.webp',
+  '/assets/img/trusted/pcv.png',
+  '/assets/img/trusted/reality_pilot.png',
+  '/assets/img/trusted/summit.webp',
+  '/assets/img/trusted/think_lattice.jpg',
 ];
 
 export const BG_COLORS = [
@@ -249,5 +192,38 @@ export const FAQS = [
       'What industries can benefit from Leadmetrics AI-powered marketing solutions?',
     answer:
       'Industries including real estate, healthcare, SaaS, retail, hospitality, and professional services benefit from our solutions.',
+  },
+];
+
+export const FEATURES = [
+  {
+    title: 'Accuracy Before Everything',
+    description:
+      'We believe valuation credibility starts with accuracy. Every workflow we build is designed to reduce errors, enforce instructions, and support defensible pricing, because even small inconsistencies can create downstream risk.',
+  },
+  {
+    title: 'Compliance Is Non-Negotiable',
+    description:
+      'Our systems are built with institutional standards in mind. From audit trails and documentation checks to instruction-driven validations, we help teams stay aligned with lender, investor, and regulatory expectations.',
+  },
+  {
+    title: 'Intelligent Automation, Not Blind AI',
+    description:
+      'We apply AI where it creates real value. Order capture, validation, routing, and quality checks, while keeping humans in control of pricing judgment and final decisions.',
+  },
+  {
+    title: 'Transparency & Operational Visibility',
+    description:
+      'We believe clients should always know what’s happening. Our dashboards provide clear visibility into order status, turnaround times, revisions, quality metrics, and broker performance.',
+  },
+  {
+    title: 'Process-First Thinking',
+    description:
+      'We don’t automate chaos. We first understand your valuation process, portal rules, client instructions, and review criteria, then design structured, repeatable workflows that scale reliably.',
+  },
+  {
+    title: 'Built to Scale With You',
+    description:
+      'Whether you’re handling steady daily volume or large portfolio assignments, our technology and operations are designed to scale without increasing turnaround time or operational stress.',
   },
 ];

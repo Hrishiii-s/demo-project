@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import axios from 'axios';
+import { RiLoader4Line } from 'react-icons/ri';
 
-const GetStartedForm = () => {
+const GetStartedForm = ({ onSubmit }) => {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -32,10 +34,6 @@ const GetStartedForm = () => {
     else if (!/\S+@\S+\.\S+/.test(form.email))
       newErrors.email = 'Enter a valid email';
 
-    if (!form.company.trim()) newErrors.company = 'Company is required';
-    else if (form.company.trim().length < 3)
-      newErrors.company = 'Enter a valid company name';
-
     if (!form.requirements.trim())
       newErrors.requirements = 'Please enter your requirements';
     else if (form.requirements.trim().length < 3)
@@ -50,9 +48,20 @@ const GetStartedForm = () => {
 
     try {
       setIsLoading(true);
-      console.log('Form Data:', form);
 
-      // Need to write the submission logic
+      const res = await axios.post('/api/submit-form', form);
+
+      if (res.status === 200) {
+        setForm({
+          name: '',
+          email: '',
+          mobile: '',
+          company: '',
+          requirements: '',
+        });
+        setErrors({});
+        onSubmit();
+      }
     } catch (error) {
       console.error('Submission failed', error);
     } finally {
@@ -143,10 +152,16 @@ const GetStartedForm = () => {
 
       <button
         onClick={submitForm}
-        className="mt-6 w-fit px-3 rounded-md bg-violet-800 py-2.5 text-white font-semibold hover:bg-violet-900 transition"
+        className={`mt-6 px-3 rounded-md bg-violet-800 py-2.5 text-white font-semibold hover:bg-violet-900 transition ${isLoading ? 'w-[5rem] flex justify-center' : 'w-fit'}`}
         disabled={isLoading}
       >
-        Get Started
+        {isLoading ? (
+          <span>
+            <RiLoader4Line className="animate-spin" />
+          </span>
+        ) : (
+          <span>Get Started</span>
+        )}
       </button>
     </>
   );

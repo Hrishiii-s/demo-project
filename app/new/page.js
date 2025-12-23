@@ -4,14 +4,14 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { MdEmail } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
+import { IoPlayCircleOutline } from 'react-icons/io5';
 
 import GetStartedForm from '@/components/sections/GetStartedForm';
 
 import {
   BG_COLORS,
   BUSSINESS_DATA,
-  FAQS,
-  PRODUCT_FEATURES,
+  FEATURES,
   SERVICE_DATA,
   SERVICES,
   TESTIMONIALS,
@@ -20,8 +20,9 @@ import {
 
 const New = () => {
   const [activeService, setActiveService] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [showYtVideo, setShowYtVideo] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const tabRefs = useRef([]);
   const hasShownModal = useRef(false);
@@ -104,6 +105,14 @@ const New = () => {
       if (animationId !== null) cancelAnimationFrame(animationId);
     };
   }, []);
+
+  useEffect(() => {
+    if (showConfirmation) {
+      setTimeout(() => {
+        setShowConfirmation(false);
+      }, 3000);
+    }
+  }, [showConfirmation]);
 
   const brandColors = useMemo(() => {
     return TRUSTED_BRANDS.map(() => {
@@ -207,7 +216,12 @@ const New = () => {
                 Get Free Consultation
               </h3>
 
-              <GetStartedForm />
+              <GetStartedForm
+                onSubmit={() => {
+                  setShowModal(false);
+                  setShowConfirmation(true);
+                }}
+              />
             </div>
           </div>
         </div>
@@ -310,10 +324,6 @@ const New = () => {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
-
-              <button className="mt-8 inline-flex items-center gap-2 rounded-md bg-violet-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-violet-900">
-                Read More
-              </button>
             </div>
 
             <div className="flex justify-center">
@@ -334,34 +344,29 @@ const New = () => {
           </h5>
 
           <h2 className="mt-2 text-start text-3xl font-bold text-gray-900 sm:text-4xl">
-            Other Product Features
+            Enhanced BPO Management with ECESIS
           </h2>
 
-          <div className="mt-[3rem] grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-            {PRODUCT_FEATURES.map((data, index) => (
-              <div
-                key={index}
-                className="group rounded-xl p-4 lg:p-6 text-left transition-all duration-300 max-lg:shadow-lg lg:shadow-none lg:hover:shadow-xl lg:hover:-translate-y-1"
-              >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-violet-100">
-                  <img
-                    src={data.imageUrl}
-                    alt="Product"
-                    className="h-8 w-8 object-contain"
-                  />
-                </div>
+          <div className="mt-[4rem] mb-[1rem] w-full md:w-[75%] lg:w-[50%] mx-auto h-[20rem] bg-[url('/assets/img/meta/thumbnail2.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center rounded-md">
+            <div className="relative flex items-center justify-center">
+              <span className="absolute h-32 w-32 rounded-full bg-white opacity-20 animate-ping"></span>
+              <span className="absolute h-24 w-24 rounded-full opacity-30 animate-pulse"></span>
 
-                <p className="text-sm leading-relaxed text-gray-900">
-                  {data.description}
-                </p>
-              </div>
-            ))}
+              <IoPlayCircleOutline
+                size={100}
+                color="#fff"
+                className="relative z-10 cursor-pointer"
+                onClick={() => setShowYtVideo(true)}
+              />
+            </div>
           </div>
 
-          <div className="mt-12">
-            <button className="inline-flex items-center gap-2 rounded-md bg-violet-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-violet-900 hover:shadow-lg">
-              Get A Call Back
-            </button>
+          <div className="w-full md:w-[75%] lg:w-[50%] mx-auto mb-3">
+            <h2 className="">
+              WATCH HOW TO GET{' '}
+              <span className="text-[#60A5FA]">2X REVENUE</span> GROWTH,{' '}
+              <span className="text-violet-800">92%+ ACCURACY</span> WITH ECESIS
+            </h2>
           </div>
         </div>
       </section>
@@ -387,6 +392,14 @@ const New = () => {
                 </div>
               );
             })}
+
+            <div
+              className={`flex items-center justify-center rounded-xl p-4 border-1 border-dashed`}
+            >
+              <p className="text-center capitalize text-violet-800">
+                & <br /> many more
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -434,7 +447,7 @@ const New = () => {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center">
             <p className="mb-2 text-sm tracking-widest text-violet-700 font-semibold">
-              WHY LEADMETRICS
+              WHY ECESIS
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our core Principles & Values
@@ -442,62 +455,20 @@ const New = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="rounded-2xl bg-[#FFF7E6] p-6 transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 flex h-40 items-center justify-center rounded-xl bg-white/60">
-                <img
-                  src="/assets/icons/target.svg"
-                  alt="Result Driven Strategy"
-                  className="h-20 w-20"
-                />
+            {FEATURES.map((feature, index) => (
+              <div
+                key={index}
+                className={`rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg ${brandColors[index]}`}
+              >
+                <h3 className="mb-3 text-lg lg:text-xl font-semibold text-gray-900">
+                  {feature.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {feature.description}
+                </p>
               </div>
-
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">
-                Result Driven Strategy
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
-                We focus on results and all the activities implementing on the
-                software are 100% aligned with the core strategy recommendation
-                by the Digital Media Platforms using Data Analytics.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-[#F7FBEA] p-6 transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 flex h-40 items-center justify-center rounded-xl bg-white/60">
-                <img
-                  src="/assets/icons/data.svg"
-                  alt="Data Driven Approach"
-                  className="h-20 w-20"
-                />
-              </div>
-
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">
-                Data-Driven Approach
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
-                Our Digital Media strategies are meticulously crafted using data
-                analytics, ensuring accuracy and alignment with your business’s
-                unique nature and requirements.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-[#F2F1FF] p-6 transition hover:-translate-y-1 hover:shadow-lg">
-              <div className="mb-6 flex h-40 items-center justify-center rounded-xl bg-white/60">
-                <img
-                  src="/assets/icons/ai.svg"
-                  alt="AI Powered Implementation"
-                  className="h-20 w-20"
-                />
-              </div>
-
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">
-                AI-Powered Implementation
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
-                We implement Digital Marketing Strategies with the assistance of
-                Generative Artificial Intelligence, guaranteeing optimal results
-                in minimal time.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -528,56 +499,6 @@ const New = () => {
         </div>
       </section>
 
-      <section className="py-8">
-        <div className="mx-auto max-w-4xl px-6">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-4">
-            {FAQS.map((faq, index) => {
-              const isOpen = activeIndex === index;
-
-              return (
-                <div
-                  key={index}
-                  className="rounded-xl bg-gray-50 transition hover:bg-gray-100"
-                >
-                  <button
-                    onClick={() => setActiveIndex(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between px-3 md:px-5 py-3 text-left"
-                  >
-                    <span className="text-sm font-semibold text-gray-900 sm:text-base w-[85%] ">
-                      {faq.question}
-                    </span>
-
-                    <span
-                      className={`flex h-8 w-8 px-2 items-center justify-center rounded-full border border-violet-600 text-violet-600 transition-transform ${
-                        isOpen ? 'rotate-45' : ''
-                      }`}
-                    >
-                      +
-                    </span>
-                  </button>
-
-                  <div
-                    className={`grid overflow-hidden px-3 md:px-5 transition-all duration-300 ${
-                      isOpen
-                        ? 'grid-rows-[1fr] pb-4 opacity-100'
-                        : 'grid-rows-[0fr] opacity-0'
-                    }`}
-                  >
-                    <div className="overflow-hidden text-sm text-gray-600">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <footer className="bg-gray-50 pt-12">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col lg:flex-row justify-between">
@@ -590,11 +511,14 @@ const New = () => {
 
               <div className="mt-4 rounded-xl bg-violet-800 p-6 shadow-lg">
                 <h3 className="mb-4 text-2xl font-semibold text-white">
-                  Let's Create Something <br /> Extraordinary Together!
+                  Let&apos;s Create Something <br /> Extraordinary Together!
                 </h3>
 
-                <button className="rounded-md bg-yellow-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-yellow-400">
-                  Let’s Connect
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="rounded-md bg-yellow-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-yellow-400"
+                >
+                  Let&apos;s Connect
                 </button>
               </div>
             </di>
@@ -681,7 +605,6 @@ const New = () => {
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
           <div className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-xl">
-            {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
               className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
@@ -693,8 +616,42 @@ const New = () => {
               Get Free Consultation
             </h3>
 
-            {/* Render your form */}
-            <GetStartedForm />
+            <GetStartedForm
+              onSubmit={() => {
+                setShowModal(false);
+                setShowConfirmation(true);
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {showYtVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setShowYtVideo(false)}
+        >
+          <div className="relative w-full max-w-3xl rounded-xl p-6">
+            <div className="relative pt-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/jRHkw8liWLQ?autoplay=1"
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showConfirmation && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
+          <div className="relative w-full max-w-lg rounded-xl bg-white px-6 py-8 shadow-xl">
+            <h4 className="text-center text-2xl leading-tight">Thank You!</h4>
+            <p className="text-center text-[1rem] leading-tight">
+              Our valuation expert will get back to you soon.
+            </p>
           </div>
         </div>
       )}
