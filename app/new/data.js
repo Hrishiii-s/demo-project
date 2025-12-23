@@ -48,7 +48,8 @@ export const SERVICES = [
 
 export const SERVICE_DATA = {
   'AI-enabled BPO order Acceptance & Routing': {
-    title: 'AI-enabled Broker price opinion order Acceptance & Routing',
+    title:
+      'AI-enabled <br/> Broker price opinion <br/> order Acceptance & Routing',
     description:
       'Automatically capture, filter, and assign BPO orders across major portals based on coverage, fee, and rules.',
     services: [
@@ -59,7 +60,7 @@ export const SERVICE_DATA = {
     ],
   },
   'End-to-End BPO Workflow Automation': {
-    title: 'End-to-End Broker price opinion Workflow Automation',
+    title: 'End-to-End <br/> Broker price opinion <br/> Workflow Automation',
     description:
       'From order intake to submission, reduce manual touchpoints, turnaround time, and operational risk.',
     services: [
@@ -70,7 +71,7 @@ export const SERVICE_DATA = {
     ],
   },
   'Valuation Review & QC Automation': {
-    title: 'Valuation Review & Quality Control Automation',
+    title: 'Valuation Review & <br/> Quality Control Automation',
     description:
       'AI-assisted checks for data consistency, compliance, and documentation accuracy before delivery.',
     services: [
@@ -81,7 +82,7 @@ export const SERVICE_DATA = {
     ],
   },
   'Scalable BPO Production Support': {
-    title: 'Scalable Broker price opinion Production Support',
+    title: 'Scalable <br/> Broker price opinion <br/> Production Support',
     description:
       'Handle volume spikes without adding headcount. Ideal for REO, institutional, and portfolio work.',
     services: [
@@ -92,7 +93,7 @@ export const SERVICE_DATA = {
     ],
   },
   'Broker & Panel Management Tools': {
-    title: 'Broker & Panel Management Tools',
+    title: 'Broker & Panel <br/> Management Tools',
     description:
       'Centralized visibility into broker performance, SLAs, revisions, and turnaround metrics.',
     services: [
@@ -103,7 +104,7 @@ export const SERVICE_DATA = {
     ],
   },
   'Reporting & Insights for Institutional Clients': {
-    title: 'Reporting & Insights for Institutional Clients',
+    title: 'Reporting & Insights for <br/> Institutional Clients',
     description:
       'Real-time dashboards for volume, cycle time, quality trends, and cost efficiency.',
     services: [
@@ -203,46 +204,21 @@ export const BG_COLORS = [
 
 export const TESTIMONIALS = [
   {
-    name: 'Teaminfra',
-    company: 'Teaminfra',
-    logo: '/assets/logos/teaminfra.svg',
+    name: 'GR',
+    company: 'Realtor feom California',
     message:
-      'Leadmetrics truly understands how to blend innovation and marketing to deliver real, measurable results. Their AI powered digital marketing in Kochi helped us target the right audience.',
+      "Your team is really supporting my business,it's really cool to have you guys.",
   },
   {
-    name: 'Saqib',
-    company: 'White Horse Spaces',
-    logo: '/assets/logos/whitehorse.svg',
+    name: 'RK',
+    company: 'Realtor feom New York',
     message:
-      'The team at Leadmetrics has completely transformed our marketing approach with its AI-driven strategies and all-in-one dashboard. The ability to manage everything, SEO, ads, and lead generation.',
+      'Great monitoring measures established by your team creating good results',
   },
   {
-    name: 'Mridula Nair',
-    company: 'Datamate',
-    logo: '/assets/logos/datamate.svg',
-    message:
-      'We’ve had a great experience working with Leadmetrics. As a leading provider of hospital management systems and healthcare IT solutions, we needed a digital marketing agency that could deliver.',
-  },
-  {
-    name: 'Saqib',
-    company: 'White Horse Spaces',
-    logo: '/assets/logos/whitehorse.svg',
-    message:
-      'The team at Leadmetrics has completely transformed our marketing approach with its AI-driven strategies and all-in-one dashboard. The ability to manage everything, SEO, ads, and lead generation.',
-  },
-  {
-    name: 'Mridula Nair',
-    company: 'Datamate',
-    logo: '/assets/logos/datamate.svg',
-    message:
-      'We’ve had a great experience working with Leadmetrics. As a leading provider of hospital management systems and healthcare IT solutions, we needed a digital marketing agency that could deliver.',
-  },
-  {
-    name: 'Mridula Nair',
-    company: 'Datamate',
-    logo: '/assets/logos/datamate.svg',
-    message:
-      'We’ve had a great experience working with Leadmetrics. As a leading provider of hospital management systems and healthcare IT solutions, we needed a digital marketing agency that could deliver.',
+    name: 'JP',
+    company: 'Realtor feom Maryland',
+    message: 'Quality based services better packages',
   },
 ];
 

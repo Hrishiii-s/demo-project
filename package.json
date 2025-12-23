@@ -4,8 +4,8 @@
   "private": true,
   "author": "alithemes",
   "scripts": {
-    "dev": "next dev",
-    "start": "next start",
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css",
     "deploy": "gh-pages -d dist",
