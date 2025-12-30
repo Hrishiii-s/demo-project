@@ -2,8 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
+
 import { MdEmail } from 'react-icons/md';
-import { FaWhatsapp } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoPlayCircleOutline } from 'react-icons/io5';
 
 import GetStartedForm from '@/components/sections/GetStartedForm';
@@ -425,13 +428,12 @@ const New = () => {
                 key={index}
                 className="min-w-full sm:min-w-[48%] lg:min-w-[32%] flex flex-col justify-between rounded-xl bg-white p-6 shadow-md transition"
               >
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-2xl">
-                      {item.name}
-                    </h4>
-                    <p className="text-sm text-gray-500">{item.company}</p>
+                <div className="flex flex-col items-start gap-y-2">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-100 text-violet-700 font-semibold text-sm uppercase">
+                    {item.name}
                   </div>
+
+                  <p className="text-sm text-gray-500">{item.company}</p>
                 </div>
 
                 <p className="my-6 text-sm leading-relaxed text-gray-600">
@@ -538,29 +540,30 @@ const New = () => {
                 <ul className="flex gap-3 lg:justify-end">
                   {[
                     {
-                      icon: 'facebook-f',
+                      Icon: FaFacebookF,
                       url: 'https://www.facebook.com/ecesisservices/',
                     },
                     {
-                      icon: 'twitter',
+                      Icon: FaXTwitter,
                       url: 'https://x.com/ecesisservices?s=21',
                     },
                     {
-                      icon: 'instagram',
+                      Icon: FaInstagram,
                       url: 'https://www.instagram.com/ecesistech/',
                     },
                     {
-                      icon: 'linkedin-in',
+                      Icon: FaLinkedinIn,
                       url: 'https://in.linkedin.com/company/ecesis',
                     },
-                  ].map(item => (
-                    <li key={item.icon}>
+                  ].map(({ Icon, url }, index) => (
+                    <li key={index}>
                       <a
-                        href={item.url}
+                        href={url}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-700 text-white transition hover:bg-violet-900"
                       >
-                        <i className={`fab fa-${item.icon}`} />
+                        <Icon className="text-lg" />
                       </a>
                     </li>
                   ))}
@@ -589,16 +592,13 @@ const New = () => {
         </div>
       </footer>
 
-      <div className="fixed bottom-[30px] right-[30px]">
+      <div className="fixed bottom-[50px] right-[30px]">
         <Link
           href="https://wa.me/9061111304?text=Hi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaWhatsapp
-            size={70}
-            className="text-green-500 bg-white shadow-lg p-3 rounded-md"
-          />
+          <IoLogoWhatsapp size={50} className="text-green-500" />
         </Link>
       </div>
 
