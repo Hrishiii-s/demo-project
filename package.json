@@ -4,7 +4,7 @@
   "private": true,
   "author": "alithemes",
   "scripts": {
-    "dev": "next dev -H 192.168.2.199 -p 4000",
+    "dev": "next dev -H 192.168.3.99 -p 4000",
     "start": "next start",
     "lint": "next lint",
     "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css",
@@ -34,6 +34,7 @@
     "gh-pages": "^6.1.1",
     "html-react-parser": "^5.1.18",
     "isomorphic-dompurify": "^2.20.0",
+    "lucide-react": "^0.563.0",
     "mysql2": "^3.11.4",
     "next": "^14.2.4",
     "nodemailer": "^6.9.16",
