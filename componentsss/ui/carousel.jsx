@@ -7,9 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "./utils";
 import { Button } from "./button";
 
-
-
-const CarouselContext = null;
+const CarouselContext = React.createContext(null);
 
 function useCarousel() {
   const context = React.useContext(CarouselContext);
@@ -155,7 +153,7 @@ function CarouselPrevious({
   variant = "outline",
   size = "icon",
   ...props
-}: React.ComponentProps<typeof Button>) {
+}) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
@@ -185,7 +183,7 @@ function CarouselNext({
   variant = "outline",
   size = "icon",
   ...props
-}: React.ComponentProps<typeof Button>) {
+}) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
@@ -211,7 +209,6 @@ function CarouselNext({
 }
 
 export {
-  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
