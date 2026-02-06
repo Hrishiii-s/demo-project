@@ -30,7 +30,7 @@ const steps = [
 
 export function DeliveryApproach() {
   return (
-    <section className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
+    <section className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 min-h-screen flex items-center">
       <div className="max-w-[1400px] mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
