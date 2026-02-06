@@ -1,0 +1,78 @@
+'use client'
+import React, { useEffect, useState } from "react"
+import data from "../../util/blog.json"
+import BlogCard1 from "./BlogCard1"
+import Pagination from "./Pagination"
+
+export default function BlogPost({ style, showItem, showPagination }) {
+    let [currentPage, setCurrentPage] = useState(1)
+    let showLimit = showItem,
+        paginationItem = 3
+
+    let [pagination, setPagination] = useState([])
+    let [limit, setLimit] = useState(showLimit)
+    let [pages, setPages] = useState(Math.ceil(data.length / limit))
+
+    useEffect(() => {
+        createPagination()
+    }, [limit, pages, data.length])
+
+    const createPagination = () => {
+        // Set pagination
+        let arr = new Array(Math.ceil(data.length / limit))
+            .fill()
+            .map((_, idx) => idx + 1)
+
+        setPagination(arr)
+        setPages(Math.ceil(data.length / limit))
+    }
+
+    // Reverse data order
+    const reversedData = [...data].reverse()
+
+    const startIndex = (currentPage - 1) * limit
+    const endIndex = startIndex + limit
+    const getPaginatedProducts = reversedData.slice(startIndex, endIndex)
+
+    let start = Math.floor((currentPage - 1) / paginationItem) * paginationItem
+    let end = start + paginationItem
+    const getPaginationGroup = pagination.slice(start, end)
+
+    const next = () => {
+        if (currentPage < pages) setCurrentPage((page) => page + 1)
+    }
+
+    const prev = () => {
+        if (currentPage > 1) setCurrentPage((page) => page - 1)
+    }
+
+    const handleActive = (item) => {
+        setCurrentPage(item)
+    }
+
+    return (
+        <>
+            {getPaginatedProducts.length === 0 && (
+                <h3>No Products Found</h3>
+            )}
+
+            {getPaginatedProducts.map((item) => (
+                <React.Fragment key={item.id}>
+                    {!style && <BlogCard1 item={item} />}
+                    {style === 1 && <BlogCard1 item={item} />}
+                </React.Fragment>
+            ))}
+
+            {showPagination &&
+                <Pagination
+                    getPaginationGroup={getPaginationGroup}
+                    currentPage={currentPage}
+                    pages={pages}
+                    next={next}
+                    prev={prev}
+                    handleActive={handleActive}
+                />
+            }
+        </>
+    )
+}

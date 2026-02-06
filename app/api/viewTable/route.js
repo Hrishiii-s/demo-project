@@ -1,0 +1,26 @@
+import sqlite3 from 'better-sqlite3';
+import { NextResponse } from 'next/server';
+import path from 'path';
+
+const dbpath = path.resolve(process.cwd(), 'database.db')
+const db = new sqlite3(dbpath);
+
+export async function POST() {
+  try {
+
+    // Query to fetch all rows from the 'contacts' table
+    const rows = db.prepare('SELECT * FROM contacts').all();
+
+    // Return the rows as a JSON response
+    // res.status(200).json({ data: rows });
+ 
+    const plainRows = rows.map(row => JSON.parse(JSON.stringify(row)));
+    
+    // Return the rows as a JSON response
+    return NextResponse.json({ data: rows });
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to fetch table data' });
+  }
+}
+
+

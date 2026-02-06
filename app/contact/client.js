@@ -1,0 +1,378 @@
+'use client'
+import Layout from "@/components/layout/Layout"
+import Link from "next/link"
+import Maps from "./map"
+import React, { useState, useEffect } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import Head from "next/head";
+import MoonLoader from "react-spinners/MoonLoader";
+import { TextField, MenuItem, Select, FormControl, InputLabel, Button } from "@mui/material";
+
+
+
+export default function Contact() {
+
+    const [isMobile, setIsMobile] = useState(false);
+    const [allLoaded, setAllLoaded] = useState(false); // New state to track if all components have loaded
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
+    const [captchaError, setCaptchaError] = useState(false); // State to track if captcha error should be shown
+    const [confirmation, setConfirmation] = useState(false);
+    const [category, setCategory] = useState(true);
+
+    let Nothome = true;
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        setAllLoaded(true);
+
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+
+
+    const sendEmail = async () => {
+
+
+
+        function encodeData(data) {
+            const jsonString = JSON.stringify(data);
+            return btoa(jsonString); // Encode JSON string to Base64
+        }
+
+        const payload = encodeData({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phoneNumber,
+            message: formData.message,
+            option: formData.option
+
+        });
+
+        const tok = {
+            token: recaptchaToken
+        }
+
+
+
+        try {
+            // Send the token to the backend for verification
+
+            const response = await axios.post(`/api/recaptcha?token=${recaptchaToken}`);
+            // console.log("Response from backend", response);
+
+            if (response.data.success) {
+                console.log('reCAPTCHA verified');
+                // Proceed with form submission
+
+                // try {
+                //     const response = await axios.get('/api/submitContact', {
+                //         params: {
+                //             data: payload
+                //         }
+                //     }, {
+                //         headers: {
+                //             'Content-Type': 'application/json'
+                //         }
+                //     });
+
+                //     if (response.status === 200) {
+                // console.log('Form submitted successfully:', response.data);
+
+                // Reset the form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phoneNumber: '',
+                    message: '',
+                    option: ''
+
+                });
+                setRecaptchaToken(''); // Reset reCAPTCHA
+                //     }
+                // }
+                // catch (error) {
+                //     console.error('Error submitting form:', error);
+                // }
+
+
+                try {
+                    const res = await axios.get('/api/sendMail', {
+                        params: {
+                            data: payload
+                        }
+                    });
+                    // console.log("Response from backend", res.data)
+                    setConfirmation(true)
+                } catch (error) {
+                    console.log('Error sending email.');
+                }
+
+            }
+            else {
+                setCaptchaError(true);
+                console.error('reCAPTCHA verification failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    }
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phoneNumber: '',
+        message: '',
+        option: ''
+    });
+
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
+        if (name === "option" && value !== "Choose a category") {
+            setCategory(true);
+        }
+    };
+
+    const handleRecaptcha = (token) => {
+        setRecaptchaToken(token); // Set the reCAPTCHA token
+        setCaptchaError(false);   // Reset error if reCAPTCHA is completed
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!recaptchaToken) {
+            setCaptchaError(true); // Set error state if captcha is not completed
+            if (formData.option === "") {
+                setCategory(false);
+                return;
+            }
+            return; // Prevent form submission
+        }
+        else {
+            if (formData.option === "") {
+                setCategory(false);
+                return;
+            }
+        }
+
+
+        // Here you can add what to do with the data, e.g., sending it to an API
+
+        sendEmail();
+    };
+
+
+
+    if (!allLoaded) {
+        return (
+            <div className="fixed inset-0 flex justify-center items-center">
+                <MoonLoader />
+            </div>
+        ); // Or any other loading indicator
+    }
+
+
+
+
+    return (
+        <>
+            <Head>
+                <title>
+                    Contact Us | Get in Touch for Innovative Tech Solutions
+                </title>
+                <meta name="description" content="Reach out to us for expert advice on AI-driven technology, PropTech, and digital transformation services. Our team is ready to assist you with tailored solutions for your business needs." />
+
+            </Head>
+            <Layout headerStyle={3} footerStyle={3} breadcrumbTitle="Let’s get in touch" Nothome={Nothome}>
+                <div>
+                    <section className="contact__area">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    {/* <div className="contact-map">
+                                        <Maps/>
+                                    </div> */}
+                                </div>
+                            </div>
+                            <div className="row align-items-center">
+                                <div className="col-lg-7">
+                                    <div className="contact__form-wrap">
+                                        <h1 className="title">Send Us a Message</h1>
+                                        <p>Your email address will not be published. Required fields are marked *</p>
+                                        <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "auto" }}>
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="bg-white"
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="E-mail"
+                                                    type="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="bg-white"
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Phone Number"
+                                                    type="tel"
+                                                    name="phoneNumber"
+                                                    value={formData.phoneNumber}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="bg-white"
+                                                />
+                                            </FormControl>
+
+                                            <FormControl fullWidth margin="normal">
+                                                <TextField
+                                                    label="Message"
+                                                    name="message"
+                                                    multiline
+                                                    rows={4}
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="bg-white"
+                                                />
+                                            </FormControl>
+
+                                            <label
+                                                htmlFor="enquiry"
+                                                className="block mb-2 ml-2 text-base font-medium text-gray-900 dark:text-white"
+                                            >
+                                                Type of Enquiry
+                                            </label>
+                                            <select
+                                                name="option"
+                                                required
+                                                id="enquiry"
+                                                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                value={formData.option}
+                                                onChange={handleChange}
+                                                
+                                            >
+                                                <option value="Choose a category" disabled={formData.option !== ""}>
+                                                    Choose a category
+                                                </option>
+                                                <option value="Business">Business Enquiry</option>
+                                                <option value="Recruitment">Job Enquiry</option>
+                                            </select>
+
+                                            {!category && (<div>
+                                                <p className="text-red-500 ml-3">Choose a category</p>
+                                            </div>)}
+
+                                            <div style={{ marginTop: "16px" }}>
+                                                <ReCAPTCHA
+                                                    sitekey={"6LcLetQUAAAAAP89ce3jCXSHagyDfca0AtQU-63g"}
+                                                    onChange={handleRecaptcha}
+                                                />
+                                                {captchaError && (
+                                                    <p style={{ color: "red", marginTop: "8px" }}>Please complete the reCAPTCHA.</p>
+                                                )}
+                                            </div>
+
+                                             <button type="submit" className="btn mt-3">Submit</button>
+                                        </form>
+                                        {confirmation && (<div>
+                                            <p className="text-purple-300">Thank you for reaching out to us!<br />We will get back to you shortly.</p>
+                                        </div>)}
+                                        <p className="ajax-response mb-0" />
+                                    </div>
+                                </div>
+                                <div className="col-lg-5 mt-8 md:mt-0   ">
+                                    <div className="contact__content">
+                                        <div className="section-title mb-35">
+                                            <h2 className="title">Our Locations</h2>
+                                        </div>
+                                        <div className="contact__info">
+                                            <ul className="list-wrap">
+                                                <li className="mt-6">
+                                                    <div className="mb-[77px]">
+                                                        <img src="/assets/img/icon/india.webp" alt="" className="w-12" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h4 className="title">INDIA</h4>
+                                                        <p>2nd Floor, Temple Square - PPD <br /> Ambalamukku Junction,<br /> Kowdiar P.0 Trivandrum. 695003 <br />Kerala, India</p>
+                                                        <div className="flex flex-row">
+                                                            <div className="text-[18px]">
+                                                                <i className="flaticon-phone-call mr-2" />
+                                                            </div>
+                                                            <div className="content">
+
+                                                                <Link href="">+91 9074002697</Link>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                                <li className="mt-6">
+                                                    <div className="mb-[30px]">
+                                                        <img src="/assets/img/icon/usa.webp" alt="" className="w-12" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h4 className="title">US</h4>
+                                                        <p>4830 West Kennedy Boulevard, Tampa<br />
+                                                            Florida - 33609<br /> </p>
+                                                        <div className="flex flex-row">
+                                                            <div className="text-[18px]">
+                                                                <i className="flaticon-phone-call mr-2" />
+                                                            </div>
+                                                            <div className="content">
+
+                                                                <Link href="">+1 (813) 338 6870</Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="icon">
+                                                        <i className="flaticon-mail" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h4 className="title">E-mail</h4>
+                                                        <Link href="mailto:info@ecesistech.com">info@ecesistech.com</Link>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </Layout>
+        </>
+    )
+}

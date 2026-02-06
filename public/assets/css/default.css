@@ -1,0 +1,212 @@
+
+.bg-lblue{
+	background-color: #0A1D3D;
+  }
+
+.bg-lyellow{
+  background-color: #f9ba00;
+}
+
+.text-lb{
+  color: #0A1D3D;
+}
+.text-ly{
+  color: #f9ba00;
+}
+
+
+.text-lblue{
+  color: #0A1D3D;
+  display: block;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+.text-dblue{
+  color: #0E104B;
+  display: block;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+.fab-container {
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.fab-button {
+  background-color: #000000;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.fab-button:focus {
+  outline: none;
+}
+
+.ring {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.ring.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.ring-button {
+  margin: 10px 0;
+  background-color: #28A745;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.ring-button:focus {
+  outline: none;
+}
+
+.mb_19{
+  margin-bottom: 19px;
+}
+
+.max-w-1350{
+  max-width:1350px;
+}
+
+.footer-connect{
+  width: 425px;
+}
+
+.font28{
+  font-size: 28px;
+  line-height: 2rem;
+}
+
+.typewriter {
+  width: fit-content;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: .02em; /* Adjust as needed */
+  animation: typing 4.2s steps(22, end), blink-caret .75s step-end infinite;
+}
+
+.typewriter-none {
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: .02em; /* Adjust as needed */
+  animation: typing 4.2s steps(22, end), blink-caret .75s step-end infinite;
+}
+
+
+.typewriter-text {
+  font-size: 20px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+  100% { border-color: transparent; }
+}
+
+
+.breadcrumbBackgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire section */
+  z-index: -1; /* Place it behind the content */
+}
+
+.bg-dotted {
+  background-image: radial-gradient(circle, #000 1px, transparent 1px);
+  background-size: 1px 10px;
+}
+
+/* 
+.tgmenu__main-menu li.menu-item-has-children .sub-menu li.menu-item-has-children .dropdown-btn {
+  display: none;
+}
+.tgmenu__main-menu li.menu-item-has-children .sub-menu li.menu-item-has-children > a::after {
+  content: "\f107";
+  font-weight: 700;
+  font-family: var(--tg-icon-font-family);
+  color: var(--tg-color-dark-blue);
+  margin-left: 8px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.tgmenu__main-menu li.menu-item-has-children .sub-menu li.menu-item-has-children > a:hover {
+  color: var(--tg-theme-primary);
+}
+.tgmenu__main-menu li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a::after {
+  color: var(--tg-theme-primary);
+}
+.tgmenu__main-menu li.menu-item-has-children .sub-menu li.menu-item-has-children.active > a::after {
+  color: var(--tg-theme-primary);
+} */
+
+/* Modal fade in and out animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.modal-enter {
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-exit {
+  animation: fadeOut 0.3s forwards;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;  /* Ensure this is higher than other page elements */
+}
+.modal-content {
+  z-index: 1051;  /* Higher than overlay to appear on top */
+}
