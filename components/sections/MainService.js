@@ -239,6 +239,23 @@ export default function MainService() {
                                             }
 
                                         </li>
+                                        <li className="nav-item" onClick={() => handleOnClick(7)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/qa-valuation-processing">
+                                                        <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">QA Valuation Processing</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">QA Valuation Processing</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
                                     </ul>
 
 
