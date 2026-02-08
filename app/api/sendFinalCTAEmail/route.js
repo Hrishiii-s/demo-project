@@ -19,21 +19,19 @@ export async function POST(request) {
     //     pass: process.env.PASSWORD,
     //   },
     // });
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
-  },
-});
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+      },
+    });
 
-
-
- await transporter.sendMail({
+    await transporter.sendMail({
       from: `"Ecesis Website" <${process.env.EMAIL}>`,
-      to: ["hrishikesh_s@ecesisgroups.com"],
+      to: ["vishnu.vinayan@ecesistech.com"],
       subject: `New Consultation Request – ${company}`,
       text: `
 New Consultation Request

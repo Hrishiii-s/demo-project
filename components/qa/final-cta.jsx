@@ -203,7 +203,7 @@ export function FinalCTA() {
                   <p className="font-bold text-slate-900 text-base mb-1">
                     Email
                   </p>
-                  <p className="text-slate-600 text-base">qa@ecesis.com</p>
+                  <p className="text-slate-600 text-base">vishnu.vinayan@ecesistech.com</p>
                 </div>
               </div>
 
