@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { CheckCircle2, FileCheck, Eye, GitCompare, ShieldCheck, ClipboardCheck } from "lucide-react";
-=======
 import {
   CheckCircle2,
   FileCheck,
@@ -10,66 +7,36 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import { useState } from "react";
->>>>>>> private/hrishi/dev
 
 const capabilities = [
   {
     icon: CheckCircle2,
     title: "Process Quality Assurance",
-<<<<<<< HEAD
-    description: "Across operational workflows"
-=======
     description: "Across operational workflows",
->>>>>>> private/hrishi/dev
   },
   {
     icon: FileCheck,
     title: "Data & Report Verification",
-<<<<<<< HEAD
-    description: "Accuracy and completeness validation"
-=======
     description: "Accuracy and completeness validation",
->>>>>>> private/hrishi/dev
   },
   {
     icon: Eye,
     title: "Vendor Output Monitoring",
-<<<<<<< HEAD
-    description: "Consistency checks and oversight"
-=======
     description: "Consistency checks and oversight",
->>>>>>> private/hrishi/dev
   },
   {
     icon: GitCompare,
     title: "Transaction Validation",
-<<<<<<< HEAD
-    description: "Workflow verification and approval"
-=======
     description: "Workflow verification and approval",
->>>>>>> private/hrishi/dev
   },
   {
     icon: ShieldCheck,
     title: "Pre-Delivery Quality",
-<<<<<<< HEAD
-    description: "Final checks before handoff"
-=======
     description: "Final checks before handoff",
->>>>>>> private/hrishi/dev
   },
   {
     icon: ClipboardCheck,
     title: "Compliance Validation",
-<<<<<<< HEAD
-    description: "Checklist and regulatory adherence"
-  }
-];
-
-export function CoreCapabilities() {
-  return (
-    <section id="capabilities" className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-br from-purple-50 via-fuchsia-50 to-pink-50 min-h-screen">
-=======
     description: "Checklist and regulatory adherence",
   },
 ];
@@ -89,7 +56,6 @@ export function CoreCapabilities() {
         flex items-center
       "
     >
->>>>>>> private/hrishi/dev
       <div className="max-w-[1400px] mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
@@ -100,19 +66,6 @@ export function CoreCapabilities() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((capability, index) => (
-<<<<<<< HEAD
-            <div 
-              key={index} 
-              className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-2xl hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:text-white hover:border-purple-400 hover:scale-105 transition-all duration-300 group"
-            >
-              <div className="bg-slate-50 group-hover:bg-white/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-all duration-300">
-                <capability.icon className="h-7 w-7 text-purple-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors duration-300">
-                {capability.title}
-              </h3>
-              <p className="text-slate-600 group-hover:text-white/90 leading-relaxed text-sm transition-colors duration-300">
-=======
             <div
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
@@ -187,7 +140,6 @@ export function CoreCapabilities() {
                   }
                 `}
               >
->>>>>>> private/hrishi/dev
                 {capability.description}
               </p>
             </div>
@@ -196,8 +148,4 @@ export function CoreCapabilities() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> private/hrishi/dev

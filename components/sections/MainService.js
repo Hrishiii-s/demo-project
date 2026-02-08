@@ -239,8 +239,6 @@ export default function MainService() {
                                             }
 
                                         </li>
-<<<<<<< HEAD
-=======
                                         <li className="nav-item" onClick={() => handleOnClick(7)}>
                                             {isMobile ? (
                                                 <>
@@ -258,7 +256,6 @@ export default function MainService() {
                                             }
 
                                         </li>
->>>>>>> private/hrishi/dev
                                     </ul>
 
 

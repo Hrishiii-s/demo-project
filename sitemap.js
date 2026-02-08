@@ -16,10 +16,7 @@ const staticPages = [
   { url: "/services-details/accounting-finance", changefreq: "monthly", priority: 1 },
   { url: "/services-details/manpower-staffing", changefreq: "monthly", priority: 1 },
   { url: "/services-details/digital-marketing", changefreq: "monthly", priority: 1 },
-<<<<<<< HEAD
-=======
     { url: "/services-details/qa-valuation-processing", changefreq: "monthly", priority: 1 },
->>>>>>> private/hrishi/dev
   { url: "/contact", changefreq: "monthly", priority: 1 },
   { url: "/case-study", changefreq: "monthly", priority: 1 },
   { url: "/privacy-policy", changefreq: "monthly", priority: 1 },
