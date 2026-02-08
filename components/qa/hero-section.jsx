@@ -1,9 +1,43 @@
+<<<<<<< HEAD
+=======
+"use client"
+
+>>>>>>> private/hrishi/dev
 import { ArrowRight, Shield } from "lucide-react";
 import { Counter } from "./counter";
 
 export function HeroSection() {
+<<<<<<< HEAD
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-12 py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
+=======
+
+  const scrollToSection=(id)=>{
+    const element=document.getElementById(id);
+    if (element){
+      element.scrollIntoView({
+        behavior:"smooth",
+        block:"start",
+      })
+    }
+  };
+
+  return (
+    <section
+      className="
+        relative
+        min-h-screen
+        flex
+        items-center
+        justify-center
+        px-6 lg:px-12
+        pt-[96px] lg:pt-[112px]   
+        py-24
+        bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900
+        overflow-hidden
+      "
+    >
+>>>>>>> private/hrishi/dev
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -52,26 +86,50 @@ export function HeroSection() {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center gap-2 group">
                 Get Started
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 hover:bg-white/20 transition-all duration-200">
+=======
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button
+                onClick={() => scrollToSection("final-cta")}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 group"
+              >
+                Get Started
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button
+                onClick={() => scrollToSection("built-for-scale")}
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 hover:bg-white/20 transition-all duration-200"
+              >
+>>>>>>> private/hrishi/dev
                 Learn More
               </button>
             </div>
           </div>
 
           {/* Right Content - Testimonial Card */}
+<<<<<<< HEAD
           <div className="lg:flex lg:items-center lg:justify-end ">
             <div className="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-8 shadow-2xl max-w-md transform hover:scale-[1.02] transition-transform duration-300">
               {/* Quote Icon */}
+=======
+          <div className="lg:flex lg:items-center lg:justify-end">
+            <div className="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-8 shadow-2xl max-w-md transform hover:scale-[1.02] transition-transform duration-300">
+>>>>>>> private/hrishi/dev
               <div className="text-5xl text-purple-600 mb-1 font-serif leading-none">
                 "
               </div>
 
+<<<<<<< HEAD
               {/* Testimonial */}
+=======
+>>>>>>> private/hrishi/dev
               <p className="text-slate-800 text-lg mb-6 leading-relaxed font-medium">
                 Ecesis transformed our quality assurance process. Their team's
                 deep understanding of real estate workflows and meticulous
@@ -79,7 +137,10 @@ export function HeroSection() {
                 speeding up our delivery timelines.
               </p>
 
+<<<<<<< HEAD
               {/* Stats */}
+=======
+>>>>>>> private/hrishi/dev
               <div className="grid grid-cols-2 gap-6 mb-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl">
                 <div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
@@ -99,7 +160,10 @@ export function HeroSection() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Client Info */}
+=======
+>>>>>>> private/hrishi/dev
               <div className="pt-6 border-t border-slate-200">
                 <p className="font-bold text-slate-900 text-base">
                   Michael Chen
@@ -118,4 +182,8 @@ export function HeroSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> private/hrishi/dev

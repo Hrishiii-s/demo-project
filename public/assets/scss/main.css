@@ -1834,6 +1834,40 @@ textarea {
 .tgmobile__menu .navigation li > ul > li > ul {
   display: none;
 }
+<<<<<<< HEAD
+=======
+
+/* Fix for mobile menu submenus */
+.tgmobile__menu .navigation li > ul {
+  display: none !important;
+}
+
+.tgmobile__menu .navigation li .sub-menu {
+  display: none !important;
+}
+
+.tgmobile__menu .navigation li .sub-menu[style*="display: block"] {
+  display: block !important;
+}
+
+.tgmobile__menu .navigation li .sub-menu[style*="display:block"] {
+  display: block !important;
+}
+
+/* Add transitions for smooth animation */
+.tgmobile__menu .navigation li .sub-menu {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Make sure dropdown buttons are clickable */
+.tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn {
+  z-index: 10;
+}
+
+
+
+>>>>>>> private/hrishi/dev
 .tgmobile__menu .navigation ul {
   padding: 0;
   margin: 0;

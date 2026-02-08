@@ -51,8 +51,13 @@ export function FinalCTA() {
 
   return (
     <section
+<<<<<<< HEAD
       id="contact"
       className="py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50"
+=======
+      id="final-cta"
+      className="px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-24 lg:min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50"
+>>>>>>> private/hrishi/dev
     >
       <div className="max-w-[1400px] mx-auto w-full">
         <div className="text-center mb-16">
@@ -203,7 +208,11 @@ export function FinalCTA() {
                   <p className="font-bold text-slate-900 text-base mb-1">
                     Email
                   </p>
+<<<<<<< HEAD
                   <p className="text-slate-600 text-base">qa@ecesis.com</p>
+=======
+                  <p className="text-slate-600 text-base">vishnu.vinayan@ecesistech.com</p>
+>>>>>>> private/hrishi/dev
                 </div>
               </div>
 
