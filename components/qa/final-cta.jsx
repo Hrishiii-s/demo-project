@@ -65,11 +65,10 @@ export function FinalCTA() {
             Stop letting QA capacity limit your growth.
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Whether you need to expand review capacity, outsource complete
-            appraisal production, or reduce operational overhead — Ecesis
-            delivers the offshore support you need with the quality standards
-            you demand.
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed text-center text-balance">
+            Whether you need more review capacity, full appraisal production
+            support, or help reducing operational overhead, Ecesis delivers the
+            offshore support you need with the quality standards you demand.
           </p>
 
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-pink-600 mx-auto rounded-full"></div>
@@ -78,7 +77,7 @@ export function FinalCTA() {
         {/* ACTION CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
           {/* CARD 1 */}
-          <div 
+          <div
             className={`
               group bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center 
               transition-all duration-300 cursor-pointer
@@ -91,7 +90,7 @@ export function FinalCTA() {
             `}
             onMouseEnter={() => setActiveCardIndex(0)}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 
                 transition-all duration-300
@@ -102,7 +101,7 @@ export function FinalCTA() {
                 }
               `}
             >
-              <Calendar 
+              <Calendar
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -110,11 +109,11 @@ export function FinalCTA() {
                       ? "text-white"
                       : "text-blue-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
 
-            <h3 
+            <h3
               className={`
                 text-xl font-bold mb-3 transition-colors duration-300
                 ${
@@ -138,7 +137,7 @@ export function FinalCTA() {
           </div>
 
           {/* CARD 2 */}
-          <div 
+          <div
             className={`
               group bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center 
               transition-all duration-300 cursor-pointer
@@ -151,7 +150,7 @@ export function FinalCTA() {
             `}
             onMouseEnter={() => setActiveCardIndex(1)}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 
                 transition-all duration-300
@@ -162,7 +161,7 @@ export function FinalCTA() {
                 }
               `}
             >
-              <FileText 
+              <FileText
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -170,11 +169,11 @@ export function FinalCTA() {
                       ? "text-white"
                       : "text-purple-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
 
-            <h3 
+            <h3
               className={`
                 text-xl font-bold mb-3 transition-colors duration-300
                 ${
@@ -188,7 +187,7 @@ export function FinalCTA() {
             </h3>
 
             <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-              Custom pricing based on your order types and monthly volume
+              Get custom pricing based on your order types and monthly volume.
             </p>
 
             <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl py-3">
@@ -197,7 +196,7 @@ export function FinalCTA() {
           </div>
 
           {/* CARD 3 */}
-          <div 
+          <div
             className={`
               group bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center 
               transition-all duration-300 cursor-pointer
@@ -211,7 +210,7 @@ export function FinalCTA() {
             `}
             onMouseEnter={() => setActiveCardIndex(2)}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 
                 transition-all duration-300
@@ -222,7 +221,7 @@ export function FinalCTA() {
                 }
               `}
             >
-              <Download 
+              <Download
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -230,11 +229,11 @@ export function FinalCTA() {
                       ? "text-white"
                       : "text-indigo-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
 
-            <h3 
+            <h3
               className={`
                 text-xl font-bold mb-3 transition-colors duration-300
                 ${
@@ -252,7 +251,7 @@ export function FinalCTA() {
             </p>
 
             <Button className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-bold rounded-xl py-3">
-              Download Capabilities Overview
+              Capabilities Overview
             </Button>
           </div>
         </div>
@@ -316,7 +315,7 @@ export function FinalCTA() {
           {/* INFO */}
           <div className="flex flex-col justify-center space-y-8">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
                 Let's Talk
               </h3>
               <p className="text-slate-600 leading-relaxed">
@@ -326,7 +325,7 @@ export function FinalCTA() {
             </div>
 
             {[
-              { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
+              { icon: Phone, title: "Phone", value: "+91 9074002697" },
               {
                 icon: Mail,
                 title: "Email",
@@ -335,7 +334,10 @@ export function FinalCTA() {
               {
                 icon: MapPin,
                 title: "Office",
-                value: "Multiple Delivery Centers in India",
+                value: `2nd Floor, Temple Square - PPD
+                        Ambalamukku Junction,
+                        Kowdiar P.0 Trivandrum. 695003
+                        Kerala, India`,
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
