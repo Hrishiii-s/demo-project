@@ -1,4 +1,4 @@
-import { Server, Shield, Clock, TrendingUp, CheckCircle2, FileCheck, BarChart3 } from "lucide-react";
+import { CheckCircle2, FileCheck, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
 export function WhatWeOffer() {
@@ -9,7 +9,7 @@ export function WhatWeOffer() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-6">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3 tracking-tight">
-            Power Your Quality Assurance Operations
+            Make QA a Growth Lever, Not a Bottleneck
           </h2>
           <p className="text-base lg:text-lg text-slate-600 max-w-3xl mx-auto">
             Scale with Experts Who Think and Work Like Your Core Team
@@ -18,21 +18,18 @@ export function WhatWeOffer() {
         </div>
 
         <div className="mb-6 max-w-4xl mx-auto">
-          <p className="text-sm lg:text-base text-slate-600 leading-relaxed text-center">
-            Stop turning away business because your QA team is maxed out,
-            sacrificing quality because you can't afford enough reviewers, or
-            trapped in the endless cycle of recruiting, training, and managing
-            QA staff. Eliminate these constraints holding your business back—you
-            no longer have to turn away business because your Quality Assurance
-            (QA) team is overwhelmed, compromise on quality due to a lack of
-            affordable reviewers, or endure the perpetual cycle of recruiting,
-            training, and managing expensive QA personnel.{" "}
+          <p className="text-sm lg:text-base text-slate-600 leading-relaxed text-center text-balance ">
+            Stop letting reviewer bandwidth dictate how much business you can
+            accept. With Ecesis, you get a trained, appraisal‑focused QA team
+            that scales up for peak cycles and scales down when volumes
+            normalize, so you protect margins while maintaining consistent
+            quality{" "}
           </p>
         </div>
 
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Card 1: Comprehensive Appraisal Review */}
-          <div 
+          <div
             onMouseEnter={() => setActiveIndex(0)}
             className={`
               bg-white/90 backdrop-blur-sm border rounded-2xl p-6
@@ -45,7 +42,7 @@ export function WhatWeOffer() {
               }
             `}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
@@ -55,7 +52,7 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              <CheckCircle2 
+              <CheckCircle2
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -63,10 +60,10 @@ export function WhatWeOffer() {
                       ? "text-white"
                       : "text-blue-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
-            <h3 
+            <h3
               className={`
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
@@ -78,7 +75,7 @@ export function WhatWeOffer() {
             >
               Comprehensive Appraisal Review
             </h3>
-            <p 
+            <p
               className={`
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
@@ -98,10 +95,10 @@ export function WhatWeOffer() {
                 "Fannie Mae, Freddie Mac guideline checks",
                 "Comparable analysis validation",
                 "Quality Control & Compliance",
-                "Scalable Review Capacity"
+                "Scalable Review Capacity",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span 
+                  <span
                     className={`
                       mt-0.5 transition-colors duration-300
                       ${
@@ -113,7 +110,7 @@ export function WhatWeOffer() {
                   >
                     •
                   </span>
-                  <span 
+                  <span
                     className={`
                       transition-colors duration-300
                       ${
@@ -128,7 +125,7 @@ export function WhatWeOffer() {
                 </li>
               ))}
             </ul>
-            <p 
+            <p
               className={`
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
@@ -138,12 +135,13 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              You get trained QA professionals who understand valuation workflows — not general document reviewers.
+              You work with people who understand valuation logic and risk, not
+              generic document processors.
             </p>
           </div>
 
           {/* Card 2: Full Appraisal & Valuation Production Services */}
-          <div 
+          <div
             onMouseEnter={() => setActiveIndex(1)}
             className={`
               bg-white/90 backdrop-blur-sm border rounded-2xl p-6
@@ -156,7 +154,7 @@ export function WhatWeOffer() {
               }
             `}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
@@ -166,7 +164,7 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              <FileCheck 
+              <FileCheck
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -174,10 +172,10 @@ export function WhatWeOffer() {
                       ? "text-white"
                       : "text-purple-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
-            <h3 
+            <h3
               className={`
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
@@ -189,7 +187,7 @@ export function WhatWeOffer() {
             >
               Full Appraisal & Valuation Production
             </h3>
-            <p 
+            <p
               className={`
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
@@ -201,7 +199,7 @@ export function WhatWeOffer() {
             >
               Complete Order Processing From Assignment to Delivery
             </p>
-            <p 
+            <p
               className={`
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
@@ -211,7 +209,8 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              If you're a portal looking to outsource entire appraisal production, we handle complete order fulfillment:
+              If you're a portal looking to outsource entire appraisal
+              production, we handle complete order fulfillment:
             </p>
             <ul className="space-y-1.5 text-xs lg:text-sm max-w-md mx-auto">
               {[
@@ -220,10 +219,10 @@ export function WhatWeOffer() {
                 "Property data research and comparable analysis",
                 "Report compilation and compliance checks",
                 "Photo editing and sketch creation",
-                "Final delivery in your required format"
+                "Final delivery in your required format",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span 
+                  <span
                     className={`
                       mt-0.5 transition-colors duration-300
                       ${
@@ -235,7 +234,7 @@ export function WhatWeOffer() {
                   >
                     •
                   </span>
-                  <span 
+                  <span
                     className={`
                       transition-colors duration-300
                       ${
@@ -250,7 +249,7 @@ export function WhatWeOffer() {
                 </li>
               ))}
             </ul>
-            <p 
+            <p
               className={`
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
@@ -260,9 +259,10 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              Pricing: 30-50% below typical appraisal costs with consistent quality and on-time delivery.
+              Typical pricing is 30–50% below standard appraisal production
+              costs, with consistent on‑time delivery.
             </p>
-            <button 
+            <button
               className={`
                 mt-3 text-xs lg:text-sm font-semibold underline mx-auto block transition-colors duration-300
                 ${
@@ -277,7 +277,7 @@ export function WhatWeOffer() {
           </div>
 
           {/* Card 3: Operational Support for AMCs */}
-          <div 
+          <div
             onMouseEnter={() => setActiveIndex(2)}
             className={`
               bg-white/90 backdrop-blur-sm border rounded-2xl p-6
@@ -290,7 +290,7 @@ export function WhatWeOffer() {
               }
             `}
           >
-            <div 
+            <div
               className={`
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
@@ -300,7 +300,7 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              <BarChart3 
+              <BarChart3
                 className={`
                   h-7 w-7 transition-colors duration-300
                   ${
@@ -308,10 +308,10 @@ export function WhatWeOffer() {
                       ? "text-white"
                       : "text-cyan-600 group-hover:text-white"
                   }
-                `} 
+                `}
               />
             </div>
-            <h3 
+            <h3
               className={`
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
@@ -323,7 +323,7 @@ export function WhatWeOffer() {
             >
               Operational Support for AMCs
             </h3>
-            <p 
+            <p
               className={`
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
@@ -335,7 +335,7 @@ export function WhatWeOffer() {
             >
               Reduce Administrative Burden, Increase Throughput
             </p>
-            <p 
+            <p
               className={`
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
@@ -345,7 +345,8 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              Free your team from time-consuming tasks that don't require licensed expertise:
+              Free your team from time-consuming tasks that don't require
+              licensed expertise:
             </p>
             <ul className="space-y-1.5 text-xs lg:text-sm max-w-md mx-auto">
               {[
@@ -353,10 +354,10 @@ export function WhatWeOffer() {
                 "Property data research and MLS pulls",
                 "Client communication and status updates",
                 "Document processing and file management",
-                "Revision coordination and resubmission tracking"
+                "Revision coordination and resubmission tracking",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span 
+                  <span
                     className={`
                       mt-0.5 transition-colors duration-300
                       ${
@@ -368,7 +369,7 @@ export function WhatWeOffer() {
                   >
                     •
                   </span>
-                  <span 
+                  <span
                     className={`
                       transition-colors duration-300
                       ${
@@ -383,7 +384,7 @@ export function WhatWeOffer() {
                 </li>
               ))}
             </ul>
-            <p 
+            <p
               className={`
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
@@ -393,7 +394,8 @@ export function WhatWeOffer() {
                 }
               `}
             >
-              Let your internal team focus on client relationships and complex cases while we handle production operations.
+              Your internal team can focus on client relationships, complex
+              cases, and exceptions while we keep production moving
             </p>
           </div>
         </div>
