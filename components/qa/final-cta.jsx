@@ -251,7 +251,7 @@ export function FinalCTA() {
             </p>
 
             <Button className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-bold rounded-xl py-3">
-              Capabilities Overview
+              Talk to an Expert
             </Button>
           </div>
         </div>
@@ -331,14 +331,14 @@ export function FinalCTA() {
                 title: "Email",
                 value: "vishnu.vinayan@ecesistech.com",
               },
-              {
-                icon: MapPin,
-                title: "Office",
-                value: `2nd Floor, Temple Square - PPD
-                        Ambalamukku Junction,
-                        Kowdiar P.0 Trivandrum. 695003
-                        Kerala, India`,
-              },
+              // {
+              //   icon: MapPin,
+              //   title: "Office",
+              //   value: `2nd Floor, Temple Square - PPD
+              //           Ambalamukku Junction,
+              //           Kowdiar P.0 Trivandrum. 695003
+              //           Kerala, India`,
+              // },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 w-12 h-12 rounded-2xl flex items-center justify-center">
