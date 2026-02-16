@@ -249,171 +249,92 @@ export default function MainService() {
                                         <li className="nav-item" onClick={() => handleOnClick(4)}>
                                             <button className={activeIndex == 4 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false"><i className="flaticon-ship" />Cargo Insurance</button>
                                         </li> */}
-                    <li className="nav-item" onClick={() => handleOnClick(5)}>
-                      {isMobile ? (
-                        <>
-                          <Link href="/services-details/real-estate-valuation">
-                            <button
-                              className={
-                                activeIndex == 5
-                                  ? 'nav-link active'
-                                  : 'nav-link'
-                              }
-                              id="fire-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#fire-tab-pane"
-                              type="button"
-                              role="tab"
-                              aria-controls="fire-tab-pane"
-                              aria-selected="false"
-                            >
-                              Real Estate Valuation
-                            </button>
-                          </Link>
-                        </>
-                      ) : (
-                        <>
-                          <button
-                            className={
-                              activeIndex == 5 ? 'nav-link active' : 'nav-link'
-                            }
-                            id="fire-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#fire-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="fire-tab-pane"
-                            aria-selected="false"
-                          >
-                            Real Estate Valuation
-                          </button>
-                        </>
-                      )}
-                    </li>
-                    <li className="nav-item" onClick={() => handleOnClick(6)}>
-                      {isMobile ? (
-                        <>
-                          <Link href="/services-details/accounting-finance">
-                            <button
-                              className={
-                                activeIndex == 6
-                                  ? 'nav-link active'
-                                  : 'nav-link'
-                              }
-                              id="bike-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#bike-tab-pane"
-                              type="button"
-                              role="tab"
-                              aria-controls="bike-tab-pane"
-                              aria-selected="false"
-                            >
-                              Accounting & Finance
-                            </button>
-                          </Link>
-                        </>
-                      ) : (
-                        <>
-                          <button
-                            className={
-                              activeIndex == 6 ? 'nav-link active' : 'nav-link'
-                            }
-                            id="bike-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#bike-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="bike-tab-pane"
-                            aria-selected="false"
-                          >
-                            Accounting & Finance
-                          </button>
-                        </>
-                      )}
-                    </li>
-                    <li className="nav-item" onClick={() => handleOnClick(7)}>
-                      {isMobile ? (
-                        <>
-                          <Link href="/services-details/engineering-services">
-                            <button
-                              className={
-                                activeIndex == 7
-                                  ? 'nav-link active'
-                                  : 'nav-link'
-                              }
-                              id="cargo-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#cargo-tab-pane"
-                              type="button"
-                              role="tab"
-                              aria-controls="cargo-tab-pane"
-                              aria-selected="false"
-                            >
-                              Engineering Services
-                            </button>
-                          </Link>
-                        </>
-                      ) : (
-                        <>
-                          <button
-                            className={
-                              activeIndex == 7 ? 'nav-link active' : 'nav-link'
-                            }
-                            id="cargo-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#cargo-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="cargo-tab-pane"
-                            aria-selected="false"
-                          >
-                            Engineering Services
-                          </button>
-                        </>
-                      )}
-                    </li>
-                    <li className="nav-item" onClick={() => handleOnClick(8)}>
-                      {isMobile ? (
-                        <>
-                          <Link href="/services-details/digital-marketing">
-                            <button
-                              className={
-                                activeIndex == 8
-                                  ? 'nav-link active'
-                                  : 'nav-link'
-                              }
-                              id="cargo-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#cargo-tab-pane"
-                              type="button"
-                              role="tab"
-                              aria-controls="cargo-tab-pane"
-                              aria-selected="false"
-                            >
-                              Digital Marketing
-                            </button>
-                          </Link>
-                        </>
-                      ) : (
-                        <>
-                          <button
-                            className={
-                              activeIndex == 8 ? 'nav-link active' : 'nav-link'
-                            }
-                            id="cargo-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#cargo-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="cargo-tab-pane"
-                            aria-selected="false"
-                          >
-                            Digital Marketing
-                          </button>
-                        </>
-                      )}
-                    </li>
-                  </ul>
+                                        <li className="nav-item" onClick={() => handleOnClick(5)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/real-estate-valuation">
+                                                        <button className={activeIndex == 5 ? "nav-link active" : "nav-link"} id="fire-tab" data-bs-toggle="tab" data-bs-target="#fire-tab-pane" type="button" role="tab" aria-controls="fire-tab-pane" aria-selected="false">Real Estate Valuation</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 5 ? "nav-link active" : "nav-link"} id="fire-tab" data-bs-toggle="tab" data-bs-target="#fire-tab-pane" type="button" role="tab" aria-controls="fire-tab-pane" aria-selected="false">Real Estate Valuation</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
+                                        <li className="nav-item" onClick={() => handleOnClick(6)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/accounting-finance">
+                                                        <button className={activeIndex == 6 ? "nav-link active" : "nav-link"} id="bike-tab" data-bs-toggle="tab" data-bs-target="#bike-tab-pane" type="button" role="tab" aria-controls="bike-tab-pane" aria-selected="false">Accounting & Finance</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 6 ? "nav-link active" : "nav-link"} id="bike-tab" data-bs-toggle="tab" data-bs-target="#bike-tab-pane" type="button" role="tab" aria-controls="bike-tab-pane" aria-selected="false">Accounting & Finance</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
+                                        <li className="nav-item" onClick={() => handleOnClick(7)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/engineering-services">
+                                                        <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Engineering Services</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Engineering Services</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
+                                        <li className="nav-item" onClick={() => handleOnClick(8)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/digital-marketing">
+                                                        <button className={activeIndex == 8 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Digital Marketing</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 8 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">Digital Marketing</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
+                                        <li className="nav-item" onClick={() => handleOnClick(7)}>
+                                            {isMobile ? (
+                                                <>
+                                                    <Link href="/services-details/qa-valuation-processing">
+                                                        <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">QA Valuation Processing</button>
+
+                                                    </Link>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button className={activeIndex == 7 ? "nav-link active" : "nav-link"} id="cargo-tab" data-bs-toggle="tab" data-bs-target="#cargo-tab-pane" type="button" role="tab" aria-controls="cargo-tab-pane" aria-selected="false">QA Valuation Processing</button>
+
+                                                </>
+                                            )
+                                            }
+
+                                        </li>
+                                    </ul>
 
                   <div
                     className={`tab-content ${isMobile ? 'hidden' : ''}`}

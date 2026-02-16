@@ -23,80 +23,50 @@ export default function Menu() {
     setHoverIndex(null);
   };
 
-  return (
-    <>
-      <ul className="navigation">
-        <li className={activePath === '/' ? 'active' : ''}>
-          <Link href="/">Home</Link>
-        </li>
-        <li className={activePath === '/about' ? 'active' : ''}>
-          <Link href="/about">About Us</Link>
-        </li>
-        <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
-          <Link href="#">Services</Link>
+    return (
+        <>
+            <ul className="navigation">
+                <li className={activePath === "/" ? "active" : ""}>
+                    <Link href="/">Home</Link>
+                </li>
+                <li className={activePath === "/about" ? "active" : ""}>
+                    <Link href="/about">About Us</Link>
+                </li>
+                <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
+                    <Link href="#">Services</Link>
+                    
+                        <ul className="sub-menu w-[230px]">
+                            <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
+                                <Link href="#" onMouseEnter={() => handleMouseEnter(2)}>Digital Solutions</Link>
+                                {hoverIndex === 2 && (
+                                    <ul className="sub-menu w-[230px]">
+                                        <li><Link href="/services-details/proptech">PropTech</Link></li>
+                                        <li><Link href="/services-details/artificial-intelligence">Artificial Intelligence</Link></li>
+                                        <li><Link href="/services-details/business-process-automation">Business Process Automation</Link></li>
+                                        {/* <li><Link href="/services-details/software-development">Enterprise Software Solutions</Link></li> */}
+                                        
+                                        </ul>
+                               
+                                )}
+                            </li>
+                            <li className="menu-item-has-children" onMouseLeave={handleMouseLeave}>
+                                <Link href="#" onMouseEnter={() => handleMouseEnter(3)}>Business Consulting</Link>
+                                {hoverIndex === 3 && (
+                                    <ul className="sub-menu w-[230px]">
+                                        <li><Link href="/services-details/real-estate-valuation">Real Estate Valuation</Link></li>
+                                        <li><Link href="/services-details/accounting-finance">Accounting & Finance</Link></li>
+                                        <li><Link href="/services-details/engineering-services">Engineering Services</Link></li>
+                                        <li><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
+                                        <li><Link href="/services-details/qa-valuation-processing">QA Valuation Processing</Link></li>
+                                        {/* <li><Link href="/services-details/bpo">BPO</Link></li> */}
 
-          <ul className="sub-menu w-[230px]">
-            <li
-              className="menu-item-has-children"
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link href="#" onMouseEnter={() => handleMouseEnter(2)}>
-                Digital Solutions
-              </Link>
-              {hoverIndex === 2 && (
-                <ul className="sub-menu w-[230px]">
-                  <li>
-                    <Link href="/services-details/proptech">PropTech</Link>
-                  </li>
-                  <li>
-                    <Link href="/services-details/artificial-intelligence">
-                      Artificial Intelligence
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services-details/business-process-automation">
-                      Business Process Automation
-                    </Link>
-                  </li>
-                  {/* <li><Link href="/services-details/software-development">Enterprise Software Solutions</Link></li> */}
-                </ul>
-              )}
-            </li>
-            <li
-              className="menu-item-has-children"
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link href="#" onMouseEnter={() => handleMouseEnter(3)}>
-                Business Consulting
-              </Link>
-              {hoverIndex === 3 && (
-                <ul className="sub-menu w-[230px]">
-                  <li>
-                    <Link href="/services-details/real-estate-valuation">
-                      Real Estate Valuation
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services-details/accounting-finance">
-                      Accounting & Finance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services-details/engineering-services">
-                      Engineering Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services-details/digital-marketing">
-                      Digital Marketing
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-          </ul>
-        </li>
-        {/* <li className="menu-item-has-children">
+                                    </ul>
+                                )}
+                            </li>
+                        </ul>
+                   
+                </li>
+                {/* <li className="menu-item-has-children">
                     <Link href="#">Products</Link>
 
                     <ul className="sub-menu">
