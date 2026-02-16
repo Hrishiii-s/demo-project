@@ -2424,6 +2424,72 @@ padding-left: 40px;
   transform: rotate(360deg);
 }
 
+
+/* Fix for mobile menu submenus */
+.tgmobile__menu .navigation li .sub-menu.open {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  max-height: 1000px !important;
+  overflow: visible !important;
+}
+
+.tgmobile__menu .navigation li.menu-item-has-children.open > .sub-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Override any hover effects that might be hiding the menu */
+.tgmobile__menu .navigation li:hover .sub-menu,
+.tgmobile__menu .navigation li:focus .sub-menu,
+.tgmobile__menu .navigation li:focus-within .sub-menu {
+  display: block !important;
+}
+
+/* Keep the submenu visible when active */
+.tgmobile__menu .navigation li .sub-menu[style*="display: block"] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Prevent submenu from disappearing on hover out */
+.tgmobile__menu .navigation li.menu-item-has-children {
+  position: relative;
+}
+
+.tgmobile__menu .navigation li.menu-item-has-children .sub-menu {
+  position: static;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  transition: none;
+}
+
+/* Remove any hover transitions that might be interfering */
+.tgmobile__menu .navigation li .sub-menu {
+  transition: none !important;
+}
+
+/* Ensure dropdown buttons work correctly */
+.tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn {
+  z-index: 20;
+  cursor: pointer;
+}
+
+.tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn.open {
+  background-color: var(--tg-theme-primary);
+}
+
+.tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn.open .plus-line {
+  background-color: var(--tg-color-white-default);
+}
+
+.tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn.open .plus-line::after {
+  display: none;
+}
+
 /*=============================
     04. Banner
 ===============================*/
