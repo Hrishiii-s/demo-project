@@ -62,7 +62,7 @@ export default function Menu() {
                                         <li><Link href="/services-details/engineering-services">Engineering Services</Link></li>
                                         <li><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
                                         <li><Link href="/services-details/qa-valuation-processing">QA Valuation Processing</Link></li>
-                                        <li><Link href="/services-details/bpo">BPO</Link></li>
+                                        {/* <li><Link href="/services-details/bpo">BPO</Link></li> */}
 
                                     </ul>
                                 )}

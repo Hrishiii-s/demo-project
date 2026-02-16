@@ -31,7 +31,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"Ecesis Website" <${process.env.EMAIL}>`,
-      to: ["vishnu.vinayan@ecesistech.com"],
+      to: ["info@ecesistech.com"],
       subject: `New Consultation Request – ${company}`,
       text: `
 New Consultation Request

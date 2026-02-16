@@ -19,7 +19,7 @@ import {
   FileText,
   Home
 } from 'lucide-react';
-import { ImageWithFallback } from '../bpo/figma/ImageWithFallback';
+import { ImageWithFallback } from '../figma/figma/ImageWithFallback';
 
 export default function BpoLandingPage() {
   const [scrolled, setScrolled] = useState(false);

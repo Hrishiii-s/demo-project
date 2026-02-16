@@ -262,8 +262,11 @@ export function WhatWeOffer() {
               Typical pricing is 30–50% below standard appraisal production
               costs, with consistent on‑time delivery.
             </p>
-            <button
-              className={`
+            <a
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30min" target="_blank"
+            >
+              <button
+                className={`
                 mt-3 text-xs lg:text-sm font-semibold underline mx-auto block transition-colors duration-300
                 ${
                   activeIndex === 1
@@ -271,9 +274,10 @@ export function WhatWeOffer() {
                     : "text-purple-600 group-hover:text-white"
                 }
               `}
-            >
-              Request Volume Pricing →
-            </button>
+              >
+                Request Volume Pricing →
+              </button>
+            </a>
           </div>
 
           {/* Card 3: Operational Support for AMCs */}
