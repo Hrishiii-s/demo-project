@@ -1,6 +1,8 @@
 "use client";
 
+import { scrollToSection } from "@/util/scrollToSection";
 import { ArrowRight } from "lucide-react";
+
 
 export function HeroSection() {
   // const scrollToSection = (id) => {
@@ -13,19 +15,6 @@ export function HeroSection() {
   //   }
   // };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (!element) return;
-
-    const headerOffset = 100;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 lg:px-12 py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
@@ -96,20 +85,25 @@ export function HeroSection() {
               delivering enterprise-grade quality without the premium price tag.
             </p>
 
-            <p className="text-base text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
               Whether you're processing 500 or 5,000 appraisals monthly, get the
               review capacity you need in weeks, not months.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
+              <a
+                href="https://calendly.com/vishnu-vinayan-ecesistech/30min"
+                target="_blank"
+                >
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center gap-2 group">
+                  Scale Your QA Team Now
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </a>
               <button
-                onClick={() => scrollToSection("final-cta")}
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center gap-2 group"
+                onClick={() => scrollToSection("final-cta-form")}
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 hover:bg-white/20 transition-all duration-200"
               >
-                Scale Your QA Team Now
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 hover:bg-white/20 transition-all duration-200">
                 See Pricing Models
               </button>
             </div>
@@ -146,14 +140,12 @@ export function HeroSection() {
                 </div>
 
                 <div className="pt-6 border-t border-slate-200 space-y-2">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                    3 types
+                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    Flexible Engagement Models
                   </div>
-                  <div className="text-lg text-slate-800 font-medium">
-                    Flexible Models
-                  </div>
+                  <div className="text-lg text-slate-800 font-medium"></div>
                   <p className="text-sm text-slate-700">
-                    Dedicated Teams, Shared Capacity, Per-Review Pricing.
+                    Dedicated Teams, Shared Capacity or Pay-Per-Review.
                   </p>
                 </div>
               </div>

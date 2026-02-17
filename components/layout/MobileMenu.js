@@ -164,6 +164,11 @@ export default function MobileMenu({ handleMobileMenu }) {
                     QA Valuation Processing
                   </Link>
                 </li>
+                <li onClick={handleMenuClick}>
+                  <Link href="/services-details/bpo">
+                    BPO
+                  </Link>
+                </li>
               </ul>
               <div
                 className={
