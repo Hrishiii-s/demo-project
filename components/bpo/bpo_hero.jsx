@@ -1,22 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Users,
-  Building2,
-  TrendingUp,
-  Shield,
-  Zap,
-  Globe,
-  CheckCircle2,
-  Clock,
-  Target,
-  BarChart3,
-  Lock,
-  Headphones,
-  Calendar,
-  FileText,
-  Home,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const BpoHero = () => {
   return (

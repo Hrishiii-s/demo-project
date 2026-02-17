@@ -1,23 +1,6 @@
 import { motion } from "framer-motion";
 
-import {
-  ArrowRight,
-  Users,
-  Building2,
-  TrendingUp,
-  Shield,
-  Zap,
-  Globe,
-  CheckCircle2,
-  Clock,
-  Target,
-  BarChart3,
-  Lock,
-  Headphones,
-  Calendar,
-  FileText,
-  Home,
-} from "lucide-react";
+import { Building2, CheckCircle2, Target, BarChart3, FileText, Home } from "lucide-react";
 
 export const BpoSupportingWorkflows = () => {
   return (
