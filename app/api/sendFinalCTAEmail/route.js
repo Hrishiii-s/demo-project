@@ -28,10 +28,10 @@ export async function POST(request) {
       from: `"Ecesis Website" <${process.env.EMAIL}>`,
       to: ["info@ecesistech.com"],
       subject: isQA
-        ? `🧪 New QA Consultation Request – ${company}`
-        : `🏢 New BPO Consultation Request – ${company}`,
+        ? `QA Consultation Request – ${company}`
+        : `B2B BPO Landing Page Request – ${company}`,
       text: `
-New ${isQA ? "QA" : "BPO"} Consultation Request
+${isQA ? "QA Consultation Request" : "B2B BPO Landing Page Request"} 
 
 Source: ${source}
 
