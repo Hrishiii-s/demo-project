@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, CheckCircle2 } from "lucide-react";
 
 import { Input } from "../figma/ui/input";
 import { Textarea } from "../figma/ui/textarea";
@@ -10,13 +10,13 @@ import { Label } from "../figma/ui/label";
 import { Button } from "../figma/ui/button";
 
 export default function BpoFinalCta() {
-const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  company: "",
-  message: "",
-  source: "BPO",
-});
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+    source: "BPO",
+  });
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -40,7 +40,13 @@ const [formData, setFormData] = useState({
       setIsLoading(true);
       await sendEmail();
       alert("Message sent successfully!");
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+        source: "BPO",
+      });
     } catch (err) {
       alert("Failed to send message");
     } finally {
@@ -55,7 +61,7 @@ const [formData, setFormData] = useState({
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-purple-400/30 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,21 +71,22 @@ const [formData, setFormData] = useState({
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Strengthen Operations{" "}
+            Let’s Discuss Your{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Behind Your Agent Network?
+              Mortgage Valuation Operations
             </span>
           </h2>
 
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Build a dedicated operations team aligned with your brokerage or
-            mortgage business growth.
+            Schedule a 30-minute assessment call with our mortgage operations
+            team. We'll review your current workflows and show you specific ways
+            Ecesis can reduce turn-times, lower costs, and free up your team.
           </p>
         </motion.div>
 
-        {/* FORM + INFO */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
-          {/* FORM */}
+        {/* GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
+          {/* FORM — LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +108,7 @@ const [formData, setFormData] = useState({
                     required
                     disabled={isLoading}
                     type={field === "email" ? "email" : "text"}
-                    value={(formData)[field]}
+                    value={formData[field]}
                     onChange={(e) =>
                       setFormData({ ...formData, [field]: e.target.value })
                     }
@@ -143,45 +150,40 @@ const [formData, setFormData] = useState({
             </form>
           </motion.div>
 
-          {/* LET'S TALK */}
+          {/* CONTENT — RIGHT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex flex-col space-y-8 lg:pl-6"
+            className="flex flex-col justify-center space-y-10 h-full lg:min-h-[560px]"
           >
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                Let’s Talk
+              <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                What We’ll Cover
               </h3>
-              <p className="text-gray-700 max-w-md">
-                Our quality assurance specialists are ready to discuss your
-                operational needs.
-              </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-md">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Phone</p>
-                  <p className="text-gray-700">+91 9074002697</p>
-                </div>
-              </div>
+            <ul className="space-y-5">
+              {[
+                "Your current valuation volumes and vendor relationships",
+                "Specific pain points (turn-times, costs, compliance, scaling)",
+                "How Ecesis integrates with your existing workflows",
+                "Expected efficiency and cost improvements",
+                "Transparent pricing and implementation timeline",
+                "Clear next steps — only if it makes sense",
+              ].map((item, index) => (
+                <li key={index} className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-800 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-md">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Email</p>
-                  <p className="text-gray-700">info@ecesistech.com</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-lg font-semibold text-gray-900">
+              No sales pressure. Just a focused discussion on improving your
+              operations and economics.
+            </p>
           </motion.div>
         </div>
       </div>
