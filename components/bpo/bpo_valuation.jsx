@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
-export const BpoBrokerage = () => {
+export const BpoValuation = () => {
   const bullets = [
     { bold: "Rising expenses", text: "Overtime, temporary help, and per-unit costs that keep increasing" },
     { bold: "Cost pressure during peak volumes", text: "Forcing teams to scale quickly at higher expense" },
     { bold: "Volume unpredictability", text: "Refi booms, purchase surges, seasonal fluctuations require flexible staffing" },
     { bold: "Turn-time pressure", text: "Borrower expectations and closing deadlines don't wait" },
-    { bold: "Vendor coordination overhead", text: "Staff hours consumed managing AMCs, appraisers, BPO agents across markets" },
-    { bold: "Quality & compliance risk", text: "Documentation gaps leading to costly audit findings" },
+    { bold: "Vendor coordination overhead", text: "Time‑consuming vendor management across AMCs, appraisers, and BPO agents" },
+    { bold: "Quality & compliance risk", text: "Documentation gaps that create compliance and audit risk" },
     // { bold: "Fixed cost structure", text: "Paying for full-time staff even when volumes drop" },
   ];
 
