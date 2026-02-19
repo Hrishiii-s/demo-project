@@ -47,7 +47,7 @@ export const BpoMortgage = () => {
       gradient: "from-blue-500 via-blue-600 to-indigo-600",
       items: [
         "Coordinate purchase and refinance valuations from order to completion",
-        "Manage rush appraisals and BPOs for time-sensitive closings",
+        "Manage rush appraisals and BPOs for time sensitive closings",
         "Track vendor performance with clear metrics and quality checks",
         "Add surge capacity for peak months without emergency hiring",
       ],
@@ -206,7 +206,7 @@ export const BpoMortgage = () => {
           transition={{ duration: 0.6 }}
           className="text-center text-lg text-gray-800 font-semibold max-w-5xl mx-auto"
         >
-          We don’t replace your AMCs or appraisal vendors—we make them work
+          We don’t replace your AMCs or appraisal vendors, we make them work
           better by managing operational complexity on your behalf, more
           efficiently and affordably than in-house teams.
         </motion.p>

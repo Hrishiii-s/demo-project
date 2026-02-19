@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight,Quote } from "lucide-react";
+import { scrollToSection } from "@/util/scrollToSection";
 
 const testimonials = [
   {
@@ -156,6 +157,7 @@ useEffect(() => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center group shadow-lg"
+            onClick={()=>scrollToSection("bpo_final_cta_form")}
           >
             Schedule your Free Operations Assessment
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -167,16 +169,25 @@ useEffect(() => {
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-10 w-full max-w-xl ml-auto overflow-hidden"
+          className="
+                  relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl
+                  border border-blue-200
+                  p-6 sm:p-8 lg:p-10
+                  w-full max-w-md sm:max-w-lg lg:max-w-xl
+                  mx-auto
+                  mt-8 lg:mt-0
+                  overflow-hidden
+                "     
         >
-          <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
             What Mortgage Leaders Say
           </p>
 
           {/* Quote Icon */}
-          <Quote className="absolute top-8 right-8 w-10 h-10 text-indigo-200" />
+          <Quote className="absolute top-6 right-6 w-8 h-8 text-indigo-200" />
 
-          <div className="relative h-[220px]">
+          {/* SLIDER WRAPPER */}
+          <div className="relative min-h-[220px] sm:min-h-[200px] lg:h-[220px] overflow-hidden">
             <AnimatePresence custom={direction} mode="wait">
               <motion.div
                 key={index}
@@ -188,32 +199,33 @@ useEffect(() => {
                 transition={{ duration: 0.45, ease: "easeOut" }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.8}
+                dragElastic={0.6}
                 onDragEnd={(e, { offset }) => {
                   if (offset.x < -80) paginate(1);
                   if (offset.x > 80) paginate(-1);
                 }}
-                className="absolute inset-0 flex flex-col justify-center cursor-grab active:cursor-grabbing"
+                className="
+          absolute inset-0
+          flex flex-col justify-center
+          cursor-grab active:cursor-grabbing
+          px-1
+        "
               >
-                <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  <span className="text-gray-800 text-3xl font-serif mr-1">
-                    “
-                  </span>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 break-words">
+                  <span className="text-xl sm:text-2xl font-serif mr-1">“</span>
                   {testimonials[index].quote}
-                  <span className="text-gray-700 text-3xl font-serif ml-1">
-                    ”
-                  </span>
+                  <span className="text-xl sm:text-2xl font-serif ml-1">”</span>
                 </p>
 
-                <p className="text-sm font-semibold flex items-center gap-2 text-amber-600">
-                  - {testimonials[index].author}, {testimonials[index].company}
+                <p className="text-sm font-semibold text-amber-600">
+                  — {testimonials[index].author}, {testimonials[index].company}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Pagination Dots */}
-          <div className="flex gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4 mb-4">
             {testimonials.map((_, i) => (
               <button
                 key={i}

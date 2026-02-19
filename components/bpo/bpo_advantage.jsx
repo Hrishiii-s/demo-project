@@ -65,7 +65,7 @@ export const BpoAdvantage = () => {
   {
     icon: PiggyBank,
     title: "Cost efficiency by design",
-    desc: "Convert fixed operational overhead into a variable, volume-based model that improves margins across cycles.",
+    desc: "Convert fixed operational overhead into a variable, volume based model that improves margins across cycles.",
     gradient: "from-blue-600 to-cyan-600",
   },
   {
