@@ -55,7 +55,7 @@ export default function BpoFinalCta() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-indigo-100 via-blue-100 to-purple-100 relative overflow-hidden">
+    <section  id="bpo_final_cta_form" className="py-24 bg-gradient-to-br from-indigo-100 via-blue-100 to-purple-100 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-purple-400/30 rounded-full blur-3xl" />
@@ -171,7 +171,7 @@ export default function BpoFinalCta() {
                 "How Ecesis integrates with your existing workflows",
                 "Expected efficiency and cost improvements",
                 "Transparent pricing and implementation timeline",
-                "Clear next steps — only if it makes sense",
+                "Clear next steps only if it makes sense",
               ].map((item, index) => (
                 <li key={index} className="flex gap-4 items-start">
                   <CheckCircle2 className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />

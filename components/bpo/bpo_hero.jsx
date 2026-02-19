@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight,Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -26,20 +26,38 @@ const testimonials = [
 ];
 
 const slideVariants = {
-  enter: { x: 60, opacity: 0 },
-  center: { x: 0, opacity: 1 },
-  exit: { x: -60, opacity: 0 },
+  enter: (direction) => ({
+    x: direction > 0 ? 80 : -80,
+    opacity: 0,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction) => ({
+    x: direction > 0 ? -80 : 80,
+    opacity: 0,
+  }),
 };
 
 export const BpoHero = () => {
-  const [index, setIndex] = useState(0);
+   const [[index, direction], setIndex] = useState([0, 0]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
+   const paginate = (newDirection) => {
+     setIndex([
+       (index + newDirection + testimonials.length) % testimonials.length,
+       newDirection,
+     ]);
+   };
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    paginate(1);
+  }, 6000);
+
+  return () => clearInterval(interval);
+}, [index]);
+
 
   return (
     <section className="relative pt-20 pb-24 min-h-screen overflow-hidden bg-gradient-to-br from-blue-300/40 via-indigo-300/40 to-purple-300/40">
@@ -60,11 +78,11 @@ export const BpoHero = () => {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto px-6 text-center mb-16"
       >
-        <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 max-w-5xl mx-auto mb-4">
-          Mortgage Valuation Operations Without the Operational Burden
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 max-w-5xl mx-auto mb-4">
+          Outsource Mortgage Valuations Without Adding Operational Overhead
         </h1>
         <p className="text-xl font-semibold bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 bg-clip-text text-transparent">
-          Scale Broker & Agent Operations Without Scaling Internal Overhead
+          Grow Broker and Agent Productivity Without Growing Internal Headcount
         </p>
       </motion.div>
 
@@ -92,7 +110,7 @@ export const BpoHero = () => {
           >
             <p className="text-lg text-gray-700 mb-3 leading-relaxed">
               We manage coordination, quality control, and workflow behind your
-              mortgage valuations—improving turn-times and lowering costs so
+              mortgage valuations, improving turn times and lowering costs so
               your teams can focus on borrowers, not operational bottlenecks.
             </p>
 
@@ -110,10 +128,10 @@ export const BpoHero = () => {
             <ul className="space-y-3 text-gray-700 mb-8">
               {[
                 "Lower per-valuation costs through specialized workflows",
-                "Flexible scaling with volume — no fixed staffing overhead",
-                "Reduced overtime and temp staffing expenses",
-                "Faster turn-times that increase close rates",
-                "Stronger compliance controls to avoid audit remediation",
+                "Flexible scaling with volume, no fixed staffing overhead",
+                "Reduced overtime and  temporary staffing expenses",
+                "Improve turn-times and closing rates with tighter SLA",
+                "Strengthen compliance and audit readiness with clean documentation",
               ].map((item, i) => (
                 <motion.li
                   key={i}
@@ -149,37 +167,61 @@ export const BpoHero = () => {
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-10 w-full max-w-xl xl:w-[580px] ml-auto overflow-hidden"
+          className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-10 w-full max-w-xl ml-auto overflow-hidden"
         >
-          <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
+          <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-6">
             What Mortgage Leaders Say
           </p>
 
-          <div className="relative h-[220px] flex items-center">
-            <AnimatePresence mode="wait">
+          {/* Quote Icon */}
+          <Quote className="absolute top-8 right-8 w-10 h-10 text-indigo-200" />
+
+          <div className="relative h-[220px]">
+            <AnimatePresence custom={direction} mode="wait">
               <motion.div
                 key={index}
+                custom={direction}
                 variants={slideVariants}
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 flex flex-col justify-center"
+                transition={{ duration: 0.45, ease: "easeOut" }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.8}
+                onDragEnd={(e, { offset }) => {
+                  if (offset.x < -80) paginate(1);
+                  if (offset.x > 80) paginate(-1);
+                }}
+                className="absolute inset-0 flex flex-col justify-center cursor-grab active:cursor-grabbing"
               >
-                <p className="text-xl text-gray-800 leading-relaxed mb-6">
-                  “{testimonials[index].quote}”
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  <span className="text-gray-800 text-3xl font-serif mr-1">
+                    “
+                  </span>
+                  {testimonials[index].quote}
+                  <span className="text-gray-700 text-3xl font-serif ml-1">
+                    ”
+                  </span>
                 </p>
-                <p className="text-sm font-semibold text-gray-600">
-                  — {testimonials[index].author}, {testimonials[index].company}
+
+                <p className="text-sm font-semibold flex items-center gap-2 text-amber-600">
+                  - {testimonials[index].author}, {testimonials[index].company}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          <div className="flex gap-2 mt-4">
+          {/* Pagination Dots */}
+          <div className="flex gap-2 mt-6">
             {testimonials.map((_, i) => (
-              <span
+              <button
                 key={i}
+                onClick={() => {
+                  if (i !== index) {
+                    setIndex([i, i > index ? 1 : -1]);
+                  }
+                }}
                 className={`h-2 rounded-full transition-all ${
                   i === index ? "w-6 bg-indigo-600" : "w-2 bg-indigo-300"
                 }`}
