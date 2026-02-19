@@ -82,9 +82,18 @@ useEffect(() => {
         className="max-w-7xl mx-auto px-6 text-center mb-16"
       >
         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 max-w-5xl mx-auto mb-4">
-          Outsource Mortgage Valuations Without Adding Operational Overhead
+          Outsource Mortgage Valuations Without {" "}
+          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Adding Operational Overhead
+          </span>
         </h1>
-        <p className="text-xl font-semibold bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 bg-clip-text text-transparent">
+        <p
+          className="
+  text-xl font-semibold
+  bg-gradient-to-r from-indigo-700 via-slate-700 to-gray-800
+  bg-clip-text text-transparent
+"
+        >
           Grow Broker and Agent Productivity Without Growing Internal Headcount
         </p>
       </motion.div>
@@ -124,8 +133,8 @@ useEffect(() => {
               lenders nationwide.
             </p>
 
-            <p className="text-lg font-semibold text-gray-900 mb-4">
-              Our clients achieve:
+            <p className="text-lg font-semibold text-indigo-700 mb-3">
+              Our clients achieve :
             </p>
 
             <ul className="space-y-3 text-gray-700 mb-8">
@@ -159,7 +168,7 @@ useEffect(() => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center group shadow-lg"
-            onClick={()=>scrollToSection("bpo_final_cta_form")}
+            onClick={() => scrollToSection("bpo_final_cta_form")}
           >
             Schedule your Free Operations Assessment
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -179,7 +188,7 @@ useEffect(() => {
                   mx-auto
                   mt-8 lg:mt-0
                   overflow-hidden
-                "     
+                "
         >
           <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
             What Mortgage Leaders Say
