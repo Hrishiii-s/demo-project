@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Phone, Mail, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 import { Input } from "../figma/ui/input";
 import { Textarea } from "../figma/ui/textarea";
