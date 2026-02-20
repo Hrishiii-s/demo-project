@@ -2489,7 +2489,43 @@ padding-left: 40px;
 .tgmobile__menu .navigation li.menu-item-has-children .dropdown-btn.open .plus-line::after {
   display: none;
 }
+/* Remove hover effects that conflict with click toggles */
+.tgmobile__menu .navigation li:hover > .sub-menu,
+.tgmobile__menu .navigation li:focus > .sub-menu,
+.tgmobile__menu .navigation li:focus-within > .sub-menu {
+  display: none !important;
+}
 
+/* Only show submenus when they have the 'open' class or inline style display:block */
+.tgmobile__menu .navigation li .sub-menu[style*="display: block"],
+.tgmobile__menu .navigation li .sub-menu.open {
+  display: block !important;
+}
+
+/* Ensure submenus don't show on hover */
+.tgmobile__menu .navigation li.menu-item-has-children:hover > .sub-menu {
+  display: none !important;
+}
+
+/* Remove any hover transitions */
+.tgmobile__menu .navigation li .sub-menu {
+  transition: none !important;
+}
+
+/* Style for when menu items are active/open */
+.tgmobile__menu .navigation li.menu-item-has-children.open > .sub-menu {
+  display: block !important;
+}
+
+/* Override any existing hover rules */
+.tgmobile__menu .navigation li:hover .sub-menu {
+  display: none !important;
+}
+
+.tgmobile__menu .navigation li:focus .sub-menu,
+.tgmobile__menu .navigation li:focus-within .sub-menu {
+  display: none !important;
+}
 /*=============================
     04. Banner
 ===============================*/

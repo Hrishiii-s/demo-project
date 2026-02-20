@@ -1,14 +1,5 @@
 import { motion} from "framer-motion";
-import {
-  DollarSign,
-  Layers,
-  ArrowUpRight,
-  Clock,
-  ShieldCheck,
-  FileText,
-  Home,
-  BarChart3,
-} from "lucide-react";
+import { FileText, Home, BarChart3 } from "lucide-react";
 
 
 
