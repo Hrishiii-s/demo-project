@@ -1,5 +1,4 @@
-import { scrollToSection } from "@/util/scrollToSection";
-import { motion, scrollInfo } from "framer-motion";
+import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 export const BpoValuation = () => {
