@@ -15,22 +15,24 @@ import { GoogleTagManager } from '@next/third-parties/google'
 
 
 const inter = Inter({
-    weight: ['300', '400', '500', '600', '700'],
-    subsets: ['latin'],
-    variable: "--tg-body-font-family",
-    display: 'swap',
-})
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--tg-body-font-family',
+  display: 'swap',
+});
 const outfit = Outfit({
-    weight: ['400', '500', '600', '700', '800', '900'],
-    subsets: ['latin'],
-    variable: "--tg-heading-font-family",
-    display: 'swap',
-})
+  weight: ['400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  variable: '--tg-heading-font-family',
+  display: 'swap',
+});
 
 export const metadata = {
-    title: 'ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company',
-    description: 'We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise.',
-  }
+  title:
+    'ECESIS | AI-Driven Digital Transformation & PropTech Solutions Company',
+  description:
+    'We are the leading provider of AI-driven digital transformation and PropTech solutions, empowering businesses to evolve, transform, and grow through cutting-edge technology and strategic expertise.',
+};
 export default function RootLayout({ children }) {
     return (
     //     {/* <Head>

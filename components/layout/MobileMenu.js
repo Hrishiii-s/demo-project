@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function MobileMenu({ handleMobileMenu }) {
   const [isActive, setIsActive] = useState({

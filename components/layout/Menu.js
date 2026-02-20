@@ -1,31 +1,27 @@
-'use client'
-import Link from "next/link";
-import axios from "axios";
-import * as Sentry from "@sentry/nextjs";
-import React, { useEffect, useState } from "react";
-
+'use client';
+import Link from 'next/link';
+import axios from 'axios';
+import * as Sentry from '@sentry/nextjs';
+import React, { useEffect, useState } from 'react';
 
 export default function Menu() {
+  const [activePath, setActivePath] = useState('');
+  const [hoverIndex, setHoverIndex] = useState(null);
 
-    const [activePath, setActivePath] = useState('');
-    const [hoverIndex, setHoverIndex] = useState(null);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Set the active path from window.location.pathname
+      setActivePath(window.location.pathname);
+    }
+  }, []);
 
+  const handleMouseEnter = index => {
+    setHoverIndex(index);
+  };
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            // Set the active path from window.location.pathname
-            setActivePath(window.location.pathname);
-        }
-    }, []);
-
-    const handleMouseEnter = index => {
-        setHoverIndex(index);
-    };
-
-    const handleMouseLeave = () => {
-        setHoverIndex(null);
-    };
-
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
+  };
 
     return (
         <>
@@ -91,26 +87,28 @@ export default function Menu() {
 
                     </ul>
                 </li> */}
-                <li className="menu-item-has-children">
-                    <Link href="#">Resources</Link>
+        <li className="menu-item-has-children">
+          <Link href="#">Resources</Link>
 
-                    <ul className="sub-menu w-[160px]">
-                     
-                        <li><Link href={`/case-study`}>Case Studies</Link></li>
-                        <li><Link href={`/blog`}>Blogs</Link></li>
-
-                    </ul>
-                </li>
-                {/* <li>
+          <ul className="sub-menu w-[160px]">
+            <li>
+              <Link href={`/case-study`}>Case Studies</Link>
+            </li>
+            <li>
+              <Link href={`/blog`}>Blogs</Link>
+            </li>
+          </ul>
+        </li>
+        {/* <li>
                     <Link href="/careers">Careers</Link>
                 </li> */}
-                <li>
-                    <Link href="/contact">Contact Us</Link>
-                </li>
-                {/* <li>
+        <li>
+          <Link href="/contact">Contact Us</Link>
+        </li>
+        {/* <li>
                     <Link href="/project-details">Project</Link>
                 </li> */}
-            </ul>
-        </>
-    );
+      </ul>
+    </>
+  );
 }

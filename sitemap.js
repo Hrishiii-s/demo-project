@@ -1,9 +1,9 @@
-const { SitemapStream, streamToPromise } = require("sitemap");
-const fs = require("fs");
-const path = require("path");
+const { SitemapStream, streamToPromise } = require('sitemap');
+const fs = require('fs');
+const path = require('path');
 
 // Define website URL
-const WEBSITE_URL = "https://www.ecesistech.com";
+const WEBSITE_URL = 'https://www.ecesistech.com';
 
 // Define static pages
 const staticPages = [
@@ -36,21 +36,25 @@ const staticPages = [
 
 // Function to generate sitemap
 async function generateSitemap() {
-  console.log("🚀 Generating sitemap...");
+  console.log('🚀 Generating sitemap...');
 
   const sitemap = new SitemapStream({ hostname: WEBSITE_URL });
 
   staticPages.forEach(page => sitemap.write(page));
   sitemap.end();
 
-  const sitemapXml = await streamToPromise(sitemap).then(data => data.toString());
+  const sitemapXml = await streamToPromise(sitemap).then(data =>
+    data.toString()
+  );
 
   // Save sitemap.xml in the public directory
-  const filePath = path.join(__dirname, "public", "sitemap.xml");
+  const filePath = path.join(__dirname, 'public', 'sitemap.xml');
   fs.writeFileSync(filePath, sitemapXml);
 
-  console.log("✅ Sitemap successfully generated at public/sitemap.xml");
+  console.log('✅ Sitemap successfully generated at public/sitemap.xml');
 }
 
 // Run the function
-generateSitemap().catch(err => console.error("❌ Error generating sitemap:", err));
+generateSitemap().catch(err =>
+  console.error('❌ Error generating sitemap:', err)
+);

@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = nextConfig
-
+module.exports = nextConfig;
 
 // Injected content via Sentry wizard below
 
@@ -18,7 +17,6 @@ module.exports = nextConfig
 //     org: "sidharth-7o",
 //     project: "javascript-nextjs",
 //     tunnelRoute: '/monitoring-tunnel',
-
 
 //     // Only print logs for uploading source maps in CI
 //     silent: !process.env.CI,
@@ -50,7 +48,6 @@ module.exports = nextConfig
 //     // https://vercel.com/docs/cron-jobs
 //     automaticVercelMonitors: true,
 //     autoInstrumentServerFunctions: false,
-
 
 //     authToken: process.env.SENTRY_AUTH_TOKEN
 //   }
