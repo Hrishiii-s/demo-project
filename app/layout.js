@@ -11,6 +11,8 @@ import "/public/assets/css/default.css";
 import "/public/assets/css/main.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
+import Script from "next/script";
+
 
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
@@ -40,15 +42,19 @@ export default function RootLayout({ children }) {
           href="https://www.googletagmanager.com"
           crossOrigin="anonymous"
         />
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-63R8LEM88V"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-63R8LEM88V');
-        </script>
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-63R8LEM88V');
+          `}
+        </Script>
       </Head>
       <html lang="en">
         <GoogleTagManager gtmId="GTM-TBG2XGX4" />
