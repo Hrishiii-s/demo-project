@@ -14,7 +14,7 @@ export const BpoValuation = () => {
     },
     {
       bold: "Volume unpredictability",
-      text: "Refi booms, purchase surges, seasonal fluctuations require flexible staffing",
+      text: "Refinance booms, purchase surges, seasonal fluctuations require flexible staffing",
     },
     {
       bold: "Turn-time pressure",
@@ -26,7 +26,7 @@ export const BpoValuation = () => {
     },
     {
       bold: "Vendor coordination overhead",
-      text: "Time-consuming vendor management across AMCs, appraisers, and BPO agents",
+      text: "Time consuming vendor management across AMCs, appraisers, and BPO agents",
     },
   ];
 

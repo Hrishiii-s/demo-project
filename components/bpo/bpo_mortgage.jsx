@@ -113,7 +113,7 @@ export const BpoMortgage = () => {
                 {card.title}
               </h3>
 
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <ul className="list-disc list-outside pl-5 text-gray-700 space-y-2">
                 {card.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
