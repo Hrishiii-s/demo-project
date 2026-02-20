@@ -1,11 +1,9 @@
 
 
 "use client";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight,Quote } from "lucide-react";
-import { scrollToSection } from "@/util/scrollToSection";
 
 const testimonials = [
   {
