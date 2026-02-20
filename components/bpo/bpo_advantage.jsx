@@ -71,7 +71,7 @@ export const BpoAdvantage = () => {
   {
     icon: Repeat,
     title: "Consistency through market cycles",
-    desc: "Manage refi surges and slowdowns without constant hiring, training, and downsizing.",
+    desc: "Manage refinance surges and slowdowns without constant hiring, training, and downsizing.",
     gradient: "from-cyan-500 to-blue-600",
   },
   {

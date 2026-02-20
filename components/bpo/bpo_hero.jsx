@@ -10,7 +10,7 @@ import { scrollToSection } from "@/util/scrollToSection";
 const testimonials = [
   {
     quote:
-      "During the 2024 refi surge, Ecesis scaled with us seamlessly. We processed 3× our normal volume without adding headcount or missing SLAs.",
+      "During the 2024 refinance surge, Ecesis scaled with us seamlessly. We processed 3× our normal volume without adding headcount or missing SLAs.",
     author: "Chief Operations Officer",
     company: "Mid-Size Mortgage Lender",
   },
