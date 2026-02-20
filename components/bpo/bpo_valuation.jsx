@@ -82,7 +82,7 @@ export const BpoValuation = () => {
           >
             <h4 className="text-base sm:text-lg font-bold bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent mb-4">
               Managing these workflows creates operational complexity and
-              financial pressure:
+              financial pressure :
             </h4>
 
             <ul className="grid md:grid-cols-2 gap-x-4 gap-y-3">
@@ -112,10 +112,12 @@ export const BpoValuation = () => {
           <p className="text-base sm:text-lg text-gray-800 font-semibold mb-3">
             Operations teams are caught between demand, risk, and cost.
           </p>
-
-          <button onClick={() => scrollToSection("bpo_final_cta_form")} className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold text-base sm:text-lg hover:shadow-xl hover:scale-105 transition-all">
+          <a href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone" target="_blank">
+          <button className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold text-base sm:text-lg hover:shadow-xl hover:scale-105 transition-all"
+          >
             Let’s talk about your specific volume and cost challenges
           </button>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -11,7 +11,7 @@ export default function MobileMenu({ handleMobileMenu }) {
 
   const handleToggle = (key, event) => {
     event.preventDefault();
-    event.stopPropagation();
+    event.stopPropagation(); // This prevents the event from bubbling up
 
     // If 'services' or 'resources' is clicked, close the other
     if (key === "services" || key === "resources") {
@@ -30,7 +30,11 @@ export default function MobileMenu({ handleMobileMenu }) {
     }
   };
 
-  const handleMenuClick = () => {
+  const handleMenuClick = (event) => {
+    // Don't close the menu if clicking on a dropdown toggle or link that should navigate
+    if (event) {
+      event.stopPropagation();
+    }
     // Reset all states when closing the menu
     setIsActive({
       services: false,
@@ -39,6 +43,15 @@ export default function MobileMenu({ handleMobileMenu }) {
       business: false,
     });
     handleMobileMenu(); // Call the provided handleMobileMenu function
+  };
+
+  // Handle link clicks without closing the mobile menu overlay
+  const handleLinkClick = (event) => {
+    event.stopPropagation();
+    // Close the mobile menu after navigation
+    setTimeout(() => {
+      handleMenuClick();
+    }, 100);
   };
 
   useEffect(() => {
@@ -73,11 +86,11 @@ export default function MobileMenu({ handleMobileMenu }) {
   return (
     <>
       <ul className="navigation">
-        <li className="active" onClick={handleMenuClick}>
-          <Link href="/">Home</Link>
+        <li className="active">
+          <Link href="/" onClick={handleLinkClick}>Home</Link>
         </li>
-        <li onClick={handleMenuClick}>
-          <Link href="/about">About Us</Link>
+        <li>
+          <Link href="/about" onClick={handleLinkClick}>About Us</Link>
         </li>
         <li
           className={`menu-item-has-children ${isActive.services ? "open" : ""}`}
@@ -104,16 +117,16 @@ export default function MobileMenu({ handleMobileMenu }) {
                   display: isActive.digital ? "block" : "none",
                 }}
               >
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/proptech">PropTech</Link>
+                <li>
+                  <Link href="/services-details/proptech" onClick={handleLinkClick}>PropTech</Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/artificial-intelligence">
+                <li>
+                  <Link href="/services-details/artificial-intelligence" onClick={handleLinkClick}>
                     Artificial Intelligence
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/business-process-automation">
+                <li>
+                  <Link href="/services-details/business-process-automation" onClick={handleLinkClick}>
                     Business Process Automation
                   </Link>
                 </li>
@@ -122,7 +135,11 @@ export default function MobileMenu({ handleMobileMenu }) {
                 className={
                   isActive.digital ? "dropdown-btn open" : "dropdown-btn"
                 }
-                onClick={(e) => handleToggle("digital", e)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleToggle("digital", e);
+                }}
               >
                 <span className="plus-line" />
               </div>
@@ -139,34 +156,34 @@ export default function MobileMenu({ handleMobileMenu }) {
                   display: isActive.business ? "block" : "none",
                 }}
               >
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/real-estate-valuation">
+                <li>
+                  <Link href="/services-details/real-estate-valuation" onClick={handleLinkClick}>
                     Real Estate Valuation
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/accounting-finance">
+                <li>
+                  <Link href="/services-details/accounting-finance" onClick={handleLinkClick}>
                     Accounting & Finance
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/engineering-services">
+                <li>
+                  <Link href="/services-details/engineering-services" onClick={handleLinkClick}>
                     Engineering Services
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/digital-marketing">
+                <li>
+                  <Link href="/services-details/digital-marketing" onClick={handleLinkClick}>
                     Digital Marketing
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/qa-valuation-processing">
+                <li>
+                  <Link href="/services-details/qa-valuation-processing" onClick={handleLinkClick}>
                     QA Valuation Processing
                   </Link>
                 </li>
-                <li onClick={handleMenuClick}>
-                  <Link href="/services-details/bpo">
-                    BPO
+                <li>
+                  <Link href="/services-details/b2b_bpo_valuation" onClick={handleLinkClick}>
+                    B2B BPO Valuation
                   </Link>
                 </li>
               </ul>
@@ -174,7 +191,11 @@ export default function MobileMenu({ handleMobileMenu }) {
                 className={
                   isActive.business ? "dropdown-btn open" : "dropdown-btn"
                 }
-                onClick={(e) => handleToggle("business", e)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleToggle("business", e);
+                }}
               >
                 <span className="plus-line" />
               </div>
@@ -182,7 +203,11 @@ export default function MobileMenu({ handleMobileMenu }) {
           </ul>
           <div
             className={isActive.services ? "dropdown-btn open" : "dropdown-btn"}
-            onClick={(e) => handleToggle("services", e)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleToggle("services", e);
+            }}
           >
             <span className="plus-line" />
           </div>
@@ -199,24 +224,28 @@ export default function MobileMenu({ handleMobileMenu }) {
               display: isActive.resources ? "block" : "none",
             }}
           >
-            <li onClick={handleMenuClick}>
-              <Link href="/case-study">Case Study</Link>
+            <li>
+              <Link href="/case-study" onClick={handleLinkClick}>Case Study</Link>
             </li>
-            <li onClick={handleMenuClick}>
-              <Link href="/blog">Blogs</Link>
+            <li>
+              <Link href="/blog" onClick={handleLinkClick}>Blogs</Link>
             </li>
           </ul>
           <div
             className={
               isActive.resources ? "dropdown-btn open" : "dropdown-btn"
             }
-            onClick={(e) => handleToggle("resources", e)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleToggle("resources", e);
+            }}
           >
             <span className="plus-line" />
           </div>
         </li>
-        <li onClick={handleMenuClick}>
-          <Link href="/contact">Contact Us</Link>
+        <li>
+          <Link href="/contact" onClick={handleLinkClick}>Contact Us</Link>
         </li>
       </ul>
     </>

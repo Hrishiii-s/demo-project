@@ -82,7 +82,7 @@ useEffect(() => {
         className="max-w-7xl mx-auto px-6 text-center mb-16"
       >
         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 max-w-5xl mx-auto mb-4">
-          Outsource Mortgage Valuations Without {" "}
+          Outsource Mortgage Valuations Without{" "}
           <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Adding Operational Overhead
           </span>
@@ -160,19 +160,27 @@ useEffect(() => {
             </ul>
           </motion.div>
 
-          <motion.button
+          <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center group shadow-lg"
-            onClick={() => scrollToSection("bpo_final_cta_form")}
           >
-            Schedule your Free Operations Assessment
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+            <a
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center group shadow-lg"
+              >
+                Schedule your Free Operations Assessment
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* RIGHT TESTIMONIAL */}
