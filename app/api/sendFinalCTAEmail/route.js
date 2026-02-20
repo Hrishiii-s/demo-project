@@ -3,22 +3,15 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const { name, email, company, message } = await request.json();
+    const { name, email, company, message, source } = await request.json();
 
-    if (!name || !email || !company || !message) {
+    if (!name || !email || !company || !message || !source) {
       return NextResponse.json(
         { message: "All fields are required" },
         { status: 400 },
       );
     }
 
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: process.env.EMAIL,
-    //     pass: process.env.PASSWORD,
-    //   },
-    // });
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -29,12 +22,18 @@ export async function POST(request) {
       },
     });
 
+    const isQA = source === "QA";
+
     await transporter.sendMail({
       from: `"Ecesis Website" <${process.env.EMAIL}>`,
       to: ["info@ecesistech.com"],
-      subject: `New Consultation Request – ${company}`,
+      subject: isQA
+        ? `QA Consultation Request – ${company}`
+        : `B2B BPO Landing Page Request – ${company}`,
       text: `
-New Consultation Request
+${isQA ? "QA Consultation Request" : "B2B BPO Landing Page Request"} 
+
+Source: ${source}
 
 Name: ${name}
 Email: ${email}
