@@ -1,11 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 export default function DataBg() {
-    useEffect(() => {
-        const elements = document.querySelectorAll('[data-background]')
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-background]');
 
-        elements.forEach((element) => {
-            element.style.backgroundImage = `url(${element.getAttribute('data-background')})`
-        })
-    }, [])
+    elements.forEach(element => {
+      element.style.backgroundImage = `url(${element.getAttribute('data-background')})`;
+    });
+  }, []);
 }
