@@ -1,12 +1,4 @@
-import {
-  Check,
-  Star,
-  ArrowRight,
-  Calendar,
-  Clock,
-  Users,
-  Zap,
-} from 'lucide-react';
+import { Check, Star, ArrowRight, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';

@@ -1,17 +1,4 @@
-import {
-  Code,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Shield,
-  Globe,
-  Layers,
-  Settings,
-  ShoppingCart,
-  Bot,
-  Palette,
-} from 'lucide-react';
+import { Smartphone, Globe, Settings, ShoppingCart, Bot, Palette } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';

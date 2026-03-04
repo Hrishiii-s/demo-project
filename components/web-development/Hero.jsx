@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from 'react';
 

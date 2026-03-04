@@ -1,14 +1,4 @@
-import {
-  Users,
-  Briefcase,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Shield,
-  DollarSign,
-  Users as UsersIcon,
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, Shield, DollarSign, Users as UsersIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
