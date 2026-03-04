@@ -1,5 +1,5 @@
-import nodemailer from "nodemailer";
-import { NextResponse } from "next/server";
+import nodemailer from 'nodemailer';
+import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
@@ -7,13 +7,13 @@ export async function POST(request) {
 
     if (!name || !email || !company || !message || !source) {
       return NextResponse.json(
-        { message: "All fields are required" },
-        { status: 400 },
+        { message: 'All fields are required' },
+        { status: 400 }
       );
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: 'smtp.gmail.com',
       port: 587,
       secure: false,
       auth: {
@@ -22,17 +22,19 @@ export async function POST(request) {
       },
     });
 
-    const isQA = source === "QA";
+    const isQA = source === 'QA';
+    const isWebsiteCTA = source === 'Website CTA';
 
-    await transporter.sendMail({
-      from: `"Ecesis Website" <${process.env.EMAIL}>`,
-      to: ["info@ecesistech.com"],
-      subject: isQA
-        ? `QA Consultation Request – ${company}`
-        : `B2B BPO Landing Page Request – ${company}`,
-      text: `
-${isQA ? "QA Consultation Request" : "B2B BPO Landing Page Request"} 
+    let subject = '';
+    if (isQA) {
+      subject = `QA Consultation Request - ${company}`;
+    } else if (isWebsiteCTA) {
+      subject = `New Project Inquiry - ${company}`;
+    } else {
+      subject = `B2B BPO Landing Page Request - ${company}`;
+    }
 
+    let emailBody = `
 Source: ${source}
 
 Name: ${name}
@@ -41,18 +43,32 @@ Company: ${company}
 
 Message:
 ${message}
-      `,
+    `;
+
+    if (isQA) {
+      emailBody = `QA Consultation Request\n\n${emailBody}`;
+    } else if (isWebsiteCTA) {
+      emailBody = `Website CTA - New Project Inquiry\n\n${emailBody}`;
+    } else {
+      emailBody = `B2B BPO Landing Page Request\n\n${emailBody}`;
+    }
+
+    await transporter.sendMail({
+      from: `"Ecesis Website" <${process.env.EMAIL}>`,
+      to: ['info@ecesistech.com'],
+      subject: subject,
+      text: emailBody,
     });
 
     return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 },
+      { message: 'Email sent successfully' },
+      { status: 200 }
     );
   } catch (error) {
-    console.error("FinalCTA email error:", error);
+    console.error('FinalCTA email error:', error);
     return NextResponse.json(
-      { message: "Failed to send email" },
-      { status: 500 },
+      { message: 'Failed to send email' },
+      { status: 500 }
     );
   }
 }

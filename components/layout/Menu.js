@@ -59,6 +59,7 @@ export default function Menu() {
                                         <li><Link href="/services-details/digital-marketing">Digital Marketing</Link></li>
                                         <li><Link href="/services-details/qa-valuation-processing">QA Valuation Processing</Link></li>
                                         <li><Link href="/services-details/b2b_bpo_valuation">B2B BPO Valuation</Link></li>
+                                        <li><Link href="/services-details/web-development">Web Development</Link></li>
 
                                     </ul>
                                 )}
