@@ -185,7 +185,7 @@ export function Pricing() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4 md:mb-6 leading-tight">
-            Know Exactly What You're Getting Before You Even Reach Out.
+            Know Exactly What You're Getting Before You Even Reach Out
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed px-4">
             No hidden fees, no surprise invoices. We believe pricing

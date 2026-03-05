@@ -141,7 +141,7 @@ export function CTA() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-5 lg:mb-6 tracking-tight px-4 leading-[1.3]">
             Your Competitors Are Already{' '}
             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mt-1 sm:mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.4] pb-1">
-              Investing in Better Technology.
+              Investing in Better Technology
             </span>
           </h2>
 
@@ -227,7 +227,7 @@ export function CTA() {
               See what we've built for businesses like yours
             </p>
 
-            <Button className="mt-auto w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold rounded-xl py-3 sm:py-4 text-sm sm:text-base shadow-md relative z-10 group/btn">
+            <Button className="mt-auto w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:text-white hover:border-transparent font-bold rounded-xl py-3 sm:py-4 text-sm sm:text-base shadow-md relative z-10 group/btn transition-all duration-300">
               ecesistech.com
               <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
             </Button>
