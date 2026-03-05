@@ -150,7 +150,7 @@ export function ServicesGrid() {
               Stop Settling for a Digital Presence
             </span>
             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent lg:whitespace-nowrap">
-              That Doesn't Perform.
+              That Doesn't Perform
             </span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto px-4">
