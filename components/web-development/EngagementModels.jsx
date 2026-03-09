@@ -1,4 +1,11 @@
-import { ArrowRight, CheckCircle, Clock, Shield, DollarSign, Users as UsersIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Shield,
+  DollarSign,
+  Users as UsersIcon,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
@@ -62,14 +69,14 @@ export function EngagementModels() {
 
     if (hasError) {
       return (
-        <span className="text-base sm:text-lg md:text-xl font-bold text-gray-400 whitespace-nowrap">
+        <span className="text-sm sm:text-base md:text-lg font-bold text-gray-400 whitespace-nowrap">
           {client.name}
         </span>
       );
     }
 
     return (
-      <div className="w-28 h-24 sm:w-32 sm:h-28 md:w-36 md:h-32 lg:w-40 lg:h-32 flex items-center justify-center">
+      <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-36 lg:h-32 flex items-center justify-center">
         <img
           src={client.logo}
           alt={client.name}
@@ -84,7 +91,7 @@ export function EngagementModels() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden"
+      className="py-14 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white relative overflow-hidden"
       id="engagement"
     >
       {/* Subtle background pattern */}
@@ -104,47 +111,48 @@ export function EngagementModels() {
       </div>
 
       {/* Background decoration orbs - more subtle */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-purple-100/50 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-80 h-80 lg:w-96 lg:h-96 bg-purple-100/50 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 lg:w-96 lg:h-96 bg-blue-100/50 rounded-full blur-3xl" />
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
         {/* Header */}
         <motion.div
-          className="max-w-7xl mx-auto text-center mb-12 sm:mb-14 md:mb-16"
+          className="max-w-5xl mx-auto text-center mb-10 sm:mb-12 md:mb-14"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-5 px-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-2 px-4">
             <span className="block leading-[1.3]">
               We Don't Just Build Websites
             </span>
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mt-2 sm:mt-3 lg:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl lg:whitespace-nowrap leading-[1.5] pb-1">
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl lg:whitespace-nowrap leading-[1.4] pb-0.5">
               We Change How Businesses Operate
             </span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed px-4 max-w-5xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed px-4 max-w-3xl mx-auto">
             Every project we take on is treated as a partnership, with full
             transparency, Agile delivery, and a relentless focus on outcomes.
             We've built for gaming, healthcare, nonprofits, SaaS, and social
             services. Here's a glimpse of who we've worked with.
           </p>
         </motion.div>
+
         {/* Client Logo Slider - With uniform sized logos */}
         <motion.div
-          className="mb-12 sm:mb-14 md:mb-16 overflow-hidden"
+          className="mb-10 sm:mb-12 md:mb-14 overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="relative">
             {/* Gradient fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 bg-gradient-to-r from-white via-white to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 bg-gradient-to-l from-white via-white to-transparent z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 lg:w-24 bg-gradient-to-r from-white via-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 lg:w-24 bg-gradient-to-l from-white via-white to-transparent z-10" />
 
             {/* Auto-scrolling logo track */}
             <motion.div
-              className="flex gap-8 sm:gap-12 md:gap-16 items-center py-4"
+              className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center py-3"
               animate={{
                 x: [0, -2000],
               }}
@@ -158,7 +166,7 @@ export function EngagementModels() {
               {allClients.map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                  className="flex-shrink-0 opacity-60 hover:opacity-100 transition-all duration-300"
                 >
                   <ClientLogo client={client} />
                 </div>
@@ -169,26 +177,26 @@ export function EngagementModels() {
 
         {/* Trust Signals Bar */}
         <motion.div
-          className="mb-16 sm:mb-18 md:mb-20 bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg border border-gray-100"
+          className="mb-12 sm:mb-14 md:mb-16 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 shadow-md border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-x-8 md:gap-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-x-6 md:gap-y-3">
             {trustSignals.map((signal, index) => {
               const Icon = signal.icon;
               return (
                 <motion.div
                   key={index}
-                  className="flex items-center justify-center sm:justify-start gap-2 text-gray-700 bg-white/50 px-3 py-2 rounded-lg sm:bg-transparent sm:px-0 sm:py-0"
-                  whileHover={{ scale: 1.05, color: '#7C3AED' }}
+                  className="flex items-center justify-center sm:justify-start gap-1.5 text-gray-700 bg-white/50 px-2 py-1.5 rounded-lg sm:bg-transparent sm:px-0 sm:py-0"
+                  whileHover={{ scale: 1.03, color: '#7C3AED' }}
                 >
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm md:text-base font-medium whitespace-nowrap">
+                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-600 flex-shrink-0" />
+                  <span className="text-xs sm:text-xs md:text-sm font-medium whitespace-nowrap">
                     {signal.text}
                   </span>
                   {index < trustSignals.length - 1 && (
-                    <span className="text-gray-300 mx-2 hidden lg:inline">
+                    <span className="text-gray-300 mx-1 hidden lg:inline">
                       |
                     </span>
                   )}
@@ -199,19 +207,19 @@ export function EngagementModels() {
         </motion.div>
 
         {/* Engagement Models Callout */}
-        <motion.div
-          className="text-center mb-8 sm:mb-10 md:mb-12"
+        {/* <motion.div
+          className="text-center mb-6 sm:mb-8 md:mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 rounded-full text-xs sm:text-sm font-semibold shadow-sm border border-purple-200/50">
+          <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 rounded-full text-xs font-semibold shadow-sm border border-purple-200/50">
             How We Work With You
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Models Grid - 2x2 with improved card styling */}
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 mb-12 sm:mb-14 md:mb-16">
+        {/* <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 mb-10 sm:mb-12 md:mb-14">
           {models.map((model, index) => (
             <motion.div
               key={index}
@@ -220,53 +228,53 @@ export function EngagementModels() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
             >
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-200 hover:border-purple-300 shadow-md hover:shadow-2xl transition-all duration-300 h-full relative overflow-hidden group">
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-gray-200 hover:border-purple-300 shadow-sm hover:shadow-xl transition-all duration-300 h-full relative overflow-hidden group"> */}
                 {/* Subtle card gradient background on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/0 to-blue-50/0 group-hover:from-purple-50/50 group-hover:to-blue-50/50 transition-all duration-500" />
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-purple-50/0 to-blue-50/0 group-hover:from-purple-50/50 group-hover:to-blue-50/50 transition-all duration-500" />
 
-                <div className="flex items-start gap-3 sm:gap-4 relative z-10">
+                <div className="flex items-start gap-2 sm:gap-3 relative z-10"> */}
                   {/* Gradient dot with glow effect */}
-                  <div
-                    className={`w-2 h-2 sm:w-3 sm:h-3 mt-1.5 sm:mt-2 rounded-full bg-gradient-to-r ${model.gradient} flex-shrink-0 shadow-lg shadow-purple-600/20`}
+                  {/* <div
+                    className={`w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 rounded-full bg-gradient-to-r ${model.gradient} flex-shrink-0 shadow-sm shadow-purple-600/20`}
                   />
 
                   <div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-0.5 sm:mb-1 group-hover:text-purple-600 transition-colors duration-300">
                       {model.title}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-lg text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-xs sm:text-xs md:text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
                       {model.description}
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Subtle decorative element */}
-                <div
-                  className={`absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r ${model.gradient} opacity-0 group-hover:opacity-5 rounded-full blur-xl transition-opacity duration-500`}
+                {/* <div
+                  className={`absolute -bottom-2 -right-2 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r ${model.gradient} opacity-0 group-hover:opacity-5 rounded-full blur-lg transition-opacity duration-500`}
                 />
               </div>
             </motion.div>
-          ))}
-        </div>
+          ))} */}
+        {/* </div> */}
 
         {/* Bottom CTA */}
-        <motion.div
+        {/* <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.8 }}
         >
           <motion.button
-            className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold text-sm sm:text-base md:text-lg flex items-center gap-2 sm:gap-3 mx-auto shadow-xl shadow-purple-600/30 hover:shadow-2xl hover:shadow-purple-600/40 transition-all duration-300"
+            className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold text-xs sm:text-sm md:text-base flex items-center gap-1.5 sm:gap-2 mx-auto shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-300"
             whileHover={{
-              scale: 1.05,
+              scale: 1.03,
             }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.97 }}
           >
             <span>Get Free Technical Consultation</span>
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
