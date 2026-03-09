@@ -21,9 +21,9 @@ export function MidCTA() {
             transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
           />
 
-          {/* Floating orbs - Very faint */}
+          {/* Floating orbs - Very faint - Optimized sizes */}
           <motion.div
-            className="absolute top-10 left-1/4 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl"
+            className="absolute top-10 left-1/4 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-purple-400/30 rounded-full blur-3xl"
             animate={{
               y: [0, 100, 0],
               x: [0, 100, 0],
@@ -31,7 +31,7 @@ export function MidCTA() {
             transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute bottom-10 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+            className="absolute bottom-10 right-1/4 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-blue-500/5 rounded-full blur-3xl"
             animate={{
               y: [0, -50, 0],
               x: [0, -30, 0],
@@ -54,12 +54,12 @@ export function MidCTA() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-20 py-8 sm:py-10 md:py-16">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-20 py-8 sm:py-10 md:py-12 lg:py-14">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 md:gap-8">
             {/* Left Content */}
             <div className="text-center md:text-left">
               <motion.h2
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3 px-4 sm:px-0"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1.5 md:mb-2 px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -69,7 +69,7 @@ export function MidCTA() {
                 Not sure where to start?
               </motion.h2>
               <motion.p
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-2xl px-4 sm:px-0"
+                className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 max-w-xl px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -83,17 +83,17 @@ export function MidCTA() {
 
             {/* Right CTA */}
             <motion.button
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold flex items-center gap-2 group shadow-lg whitespace-normal sm:whitespace-nowrap text-sm sm:text-base md:text-lg mx-4 sm:mx-0"
+              className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold flex items-center gap-1.5 sm:gap-2 group shadow-lg whitespace-normal sm:whitespace-nowrap text-xs sm:text-sm md:text-base mx-4 sm:mx-0"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
               }
               transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               <span>Get Free Technical Consultation</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </div>
         </div>
