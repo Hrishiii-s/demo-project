@@ -198,7 +198,7 @@ export function HowWeWork() {
                     <p className="text-xs sm:text-sm md:text-sm text-gray-300 mb-2 leading-relaxed">
                       {model.tagline}
                     </p>
-                    <p className="text-xs  text-purple-400 font-semibold">
+                    <p className="text-xs sm:text-sm md:text-sm text-purple-400 font-semibold">
                       {model.description}
                     </p>
                   </div>
