@@ -29,7 +29,7 @@ export async function POST(request) {
     if (isQA) {
       subject = `QA Consultation Request - ${company}`;
     } else if (isWebsiteCTA) {
-      subject = `New Project Inquiry - ${company}`;
+      subject = `New Website Project Inquiry - ${company}`;
     } else {
       subject = `B2B BPO Landing Page Request - ${company}`;
     }
