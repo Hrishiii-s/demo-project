@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { scrollToSection } from "@/util/scrollToSection";
 
 export function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,7 +20,7 @@ export function Hero() {
       ref={containerRef}
       className="relative bg-black min-h-screen overflow-hidden z-0"
     >
-      {/* Animated gradient background - Optimized sizes */}
+      {/* Animated gradient background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20" />
         <motion.div
@@ -52,10 +53,10 @@ export function Hero() {
         }}
       />
 
-      {/* Hero Content - Left/Right Layout */}
+      {/* Hero Content*/}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-20 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1200px] mx-auto w-full">
-          {/* Main Headline - Centered */}
+          {/* Main Headline*/}
           <motion.div
             className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14 px-4"
             initial={{ opacity: 0, y: 30 }}
@@ -76,14 +77,14 @@ export function Hero() {
 
           {/* Left and Right Content */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
-            {/* Left Content - Main message */}
+            {/* Left Content */}
             <motion.div
               className="text-white space-y-4 sm:space-y-5 md:space-y-6 px-4 lg:px-0"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {/* Sub-headline - Now in left section without badge styling */}
+              {/* Sub-headline */}
               <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-purple-200 font-medium leading-relaxed">
                 We Design, Develop and Deliver Digital Solutions That Move Your
                 Business Forward.
@@ -105,23 +106,28 @@ export function Hero() {
                 turn your vision into a competitive advantage.
               </p>
 
-              {/* CTAs - Fully responsive */}
+              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 sm:pt-4 w-full">
-                <motion.button
-                  className="w-full sm:w-auto flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold transition-all flex items-center justify-center gap-2 group shadow-lg shadow-purple-500/30 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
-                  whileHover={{
-                    scale: 1.03,
-                    boxShadow: '0 20px 60px rgba(147, 51, 234, 0.4)',
-                  }}
-                  whileTap={{ scale: 0.97 }}
+                <a
+                  href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+                  target="_blank"
                 >
-                  <span className="text-center">
-                    Let's Transform Your Business
-                  </span>
-                  <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-
+                  <motion.button
+                    className="w-full sm:w-auto flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold transition-all flex items-center justify-center gap-2 group shadow-lg shadow-purple-500/30 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
+                    whileHover={{
+                      scale: 1.03,
+                      boxShadow: '0 20px 60px rgba(147, 51, 234, 0.4)',
+                    }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <span className="text-center">
+                      Let's Transform Your Business
+                    </span>
+                    <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
+                </a>
                 <motion.button
+                  onClick={() => scrollToSection('engagement')}
                   className="w-full sm:w-auto flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 border border-white/20 text-white rounded-full font-semibold backdrop-blur-xl bg-white/5 transition-all flex items-center justify-center gap-2 group hover:border-white/40 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -132,7 +138,7 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* Right Content - Stats Card (KEPT EXACTLY THE SAME) */}
+            {/* Right Content - Stats Card */}
             <motion.div
               className="lg:flex lg:items-start lg:justify-end px-4 lg:px-0"
               initial={{ opacity: 0, x: 30 }}

@@ -89,6 +89,11 @@
 /*=============================
 	Typography css start
 ===============================*/
+
+html {
+  scroll-behavior: smooth;
+}
+
 .main-font {
   font-family: var(--tg-body-font-family);
 }

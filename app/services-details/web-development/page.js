@@ -12,10 +12,8 @@ const page = () => {
     <div className="min-h-screen bg-white">
       <Layout headerStyle={3} footerStyle={3} Nothome={Nothome}>
         <Hero/>
-        {/* <TrustBar/> */}
         <ServicesGrid/>
         <MidCTA/>
-        {/* <Portfolio/> */}
         <EngagementModels/>
         <HowWeWork/>
         {/* <Pricing/> */}

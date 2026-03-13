@@ -215,7 +215,7 @@ function SoftwareServices() {
                     </li>
                     <li>
                       <i className="flaticon-arrow-button" />
-                      Website Development
+                      Website and Web Application Development
                     </li>
                   </ul>
                 </div>

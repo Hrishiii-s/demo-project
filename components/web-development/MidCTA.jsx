@@ -21,7 +21,7 @@ export function MidCTA() {
             transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
           />
 
-          {/* Floating orbs - Very faint - Optimized sizes */}
+          {/* Floating orbs */}
           <motion.div
             className="absolute top-10 left-1/4 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-purple-400/30 rounded-full blur-3xl"
             animate={{
@@ -82,19 +82,26 @@ export function MidCTA() {
             </div>
 
             {/* Right CTA */}
-            <motion.button
-              className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold flex items-center gap-1.5 sm:gap-2 group shadow-lg whitespace-normal sm:whitespace-nowrap text-xs sm:text-sm md:text-base mx-4 sm:mx-0"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={
-                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
-              }
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+            <a
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+              target="_blank"
             >
-              <span>Get Free Technical Consultation</span>
-              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+              <motion.button
+                className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold flex items-center gap-1.5 sm:gap-2 group shadow-lg whitespace-normal sm:whitespace-nowrap text-xs sm:text-sm md:text-base mx-4 sm:mx-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.9 }
+                }
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span>Get Free Technical Consultation</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+            </a>
           </div>
         </div>
       </div>

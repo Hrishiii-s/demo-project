@@ -81,7 +81,7 @@ export function HeroSection() {
               <strong>
                 Ecesis powers your QA operations with dedicated teams at 60%
                 lower cost,
-              </strong>{" "}
+              </strong>{' '}
               delivering enterprise-grade quality without the premium price tag.
             </p>
 
@@ -92,16 +92,16 @@ export function HeroSection() {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="https://calendly.com/vishnu-vinayan-ecesistech/30min"
+                href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
                 target="_blank"
-                >
+              >
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center gap-2 group">
                   Scale Your QA Team Now
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </a>
               <button
-                onClick={() => scrollToSection("final-cta-form")}
+                onClick={() => scrollToSection('final-cta-form')}
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 hover:bg-white/20 transition-all duration-200"
               >
                 See Pricing Models
