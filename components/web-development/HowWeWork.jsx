@@ -29,7 +29,7 @@ export function HowWeWork() {
       name: 'Project Based',
       tagline:
         'You have a clear goal and a defined scope. We take full ownership, deliver on time, and keep you informed at every stage.',
-      description: 'Best for one-time builds and defined deliverables.',
+      description: 'Best for one time builds and defined deliverables.',
       icon: Target,
     },
     {
@@ -58,7 +58,7 @@ export function HowWeWork() {
 
   const addons = [
     {
-      name: 'SEO Booster Pack',
+      name: 'SEO Booster',
       description:
         'Keyword research, meta optimization and schema setup to give your site the best possible start in search rankings.',
       icon: Search,
@@ -66,7 +66,7 @@ export function HowWeWork() {
     {
       name: 'Content Writing',
       description:
-        'Professional, conversion-focused copy written for every page of your website so you never have to worry about what to say.',
+        'Professional, conversion focused copy written for every page of your website so you never have to worry about what to say.',
       icon: FileText,
     },
     {
@@ -296,15 +296,19 @@ export function HowWeWork() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 px-4">
-            <motion.button
-              className="group relative px-5 md:px-6 py-3 md:py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow text-sm md:text-base w-full sm:w-auto justify-center"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+            <a
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+              target="_blank"
             >
-              <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              <span>Book a Free 30 Minute Consultation</span>
-            </motion.button>
-
+              <motion.button
+                className="group relative px-5 md:px-6 py-3 md:py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-semibold text-white flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow text-sm md:text-base w-full sm:w-auto justify-center"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                <span>Book a Free 30 Minute Consultation</span>
+              </motion.button>
+            </a>
             <div className="flex items-center gap-2 text-gray-300 text-sm md:text-base">
               <span>Or</span>
               <a

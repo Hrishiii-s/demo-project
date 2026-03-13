@@ -23,7 +23,7 @@ export function WhatWeOffer() {
             accept. With Ecesis, you get a trained, appraisal‑focused QA team
             that scales up for peak cycles and scales down when volumes
             normalize, so you protect margins while maintaining consistent
-            quality{" "}
+            quality{' '}
           </p>
         </div>
 
@@ -37,8 +37,8 @@ export function WhatWeOffer() {
               hover:-translate-y-1
               ${
                 activeIndex === 0
-                  ? "shadow-xl border-blue-500 bg-gradient-to-br from-blue-600 to-blue-700 text-white"
-                  : "border-slate-200 hover:shadow-xl hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 hover:text-white"
+                  ? 'shadow-xl border-blue-500 bg-gradient-to-br from-blue-600 to-blue-700 text-white'
+                  : 'border-slate-200 hover:shadow-xl hover:border-blue-500 hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 hover:text-white'
               }
             `}
           >
@@ -47,8 +47,8 @@ export function WhatWeOffer() {
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
                   activeIndex === 0
-                    ? "bg-white/20"
-                    : "bg-blue-50 group-hover:bg-white/20"
+                    ? 'bg-white/20'
+                    : 'bg-blue-50 group-hover:bg-white/20'
                 }
               `}
             >
@@ -57,8 +57,8 @@ export function WhatWeOffer() {
                   h-7 w-7 transition-colors duration-300
                   ${
                     activeIndex === 0
-                      ? "text-white"
-                      : "text-blue-600 group-hover:text-white"
+                      ? 'text-white'
+                      : 'text-blue-600 group-hover:text-white'
                   }
                 `}
               />
@@ -68,8 +68,8 @@ export function WhatWeOffer() {
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 0
-                    ? "text-white"
-                    : "text-slate-900 group-hover:text-white"
+                    ? 'text-white'
+                    : 'text-slate-900 group-hover:text-white'
                 }
               `}
             >
@@ -80,8 +80,8 @@ export function WhatWeOffer() {
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 0
-                    ? "text-white/90"
-                    : "text-slate-600 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-slate-600 group-hover:text-white/90'
                 }
               `}
             >
@@ -89,13 +89,13 @@ export function WhatWeOffer() {
             </p>
             <ul className="space-y-1.5 text-xs lg:text-sm max-w-md mx-auto">
               {[
-                "URAR (1004), Condo (1073), 2-4 Unit (1025), Land (1004C)",
-                "Desktop appraisals, BPO reviews, AVM validations",
-                "USPAP compliance verification",
-                "Fannie Mae, Freddie Mac guideline checks",
-                "Comparable analysis validation",
-                "Quality Control & Compliance",
-                "Scalable Review Capacity",
+                'URAR (1004), Condo (1073), 2-4 Unit (1025), Land (1004C)',
+                'Desktop appraisals, BPO reviews, AVM validations',
+                'USPAP compliance verification',
+                'Fannie Mae, Freddie Mac guideline checks',
+                'Comparable analysis validation',
+                'Quality Control & Compliance',
+                'Scalable Review Capacity',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span
@@ -103,8 +103,8 @@ export function WhatWeOffer() {
                       mt-0.5 transition-colors duration-300
                       ${
                         activeIndex === 0
-                          ? "text-white/90"
-                          : "text-blue-600 group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'text-blue-600 group-hover:text-white/90'
                       }
                     `}
                   >
@@ -115,8 +115,8 @@ export function WhatWeOffer() {
                       transition-colors duration-300
                       ${
                         activeIndex === 0
-                          ? "text-white/90"
-                          : "group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'group-hover:text-white/90'
                       }
                     `}
                   >
@@ -130,8 +130,8 @@ export function WhatWeOffer() {
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 0
-                    ? "text-white/90"
-                    : "text-blue-700 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-blue-700 group-hover:text-white/90'
                 }
               `}
             >
@@ -149,8 +149,8 @@ export function WhatWeOffer() {
               hover:-translate-y-1
               ${
                 activeIndex === 1
-                  ? "shadow-xl border-purple-500 bg-gradient-to-br from-purple-600 to-purple-700 text-white"
-                  : "border-slate-200 hover:shadow-xl hover:border-purple-500 hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-700 hover:text-white"
+                  ? 'shadow-xl border-purple-500 bg-gradient-to-br from-purple-600 to-purple-700 text-white'
+                  : 'border-slate-200 hover:shadow-xl hover:border-purple-500 hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-700 hover:text-white'
               }
             `}
           >
@@ -159,8 +159,8 @@ export function WhatWeOffer() {
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
                   activeIndex === 1
-                    ? "bg-white/20"
-                    : "bg-purple-50 group-hover:bg-white/20"
+                    ? 'bg-white/20'
+                    : 'bg-purple-50 group-hover:bg-white/20'
                 }
               `}
             >
@@ -169,8 +169,8 @@ export function WhatWeOffer() {
                   h-7 w-7 transition-colors duration-300
                   ${
                     activeIndex === 1
-                      ? "text-white"
-                      : "text-purple-600 group-hover:text-white"
+                      ? 'text-white'
+                      : 'text-purple-600 group-hover:text-white'
                   }
                 `}
               />
@@ -180,8 +180,8 @@ export function WhatWeOffer() {
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 1
-                    ? "text-white"
-                    : "text-slate-900 group-hover:text-white"
+                    ? 'text-white'
+                    : 'text-slate-900 group-hover:text-white'
                 }
               `}
             >
@@ -192,8 +192,8 @@ export function WhatWeOffer() {
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 1
-                    ? "text-white/90"
-                    : "text-slate-600 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-slate-600 group-hover:text-white/90'
                 }
               `}
             >
@@ -204,8 +204,8 @@ export function WhatWeOffer() {
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 1
-                    ? "text-white/90"
-                    : "text-slate-600 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-slate-600 group-hover:text-white/90'
                 }
               `}
             >
@@ -214,12 +214,12 @@ export function WhatWeOffer() {
             </p>
             <ul className="space-y-1.5 text-xs lg:text-sm max-w-md mx-auto">
               {[
-                "Residential appraisals (URAR, 1004, 1025, 1073, 2055)",
-                "Desktop valuations and BPOs",
-                "Property data research and comparable analysis",
-                "Report compilation and compliance checks",
-                "Photo editing and sketch creation",
-                "Final delivery in your required format",
+                'Residential appraisals (URAR, 1004, 1025, 1073, 2055)',
+                'Desktop valuations and BPOs',
+                'Property data research and comparable analysis',
+                'Report compilation and compliance checks',
+                'Photo editing and sketch creation',
+                'Final delivery in your required format',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span
@@ -227,8 +227,8 @@ export function WhatWeOffer() {
                       mt-0.5 transition-colors duration-300
                       ${
                         activeIndex === 1
-                          ? "text-white/90"
-                          : "text-purple-600 group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'text-purple-600 group-hover:text-white/90'
                       }
                     `}
                   >
@@ -239,8 +239,8 @@ export function WhatWeOffer() {
                       transition-colors duration-300
                       ${
                         activeIndex === 1
-                          ? "text-white/90"
-                          : "group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'group-hover:text-white/90'
                       }
                     `}
                   >
@@ -254,8 +254,8 @@ export function WhatWeOffer() {
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 1
-                    ? "text-white/90"
-                    : "text-purple-700 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-purple-700 group-hover:text-white/90'
                 }
               `}
             >
@@ -263,15 +263,16 @@ export function WhatWeOffer() {
               costs, with consistent on‑time delivery.
             </p>
             <a
-              href="https://calendly.com/vishnu-vinayan-ecesistech/30min" target="_blank"
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+              target="_blank"
             >
               <button
                 className={`
                 mt-3 text-xs lg:text-sm font-semibold underline mx-auto block transition-colors duration-300
                 ${
                   activeIndex === 1
-                    ? "text-white"
-                    : "text-purple-600 group-hover:text-white"
+                    ? 'text-white'
+                    : 'text-purple-600 group-hover:text-white'
                 }
               `}
               >
@@ -289,8 +290,8 @@ export function WhatWeOffer() {
               hover:-translate-y-1
               ${
                 activeIndex === 2
-                  ? "shadow-xl border-cyan-500 bg-gradient-to-br from-cyan-600 to-cyan-700 text-white"
-                  : "border-slate-200 hover:shadow-xl hover:border-cyan-500 hover:bg-gradient-to-br hover:from-cyan-600 hover:to-cyan-700 hover:text-white"
+                  ? 'shadow-xl border-cyan-500 bg-gradient-to-br from-cyan-600 to-cyan-700 text-white'
+                  : 'border-slate-200 hover:shadow-xl hover:border-cyan-500 hover:bg-gradient-to-br hover:from-cyan-600 hover:to-cyan-700 hover:text-white'
               }
             `}
           >
@@ -299,8 +300,8 @@ export function WhatWeOffer() {
                 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto transition-all duration-300
                 ${
                   activeIndex === 2
-                    ? "bg-white/20"
-                    : "bg-cyan-50 group-hover:bg-white/20"
+                    ? 'bg-white/20'
+                    : 'bg-cyan-50 group-hover:bg-white/20'
                 }
               `}
             >
@@ -309,8 +310,8 @@ export function WhatWeOffer() {
                   h-7 w-7 transition-colors duration-300
                   ${
                     activeIndex === 2
-                      ? "text-white"
-                      : "text-cyan-600 group-hover:text-white"
+                      ? 'text-white'
+                      : 'text-cyan-600 group-hover:text-white'
                   }
                 `}
               />
@@ -320,8 +321,8 @@ export function WhatWeOffer() {
                 text-xl lg:text-2xl font-bold mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 2
-                    ? "text-white"
-                    : "text-slate-900 group-hover:text-white"
+                    ? 'text-white'
+                    : 'text-slate-900 group-hover:text-white'
                 }
               `}
             >
@@ -332,8 +333,8 @@ export function WhatWeOffer() {
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 2
-                    ? "text-white/90"
-                    : "text-slate-600 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-slate-600 group-hover:text-white/90'
                 }
               `}
             >
@@ -344,8 +345,8 @@ export function WhatWeOffer() {
                 leading-relaxed text-xs lg:text-sm mb-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 2
-                    ? "text-white/90"
-                    : "text-slate-600 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-slate-600 group-hover:text-white/90'
                 }
               `}
             >
@@ -354,11 +355,11 @@ export function WhatWeOffer() {
             </p>
             <ul className="space-y-1.5 text-xs lg:text-sm max-w-md mx-auto">
               {[
-                "Order coordination and appraiser assignment",
-                "Property data research and MLS pulls",
-                "Client communication and status updates",
-                "Document processing and file management",
-                "Revision coordination and resubmission tracking",
+                'Order coordination and appraiser assignment',
+                'Property data research and MLS pulls',
+                'Client communication and status updates',
+                'Document processing and file management',
+                'Revision coordination and resubmission tracking',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span
@@ -366,8 +367,8 @@ export function WhatWeOffer() {
                       mt-0.5 transition-colors duration-300
                       ${
                         activeIndex === 2
-                          ? "text-white/90"
-                          : "text-cyan-600 group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'text-cyan-600 group-hover:text-white/90'
                       }
                     `}
                   >
@@ -378,8 +379,8 @@ export function WhatWeOffer() {
                       transition-colors duration-300
                       ${
                         activeIndex === 2
-                          ? "text-white/90"
-                          : "group-hover:text-white/90"
+                          ? 'text-white/90'
+                          : 'group-hover:text-white/90'
                       }
                     `}
                   >
@@ -393,8 +394,8 @@ export function WhatWeOffer() {
                 text-xs lg:text-sm font-semibold mt-3 text-center transition-colors duration-300
                 ${
                   activeIndex === 2
-                    ? "text-white/90"
-                    : "text-cyan-700 group-hover:text-white/90"
+                    ? 'text-white/90'
+                    : 'text-cyan-700 group-hover:text-white/90'
                 }
               `}
             >

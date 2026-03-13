@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  ArrowRight,
-  Mail,
-  Phone,
-  Globe,
-  Clock,
-  Sparkles,
-  Send,
-  Briefcase,
-} from 'lucide-react';
+import { ArrowRight, Mail, Phone, Globe, Clock, Sparkles, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
@@ -140,7 +131,7 @@ export function CTA() {
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 lg:mb-5 tracking-tight px-4 leading-[1.3]">
             Your Competitors Are Already{' '}
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mt-1 sm:mt-1.5 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-[1.4] pb-0.5">
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mt-1 sm:mt-1.5 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-[1.4] pb-1.5">
               Investing in Better Technology
             </span>
           </h2>
@@ -193,11 +184,21 @@ export function CTA() {
             <p className="text-gray-500 mb-3 sm:mb-4 md:mb-5 text-xs sm:text-xs relative z-10">
               Limited consultation slots available each month
             </p>
-
-            <Button className="mt-auto w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm shadow-sm relative z-10 group/btn">
-              Schedule Your Call
-              <ArrowRight className="w-3 h-3 ml-1.5 group-hover/btn:translate-x-1 transition-transform" />
-            </Button>
+            
+            {/* Fixed button - full width */}
+            <div className="w-full mt-auto relative z-10">
+              <a
+                href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm shadow-sm group/btn">
+                  Schedule Your Call
+                  <ArrowRight className="w-3 h-3 ml-1.5 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </div>
           </motion.div>
 
           {/* Secondary CTA Card */}
@@ -227,10 +228,20 @@ export function CTA() {
               See what we've built for businesses like yours
             </p>
 
-            <Button className="mt-auto w-full bg-white border border-blue-600 text-blue-600 hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:text-white hover:border-transparent font-bold rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm shadow-sm relative z-10 group/btn transition-all duration-300">
-              ecesistech.com
-              <ArrowRight className="w-3 h-3 ml-1.5 group-hover/btn:translate-x-1 transition-transform" />
-            </Button>
+            {/* Fixed button - full width */}
+            <div className="w-full mt-auto relative z-10">
+              <a 
+                href="https://ecesistech.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm shadow-sm group/btn">
+                  ecesistech.com
+                  <ArrowRight className="w-3 h-3 ml-1.5 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </motion.div>
 

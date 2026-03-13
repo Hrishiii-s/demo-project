@@ -86,14 +86,14 @@ export function FinalCTA() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
           {[
             {
-              title: "For QA Scaling",
-              desc: "30-minute call to analyze your current bottlenecks and capacity needs",
+              title: 'For QA Scaling',
+              desc: '30-minute call to analyze your current bottlenecks and capacity needs',
               icon: Calendar,
-              gradient: "from-blue-50 to-purple-50",
-              iconBg: "from-blue-500 to-purple-500",
+              gradient: 'from-blue-50 to-purple-50',
+              iconBg: 'from-blue-500 to-purple-500',
               action: (
                 <a
-                  href="https://calendly.com/vishnu-vinayan-ecesistech/30min"
+                  href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
                   target="_blank"
                   className="w-full"
                 >
@@ -104,14 +104,14 @@ export function FinalCTA() {
               ),
             },
             {
-              title: "For Appraisal Production",
-              desc: "Get custom pricing based on your order types and monthly volume.",
+              title: 'For Appraisal Production',
+              desc: 'Get custom pricing based on your order types and monthly volume.',
               icon: FileText,
-              gradient: "from-purple-50 to-pink-50",
-              iconBg: "from-purple-500 to-pink-500",
+              gradient: 'from-purple-50 to-pink-50',
+              iconBg: 'from-purple-500 to-pink-500',
               action: (
                 <Button
-                  onClick={() => scrollToSection("final-cta-form")}
+                  onClick={() => scrollToSection('final-cta-form')}
                   className="mt-auto w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl py-3"
                 >
                   Get Volume Pricing Quote
@@ -119,14 +119,14 @@ export function FinalCTA() {
               ),
             },
             {
-              title: "Questions?",
-              desc: "Detailed services guide and pricing models",
+              title: 'Questions?',
+              desc: 'Detailed services guide and pricing models',
               icon: Download,
-              gradient: "from-indigo-50 to-blue-50",
-              iconBg: "from-indigo-500 to-blue-500",
+              gradient: 'from-indigo-50 to-blue-50',
+              iconBg: 'from-indigo-500 to-blue-500',
               action: (
                 <a
-                  href="https://calendly.com/vishnu-vinayan-ecesistech/30min"
+                  href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
                   target="_blank"
                   className="w-full"
                 >
@@ -178,7 +178,7 @@ export function FinalCTA() {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {["name", "email", "company"].map((field) => (
+              {['name', 'email', 'company'].map(field => (
                 <div key={field}>
                   <Label className="block mb-2 font-semibold capitalize">
                     {field} *
@@ -186,9 +186,9 @@ export function FinalCTA() {
                   <Input
                     required
                     disabled={isLoading}
-                    type={field === "email" ? "email" : "text"}
+                    type={field === 'email' ? 'email' : 'text'}
                     value={formData[field]}
-                    onChange={(e) =>
+                    onChange={e =>
                       setFormData({ ...formData, [field]: e.target.value })
                     }
                   />
@@ -204,7 +204,7 @@ export function FinalCTA() {
                   disabled={isLoading}
                   rows={4}
                   value={formData.message}
-                  onChange={(e) =>
+                  onChange={e =>
                     setFormData({ ...formData, message: e.target.value })
                   }
                 />
@@ -214,7 +214,7 @@ export function FinalCTA() {
                 type="submit"
                 disabled={isLoading}
                 className={`w-full font-bold py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white ${
-                  isLoading ? "opacity-70 cursor-not-allowed" : ""
+                  isLoading ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
                 {isLoading ? (
@@ -223,7 +223,7 @@ export function FinalCTA() {
                     Sending...
                   </span>
                 ) : (
-                  "Request Consultation →"
+                  'Request Consultation →'
                 )}
               </Button>
             </form>
@@ -242,8 +242,8 @@ export function FinalCTA() {
             </div>
 
             {[
-              { icon: Phone, title: "Phone", value: "+91 9074002697" },
-              { icon: Mail, title: "Email", value: "info@ecesistech.com" },
+              { icon: Phone, title: 'Phone', value: '+91 9074002697' },
+              { icon: Mail, title: 'Email', value: 'info@ecesistech.com' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 w-12 h-12 rounded-2xl flex items-center justify-center">

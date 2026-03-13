@@ -81,12 +81,12 @@ export function ServicesGrid() {
       className="relative py-14 md:py-20 lg:py-24 bg-gray-50 overflow-hidden"
       id="services"
     >
-      {/* Professional Animated Background - Optimized sizes */}
+      {/* Professional Animated Background */}
       <div className="absolute inset-0">
         {/* Soft gradient base */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-gray-50 to-blue-50/50" />
 
-        {/* Primary Orbs - Reduced size */}
+        {/* Primary Orbs */}
         <motion.div
           className="absolute top-0 -left-20 w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] bg-purple-400/70 rounded-full blur-3xl"
           animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
@@ -98,7 +98,7 @@ export function ServicesGrid() {
           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         />
 
-        {/* Secondary Orbs - Reduced size */}
+        {/* Secondary Orbs */}
         <motion.div
           className="absolute top-1/3 right-1/3 w-60 h-60 lg:w-72 lg:h-72 bg-indigo-500/40 rounded-full blur-3xl"
           animate={{ x: [0, -60, 0], y: [0, 30, 0] }}
@@ -168,7 +168,7 @@ export function ServicesGrid() {
           </p>
         </motion.div>
 
-        {/* Services Grid - 3x2 */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -183,7 +183,7 @@ export function ServicesGrid() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
               >
-                {/* Icon - Optimized sizing */}
+                {/* Icon */}
                 <motion.div
                   className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 mx-auto shadow-md shadow-purple-600/20"
                   whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
@@ -191,7 +191,7 @@ export function ServicesGrid() {
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                 </motion.div>
 
-                {/* Content - Full description without truncation */}
+                {/* Content  */}
                 <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors duration-200">
                   {service.title}
                 </h3>
@@ -202,7 +202,7 @@ export function ServicesGrid() {
                   {service.description}
                 </p>
 
-                {/* Tags - Optimized sizing */}
+                {/* Tags  */}
                 <div className="flex flex-wrap gap-1 sm:gap-1.5 justify-center mt-auto">
                   {service.tags.map((tag, idx) => (
                     <motion.span
