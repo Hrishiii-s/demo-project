@@ -23,7 +23,7 @@ export function CTA() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
 
   const sendEmail = async () => {
-    const res = await fetch('/api/sendCTAEmail', {
+    const res = await fetch('/api/sendFinalCTAEmail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
