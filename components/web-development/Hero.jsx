@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { scrollToSection } from "@/util/scrollToSection";
+import { scrollToSection } from '@/util/scrollToSection';
 
 export function Hero() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,7 +54,7 @@ export function Hero() {
       />
 
       {/* Hero Content*/}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-20 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 sm:pb-20">
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-20 pt-20 sm:pt-18 md:pt-20 lg:pt-20 pb-16 sm:pb-20">
         <div className="max-w-[1200px] mx-auto w-full">
           {/* Main Headline*/}
           <motion.div
@@ -75,11 +75,11 @@ export function Hero() {
             </h2>
           </motion.div>
 
-          {/* Left and Right Content */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
+          {/* Left and Right Content - Equal Height Grid */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
             {/* Left Content */}
             <motion.div
-              className="text-white space-y-4 sm:space-y-5 md:space-y-6 px-4 lg:px-0"
+              className="text-white space-y-5 sm:space-y-5 md:space-y-10 px-4 lg:px-0 h-full flex flex-col"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -90,18 +90,18 @@ export function Hero() {
                 Business Forward.
               </h3>
 
-              <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-sm md:text-lg text-gray-300 leading-relaxed">
                 If your current website isn't converting visitors into clients,
                 or your team is running on outdated tools that slow everything
                 down, you're losing ground to competitors every single day.
               </p>
 
-              <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed font-medium">
+              <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed font-medium flex-grow">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent font-bold">
                   ECESIS is a full-service software development company
                 </span>{' '}
                 with 15+ years of experience helping businesses launch faster,
-                operate smarter, and scale with confidence. From
+                operate smarter, and scale with confidence.<br></br>From
                 high-performance websites to complex enterprise applications, we
                 turn your vision into a competitive advantage.
               </p>
@@ -111,9 +111,10 @@ export function Hero() {
                 <a
                   href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
                   target="_blank"
+                  className="flex-1"
                 >
                   <motion.button
-                    className="w-full sm:w-auto flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold transition-all flex items-center justify-center gap-2 group shadow-lg shadow-purple-500/30 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
+                    className="w-full px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold transition-all flex items-center justify-center gap-2 group shadow-lg shadow-purple-500/30 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
                     whileHover={{
                       scale: 1.03,
                       boxShadow: '0 20px 60px rgba(147, 51, 234, 0.4)',
@@ -128,7 +129,7 @@ export function Hero() {
                 </a>
                 <motion.button
                   onClick={() => scrollToSection('engagement')}
-                  className="w-full sm:w-auto flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 border border-white/20 text-white rounded-full font-semibold backdrop-blur-xl bg-white/5 transition-all flex items-center justify-center gap-2 group hover:border-white/40 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
+                  className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 border border-white/20 text-white rounded-full font-semibold backdrop-blur-xl bg-white/5 transition-all flex items-center justify-center gap-2 group hover:border-white/40 text-xs sm:text-sm md:text-sm whitespace-normal sm:whitespace-nowrap"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -140,16 +141,16 @@ export function Hero() {
 
             {/* Right Content - Stats Card */}
             <motion.div
-              className="lg:flex lg:items-start lg:justify-end px-4 lg:px-0"
+              className="lg:flex lg:items-stretch px-4 lg:px-0 h-full"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 shadow-2xl max-w-md transform hover:scale-[1.02] transition-transform duration-300 border border-white/10 w-full">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-4 lg:p-4 shadow-2xl max-w-md transform hover:scale-[1.02] transition-transform duration-300 border border-white/10 w-full h-full flex flex-col">
                 {/* Stats Counters */}
-                <div className="space-y-5 md:space-y-6 lg:space-y-8">
-                  <div className="space-y-2 md:space-y-3">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <div className="space-y-3 md:space-y-4 lg:space-y-5 flex flex-col h-full">
+                  <div className="space-y-1 md:space-y-2">
+                    <div className="text-2xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       15+
                     </div>
                     <div className="text-base md:text-lg lg:text-xl text-white font-medium">
@@ -158,7 +159,7 @@ export function Hero() {
                   </div>
 
                   <div className="pt-4 md:pt-5 lg:pt-6 border-t border-white/10 space-y-2 md:space-y-3">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    <div className="text-2xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       250+
                     </div>
                     <div className="text-base md:text-lg lg:text-xl text-white font-medium">
@@ -167,7 +168,7 @@ export function Hero() {
                   </div>
 
                   <div className="pt-4 md:pt-5 lg:pt-6 border-t border-white/10 space-y-2 md:space-y-3">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    <div className="text-2xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       100+
                     </div>
                     <div className="text-base md:text-lg lg:text-xl text-white font-medium">
@@ -175,11 +176,11 @@ export function Hero() {
                     </div>
                   </div>
 
-                  <div className="pt-4 md:pt-5 lg:pt-6 border-t border-white/10 space-y-2 md:space-y-3">
-                    <div className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  <div className="pt-4 md:pt-5 lg:pt-6 border-t border-white/10 space-y-2 md:space-y-3 ">
+                    <div className="text-2xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       Trusted Worldwide
                     </div>
-                    <p className="text-xs md:text-sm text-gray-400">
+                    <p className="text-sm md:text-base text-gray-400">
                       Partnering with businesses across the globe to deliver
                       innovative software solutions.
                     </p>
