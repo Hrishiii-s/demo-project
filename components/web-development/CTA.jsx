@@ -4,12 +4,14 @@ import { ArrowRight, Mail, Phone, Globe, Clock, Sparkles, Briefcase } from 'luci
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Input } from '../figma/ui/input';
 import { Textarea } from '../figma/ui/textarea';
 import { Label } from '../figma/ui/label';
 import { Button } from '../figma/ui/button';
 
 export function CTA() {
+  const router = useRouter();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [formData, setFormData] = useState({
@@ -51,6 +53,10 @@ export function CTA() {
         message: '',
         source: 'Website CTA',
       });
+      
+      // Redirect to thank you page
+      router.push('/thank-you');
+
     } catch (err) {
       console.error(err);
       alert('Failed to send message. Please try again.');

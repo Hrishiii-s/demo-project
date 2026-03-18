@@ -1,61 +1,67 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 
-import { Input } from "../figma/ui/input";
-import { Textarea } from "../figma/ui/textarea";
-import { Label } from "../figma/ui/label";
-import { Button } from "../figma/ui/button";
+import { Input } from '../figma/ui/input';
+import { Textarea } from '../figma/ui/textarea';
+import { Label } from '../figma/ui/label';
+import { Button } from '../figma/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function BpoFinalCta() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-    source: "BPO",
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+    source: 'BPO',
   });
 
   const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = async () => {
-    const res = await fetch("/api/sendFinalCTAEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch('/api/sendFinalCTAEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
 
     const data = await res.json();
-    if (!res.ok) throw new Error(data.message || "Failed to send email");
+    if (!res.ok) throw new Error(data.message || 'Failed to send email');
     return data;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (isLoading) return;
 
     try {
       setIsLoading(true);
       await sendEmail();
-      alert("Message sent successfully!");
+      alert('Message sent successfully!');
       setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
-        source: "BPO",
+        name: '',
+        email: '',
+        company: '',
+        message: '',
+        source: 'BPO',
       });
+      router.push('/thank-you');
     } catch (err) {
-      alert("Failed to send message");
+      alert('Failed to send message');
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section  id="bpo_final_cta_form" className="py-24 bg-gradient-to-br from-indigo-100 via-blue-100 to-purple-100 relative overflow-hidden">
+    <section
+      id="bpo_final_cta_form"
+      className="py-24 bg-gradient-to-br from-indigo-100 via-blue-100 to-purple-100 relative overflow-hidden"
+    >
       {/* Background glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-purple-400/30 rounded-full blur-3xl" />
@@ -71,7 +77,7 @@ export default function BpoFinalCta() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Let’s Discuss Your{" "}
+            Let’s Discuss Your{' '}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Mortgage Valuation Operations
             </span>
@@ -99,7 +105,7 @@ export default function BpoFinalCta() {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {["name", "email", "company"].map((field) => (
+              {['name', 'email', 'company'].map(field => (
                 <div key={field}>
                   <Label className="block mb-2 font-semibold capitalize">
                     {field} *
@@ -107,9 +113,9 @@ export default function BpoFinalCta() {
                   <Input
                     required
                     disabled={isLoading}
-                    type={field === "email" ? "email" : "text"}
+                    type={field === 'email' ? 'email' : 'text'}
                     value={formData[field]}
-                    onChange={(e) =>
+                    onChange={e =>
                       setFormData({ ...formData, [field]: e.target.value })
                     }
                   />
@@ -125,7 +131,7 @@ export default function BpoFinalCta() {
                   required
                   disabled={isLoading}
                   value={formData.message}
-                  onChange={(e) =>
+                  onChange={e =>
                     setFormData({ ...formData, message: e.target.value })
                   }
                 />
@@ -135,7 +141,7 @@ export default function BpoFinalCta() {
                 type="submit"
                 disabled={isLoading}
                 className={`w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:shadow-xl transition-all ${
-                  isLoading ? "opacity-70 cursor-not-allowed" : ""
+                  isLoading ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
                 {isLoading ? (
@@ -144,7 +150,7 @@ export default function BpoFinalCta() {
                     Sending...
                   </span>
                 ) : (
-                  "Request Consultation →"
+                  'Request Consultation →'
                 )}
               </Button>
             </form>
@@ -166,12 +172,12 @@ export default function BpoFinalCta() {
 
             <ul className="space-y-5">
               {[
-                "Your current valuation volumes and vendor relationships",
-                "Specific pain points (turn-times, costs, compliance, scaling)",
-                "How Ecesis integrates with your existing workflows",
-                "Expected efficiency and cost improvements",
-                "Transparent pricing and implementation timeline",
-                "Clear next steps only if it makes sense",
+                'Your current valuation volumes and vendor relationships',
+                'Specific pain points (turn-times, costs, compliance, scaling)',
+                'How Ecesis integrates with your existing workflows',
+                'Expected efficiency and cost improvements',
+                'Transparent pricing and implementation timeline',
+                'Clear next steps only if it makes sense',
               ].map((item, index) => (
                 <li key={index} className="flex gap-4 items-start">
                   <CheckCircle2 className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />

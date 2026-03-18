@@ -2,10 +2,8 @@
 
 test
 
-<<<<<<< HEAD
-﻿# apexa-nextjs
 test
-=======
-﻿# apexa-nextjs
+test
+test
 test
 >>>>>>> private/hrishi/dev
