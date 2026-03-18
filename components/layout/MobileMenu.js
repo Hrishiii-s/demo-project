@@ -220,7 +220,7 @@ export default function MobileMenu({ handleMobileMenu }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services-details/web-development">
+                  <Link href="/services-details/website-and-web-application-development">
                     Website and Web Application Development
                   </Link>
                 </li>

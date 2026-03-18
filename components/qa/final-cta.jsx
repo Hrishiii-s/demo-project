@@ -1,57 +1,60 @@
-"use client";
+'use client';
 
-import { Input } from "../figma/ui/input";
-import { Textarea } from "../figma/ui/textarea";
-import { Label } from "../figma/ui/label";
-import { Phone, Mail, Download, Calendar, FileText } from "lucide-react";
-import { useState } from "react";
-import { Button } from "../figma/ui/button";
-import { scrollToSection } from "@/util/scrollToSection";
+import { Input } from '../figma/ui/input';
+import { Textarea } from '../figma/ui/textarea';
+import { Label } from '../figma/ui/label';
+import { Phone, Mail, Download, Calendar, FileText } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '../figma/ui/button';
+import { scrollToSection } from '@/util/scrollToSection';
+import { useRouter } from 'next/navigation';
 
 export function FinalCTA() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-    source: "QA",
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+    source: 'QA',
   });
 
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = async () => {
-    const res = await fetch("/api/sendFinalCTAEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch('/api/sendFinalCTAEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
 
     const data = await res.json();
     if (!res.ok) {
-      throw new Error(data.message || "Failed to send email");
+      throw new Error(data.message || 'Failed to send email');
     }
     return data;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (isLoading) return;
 
     try {
       setIsLoading(true);
       await sendEmail();
-      alert("Message sent successfully!");
+      alert('Message sent successfully!');
       setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
-        source: "QA",
+        name: '',
+        email: '',
+        company: '',
+        message: '',
+        source: 'QA',
       });
+      router.push('/thank-you');
     } catch (err) {
       console.error(err);
-      alert("Failed to send message");
+      alert('Failed to send message');
     } finally {
       setIsLoading(false);
     }

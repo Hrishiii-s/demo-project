@@ -74,9 +74,8 @@ export function EngagementModels() {
         relative w-full min-h-screen
         flex items-center justify-center
         bg-gradient-to-b from-white via-gray-50/30 to-white
-        
-        px-4 sm:px-6 lg:px-8   /* ✅ FORCE SIDE SPACING */
-        overflow-x-hidden      /* ✅ PREVENT HORIZONTAL CUT */
+        px-4 sm:px-6 lg:px-8  
+        overflow-x-hidden      
       "
     >
       {/* Background */}
@@ -108,19 +107,12 @@ export function EngagementModels() {
             </span>
           </h2>
 
-          {/* ✅ BULLETPROOF PARAGRAPH */}
           <p
             className="
             text-xs sm:text-sm md:text-base lg:text-lg
-            text-gray-600 leading-relaxed
-            mt-4 text-center
-            
-            w-full
+            text-gray-600 leading-relaxed mt-4 text-center w-full
             max-w-[95%] sm:max-w-2xl md:max-w-3xl
-            mx-auto
-            
-            px-2 sm:px-0
-            break-words
+            mx-auto px-2 sm:px-0 break-words
           "
           >
             Every project we take on is treated as a partnership, with full
