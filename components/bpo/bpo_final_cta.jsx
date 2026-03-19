@@ -41,7 +41,6 @@ export default function BpoFinalCta() {
     try {
       setIsLoading(true);
       await sendEmail();
-      alert('Message sent successfully!');
       setFormData({
         name: '',
         email: '',
