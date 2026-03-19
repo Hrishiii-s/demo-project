@@ -43,7 +43,6 @@ export function FinalCTA() {
     try {
       setIsLoading(true);
       await sendEmail();
-      alert('Message sent successfully!');
       setFormData({
         name: '',
         email: '',
