@@ -111,7 +111,7 @@ export const BpoHero = () => {
             }}
             className="max-w-xl"
           >
-            <p className="text-lg text-gray-700 mb-3 leading-relaxed">
+            <p className="text-base text-gray-700 mb-3 leading-relaxed">
               We manage the complete mortgage valuation process from order
               coordination and broker engagement to quality control and delivery
               enabling you to scale BPO volumes efficiently while reducing costs
@@ -122,7 +122,7 @@ export const BpoHero = () => {
               lending priorities rather than operational execution.
             </p>
 
-            <p className="text-lg text-gray-700 mb-3 leading-relaxed">
+            <p className="text-base text-gray-700 mb-3 leading-relaxed">
               Ecesis is a specialized mortgage operations and BPO partner with
               over{' '}
               <span className="font-semibold text-gray-900">16+ years</span> of
