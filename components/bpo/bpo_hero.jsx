@@ -74,7 +74,7 @@ export const BpoHero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-14"
+          className="text-center mb-4"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Drive Higher BPO Volumes with <br />
@@ -83,7 +83,7 @@ export const BpoHero = () => {
             </span>
           </h1>
 
-          <p className="text-xl font-semibold bg-gradient-to-r from-indigo-700 via-slate-700 to-gray-800 bg-clip-text text-transparent">
+          <p className="text-base lg:text-xl text-balance font-semibold bg-gradient-to-r from-indigo-700 via-slate-700 to-gray-800 bg-clip-text text-transparent">
             Outsource mortgage operations to boost BPO order volumes at reduced
             costs leveraging a robust, interconnected broker network without
             increasing operational overhead.
@@ -92,47 +92,56 @@ export const BpoHero = () => {
 
         {/* FULL WIDTH CONTENT */}
         <div className="max-w-5xl mx-auto text-center mb-10">
-          <p className="text-base text-left text-gray-700 mb-4 leading-relaxed">
-            We manage the complete mortgage valuation process from order
-            coordination and broker engagement to quality control and delivery
-            enabling you to scale BPO volumes efficiently while reducing costs
-            and operational overhead.Our optimized model leverages a highly
-            connected broker network and streamlined workflows to deliver faster
-            turnaround times, improved cost efficiency, and consistent output
-            quality so your internal teams can stay focused on core lending
-            priorities rather than operational execution.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+          >
+            <p className="text-base text-left text-gray-700 mb-4 leading-relaxed">
+              We manage the complete mortgage valuation process from order
+              coordination and broker engagement to quality control and delivery
+              enabling you to scale BPO volumes efficiently while reducing costs
+              and operational overhead.Our optimized model leverages a highly
+              connected broker network and streamlined workflows to deliver
+              faster turnaround times, improved cost efficiency, and consistent
+              output quality so your internal teams can stay focused on core
+              lending priorities rather than operational execution.
+            </p>
 
-          <p className="text-base text-left text-gray-700 leading-relaxed">
-            Ecesis is a specialized mortgage operations and BPO partner with
-            over <span className="font-semibold text-gray-900">16+ years</span>{' '}
-            of service excellence, supporting <b>150+ clients</b> with scalable,
-            cost-efficient valuation solutions. The company manages end-to-end
-            workflows from order coordination and broker engagement to quality
-            control and delivery leveraging a strong, connected broker network
-            to ensure faster turnaround times and consistent output quality.
-            With a proven track record across 50+ successful engagements, Ecesis
-            helps lenders scale BPO volumes, reduce cost per valuation, and
-            operate efficiently with no additional operational overhead, while
-            maintaining high standards of compliance and audit readiness.
-          </p>
+            <p className="text-base text-left text-gray-700 leading-relaxed">
+              Ecesis is a specialized mortgage operations and BPO partner with
+              over{' '}
+              <span className="font-semibold text-gray-900">16+ years</span> of
+              service excellence, supporting <b>150+ clients</b> with scalable,
+              cost-efficient valuation solutions. The company manages end-to-end
+              workflows from order coordination and broker engagement to quality
+              control and delivery leveraging a strong, connected broker network
+              to ensure faster turnaround times and consistent output quality.
+              With a proven track record across 50+ successful engagements,
+              Ecesis helps lenders scale BPO volumes, reduce cost per valuation,
+              and operate efficiently with no additional operational overhead,
+              while maintaining high standards of compliance and audit
+              readiness.
+            </p>
 
-          <div className="mt-8">
-            <a
-              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center shadow-lg"
+            <div className="mt-8">
+              <a
+                href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Schedule your Free Operations Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </a>
-          </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center shadow-lg"
+                >
+                  Schedule your Free Operations Assessment
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </motion.button>
+              </a>
+            </div>
+          </motion.div>
         </div>
 
         {/* CLIENT RESULTS + TESTIMONIAL */}
@@ -252,8 +261,8 @@ export const BpoHero = () => {
             </ul>
           </div>
 
-          {/* RIGHT - TESTIMONIAL */}
-          <motion.div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-8">
+          {/* RIGHT - TESTIMONIAL - Vertically Centered */}
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-8 flex flex-col justify-center self-center h-auto">
             <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
               What Mortgage Leaders Say
             </p>
@@ -289,13 +298,13 @@ export const BpoHero = () => {
                 <button
                   key={i}
                   onClick={() => setIndex([i, i > index ? 1 : -1])}
-                  className={`h-2 rounded-full ${
+                  className={`h-2 rounded-full transition-all ${
                     i === index ? 'w-6 bg-indigo-600' : 'w-2 bg-indigo-300'
                   }`}
                 />
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
