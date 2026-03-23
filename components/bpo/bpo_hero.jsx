@@ -1,7 +1,16 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Quote } from 'lucide-react';
+import {
+  ArrowRight,
+  Quote,
+  TrendingUp,
+  Clock,
+  Users,
+  ShieldCheck,
+  BarChart3,
+  Building2,
+} from 'lucide-react';
 
 const testimonials = [
   {
@@ -58,7 +67,7 @@ export const BpoHero = () => {
   }, [index]);
 
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
+    <section className="relative pt-20 pb-24 overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
       {/* Background Glow */}
       <motion.div
         animate={{ scale: [1, 1.05, 1] }}
@@ -74,31 +83,32 @@ export const BpoHero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-4"
+          className="text-center mb-12"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Drive Higher BPO Volumes with <br />
-            <span className="bg-gradient-to-r from-purple-500 via-indigo-400  to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-500 via-indigo-400 to-pink-400 bg-clip-text text-transparent">
               Reduced Costs and Operational Overhead
             </span>
           </h1>
 
-          <p className="text-base lg:text-xl text-balance font-semibold bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent">
+          <p className="text-lg md:text-2xl text-balance font-semibold bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent">
             Outsource mortgage operations to boost BPO order volumes at reduced
             costs leveraging a robust, interconnected broker network without
             increasing operational overhead.
           </p>
         </motion.div>
 
-        {/* FULL WIDTH CONTENT */}
-        <div className="max-w-5xl mx-auto text-center mb-10">
+        {/* LEFT TEXT + RIGHT VISUAL SPLIT */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* LEFT - Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-base lg:text-lg text-left text-slate-200 mb-4 leading-relaxed">
+            <p className="text-base lg:text-lg text-slate-200 mb-4 leading-relaxed">
               We manage the complete mortgage valuation process from order
               coordination and broker engagement to quality control and delivery
               enabling you to scale BPO volumes efficiently while reducing costs
@@ -109,7 +119,7 @@ export const BpoHero = () => {
               lending priorities rather than operational execution.
             </p>
 
-            <p className="text-base lg:text-lg text-left text-slate-200 leading-relaxed">
+            <p className="text-base lg:text-lg text-slate-200 leading-relaxed">
               Ecesis is a specialized mortgage operations and BPO partner with
               over{' '}
               <span className="text-blue-400 font-semibold">16+ years</span> of
@@ -150,10 +160,92 @@ export const BpoHero = () => {
               </a>
             </div>
           </motion.div>
+
+          {/* RIGHT - Stats & Metrics Grid */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="grid grid-cols-2 gap-4">
+              {/* CARD */}
+              <motion.div
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition">
+                    <TrendingUp className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <span className="text-2xl font-bold text-white">35%</span>
+                </div>
+                <p className="text-sm text-slate-300">
+                  Average cost reduction per valuation
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-purple-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition">
+                    <Clock className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <span className="text-2xl font-bold text-white">24–48</span>
+                </div>
+                <p className="text-sm text-slate-300">Hour turnaround times</p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-indigo-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-indigo-500/20 rounded-xl group-hover:bg-indigo-500/30 transition">
+                    <Users className="w-6 h-6 text-indigo-400" />
+                  </div>
+                  <span className="text-2xl font-bold text-white">200+</span>
+                </div>
+                <p className="text-sm text-slate-300">
+                  Nationwide realtor network
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-pink-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-pink-500/20 rounded-xl group-hover:bg-pink-500/30 transition">
+                    <BarChart3 className="w-6 h-6 text-pink-400" />
+                  </div>
+                  <span className="text-2xl font-bold text-white">20K+</span>
+                </div>
+                <p className="text-sm text-slate-300">Monthly order capacity</p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="col-span-2 group bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-emerald-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/30"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition">
+                    <Building2 className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <span className="text-xl font-bold text-white">150+</span>
+                </div>
+                <p className="text-sm text-slate-300">
+                  Trusted clients including top mortgage lenders and servicers
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
 
         {/* CLIENT RESULTS + TESTIMONIAL */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 mt-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 mt-8 items-start">
           {/* LEFT - CLIENT RESULTS */}
           <div>
             <h2 className="text-3xl font-bold text-white mb-8">
