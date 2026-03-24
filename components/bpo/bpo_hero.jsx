@@ -107,41 +107,49 @@ export const BpoHero = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="flex flex-col h-full"
           >
-            <p className="text-base lg:text-lg text-slate-200 mb-4 leading-relaxed">
-              We manage the complete mortgage valuation process from order
-              coordination and broker engagement to quality control and delivery
-              enabling you to scale BPO volumes efficiently while reducing costs
-              and operational overhead. Our optimized model leverages a highly
-              connected broker network and streamlined workflows to deliver
-              faster turnaround times, improved cost efficiency, and consistent
-              output quality so your internal teams can stay focused on core
-              lending priorities rather than operational execution.
-            </p>
+            <div className="flex-1">
+              <p className="text-base lg:text-lg text-slate-200 mb-4 leading-relaxed">
+                We manage the complete mortgage valuation process from order
+                coordination and broker engagement to quality control and
+                delivery enabling you to scale BPO volumes efficiently while
+                reducing costs and operational overhead. Our optimized model
+                leverages a highly connected broker network and streamlined
+                workflows to deliver faster turnaround times, improved cost
+                efficiency, and consistent output quality so your internal teams
+                can stay focused on core lending priorities rather than
+                operational execution.
+              </p>
 
-            <p className="text-base lg:text-lg text-slate-200 leading-relaxed">
-              Ecesis is a specialized mortgage operations and BPO partner with
-              over{' '}
-              <span className="text-blue-400 font-semibold">16+ years</span> of
-              service excellence, delivering scalable, cost-efficient valuation
-              solutions to{' '}
-              <span className="text-blue-400 font-semibold">150+ clients</span>.
-              With a proven track record across{' '}
-              <span className="text-blue-400 font-semibold">
-                50+ engagements
-              </span>
-              , Ecesis manages end-to-end valuation workflows supported by a
-              network of{' '}
-              <span className="text-blue-400 font-semibold">200+ realtors</span>{' '}
-              across the U.S. and the capacity to process{' '}
-              <span className="text-blue-400 font-semibold">
-                20,000+ orders
-              </span>{' '}
-              per month. This enables lenders to achieve faster turnaround
-              times, lower cost per valuation, and higher BPO volumes, all while
-              operating with no additional operational overhead and maintaining
-              strong compliance standards.
-            </p>
+              <p className="text-base lg:text-lg text-slate-200 leading-relaxed">
+                Ecesis is a specialized mortgage operations and BPO partner with
+                over{' '}
+                <span className="text-blue-400 font-semibold">16+ years</span>{' '}
+                of service excellence, delivering scalable, cost-efficient
+                valuation solutions to{' '}
+                <span className="text-blue-400 font-semibold">
+                  150+ clients
+                </span>
+                . With a proven track record across{' '}
+                <span className="text-blue-400 font-semibold">
+                  50+ engagements
+                </span>
+                , Ecesis manages end-to-end valuation workflows supported by a
+                network of{' '}
+                <span className="text-blue-400 font-semibold">
+                  200+ realtors
+                </span>{' '}
+                across the U.S. and the capacity to process{' '}
+                <span className="text-blue-400 font-semibold">
+                  20,000+ orders
+                </span>{' '}
+                per month. This enables lenders to achieve faster turnaround
+                times, lower cost per valuation, and higher BPO volumes, all
+                while operating with no additional operational overhead and
+                maintaining strong compliance standards.
+              </p>
+            </div>
 
             <div className="mt-8">
               <a
@@ -161,86 +169,88 @@ export const BpoHero = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT - Stats & Metrics Grid */}
+          {/* RIGHT - Stats Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="h-full flex"
           >
-            <div className="grid grid-cols-2 gap-4">
-              {/* CARD */}
-              <motion.div
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-blue-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/40"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-blue-500/20 rounded-xl group-hover:bg-blue-500/30 transition">
+            <motion.div
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="w-full group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-violet-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/40 flex flex-col"
+            >
+              <div className="flex flex-col h-full justify-between divide-y divide-white/10">
+                {/* Stat */}
+                <div className="flex items-center gap-4 py-3">
+                  <div className="p-3 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl">
                     <TrendingUp className="w-6 h-6 text-blue-400" />
                   </div>
-                  <span className="text-2xl font-bold text-white">35%</span>
+                  <div>
+                    <p className="text-3xl font-bold text-white">35%</p>
+                    <p className="text-sm text-slate-300">
+                      Avg. cost reduction
+                    </p>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-300">
-                  Average cost reduction per valuation
-                </p>
-              </motion.div>
 
-              <motion.div
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-purple-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/40"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition">
+                {/* Stat */}
+                {/* <div className="flex items-center gap-4 py-4">
+                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl">
                     <Clock className="w-6 h-6 text-purple-400" />
                   </div>
-                  <span className="text-2xl font-bold text-white">24–48</span>
-                </div>
-                <p className="text-sm text-slate-300">Hour turnaround times</p>
-              </motion.div>
+                  <div>
+                    <p className="text-3xl font-bold text-white">24–48</p>
+                    <p className="text-sm text-slate-300">Hour turnaround</p>
+                  </div>
+                </div> */}
 
-              <motion.div
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-indigo-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-indigo-500/20 rounded-xl group-hover:bg-indigo-500/30 transition">
+                {/* Stat */}
+                <div className="flex items-center gap-4 py-4">
+                  <div className="p-3 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-xl">
                     <Users className="w-6 h-6 text-indigo-400" />
                   </div>
-                  <span className="text-2xl font-bold text-white">200+</span>
+                  <div>
+                    <p className="text-3xl font-bold text-white">200+</p>
+                    <p className="text-sm text-slate-300">Realtor network</p>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-300">
-                  Nationwide realtor network
-                </p>
-              </motion.div>
 
-              <motion.div
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-pink-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/40"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-pink-500/20 rounded-xl group-hover:bg-pink-500/30 transition">
+                {/* Stat */}
+                <div className="flex items-center gap-4 py-4">
+                  <div className="p-3 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl">
                     <BarChart3 className="w-6 h-6 text-pink-400" />
                   </div>
-                  <span className="text-2xl font-bold text-white">20K+</span>
+                  <div>
+                    <p className="text-3xl font-bold text-white">20K+</p>
+                    <p className="text-sm text-slate-300">Monthly capacity</p>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-300">Monthly order capacity</p>
-              </motion.div>
 
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="col-span-2 group bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-5 border border-white/20 hover:border-emerald-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/30"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition">
+                {/* Stat */}
+                <div className="flex items-center gap-4 py-4">
+                  <div className="p-3 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl">
                     <Building2 className="w-6 h-6 text-emerald-400" />
                   </div>
-                  <span className="text-xl font-bold text-white">150+</span>
+                  <div>
+                    <p className="text-3xl font-bold text-white">150+</p>
+                    <p className="text-sm text-slate-300">Trusted clients</p>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-300">
-                  Trusted clients including top mortgage lenders and servicers
-                </p>
-              </motion.div>
-            </div>
+
+                {/* Stat */}
+                <div className="flex items-center gap-4 py-3">
+                  <div className="p-3 bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-xl">
+                    <ShieldCheck className="w-6 h-6 text-violet-400" />
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-white">16+</p>
+                    <p className="text-sm text-slate-300">Years experience</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 
@@ -258,11 +268,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     Significant Reduction in Cost Per Valuation
                   </span>
                   {
@@ -276,11 +286,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     Faster Turnaround Times of 24–48 Hours
                   </span>
                   {' with consistent quality and improved pipeline efficiency.'}
@@ -292,11 +302,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     Higher BPO Order Volumes
                   </span>
                   {
@@ -310,11 +320,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     No Additional Operational Overhead
                   </span>
                   {
@@ -328,11 +338,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     Flexible Scaling with Volume
                   </span>
                   {
@@ -346,11 +356,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed"
+                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300">
+                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
                     Improved Compliance and Audit Readiness
                   </span>
                   {' with structured workflows and high-quality documentation.'}
@@ -360,7 +370,7 @@ export const BpoHero = () => {
           </div>
 
           {/* RIGHT - TESTIMONIAL - Vertically Centered */}
-          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-8 flex flex-col justify-center self-center h-auto">
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 hover:border-violet-300 transition-all duration-300 p-8 flex flex-col justify-center self-center h-auto">
             <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
               What Mortgage Leaders Say
             </p>
