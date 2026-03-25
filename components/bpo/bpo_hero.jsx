@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -7,7 +8,6 @@ import {
   TrendingUp,
   Clock,
   Users,
-  ShieldCheck,
   BarChart3,
   Building2,
 } from 'lucide-react';
@@ -79,11 +79,11 @@ export const BpoHero = () => {
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6">
-        {/* HERO HEADING */}
+        {/* ==================== HERO TITLE + SUBTITLE ==================== */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Drive Higher BPO Volumes with <br />
@@ -92,14 +92,14 @@ export const BpoHero = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-2xl text-balance font-semibold bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent">
+          <p className="text-xl text-balance font-semibold bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent max-w-4xl mx-auto">
             Outsource mortgage operations to boost BPO order volumes at reduced
             costs leveraging a robust, interconnected broker network without
             increasing operational overhead.
           </p>
         </motion.div>
 
-        {/* LEFT TEXT + RIGHT VISUAL SPLIT */}
+        {/* ==================== ROW 1: LEFT CONTENT + STATS CARD ==================== */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* LEFT - Main Content */}
           <motion.div
@@ -107,158 +107,167 @@ export const BpoHero = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col h-full"
           >
-            <div className="flex-1">
-              <p className="text-base lg:text-lg text-slate-200 mb-4 leading-relaxed">
-                We manage the complete mortgage valuation process from order
-                coordination and broker engagement to quality control and
-                delivery enabling you to scale BPO volumes efficiently while
-                reducing costs and operational overhead. Our optimized model
-                leverages a highly connected broker network and streamlined
-                workflows to deliver faster turnaround times, improved cost
-                efficiency, and consistent output quality so your internal teams
-                can stay focused on core lending priorities rather than
-                operational execution.
-              </p>
+            <p className="text-base text-slate-200 mb-4 leading-relaxed">
+              We manage the complete mortgage valuation process from order
+              coordination and broker engagement to quality control and delivery
+              enabling you to scale BPO volumes efficiently while reducing costs
+              and operational overhead. Our optimized model leverages a highly
+              connected broker network and streamlined workflows to deliver
+              faster turnaround times, improved cost efficiency, and consistent
+              output quality so your internal teams can stay focused on core
+              lending priorities rather than operational execution.
+            </p>
 
-              <p className="text-base lg:text-lg text-slate-200 leading-relaxed">
-                Ecesis is a specialized mortgage operations and BPO partner with
-                over{' '}
-                <span className="text-blue-400 font-semibold">16+ years</span>{' '}
-                of service excellence, delivering scalable, cost-efficient
-                valuation solutions to{' '}
-                <span className="text-blue-400 font-semibold">
-                  150+ clients
-                </span>
-                . With a proven track record across{' '}
-                <span className="text-blue-400 font-semibold">
-                  50+ engagements
-                </span>
-                , Ecesis manages end-to-end valuation workflows supported by a
-                network of{' '}
-                <span className="text-blue-400 font-semibold">
-                  200+ realtors
-                </span>{' '}
-                across the U.S. and the capacity to process{' '}
-                <span className="text-blue-400 font-semibold">
-                  20,000+ orders
-                </span>{' '}
-                per month. This enables lenders to achieve faster turnaround
-                times, lower cost per valuation, and higher BPO volumes, all
-                while operating with no additional operational overhead and
-                maintaining strong compliance standards.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <a
-                href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center shadow-lg hover:shadow-xl transition-shadow"
-                >
-                  Schedule your Free Operations Assessment
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </motion.button>
-              </a>
-            </div>
+            <p className="text-base text-slate-200 leading-relaxed">
+              Ecesis is a specialized mortgage operations and BPO partner with
+              over{' '}
+              <span className="text-blue-400 font-semibold">16+ years</span> of
+              service excellence, delivering scalable, cost-efficient valuation
+              solutions to{' '}
+              <span className="text-blue-400 font-semibold">150+ clients</span>.
+              With a proven track record across{' '}
+              <span className="text-blue-400 font-semibold">
+                50+ engagements
+              </span>
+              , Ecesis manages end-to-end valuation workflows supported by a
+              network of{' '}
+              <span className="text-blue-400 font-semibold">200+ realtors</span>{' '}
+              across the U.S. and the capacity to process{' '}
+              <span className="text-blue-400 font-semibold">
+                20,000+ orders
+              </span>{' '}
+              per month. This enables lenders to achieve faster turnaround
+              times, lower cost per valuation, and higher BPO volumes, all while
+              operating with no additional operational overhead and maintaining
+              strong compliance standards.
+            </p>
           </motion.div>
 
-          {/* RIGHT - Stats Card */}
+          {/* RIGHT - STATS CARD */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="h-full flex"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex items-start py-10"
           >
             <motion.div
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="w-full group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-violet-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/40 flex flex-col"
+              whileHover={{ y: -3, scale: 1.01 }}
+              className="w-full bg-gradient-to-br from-white/10 via-white/5 to-purple-900/20 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-xl overflow-hidden group"
             >
-              <div className="flex flex-col h-full justify-between divide-y divide-white/10">
-                {/* Stat */}
-                <div className="flex items-center gap-4 py-3">
-                  <div className="p-3 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl">
-                    <TrendingUp className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">35%</p>
-                    <p className="text-sm text-slate-300">
-                      Avg. cost reduction
+              {/* Background Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+
+              <div className="relative z-10">
+                <div className="grid grid-cols-2 gap-5">
+                  {/* Stat 1 */}
+                  <div className="border-b border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <TrendingUp className="w-4 h-4 text-blue-400" />
+                      <span className="text-2xl font-bold text-white">35%</span>
+                    </div>
+                    <p className="text-xs text-slate-300">
+                      Average cost reduction
                     </p>
                   </div>
-                </div>
 
-                {/* Stat */}
-                {/* <div className="flex items-center gap-4 py-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl">
-                    <Clock className="w-6 h-6 text-purple-400" />
+                  {/* Stat 2 */}
+                  <div className="border-b border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Clock className="w-4 h-4 text-purple-400" />
+                      <span className="text-2xl font-bold text-white">
+                        24-48
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-300">
+                      Hour turnaround times
+                    </p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">24–48</p>
-                    <p className="text-sm text-slate-300">Hour turnaround</p>
-                  </div>
-                </div> */}
 
-                {/* Stat */}
-                <div className="flex items-center gap-4 py-4">
-                  <div className="p-3 bg-gradient-to-br from-indigo-500/20 to-blue-500/20 rounded-xl">
-                    <Users className="w-6 h-6 text-indigo-400" />
+                  {/* Stat 3 */}
+                  <div className="border-b border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Users className="w-4 h-4 text-indigo-400" />
+                      <span className="text-2xl font-bold text-white">
+                        200+
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-300">
+                      Nationwide realtor network
+                    </p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">200+</p>
-                    <p className="text-sm text-slate-300">Realtor network</p>
-                  </div>
-                </div>
 
-                {/* Stat */}
-                <div className="flex items-center gap-4 py-4">
-                  <div className="p-3 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl">
-                    <BarChart3 className="w-6 h-6 text-pink-400" />
+                  {/* Stat 4 */}
+                  <div className="border-b border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <BarChart3 className="w-4 h-4 text-pink-400" />
+                      <span className="text-2xl font-bold text-white">
+                        200+
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-300">Realtors across US</p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">20K+</p>
-                    <p className="text-sm text-slate-300">Monthly capacity</p>
-                  </div>
-                </div>
 
-                {/* Stat */}
-                <div className="flex items-center gap-4 py-4">
-                  <div className="p-3 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl">
-                    <Building2 className="w-6 h-6 text-emerald-400" />
+                  <div className=" border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Clock className="w-4 h-4 text-red-400" />
+                      <span className="text-2xl font-bold text-white">
+                        20,000+
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-300">
+                      Orders Processed Per Month
+                    </p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">150+</p>
-                    <p className="text-sm text-slate-300">Trusted clients</p>
-                  </div>
-                </div>
 
-                {/* Stat */}
-                <div className="flex items-center gap-4 py-3">
-                  <div className="p-3 bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-xl">
-                    <ShieldCheck className="w-6 h-6 text-violet-400" />
+                  <div className=" border-white/10 pb-2">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Building2 className="w-4 h-4 text-emerald-400" />
+                      <span className="text-2xl font-bold text-white">
+                        150+
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-300">
+                      Trusted mortgage lenders & servicers
+                    </p>
                   </div>
-                  <div>
-                    <p className="text-3xl font-bold text-white">16+</p>
-                    <p className="text-sm text-slate-300">Years experience</p>
+
+                  {/* stat 5 */}
+                  {/* <div className="col-span-2 pt-1 mt-1">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Clock className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-2xl font-bold text-white">
+                        20,000+
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-300 leading-tight">
+                      Orders Processed Per Month
+                    </p>
                   </div>
+
+                  <div className="col-span-2 pt-1 mt-1">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <Building2 className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-2xl  font-bold text-white">
+                        150+
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-300 leading-tight">
+                      Trusted mortgage lenders & servicers
+                    </p>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* CLIENT RESULTS + TESTIMONIAL */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 mt-8 items-start">
-          {/* LEFT - CLIENT RESULTS */}
+        {/* ==================== ROW 2: OUR CLIENTS ACHIEVE + TESTIMONIAL ==================== */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT - Our Clients Achieve Bullets */}
           <div>
-            <h2 className="text-3xl font-bold text-white mb-8">
+            <h2 className="text-2xl font-bold text-white mb-8">
               Our Clients Achieve:
             </h2>
 
@@ -268,11 +277,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     Significant Reduction in Cost Per Valuation
                   </span>
                   {
@@ -286,11 +295,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     Faster Turnaround Times of 24–48 Hours
                   </span>
                   {' with consistent quality and improved pipeline efficiency.'}
@@ -302,11 +311,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     Higher BPO Order Volumes
                   </span>
                   {
@@ -320,11 +329,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     No Additional Operational Overhead
                   </span>
                   {
@@ -338,11 +347,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.5 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     Flexible Scaling with Volume
                   </span>
                   {
@@ -356,11 +365,11 @@ export const BpoHero = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
-                className="flex items-start gap-3 text-base md:text-lg leading-relaxed group"
+                className="flex items-start gap-3 text-base leading-relaxed"
               >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 group-hover:bg-violet-400 transition-colors shrink-0" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-400 shrink-0" />
                 <span className="text-slate-200">
-                  <span className="font-semibold text-blue-300 group-hover:text-violet-300 transition-colors">
+                  <span className="font-semibold text-blue-300">
                     Improved Compliance and Audit Readiness
                   </span>
                   {' with structured workflows and high-quality documentation.'}
@@ -369,8 +378,8 @@ export const BpoHero = () => {
             </ul>
           </div>
 
-          {/* RIGHT - TESTIMONIAL - Vertically Centered */}
-          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 hover:border-violet-300 transition-all duration-300 p-8 flex flex-col justify-center self-center h-auto">
+          {/* RIGHT - Testimonial Slider */}
+          <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl border border-blue-200 p-8 flex flex-col">
             <p className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">
               What Mortgage Leaders Say
             </p>
@@ -412,6 +421,22 @@ export const BpoHero = () => {
                 />
               ))}
             </div>
+          </div>
+          <div className="mt-8">
+            <a
+              href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-6 py-3 bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 text-white rounded-full font-semibold inline-flex items-center shadow-lg hover:shadow-xl transition-shadow"
+              >
+                Schedule your Free Operations Assessment
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
+            </a>
           </div>
         </div>
       </div>
