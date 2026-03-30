@@ -67,7 +67,7 @@ export const BpoHero = () => {
   }, [index]);
 
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
+    <section className="relative min-h-screen flex pt-20 pb-12 overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
       {/* Background Glow */}
       <motion.div
         animate={{ scale: [1, 1.05, 1] }}
@@ -79,7 +79,7 @@ export const BpoHero = () => {
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6">
-        {/* ==================== HERO TITLE + SUBTITLE ==================== */}
+        {/* HERO TITLE + SUBTITLE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export const BpoHero = () => {
           </p>
         </motion.div>
 
-        {/* ==================== ROW 1: LEFT CONTENT + STATS CARD ==================== */}
+        {/* LEFT CONTENT + STATS CARD */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* LEFT - Main Content */}
           <motion.div
@@ -263,7 +263,7 @@ export const BpoHero = () => {
           </motion.div>
         </div>
 
-        {/* ==================== ROW 2: OUR CLIENTS ACHIEVE + TESTIMONIAL ==================== */}
+        {/* CLIENTS ACHIEVE + TESTIMONIAL */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT - Our Clients Achieve Bullets */}
           <div>
@@ -422,7 +422,7 @@ export const BpoHero = () => {
               ))}
             </div>
           </div>
-          <div className="mt-8">
+          <div>
             <a
               href="https://calendly.com/vishnu-vinayan-ecesistech/30-minute-meeting-clone"
               target="_blank"
